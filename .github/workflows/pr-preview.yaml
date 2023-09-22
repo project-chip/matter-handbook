@@ -2,7 +2,6 @@ name: Deploy PR previews
 
 on:
   # Only run on Staging
-  if: github.repository == 'project-chip/matter-handbook'  
   pull_request:
     types:
       - opened
@@ -18,6 +17,7 @@ defaults:
 
 jobs:
   build-preview:
+    if: github.repository == 'project-chip/matter-handbook'  
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4

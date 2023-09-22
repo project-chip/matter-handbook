@@ -2,8 +2,6 @@
 name: Deploy Hugo site to Pages
 
 on:
-  # Only Run on Prod
-  if: github.repository == 'project-chip/matter-handbook-production'  
   # Runs on pushes targeting the default branch
   push:
     branches:
@@ -32,6 +30,8 @@ defaults:
 jobs:
   # Build job
   build:
+    # Only Run on Prod
+    if: github.repository == 'project-chip/matter-handbook-production'  
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4
