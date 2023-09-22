@@ -1,6 +1,8 @@
 name: Deploy PR previews
 
 on:
+  # Only run on Staging
+  if: github.repository == 'project-chip/matter-handbook'  
   pull_request:
     types:
       - opened
