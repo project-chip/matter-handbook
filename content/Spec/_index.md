@@ -6,5 +6,5 @@ pre = "<b>6. </b>"
 +++
 
 
-# Specificatiom
+# Specification
 
