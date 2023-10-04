@@ -1,5 +1,5 @@
 +++
 title = "Supported Device Types"
 chapter = false
-weight = 1
+weight = 10
 +++
