@@ -1,10 +1,9 @@
 +++
 title = "SDK"
 chapter = true
-weight = 7
-pre = "<b>7. </b>"
+weight = 4
+pre = "<b>4. </b>"
 +++
 
 
 # The Matter SDK
-
