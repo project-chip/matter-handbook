@@ -436,7 +436,6 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border-bottom: 4px solid #F0F2F4;
 }
 #chapter p {
-    text-align: center;
     font-size: 1.2rem;
 }
 #footer {
@@ -462,7 +461,6 @@ h2, h3, h4, h5, h6 {
 }
 h1 {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    text-align: center;
     text-transform: uppercase;
     color: #222;
     font-weight: 200;
