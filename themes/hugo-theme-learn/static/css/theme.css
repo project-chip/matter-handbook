@@ -439,9 +439,15 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     font-size: 1.2rem;
 }
 #footer {
-    padding: 3rem 1rem;
     color: #b3b3b3;
-    font-size: 13px;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0px;
+    width: 300px;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
 }
 #footer p {
     margin: 0;
