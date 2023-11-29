@@ -8,7 +8,7 @@ Commissioning in Matter refers to the process of assigning Fabric credentials to
 
 At a high-level, the commissioning flow can be broken down into multiple stages:
 
-![Commissioning Flow - High Level](/primer-commissioning.png)
+![Commissioning Flow - High Level](../../primer-commissioning.png)
 
 ## 1 Device discovery
 

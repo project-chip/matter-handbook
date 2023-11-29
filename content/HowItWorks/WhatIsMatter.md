@@ -9,7 +9,7 @@ Matter has the goal of being an interoperable standard that fosters technology a
 
 Matter is implemented by an open source SDK that contains not only the implementation of the specification but also a rich set of examples and interoperable code. The core Matter protocol fits on the top three layers in the context of OSI, meaning it can run over any type of IPv6 transport and network. While control and other operational communication are performed over IPv6, Bluetooth Low Energy (BLE) may be employed to commission new devices.
 
-![The Matter Network Stack](/primer-matter-architecture.png)
+![The Matter Network Stack](../../primer-matter-architecture.png)
 
 Matter is flexible and interoperable. It builds upon years of challenges and successes of low power 802.15.4 networks as well as Wi-Fi smart home devices. Like Thread, Matter builds atop IPv6. It includes strong cryptography, a well-defined modeling of Device Types and their data, and the support for multiple ecosystem administrators.
 

@@ -22,7 +22,7 @@ Node Operational Certificate (NOC) is the set of credentials that Nodes use to c
 
 NOCSR is a procedure that runs on Node being commissioned. It binds several cryptographical elements, then sends them to the Commissioner, who requests the CA ecosystem for its corresponding NOC. This diagram depicts this dependency tree and the order by which some operations occur.
 
-![NOC Generation Dependencies](/primer-csr.png)
+![NOC Generation Dependencies](../../primer-csr.png)
 
 While understanding each cryptographic element is important for SDK development, it is outside of this document's scope to fully analyze their role and implications. What's important to note is that:
 

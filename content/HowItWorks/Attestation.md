@@ -34,7 +34,7 @@ The DAC's signature is validated against the Product Attestation Intermediate Ce
 
 At the root of the chain of trust, the Product Attestation Authority (PAA) Certificate Authority (CA) public key validates signatures from the PAI. Note that the Matter trust store is federated and the set of PAA certificates trusted by commissioners is maintained in a central trusted database (the Distributed Compliance Ledger). Entry of a PAA within the trusted set requires meeting a certificate policy managed by the Alliance.
 
-![Matter Attestation Public Key Infrastructure](/primer-attestation-pki.png)
+![Matter Attestation Public Key Infrastructure](../../primer-attestation-pki.png)
 
 The PAI is also a X.509 v3 certificate that includes:
 
@@ -59,7 +59,7 @@ Lastly, the PAA is the root certificate in the chain and it is self-signed. It i
 
 The attestation process has several documents and messages. The following items are a brief overview of their function and composition. The image below aids in the understanding of their hierarchy.
 
-![Attestation Document Hierarchy](/primer-attestation-document-hierarchy.png)
+![Attestation Document Hierarchy](../../primer-attestation-document-hierarchy.png)
 
 ### Certification Declaration (CD)
 The CD allows the Matter device to prove its compliance with the Matter protocol. Whenever the Matter Certification Processes finishes, the Alliance creates a CD for the device type so the Vendor might include it in the firmware. The CD includes among other information:
