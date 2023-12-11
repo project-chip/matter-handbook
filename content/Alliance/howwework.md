@@ -21,7 +21,7 @@ The TSG develops the technical aspects of the Matter from the requirements given
 The Matter TSG also has an active Software Development Tiger Team who maintain and develop the open source Matter SDK.
 
 ### Certification Sub Group
-The CSG develops methods to test for specification conformance, from test cases & scripts, to test events leading up to spec release
+The CSG develops methods to test for specification conformance, from test cases & scripts, to test events leading up to specification release.
 
 ### Tiger Teams
 Additionally each Sub Group forms a number of Tiger Teams to focus on a specific topic or item and feed this work up into the sub group. Some teams are ongoing, others are formed for the purpose of a specific deliverable and then dissolved.
