@@ -15,7 +15,7 @@ Matter uses IPv6 for its operational communications, and leverages both IPv6 Uni
 ## Ethernet
 
 This is the simplest transport for Matter, as there is no need to communicated any network credential to the device it is simply connected to the Ethernet network.
-Commisioning of devices should use the on-network bitmask in the Discovery Capabilities of the Onboarding Payload and the device will be discovered via DNS-SD
+Commissioning of devices should use the on-network bitmask in the Discovery Capabilities of the Onboarding Payload and the device will be discovered via DNS-SD.
 
 ## Wi-Fi
 
