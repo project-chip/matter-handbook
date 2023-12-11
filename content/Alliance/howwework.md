@@ -27,4 +27,4 @@ The CSG develops methods to test for specification conformance, from test cases 
 Additionally each Sub Group forms a number of Tiger Teams to focus on a specific topic or item and feed this work up into the sub group. Some teams are ongoing, others are formed for the purpose of a specific deliverable and then dissolved.
 
 ### Joining
-Membership of each working group is open to a member company holding participant or promoter level membership, once a member company has formally joined a WG then employees of that company can participate in the sub groups and tiger teams.
+Membership of each working group is open to a member company holding participant or promoter level membership. Once a member company has formally joined a WG then employees of that company can participate in the sub groups and tiger teams.
