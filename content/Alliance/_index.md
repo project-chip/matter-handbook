@@ -12,5 +12,5 @@ Our wide-ranging global membership is on a mission. That mission is to ignite cr
 
 The Alliance is the owner of the Matter specification and its associated marks. We are responsible for the continued development of the specification, the certification of products, and the promotion of Matter.
 
-The Alliance is a **member driven** organization, the majority of the work on Matter is done by members with the support of their companies, The Alliance employs a relatively small full time staff to facilitate, co-ordinate and support this work.
+The Alliance is a **member driven** organization. The majority of the work on Matter is done by members with the support of their companies, and the Alliance employs a relatively small full time staff to facilitate, co-ordinate and support this work.
 
