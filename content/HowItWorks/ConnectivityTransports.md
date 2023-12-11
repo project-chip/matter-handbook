@@ -20,7 +20,7 @@ Commissioning of devices should use the on-network bitmask in the Discovery Capa
 ## Wi-Fi
 
 Matter devices may use the 802.11 (Wi-Fi) standard for connectivity, any of the approved versions of ths spec are compatible with Matter and all the approved frequency bands may be used (subject to local regulatory limits).
-In order for a Matter device that uses Wi-Fi to be certified the manufacturer must first obtain Wi-Fi certification for the device from the [WiFi Alliance](https://www.wi-fi.org/certification)
+In order for a Matter device that uses Wi-Fi to be certified the manufacturer must first obtain Wi-Fi certification for the device from the [WiFi Alliance](https://www.wi-fi.org/certification).
 This can often be obtained via the Wi-Fi chipset vendors existing certification.
 For commissioning Wi-Fi devices may use the BLE method of discovery and conveying of network credentials or the device may already be connected to the IP network via an existing proprietary method.
 The use of Soft-AP mode for Wi-Fi commissioning mode while part of the specification is not yet deployed by any vendor.
