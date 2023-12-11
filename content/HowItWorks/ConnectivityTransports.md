@@ -8,7 +8,7 @@ In principle, any IPv6-bearing network is suitable for Matter deployment, subjec
 
 Matter treats networks as shared resources: it makes no stipulation of exclusive network owner­ship or access. As a result, it is possible to overlay multiple Matter networks over the same set of constituent IP networks.
 This protocol may operate in the absence of globally routable IPv6 infrastructure. This requirement enables operation in a network disconnected or firewalled from the global Internet. It also enables deployment in situations where the Internet Service Provider either does not support IPv6 on con­sumer premises or where the support proves otherwise limiting, for example, if the delegated pre­fix cannot accommodate all the networks and devices on premises.
-This protocol supports local communications spanning one or more IPv6 subnets. Canonical net­ works supporting a fabric may include a Wi-Fi/Ethernet subnet, or one or more low power and lossy networks (LLN) subnets. In this version of the specification, Thread is the supported LLN stan dard.
+This protocol supports local communications spanning one or more IPv6 subnets. Canonical net­works supporting a fabric may include a Wi-Fi/Ethernet subnet, or one or more low power and lossy networks (LLN) subnets. In this version of the specification, Thread is the supported LLN standard.
 Matter uses IPv6 for its operational communications, and leverages both IPv6 Unicast and Multicast addressing for accessing its Nodes and Groups, respectively.
 
 
