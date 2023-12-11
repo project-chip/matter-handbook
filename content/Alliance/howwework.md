@@ -14,7 +14,7 @@ Beneath the Matter Working Group are 3 Sub Groups:
 ### Marketing Product Sub Group
 
 The MPSG are responsible for capturing use cases, identifying functional/non-functional requirements and producing marketing requirements documents (MRD’s) for hand-over to the Technical Sub Group.
-The also develop branding, positioning and external communications materials relating to Matter.
+They also develop branding, positioning and external communications materials relating to Matter.
 
 ### Technical Sub Group
 The TSG develops the technical aspects of the Matter from the requirements given to them and takes this through specification release.
