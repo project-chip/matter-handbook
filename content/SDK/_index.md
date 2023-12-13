@@ -15,7 +15,7 @@ The SDK comprises of several different components to guide the development proce
 The ZAP tool is a GUI tool that is used to generate a .zap file which describes the endpoint composition of your device,  and the clusters that are on it along wiht their attributes, commands, features etc.. 
 This zap file is used by the zap compiler along with the cluster definitions from the SDK to generate an ember layer. This happens automatically as part of the build process, and the ember layer is compiled into the firmware. 
 
-The tool produces .matter files which are a human-readable version of the .zap that can be used for review
+The tool produces .matter files which are a human-readable version of the .zap that can be used for review.
 
 ### Ember
 The ember layer is a generated layer that implements the composition of ONE SPECIFIC device. It looks at each message and determines if the device has implemented the selected attribute or command on the cluster on the selected endpoint, and then blocks or routes accordingly, based on the implementation and the access control. Valid requests are forwarded on to the cluster implementations to handle and invalid requests get sent back with an error. Ember layer is the piece that makes your device your device. Most are generated statically using zap.
