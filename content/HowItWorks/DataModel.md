@@ -34,7 +34,7 @@ A Node may also have several Endpoints, each creating an instance of the same fu
 ### Attributes
 At the last level we'll find Attributes, which are states held by the node, such as the current level attribute of a level control cluster. Attributes may be defined as different data types such as uint8, strings or arrays.
 
-![Nodes, Endpoints, Attributes and Commands](/primer-node-endpoint-attribute.png)
+![Nodes, Endpoints, Attributes and Commands](../..//primer-node-endpoint-attribute.png)
 
 ### Commands
 Besides Attributes, Clusters also have Commands, which are actions that may be performed. They are the equivalent in Matter's DM of a remote procedure call. Commands are verb-like, such as lock door on a Door Lock cluster. Commands may generate responses and results; in Matter, such responses are also defined as Commands, going in the reverse direction.
@@ -42,7 +42,7 @@ Besides Attributes, Clusters also have Commands, which are actions that may be p
 ### Events
 Lastly, Clusters may also have Events, which can be thought of as a record of past state transitions. While Attributes represent the current states, events are a journal of the past, and include a monotonically increasing counter, a timestamp and a priority. They enable capturing state transitions, as well as data modeling that is not readily achieved with attributes.
 
-![A sample of the hierarchy of Matter Devices interaction model](/primer-device-type.png)
+![A sample of the hierarchy of Matter Devices interaction model](../../primer-device-type.png)
 
 The Endpoint 0 is reserved for the Utility Clusters. Utility Clusters are specific Clusters that enclose servicing functionality on an Endpoint, such as discovery, addressing, diagnostics and software update. On the other hand, the Application Clusters support primary actions such as on/off or temperature measurement.
 
@@ -70,7 +70,7 @@ For instance, we may have two table lamps: Node A and Node B. Both nodes impleme
 
 But, as typical table lamps do, our physical devices will also include an On/Off Light Switch Device Type for their local on/off switches. This Device Type must implement an On/Off Client Cluster so it may control the Server Clusters.
 
-![Client and Server Clusters](/primer-client-server.png)
+![Client and Server Clusters](../..//primer-client-server.png)
 
 In this sample, the On/Off Client Cluster on Node A is changing the attributes of the On/Off Server Cluster on Node A and Node B, while the Node B's Client Cluster is only changing the Server Cluster on Node B itself.
 
