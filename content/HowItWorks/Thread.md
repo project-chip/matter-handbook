@@ -9,9 +9,9 @@ Some Matter Nodes are wired and have energy budgets that allow them to keep thei
 
 A fundamental aspect of Matter is that it works both on high-throughput network mediums such as Wi-Fi and Ethernet, but also on low-latency, low-bandwidth, such as Thread. If all Multicast packets from Wi-Fi were bridged into Thread, we'd overburden the network, and potentially flood it. Thread's goal is to enable IPv6 in low-power, low-latency mesh networking, not high-bandwidth data transfer. While Thread's ICMPv6 pings in a local network are typically under few tens of milliseconds RTT, its total bandwidth is limited to 250 kbps at the IEEE 802.15.4 PHY. With packet retransmissions and overhead, the typical max bandwidth is around 125 kbps. In other words, orders of magnitude less than Wi-Fi.
 
-Frames on the IEEE 802.15.4 PHY are 127 bytes, but the largest (and typical) maximum transmission unit (MTU) of IPv6 packets in Thread is 1280 bytes. Thus IPv6 packets often need to be split into several PHY frames. This process is defined by RFC4944.
+Frames on the IEEE 802.15.4 PHY are 127 bytes, but the largest (and typical) maximum transmission unit (MTU) of IPv6 packets in Thread is 1280 bytes. Thus IPv6 packets often need to be split into several PHY frames. This process is defined by RFC 4944.
 
-To learn more, refer to IPv6 Addressing in the Thread Primer on openthread.io.
+To learn more, refer to IPv6 Addressing in the [Thread Primer on openthread.io](https://openthread.io/guides/thread-primer).
 
 ## Border Routers
 So how can Nodes coexist on both transport mediums while in the same fabric? Although both networks share application-level Matter credentials, they don't share the same link technology. In this scenario, the network needs a Thread Border Router (BR) to enable connectivity. BRs are Stub IPv6 Routers.
@@ -24,12 +24,13 @@ This process is accomplished by assigning different IPv6 prefixes to Thread and 
 
 Border Routers are also responsible for:
 
-automatically configuring IPv6 prefixes and routes for both the Thread and Adjacent Infrastructure Networks so that hosts on either side of the Thread Border router can communicate.
-publishing mDNS DNS-SD discovery packets on behalf of Thread Nodes, so they can be discovered on the adjacent infrastructure network.
-To learn more, refer to the Border Router guide on openthread.io.
+- automatically configuring IPv6 prefixes and routes for both the Thread and Adjacent Infrastructure Networks so that hosts on either side of the Thread Border router can communicate.
+- publishing mDNS DNS-SD discovery packets on behalf of Thread Nodes, so they can be discovered on the adjacent infrastructure network.
+
+To learn more, refer to the [Border Router guide on openthread.io](https://openthread.io/guides/border-router).
 
 ## IPv6 Multicast
-Group messages are also important as they allow simultaneous control of several Matter Nodes through Multicast. In order to route this traffic into the Thread network, both Matter and Thread implement the Unicast Prefix-based IPv6 Multicast Addressing Scheme defined by the RFC 3306.
+Group messages are also important as they allow simultaneous control of several Matter Nodes through Multicast. In order to route this traffic into the Thread network, both Matter and Thread implement the Unicast Prefix-based IPv6 Multicast Addressing Scheme defined by RFC 3306.
 
 This method allows the selection of the destination Nodes of a Multicast packet based on their shared IPv6 Unicast prefix.
 

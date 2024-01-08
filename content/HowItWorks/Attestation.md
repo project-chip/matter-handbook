@@ -82,16 +82,20 @@ Firmware Information is an optional element in the Attestation Process and appli
 ### Attestation Information
 Message sent from the Commissionee to the Commissioner. The Attestation Information combines a TLV containing the Attestation Elements and a Attestation Signature.
 Attestation Elements
+
 ### This is a TLV containing:
 - Certificate Declaration
 - Timestamp
 - Attestation Nonce
 - Firmware Information (optional)
 - Vendor Specific information (optional)
+
 ### Attestation Challenge
 Out-of-band challenge derived during Passcode Authenticated Session Establishment (PASE)/ Certificate Authenticated Session Establishment (CASE) session establishment and used to further secure the procedure and avoid replayed signatures. Comes from either CASE session, PASE session or a resumed CASE session.
+
 ### Attestation TBS (to be signed)
 Message containing the Attestation Elements and Attestation Challenge.
+
 ### Attestation Signature
 Signature of the Attestation TBS, signed using the Device Attestation Private Key.
 

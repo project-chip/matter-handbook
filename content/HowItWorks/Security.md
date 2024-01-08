@@ -28,13 +28,13 @@ a baseline for building secure IoT devices. The following are key principles of 
 - Crypto-flexibility to address new developments and threats
 
 ## Matter Privacy Principles
-Data privacy aims to protect consumers whose personal information is consumed and transacted.
+Data privacy aims to protect consumers whose personal information is consumed and transacted
 Matter embeds data privacy principles for all interactions between devices and software agents
 that handle personal information. For complete protection, additional support from the environment
-and infrastructure that Matter devices operate in is needed.
+and infrastructure that Matter devices operate in is needed
 
 ### Confidentiality & Integrity
-Matter uses the highest possible level of civilian cryptographic standards for network communications to ensure that unauthorized entities cannot easily access or tamper with data communicated between Matter devices.
+Matter uses the highest possible level of civilian cryptographic standards for network communications to ensure that unauthorized entities cannot easily access or tamper with data communicated between Matter devices
 
 ### Proof of identity
 Required for Matter devices with cryptographic certificates so data is shared only between known Matter entities

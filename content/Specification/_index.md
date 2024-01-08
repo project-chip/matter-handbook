@@ -9,7 +9,10 @@ pre = "<b>3. </b>"
 # The Matter Specifications
 
 
-The Matter Specification is released twice a year in Spring and Fall. The first release 1.0 was in November 2022, 1.1 was released in April 2023 and 1.2 in October 2023.
+The Matter Specification is updated twice a year in Spring and Fall.
+- Version 1.0 was published in November 2022 
+- Version 1.1 was published in April 2023
+- Version 1.2 was published in October 2023
 
 The specification is made up of a number of documents:
 

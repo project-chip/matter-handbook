@@ -22,16 +22,16 @@ Commissioning of devices should use the on-network bitmask in the Discovery Capa
 Matter devices may use the 802.11 (Wi-Fi) standard for connectivity, any of the approved versions of ths spec are compatible with Matter and all the approved frequency bands may be used (subject to local regulatory limits).
 In order for a Matter device that uses Wi-Fi to be certified the manufacturer must first obtain Wi-Fi certification for the device from the [WiFi Alliance](https://www.wi-fi.org/certification).
 This can often be obtained via the Wi-Fi chipset vendors existing certification.
-For commissioning Wi-Fi devices may use the BLE method of discovery and conveying of network credentials or the device may already be connected to the IP network via an existing proprietary method.
+For commissioning, Wi-Fi devices may use the BLE method of discovery and conveying of network credentials or the device may already be connected to the IP network via an existing proprietary method.
 The use of Soft-AP mode for Wi-Fi commissioning mode while part of the specification is not yet deployed by any vendor.
 
 ## Thread
 
-Thread is a low power 802.15.4 mesh based radio protocol designed for IP transport. There are a number of additional considerations when using Thread for a Matter which are explained on the dedicated Thread page of this site.
-In order for a Matter device that uses Thread to be certified the manufacturer must first obtain Thrad certification for the device from the [Thread Group](https://www.threadgroup.org/What-is-Thread/Certification)
+Thread is a low power 802.15.4 mesh based radio protocol designed for IP transport. There are a number of additional considerations when using Thread for a Matter device which are explained on the dedicated Thread page of this site.
+In order for a device that uses Thread to be Matter certified the manufacturer must first obtain Thread certification for the device from the [Thread Group](https://www.threadgroup.org/What-is-Thread/Certification).
 Where a device used Thread it must also use BLE for Discovery and Commissioning in order to provision the Thread network credentials to the device.
 
 ## Bluetooth
 
-Bluetooth Low Energy (BLE) Is used in Matter as part of the discovery and commissioning stage as a method for passing the credentials of the WiFi or Thread network that the device will use for operational communication. BLE is Required where a device uses Thread and optional for WiFi.
-BLE Cannot be used as the sole transport technology for a Matter Device.
+Bluetooth Low Energy (BLE) is used in Matter as part of the discovery and commissioning stage as a method for passing the credentials of the Wi-Fi or Thread network that the device will use for operational communication. BLE is required where a device uses Thread and optional for Wi-Fi.
+BLE cannot be used as the sole transport technology for a Matter Device.
