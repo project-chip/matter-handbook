@@ -17,7 +17,7 @@ The MPSG are responsible for capturing use cases, identifying functional/non-fun
 They also develop branding, positioning and external communications materials relating to Matter.
 
 ### Technical Sub Group
-The TSG develops the technical aspects of the Matter from the requirements given to them and takes this through specification release.
+The Technical Sub Group (TSG) develops the technical aspects of the Matter from the requirements given to them and takes this through specification release.
 The Matter TSG also has an active Software Development Tiger Team who maintain and develop the open source Matter SDK.
 
 ### Certification Sub Group
