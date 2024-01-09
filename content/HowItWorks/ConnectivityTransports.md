@@ -28,7 +28,7 @@ The use of Soft-AP mode for Wi-Fi commissioning mode while part of the specifica
 ## Thread
 
 Thread is a low power 802.15.4 mesh-based radio protocol designed for IP transport. There are a number of additional considerations when using Thread for a Matter device which are explained on the dedicated Thread page of this site.
-In order for a device that uses Thread to be Matter certified the manufacturer must first obtain Thread certification for the device from the [Thread Group](https://www.threadgroup.org/What-is-Thread/Certification).
+In order for a device that uses Thread to be Matter certified, the manufacturer must first obtain Thread certification for the device from the [Thread Group](https://www.threadgroup.org/What-is-Thread/Certification).
 Where a device used Thread it must also use BLE for Discovery and Commissioning in order to provision the Thread network credentials to the device.
 
 ## Bluetooth
