@@ -4,7 +4,7 @@ chapter = false
 weight = 44
 +++
 
-Commissioning in Matter refers to the process of assigning Fabric credentials to a new device. The Commissioner is the device that does the Commissioning process. The Commissionee is the new device that needs to be provisioned into the Fabric.
+Commissioning in Matter refers to the process of assigning Fabric credentials to a new device or app. The Commissioner is the device or app that does the Commissioning process. The Commissionee is the new device or app that needs to be provisioned into the Fabric.
 
 At a high-level, the commissioning flow can be broken down into multiple stages:
 

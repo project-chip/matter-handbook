@@ -71,7 +71,7 @@ A Dimmable Light is a lighting device that is capable of being switched on or of
 ### Color Temperature Light
 A Color Temperature Light is a lighting device that is capable of being switched on or off, the inten­ sity of its light adjusted, and its color temperature adjusted by means of a bound controller device such as a Color Dimmer Switch.
 
-### Extendded Color Light
+### Extended Color Light
 An Extended Color Light is a lighting device that is capable of being switched on or off, the intensity of its light adjusted, and its color adjusted by means of a bound controller device such as a Color Dimmer Switch or Control Bridge. The device supports adjustment of color by means of hue/satura­ tion, enhanced hue, color looping, XY coordinates, and color temperature. In addition, the extended color light is also capable of being switched by means of a bound occupancy sensor.
 
 ### On/Off Plug in Unit
@@ -179,7 +179,7 @@ For example, a Casting Video Player can be a smart TV device, a TV Set Top Box, 
 ### Speaker
 
 This feature controls the speaker volume of the device.
-To control unmute/mute, the On/Off cluster SHALL be used. A value of TRUE for the OnOff attribute SHALL represent the volume on (not muted) state, while a value of FALSE SHALL represent the vol­ ume off (muted) state. For volume level control, the Level cluster SHALL be used.
+To control unmute/mute, the On/Off cluster SHALL be used. A value of TRUE for the OnOff attribute SHALL represent the volume on (not muted) state, while a value of FALSE SHALL represent the vol­ume off (muted) state. For volume level control, the Level cluster SHALL be used.
 A dedicated endpoint is needed because the On/Off cluster can also be used for other purposes, such as for power control.
 
 ### Content App
