@@ -101,3 +101,11 @@ a:hover {
 #sidebar hr {
     border-color: var(--MENU-SECTION-HR-color);
 }
+
+#license_footer{
+    color: #ccc;
+    width:80%;
+    bottom:0px;
+    position: relative;
+    font-size: 0.9rem;
+}
