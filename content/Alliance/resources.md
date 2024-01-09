@@ -6,7 +6,7 @@ weight = 30
 
 ## Resources for Members
 
-If you are already a member of the Alliance the following links in Causeway 
+If you are already a member of the Alliance, here are some helpful links found in Causeway (you'll need to log in with your member credentials).
 
 ### New Member Orientation
 - [Slides](https://groups.csa-iot.org/wg/members-all/document/30359)
