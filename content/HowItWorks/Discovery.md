@@ -39,22 +39,6 @@ The Commissioner does not need to issue scan requests. It should do a passive sc
 
 BLE is not used for operational discovery.
 
-### Wi-Fi Soft AP
-When using Wi-Fi Soft AP, the Commissionee will be discovered through an ad-hoc soft access point (soft AP) network. The network's SSID (network name) is in the form MATTER-ddd-vvvv-pppp, where:
-
-ddd is the 12-bit discriminator in HEX.
-vvvv is the 16-bit Vendor ID in HEX.
-pppp is the 16-bit Product ID in HEX.
-Whenever the Commissioner connects to the Commissionee, both will configure unique IPv6 link-local addresses, enabling connection at the Wi-Fi layer. At this point the discovery continues as in the same case of the DNS-SD method covered in the next section.
-
-Moreover, a Wi-Fi Soft AP may implement DHCP for IPv4 and Information Element (IE) to expose Vendor-specific additional information. IE is a variable length field within the 802.11 (Wi-Fi) management frames that allows custom information to be carried to other systems.
-
-Wi-Fi channels 1, 6 and 11 should be favored during Commissioner scanning, but all channels allowed by local spectrum regulation must be scanned.
-
-Wi-Fi Soft AP is not used for operational discovery.
-
-Note: Wi-Fi Soft AP is not implemented in version 1.0 of the Matter SDK, so no devices are currently using this method of advertisement.
-
 
 ### DNS-SD
 
