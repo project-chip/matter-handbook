@@ -10,7 +10,7 @@ Commissionable discovery happens before Commissioning and refers to the process 
 
 - Bluetooth low energy (BLE)
 - Wi-Fi Soft AP
-- DNS-SD on an IP network, also known as an existing IP-bearing network
+- DNS-SD on an any IP network the Node is connected to
 
 In either method, the commissionable node advertises information as shown in the table below.
 
