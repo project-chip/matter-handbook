@@ -9,7 +9,7 @@ Devices in Matter have a well-defined data model (DM), which is a hierarchical m
 
 ## Devices and Endpoints
 
-All Devices, including smartphones and home assistants, are composed of Nodes1. A Node is a unique identifiable and addressable resource in a network that a user can perceive as functionally whole. Network communication in Matter originates and terminates at a Node.
+All Devices, including smartphones and home assistants, are composed of Nodes. A Node is a unique identifiable and addressable resource in a network that a user can perceive as functionally whole. Network communication in Matter originates and terminates at a Node.
 
 Nodes are a collection of Endpoints. Each Endpoint encloses a feature set. For instance, an Endpoint might relate to a lighting functionality, while another relates to motion detection, and another deals with utilities such as Device OTA.
 
