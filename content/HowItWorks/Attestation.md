@@ -6,11 +6,14 @@ weight = 45
 
 Certified Devices are Devices that have gone through the Connectivity Standards Alliance (Alliance) Matter Certification Process.
 
-During the commissioning process, a Certified Device needs to attest itself. In other words, it needs to prove that it is what it claims it is and that it is a genuine product. Thus all Matter Devices have credentials which encompass the Attestation key pair and an associated certificate chain. The Device Attestation Certificate (DAC) is part of this chain. Once the Device under commissioning presents the DAC to its Commissioner, the latter will certify that:
+During the commissioning process, a device cryptographically proves (attests) to the commissioner that:
+- it is a genuine product
+- it is a product that passed Matter compliance tests and has been thus certified by CSA.
 
-- it was made by a certified manufacturer.
-- it is a genuine device.
-- it has passed Matter compliance tests.
+In order to accomplish those goals, the device carries:
+- A Device Attestation Certificate (DAC) that conveys device's manufacturer ID (VID) and product ID (PID). The DAC chains up to a set of trusted roots, approved by CSA members.
+- A securely-stored, private key associated with the public key stored in the DAC that proves the device owns this unique certificate.
+- Certificate declaration is a statement cryptographically signed by CSA that states that a tuple (VID,PID) has passed Matter compliance tests.
 
 During the development phase, the manufacturer is able test their Devices without the full Attestation process. Testers should be explicitly informed that the Device is under testing, and it hasn't yet been certified and launched. Once a manufacturer enters a production phase, the ecosystem of the provisioner should enforce all Attestation requirements.
 
