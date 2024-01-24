@@ -9,7 +9,6 @@ weight = 41
 Commissionable discovery happens before Commissioning and refers to the process of discovering and identifying a commissionable Node. There are three methods through which a commissionable Node may advertise itself:
 
 - Bluetooth low energy (BLE)
-- Wi-Fi Soft AP
 - DNS-SD on an any IP network the Node is connected to
 
 In either method, the commissionable node advertises information as shown in the table below.
