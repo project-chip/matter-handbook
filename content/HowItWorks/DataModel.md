@@ -102,4 +102,6 @@ The `PartsList` of other Endpoints will usually be empty. For example, a Tempera
 
 Other device types might be composed in a tree structure of more than one Device Type instance. For example, a Video Player Device type can be composed of TV, Video Player, Speaker and different Content App Device Types, each on a different Endpoint.
 
+[^1]: The Matter specification determines that a Device may have multiple Nodes. For example, smartphones may have multiple apps, each app being a different Node. For the purposes of this primer, all Devices will contain a single Node. It's expected that most physical devices will follow this pattern. 
+
 _This content was originally published on the [Google Developer Site](https://developers.home.google.com/matter/primer)_
