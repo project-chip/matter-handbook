@@ -11,7 +11,6 @@ This protocol may operate in the absence of globally routable IPv6 infrastructur
 This protocol supports local communications spanning one or more IPv6 subnets. Canonical net­works supporting a fabric may include a Wi-Fi/Ethernet subnet, or one or more low power and lossy networks (LLN) subnets. In this version of the specification, Thread is the supported LLN standard.
 Matter uses IPv6 for its operational communications, and leverages both IPv6 Unicast and Multicast addressing for accessing its Nodes and Groups, respectively.
 
-
 ## Ethernet
 
 This is the simplest transport for Matter, as there is no need to communicate any network credentials to the device; it is simply connected to the Ethernet network.
