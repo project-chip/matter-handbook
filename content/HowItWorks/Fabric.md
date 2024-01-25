@@ -6,7 +6,7 @@ weight = 43
 
 The Matter spec uses sophisticated methods for encrypting and decrypting information, as well as safe mechanisms for assuring a Node's identity and sharing cryptographic credentials.
 
-Whenever a set of Devices in a network shares the same security domain, and thus allows secure communication between Nodes, this set is called a Fabric. Fabrics share the same Certificate Authority (CA) top-level certificate (Root of Trust) and within the context of the CA, a unique 64-bit identifier named Fabric ID.
+Whenever a set of Devices in a network shares the same security domain, and thus allows secure communication between Nodes, this set is called a Fabric. Devices within a fabric share the same Certificate Authority (CA) top-level certificate (Root of Trust) and  a 64-bit identifier named Fabric ID, unique within the context of that CA.
 
 Thus the commissioning process is the assignment of the Fabric credentials to a new Node so it may communicate with other Nodes in the same Fabric.
 
