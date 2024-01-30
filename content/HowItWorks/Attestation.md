@@ -103,7 +103,7 @@ Message containing the Attestation Elements and Attestation Challenge.
 Signature of the Attestation TBS, signed using the Device Attestation Private Key.
 
 ## Attestation Procedure
-The Commissioner is responsible for attesting the Commissionee. It executes the following steps:
+The Commissioner is responsible for validating attestation information from the Commissionee. It executes the following steps:
 
 1. Commissioner generates a random 32 byte attestation nonce. In cryptography jargon, a nonce (number used once) is a random number generated in the cryptographic procedure and meant to be used once.
 2. Commissioner sends the nonce to the Commissionee and requests the Attestation Information.
