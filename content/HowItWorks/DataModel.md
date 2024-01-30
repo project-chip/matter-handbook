@@ -20,7 +20,7 @@ Nodes are a collection of Endpoints. Each Endpoint encloses a feature set. For i
 A Node role is a set of related behaviors. Each Node may have one or more roles. Node roles include:
 
 - Commissioner: A Node that performs Commissioning.
-- Controller: A Node that can control one or more Nodes. Examples include the Google Home app (GHA), Google Assistant, and the Google Nest Hub (2nd gen). Some device types, such as the On/Off Light Switch, have the Controller role.
+- Controller: A Node that can control one or more Nodes. Examples include a phone app used for device setup, the Hub associated with the setup app which might be embedded in a Router, Smart Speaker, TV or Smart Panel. Some device types, such as the On/Off Light Switch, have the Controller role.
 - Controlee: A Node that can be controlled by one or more Nodes. Most device types can be a - - Controlee, except for some device types which have the Controller role, such as the On/Off Light Switch. The On/Off Light Switch can only be a Controller. It cannot be a Controlee.
 - OTA Provider: A Node that can provide OTA software updates.
 - OTA Requestor: A Node that can request OTA software updates.
