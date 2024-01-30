@@ -6,7 +6,7 @@ weight = 41
 
 ## Commissionable discovery
 
-Commissionable discovery happens before Commissioning and refers to the process of discovering and identifying a commissionable Node. There are three methods through which a commissionable Node may advertise itself:
+Commissionable discovery happens before Commissioning and refers to the process of discovering and identifying a commissionable Node. There are two methods through which a commissionable Node may advertise itself:
 
 - Bluetooth low energy (BLE)
 - DNS-SD on an any IP network the Node is connected to
