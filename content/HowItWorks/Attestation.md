@@ -106,7 +106,7 @@ Signature of the Attestation TBS, signed using the Device Attestation Private Ke
 The Commissioner is responsible for attesting the Commissionee. It executes the following steps:
 
 1. Commissioner generates a random 32 byte attestation nonce. In cryptography jargon, a nonce (number used once) is a random number generated in the cryptographic procedure and meant to be used once.
-2. Commissioner sends the nonce to the DUT and requests the Attestation Information.
+2. Commissioner sends the nonce to the Commissionee and requests the Attestation Information.
 3. DUT generates the Attestation Information and signs it with the Attestation Private Key.
 4. Commissioner recovers the DAC and PAI certificate from the Device, and looks up the PAA certificate from its Matter trust store.
 5. Commissioner validates the Attestation Information. These are the conditions for validation:
