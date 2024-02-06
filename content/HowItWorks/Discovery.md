@@ -58,4 +58,13 @@ Operational discovery is the process of discovering and identifying a commission
 
 The DNS-SD service type is `_matter._tcp.` Although `_tcp` naming is used, the device might use other transports such as UDP.
 
+## Commissioner discovery
+Commissioner discovery is the process used by Commissionee's to discover Commissioners on the network. Commissioner discovery only happens through the IP-based DNS-SD method. 
+
+With Commissioner Discovery, a Commissionee, upon user interaction, can discover Commissioners on the network and obtain a list of information for each which may include Vendor ID, Product ID and friendly name. A Commissionee with a user interface, such as a Television, Thermostat or Video Player device, can then display the list of discovered commissioners to the user for selection. Once selected, the Commissionee can use the User Directed Commissioning protocol with the Commissioner to indicate that the user has selected it for commissioning of the Commissionee. The Commissioner Discovery service records thus enable a form of "door bell" protocol to allow a Commissionee to request Commissioning.
+
+The DNS-SD instance name for commissioner discovery is _matterd._udp and the host names are built by either a 48-bit MAC address or a 64-bit MAC Extended Address, expressed as a hex string such as A5F15790B0D15F32.local. similar to commissionable node discovery.
+
+After discovery, IPv6 addresses are returned in the AAAA records and key/value pairs are returned in the DNS‑SD TXT record. The key/value pair contains information such as the Discriminator, Vendor ID, and Product ID. The node also advertises commissioning subtypes, which enables filtering of results to find only Commissioners that match a particular attribute.
+
 _This content was originally published on the [Google Developer Site](https://developers.home.google.com/matter/primer)_
