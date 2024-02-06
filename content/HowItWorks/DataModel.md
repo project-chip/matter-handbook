@@ -37,7 +37,7 @@ At the last level we'll find Attributes, which are states held by the node, such
 ![Nodes, Endpoints, Attributes and Commands](../..//primer-node-endpoint-attribute.png)
 
 ### Commands
-Besides Attributes, Clusters also have Commands, which are actions that may be performed. They are the equivalent in Matter's DM of a remote procedure call. Commands are verb-like, such as lock door on a Door Lock cluster. Commands may generate responses and results; in Matter, such responses are also defined as Commands, going in the reverse direction.
+Besides Attributes, Clusters also have Commands, which are actions that may be performed. They are the equivalent in Matter's data model of a remote procedure call. Commands are verb-like, such as lock door on a Door Lock cluster. Commands may generate responses and results; in Matter, such responses are also defined as Commands, going in the reverse direction.
 
 ### Events
 Lastly, Clusters may also have Events, which can be thought of as a record of past state transitions. While Attributes represent the current states, events are a journal of the past, and include a monotonically increasing counter, a timestamp and a priority. They enable capturing state transitions, as well as data modeling that is not readily achieved with attributes.
