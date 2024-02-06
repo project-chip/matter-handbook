@@ -65,7 +65,7 @@ The attestation process has several documents and messages. The following items 
 ![Attestation Document Hierarchy](../../primer-attestation-document-hierarchy.png)
 
 ### Certification Declaration (CD)
-The CD allows the Matter device to prove its compliance with the Matter protocol. Whenever the Matter Certification Processes finishes, the Alliance creates a CD for the device type so the Vendor might include it in the firmware. The CD includes among other information:
+The CD allows the Matter product to prove its compliance with the Matter protocol. When a product has been certified by the CSA, the product maker can request a CD from the Alliance which can then be included in the product firmware. The CD includes among other information:
 - VID
 - PID (one or more)
 - Server Category ID
