@@ -24,7 +24,7 @@ Several Actions are supported on Transactions, such as a Read Request Action tha
 The Node that initiates a Transaction is the Initiator, while the Node that responds is the Target. Typically the Initiator is a Client Cluster and the Target is a Server Cluster. However, there are exceptions to this pattern, such as in the Subscription Interactions analyzed further down in this section.
 
 ### Groups
-Nodes in Matter may belong to a Group. A Group of Devices is a mechanism for addressing and sending messages to several Devices in the same Action simultaneously. All Nodes in a Group share the same Group ID, a 16-bit integer.
+Nodes and Endpoints in Matter may belong to a Group. A Group is a mechanism for addressing and sending messages to several Nodes in the same Action simultaneously. All Nodes in a Group share the same Group ID, a 16-bit integer.
 
 To accomplish group-level communication (Groupcast), Matter leverages IPv6 Multicast messages, and all Group members have the same Multicast address.
 
