@@ -37,7 +37,7 @@ Ninja is the component which builds the device image.
 The platform layer contains device specific delegate implementations for most of the common architectures on which Matter is deployed.
 
 ### Abstraction Layers
-The SDK contains absctraction layters for Python, Java and Kotlin controllers.
+The SDK contains absctraction layers for Python, Java and Kotlin controllers.
 
 
 The SDK is publically avalible on [GitHub](https://github.com/project-chip/connectedhomeip)
