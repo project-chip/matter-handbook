@@ -429,20 +429,24 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #chapter h3 {
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 300;
-    text-align: center;
 }
 #chapter h1 {
     font-size: 5rem;
     border-bottom: 4px solid #F0F2F4;
 }
 #chapter p {
-    text-align: center;
     font-size: 1.2rem;
 }
 #footer {
-    padding: 3rem 1rem;
     color: #b3b3b3;
-    font-size: 13px;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0px;
+    width: 300px;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
 }
 #footer p {
     margin: 0;
@@ -462,7 +466,6 @@ h2, h3, h4, h5, h6 {
 }
 h1 {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    text-align: center;
     text-transform: uppercase;
     color: #222;
     font-weight: 200;
