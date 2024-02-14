@@ -41,7 +41,7 @@ A Path in Matter can be assembled using one of the options below:
 
 And within these Path building blocks, `endpoint` and `cluster` may also include Wildcards Operators for selecting more than one Node instance.
 
-### Timed and Untimed
+### Timed and Untimed
 
 There are two ways of performing a Write or Invoke Transaction: Timed and Untimed. Timed Transactions establish a maximum timeout for the Write/Invoke Action to be sent. The purpose of this timeout is to prevent an Intercept Attack on the Transaction. It is especially valid for Devices that gate access to assets, such as garage openers and locks.
 
