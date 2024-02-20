@@ -11,6 +11,9 @@ on:
 
 concurrency: preview-${{ github.ref }}
 
+permissions:
+  contents: write
+
 defaults:
   run:
     shell: bash
