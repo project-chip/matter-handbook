@@ -50,5 +50,5 @@ of information
 Data shared between Matter nodes is strictly for a defined purpose, namely, for the specific operations
 of devices as required by the Matter protocol
 
-### Privacy preserving mechanisms
+### Privacy preserving mechanisms
 Encryption to ensure that messages or identities of communicating parties are not in cleartext on the network

@@ -31,7 +31,7 @@ Within an Endpoint a Node has one or more Clusters. These are another step in th
 
 A Node may also have several Endpoints, each creating an instance of the same functionality. For example, a light fixture may expose independent control of individual lights or a power strip may expose control of individual sockets.
 
-### Attributes
+### Attributes
 At the last level we'll find Attributes, which are states held by the node, such as the current level attribute of a level control cluster. Attributes may be defined as different data types such as uint8, strings or arrays.
 
 ![Nodes, Endpoints, Attributes and Commands](../..//primer-node-endpoint-attribute.png)
@@ -39,7 +39,7 @@ At the last level we'll find Attributes, which are states held by the node, such
 ### Commands
 Besides Attributes, Clusters also have Commands, which are actions that may be performed. They are the equivalent in Matter's data model of a remote procedure call. Commands are verb-like, such as lock door on a Door Lock cluster. Commands may generate responses and results; in Matter, such responses are also defined as Commands, going in the reverse direction.
 
-### Events
+### Events
 Lastly, Clusters may also have Events, which can be thought of as a record of past state transitions. While Attributes represent the current states, events are a journal of the past, and include a monotonically increasing counter, a timestamp and a priority. They enable capturing state transitions, as well as data modeling that is not readily achieved with attributes.
 
 ![A sample of the hierarchy of Matter Devices interaction model](../../primer-device-type.png)
