@@ -16,7 +16,7 @@ The Matter Specification is updated twice a year in Spring and Fall.
 
 The specification is made up of a number of documents:
 
-- The Core Specification defines the components and how they interact along with a number of common procdedures.
+- The Core Specification defines the components and how they interact along with a number of common procedures.
 - The Application Cluster Specification details the data models used by each cluster that makes up an endpoint.
 - The Device Library Specification sets out the types of End User device in Matter and which Application Clusters make up that device.
 - The Namespace Specification (introduced in 1.2) details common data formats and structures used across multiple clusters.
