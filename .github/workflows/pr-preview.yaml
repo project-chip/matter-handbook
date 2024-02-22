@@ -11,6 +11,9 @@ on:
 
 concurrency: preview-${{ github.ref }}
 
+permissions:
+  contents: write
+
 defaults:
   run:
     shell: bash
@@ -52,7 +55,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
-
       - name: Deploy preview
         - uses: jakejarvis/s3-sync-action@master
       with:
