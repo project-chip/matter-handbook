@@ -5,6 +5,7 @@ weight = 60
 +++
 
 ## Low Power
+
 Some Matter Nodes are wired and have energy budgets that allow them to keep their radios continuously on. Other types of Nodes such as sensors have requirements to run for years on a battery, operating their radios on low-power networks such as Thread. The proxy architecture, along with Thread Sleepy End Devices, allows full-powered Nodes to provide both network-level and application-level functionality that insulates their child Nodes from energy-intensive transactions.
 
 A fundamental aspect of Matter is that it works both on high-throughput network mediums such as Wi-Fi and Ethernet, but also on low-latency, low-bandwidth, such as Thread. If all Multicast packets from Wi-Fi were bridged into Thread, we'd overburden the network, and potentially flood it. Thread's goal is to enable IPv6 in low-power, low-latency mesh networking, not high-bandwidth data transfer. While Thread's ICMPv6 pings in a local network are typically under few tens of milliseconds RTT, its total bandwidth is limited to 250 kbps at the IEEE 802.15.4 PHY. With packet retransmissions and overhead, the typical max bandwidth is around 125 kbps. In other words, orders of magnitude less than Wi-Fi.
@@ -14,6 +15,7 @@ Frames on the IEEE 802.15.4 PHY are 127 bytes, but the largest (and typical) max
 To learn more, refer to IPv6 Addressing in the [Thread Primer on openthread.io](https://openthread.io/guides/thread-primer).
 
 ## Border Routers
+
 So how can Nodes coexist on both transport mediums while in the same fabric? Although both networks share application-level Matter credentials, they don't share the same link technology. In this scenario, the network needs a Thread Border Router (BR) to enable connectivity. BRs are Stub IPv6 Routers.
 
 Stub Routers enable connectivity between stub networks and regular networks. A Stub Network is a "last-mile" network that provides outer connectivity to its members, but doesn't serve as a transit network path between other networks. Typically, Matter Stub Networks are Thread-based. Refer to RFC draft for further information on stub networks.
@@ -30,6 +32,7 @@ Border Routers are also responsible for:
 To learn more, refer to the [Border Router guide on openthread.io](https://openthread.io/guides/border-router).
 
 ## IPv6 Multicast
+
 Group messages are also important as they allow simultaneous control of several Matter Nodes through Multicast. In order to route this traffic into the Thread network, both Matter and Thread implement the Unicast Prefix-based IPv6 Multicast Addressing Scheme defined by RFC 3306.
 
 This method allows the selection of the destination Nodes of a Multicast packet based on their shared IPv6 Unicast prefix.
@@ -49,9 +52,6 @@ This Table details how this address is constructed:
 |8 bits|0x00|
 |16 bits|Group ID|
 
-
 More information can be found in the [Multicast](https://openthread.io/guides/thread-primer/ipv6-addressing) section of the Thread Primer and on the RFC itself.
 
 When IPv6 Multicast Addresses are formed, they also include the upper 56-bits of the Fabric ID. The important implication is that the scope of Multicast is within a Fabric, while Unicast addresses are shared between Fabrics. Nodes with many fabrics can potentially have several Multicast addresses defining overlapping Node Groups scoped at each fabric.
-
-
