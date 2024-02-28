@@ -50,7 +50,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/pr-preview/pr-${{ github.event.number }}"          
+            --baseURL "/pr-${{ github.event.number }}"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
