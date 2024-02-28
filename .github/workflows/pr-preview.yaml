@@ -24,6 +24,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4
+      AWS_S3_BUCKET: handbook-previews2
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      SOURCE_DIR: './public'      
+      DEST_DIR: 'pr-${{ github.event.number }}'
     steps:
       - name: Install Hugo CLI
         run: |
@@ -58,10 +63,4 @@ jobs:
       - name: Deploy preview
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: handbook-previews2
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: './public'      
-          DEST_DIR: 'pr-${{ github.event.number }}'
+          args: --acl public-read --follow-symlinks --delete          
