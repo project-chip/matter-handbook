@@ -13,6 +13,7 @@ concurrency: preview-${{ github.ref }}
 
 permissions:
   contents: write
+  pull-requests: write
 
 defaults:
   run:
@@ -24,11 +25,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4
-      AWS_S3_BUCKET: handbook-previews2
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      SOURCE_DIR: './public'      
-      DEST_DIR: 'pr-${{ github.event.number }}'
     steps:
       - name: Install Hugo CLI
         run: |
@@ -55,7 +51,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/pr-preview/pr-${{ github.event.number }}"          
+            --baseURL "/pr-${{ github.event.number }}"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -63,4 +59,15 @@ jobs:
       - name: Deploy preview
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --follow-symlinks --delete          
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: './public'      
+          DEST_DIR: 'pr-${{ github.event.number }}'
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Preview deployed at ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }}
