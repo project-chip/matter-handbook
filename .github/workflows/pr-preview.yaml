@@ -13,6 +13,7 @@ concurrency: preview-${{ github.ref }}
 
 permissions:
   contents: write
+  pull-requests: write
 
 defaults:
   run:
