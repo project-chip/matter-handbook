@@ -31,7 +31,7 @@ jobs:
   # Build job
   build:
     # Only Run on Prod
-    if: github.repository == 'project-chip/matter-handbook-production'  
+    if: github.repository == 'project-chip/matter-handbook'  
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4
