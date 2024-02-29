@@ -65,3 +65,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           SOURCE_DIR: './public'      
           DEST_DIR: 'pr-${{ github.event.number }}'
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Preview deployed at ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }}
