@@ -13,7 +13,7 @@ All Devices, including smartphones and home assistants, are composed of Nodes. A
 
 Nodes are a collection of Endpoints. Each Endpoint encloses a feature set. For instance, an Endpoint might relate to a lighting functionality, while another relates to motion detection, and another deals with utilities such as Device OTA.
 
-![Devices Nodes and Endpoints](/primer-device-node.png)
+![Devices Nodes and Endpoints](../../primer-device-node.png)
 
 ## Node Roles
 
@@ -34,7 +34,7 @@ A Node may also have several Endpoints, each creating an instance of the same fu
 ### Attributes
 At the last level we'll find Attributes, which are states held by the node, such as the current level attribute of a level control cluster. Attributes may be defined as different data types such as uint8, strings or arrays.
 
-![Nodes, Endpoints, Attributes and Commands](../..//primer-node-endpoint-attribute.png)
+![Nodes, Endpoints, Attributes and Commands](../../primer-node-endpoint-attribute.png)
 
 ### Commands
 Besides Attributes, Clusters also have Commands, which are actions that may be performed. They are the equivalent in Matter's data model of a remote procedure call. Commands are verb-like, such as lock door on a Door Lock cluster. Commands may generate responses and results; in Matter, such responses are also defined as Commands, going in the reverse direction.
