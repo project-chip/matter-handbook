@@ -9,6 +9,7 @@ weight = 20
 Work with the world’s most innovative companies to create, evolve, and promote universal open standards that connect all IoT devices – regardless of country, network, brand, or function – for a unifying wireless experience that inspires new possibilities for people everywhere.
 
 ### Membership at a Glance
+
 Curious about which level is right for your company? Below is an overview of the four types of membership available:
 
 **Associate Members** use standards-based IoT products but do not directly build or manufacture them. To join at the Associate level and certify white-label products, a company must partner with an Alliance Participant or Promoter member through our Certification Transfer Program.

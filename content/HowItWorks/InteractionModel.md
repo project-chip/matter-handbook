@@ -12,7 +12,7 @@ Nodes interact with each other by:
 
 - Reading and Subscribing to Attributes and Events
 - Writing to Attributes
-- Invoking Commands
+- Invoking Commands.
 
 Whenever a Node establishes an encrypted communication sequence with another Node, they constitute an Interaction relationship. Interactions may be composed of one or more Transactions, and Transactions are composed of one or more of Actions which can be understood as IM-level messages between Nodes.
 
@@ -21,14 +21,17 @@ Whenever a Node establishes an encrypted communication sequence with another Nod
 Several Actions are supported on Transactions, such as a Read Request Action that requests an Attribute or Event from another Node, or its response, the Report Data Action, which carries the information back from the server to the client.
 
 ### Initiators and Targets
+
 The Node that initiates a Transaction is the Initiator, while the Node that responds is the Target. Typically the Initiator is a Client Cluster and the Target is a Server Cluster. However, there are exceptions to this pattern, such as in the Subscription Interactions analyzed further down in this section.
 
 ### Groups
+
 Nodes and Endpoints in Matter may belong to a Group. A Group is a mechanism for addressing and sending messages to several Nodes in the same Action simultaneously. All Nodes in a Group share the same Group ID, a 16-bit integer.
 
 To accomplish group-level communication (Groupcast), Matter leverages IPv6 Multicast messages, and all Group members have the same Multicast address.
 
 ### Paths
+
 Whenever we want to interact with an Attribute, Event, or Command, we must specify the Path for this interaction: the location of an Attribute, Event or Command in the Data Model hierarchy of a Node. The caveat is that paths may also use Groups or Wildcard Operators to address several Nodes or Clusters simultaneously, aggregating these Interactions and thus decreasing the number of actions.
 
 This mechanism is important to enhance the responsiveness of communications. For example, when a user wants to shut down all lights, a voice assistant can establish a single interaction with several lights within a Group instead of a sequence of individual Interactions. If the Initiator creates individual Interactions with each light, it can generate human-perceptible latency in Device responsiveness. This effect causes the multiple Devices to react to a command with visible delays between them. This is often referred to as "popcorn effect".
@@ -47,16 +50,18 @@ There are two ways of performing a Write or Invoke Transaction: Timed and Untime
 
 To understand Timed Transactions it's useful to understand how Intercept Attacks can happen and why Timed Transactions are important.
 
-The Intercept Attack
+#### The Intercept Attack
+
 An Intercept Attack has the following pattern:
 
-Alice sends Bob an initial message, such as a Write Request Action.
-Eve, a man-in-the-middle, intercepts the message and prevents Bob from receiving it, for example through some type of radio jamming.
-Alice, not receiving a response from Bob, sends a second message.
+- Alice sends Bob an initial message, such as a Write Request Action.
+- Eve, a man-in-the-middle, intercepts the message and prevents Bob from receiving it, for example through some type of radio jamming.
+- Alice, not receiving a response from Bob, sends a second message.
 Eve intercepts again and prevents Bob from receiving it.
-Eve sends the first intercepted message to Bob, as if it were coming from Alice.
-Bob sends the response to Alice (and Eve).
-Eve holds the second intercepted message for a later replay. Since Bob never received the original second intercepted message from Alice, it will accept it. This message represent a security breach when the message encodes a command such as "open lock".
+- Eve sends the first intercepted message to Bob, as if it were coming from Alice.
+- Bob sends the response to Alice (and Eve).
+- Eve holds the second intercepted message for a later replay. Since Bob never received the original second intercepted message from Alice, it will accept it. This message represent a security breach when the message encodes a command such as "open lock".
+
 To prevent these types of attacks, Timed Actions set a maximum Transaction timeout at the start of the Transaction. Even if Eve manages to execute the first six steps of the attack vector, it will not be able to replay the message on step 7 due to an expired timeout on the Transaction.
 
 Timed Transactions increase the complexity and number of Actions. Thus they are not recommended for every Transaction, but only the critical operations on Devices that have control over physical or virtual security and privacy assets.
@@ -70,6 +75,7 @@ The developer creating a product that uses the Matter SDK typically does not per
 ## Read Transactions
 
 ### Read Transaction
+
 One of the first use cases when interacting with Nodes in Matter is the reading of an Attribute from another Node, such as a temperature value from a sensor. In such Interactions, the first Action that must be performed is the Read Request Action.
 
 ### Read Request Action
@@ -87,6 +93,7 @@ After the Read Request Action is received by the Target it will assemble a Repor
 After the Read Request Action is received by the Target it will assemble a Report Data Action with the requested information.
 
 ### Report Data Action
+
 Direction: Target -> Initiator
 
 In this Action the Target responds with:
@@ -107,11 +114,13 @@ Once the Status Response Action is sent by the Initiator, or a Report Data Actio
 The Status Response Action simply contains a status field that will either acknowledge operation success or present a failure code.
 
 ### Read Restrictions
+
 The Read Request Action and Report Data Action are Unicast-only. Moreover, the Paths of these requests may not target a Group of Nodes.
 
 The Status Response Action is Unicast-only and can't be generated as a response to a groupcast.
 
 ## Subscription Transaction
+
 ### Subscribe Request Action
 
 Direction: Initiator -> Target
@@ -154,11 +163,13 @@ This is the last Action on the Subscription Transaction and concludes the proces
 - The Subscriber may terminate the Subscription Interaction by responding to a Report Data Action with an INACTIVE_SUBSCRIPTION status code.
 
 ## Write Transactions
+
 In the last section we discussed the reading interactions of Attributes and Events. In this section we'll discuss the writing of Attributes, which is the change of an Attribute value on a Cluster such as Level.
 
 ### Untimed Write Transaction
 
 #### Write Request Action
+
 Direction: Initiator -> Target
 
 Similar to the Read Request Action, in this Action the Initiator provides the Target with:
@@ -168,7 +179,9 @@ Similar to the Read Request Action, in this Action the Initiator provides the Ta
 - Suppress Response: a flag that indicates whether the Response Status Action should be suppressed.
 
 ![Untimed Write Transaction](../../primer-im-untimed-writing.png)
+
 #### Write Response Action
+
 Direction: Target -> Initiator
 
 After the Target receives the Write Request Action it will finalize the transaction with a Write Response Action that carries:
@@ -182,9 +195,11 @@ The Write Request Action may be a groupcast, but in this case the Suppress Respo
 To enable this behavior, the Path used in the Write Requests list may contain Groups and alternatively they may contain wildcards, but only on the Endpoint field.
 
 ### Timed Write Transaction
+
 Timed write transactions add a few steps to untimed write transactions.
 
 #### Timed request action
+
 Direction: Initiator -> Target
 
 A Initiator starts the Transaction sending this Action that contains:
@@ -194,21 +209,25 @@ A Initiator starts the Transaction sending this Action that contains:
 Once the Timed Request Action is received, the Target must acknowledge the Timed Request Action with a Status Response Action. Once the Initiator receives a Status Response Action reporting no errors, it will send a Write Request Action.
 
 #### Write Request Action
+
 Same as the previously described Write Request Action.
 
 #### Write Response Action
+
 Same as the previously described Write Response Action.
 
 #### Timed Write Restrictions
+
 The Timed Request Action, the Write Request Action and the Write Response Action are unicast-only.
 
 ## Invoke Transactions
+
 Invoke Transactions are used for invoking one or more Cluster Commands on a Target Node. It is similar to remote procedures calls made to a command defined in the Cluster.
 
 In a similar way of Write Transactions, Invoke Transactions support Timed and Untimed Transactions. Please refer to the Timed and Untimed Actions section for further information on Timed Transactions.
 
-
 ### Untimed Invoke Transaction
+
 #### Invoke Request Action
 
 Direction: Initiator -> Target
@@ -231,16 +250,18 @@ After the Target receives the Invoke Request Action it will finalize the transac
 - Invoke Responses: a list of command responses or status for every invoke request sent.
 - Interaction ID: a integer used for matching the Invoke Response Action to the Invoke Request Action.
 
- #### Untimed Invoke Restrictions
+#### Untimed Invoke Restrictions
 
 The Invoke Request Action may be a groupcast, but in this case the Suppress Response flag must be set. The rationale is that otherwise the network might be flooded by simultaneous responses from every member of a group.
 
 To enable this behavior the Path used in the Invoke Requests list may contain Groups and alternatively they may contain wildcards, but only on the Endpoint field. Moreover, if the Action is groupcast, this transaction terminates with no response.
 
 ### Timed Invoke Transactions
+
 Similar to Timed Write Transactions, Timed Invoke Transactions also start with the Timed Request Action.
 
 #### Timed Request Action
+
 Direction: Initiator -> Target
 
 A Initiator starts the Transaction sending this Action that contains:
@@ -252,12 +273,15 @@ Once the Timed Request Action is received, the Target must acknowledge the Timed
 ![Timed Invoke Transaction](../../primer-im-timed-invoking.png)
 
 #### Invoke Request Action
+
 Same as the previously described Invoke Request Action.
 
 #### Invoke Response Action
+
 Same as the previously described Invoke Response Action
 
 #### Timed Invoke Restrictions
+
 All invoke commands may be called on a Timed Interaction. The Timed Request Action, the Invoke Request Action and the Invoke Response Action are Unicast-only and thus can't be used as groupcast on Timed Invoke Transactions.
 
 The Invoke Request Action supports the usage of paths with Groups, as well as wildcards, but the Invoke Response Action does not support wildcard usage.

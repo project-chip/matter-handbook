@@ -12,7 +12,7 @@ Thus the commissioning process is the assignment of the Fabric credentials to a 
 
 ## Operational credentials
 
-The Root of Trust is set on a Node under commissioning by the Commissioner, typically a device with some type of GUI, such as a smartphone, hub or computer, after receiving it from an Administrative Domain Manager (ADM), which will often be an ecosystem that acts as a Trusted Root Certificate Authority (CA).
+The Root of Trust is set on a Node under commissioning by the Commissioner, typically a device with some type of GUI, such as a smartphone, hub or computer, after receiving it from an Administrative Domain Manager (ADM), which will often be an ecosystem that acts as a Trusted Root CA.
 
 The Commissioner has access to the CA. Thus it requests the Node Operational Credentials from the CA on behalf of the node being commissioned or Commissionee. The credentials are made of two parts:
 
@@ -36,7 +36,6 @@ The Attestation procedure is a process used by the Commissioner to certify that:
 
 - The Device has gone through Matter certification.
 - The Device is indeed is what it claims to be: it cryptographically proves its Vendor, Product ID and other manufacturing information.
-
 
 ## Multi-Admin
 
