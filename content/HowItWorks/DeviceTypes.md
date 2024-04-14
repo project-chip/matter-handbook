@@ -8,24 +8,29 @@ In order to be certified a Matter device must conform to one of the approved dev
 
 As of Matter 1.3 the following types are certifiable.
 
-- Lighting
+- [Utility Device Types](#utility-device-types)
+  - [Root Node](#root-node)
+  - [Power Source](#power-source)
+  - [OTA Requestor](#ota-requestor)
+  - [OTA Provider](#ota-provider)
+  - [Bridged Node](#bridged-node)
+  - [Electrical Sensor](#electrical-sensor)
+  - [Device Energy Management](#device-energy-management)
+- [Application Device Types](#application-device-types)
   - [On/Off Light](#onoff-light)
   - [Dimmable Light](#dimmable-light)
   - [Color Temperature Light](#color-temperature-light)
   - [Extended Color Light](#extended-color-light)
-- Smart Plugs/Outlets and Other Actuators
   - [On/Off Plug in Unit](#onoff-plug-in-unit)
   - [Dimmable Plug in Unit](#dimmable-plug-in-unit)
   - [Pump](#pump)
-  - NEW in 1.3 [Water Valve](#water-valve)
-- Switches and Controls
+  - [Water Valve](#water-valve)
   - [On/Off Light Switch](#onoff-light-switch)
   - [Dimmer Switch](#dimmer-switch)
   - [Color Dimmer Switch](#color-dimmer-switch)
   - [Control Bridge](#control-bridge)
   - [Pump Controller](#pump-controller)
   - [Generic Switch](#generic-switch)
-- Sensors
   - [Contact Sensor](#contact-sensor)
   - [Light Sensor](#light-sensor)
   - [Occupancy Sensor](#occupancy-sensor)
@@ -35,43 +40,74 @@ As of Matter 1.3 the following types are certifiable.
   - [Humidity Sensor](#humidity-sensor)
   - [On/Off Sensor](#onoff-sensor)
   - [Smoke CO Alarm](#smoke-co-alarm)
-  - NEW in 1.3 [Water Freeze Detector](#water-freeze-detector)
-  - NEW in 1.3 [Water Leak Detector](#water-leak-detector)
-  - NEW in 1.3 [Rain Sensor](#rain-sensor)
-- Closures
+  - [Water Freeze Detector](#water-freeze-detector)
+  - [Water Leak Detector](#water-leak-detector)
+  - [Rain Sensor](#rain-sensor)
   - [Door Lock](#door-lock)
   - [Door Lock Controller](#door-lock-controller)
   - [Window Covering](#window-covering)
   - [Window Covering Controller](#window-covering-controller)
-- HVAC
   - [Heating/Cooling Unit](#heatingcooling-unit)
   - [Thermostat](#thermostat)
   - [Fan](#fan)
   - [Air Purifier](#air-purifier)
   - [Air Quality Sensor](#air-quality-sensor)
-- Media
   - [Basic Video Player](#basic-video-player)
   - [Casting Video Player](#casting-video-player)
   - [Speaker](#speaker)
   - [Content App](#content-app)
   - [Casting Video Client](#casting-video-client)
   - [Video Remote Control](#video-remote-control)
-- Robotic Devices
   - [Robotic Vacuum Cleaner](#robotic-vacuum-cleaner)
-- Appliances
   - [Refrigerator](#refrigerator)
   - [Temperature Controlled Cabinet](#temperature-controlled-cabinet)
   - [Room Air Conditioner](#room-air-conditioner)
   - [Laundry Washer](#laundry-washer)
   - [Dishwasher](#dishwasher)
-  - NEW in 1.3 [Laundry Dryer](#laundry-dryer)
-  - NEW in 1.3 [Cook Surface](#cook-surface)
-  - NEW in 1.3 [Cooktop](#cooktop)
-  - NEW in 1.3 [Oven](#oven)
-  - NEW in 1.3 [Extractor Hood](#extractor-hood)
-  - NEW in 1.3 [Microwave Oven](#microwave-oven)
-- Energy Devices
-  - NEW in 1.3 [EVSE](#evse) 
+  - [Laundry Dryer](#laundry-dryer)
+  - [Cook Surface](#cook-surface)
+  - [Cooktop](#cooktop)
+  - [Oven](#oven)
+  - [Extractor Hood](#extractor-hood)
+  - [Microwave Oven](#microwave-oven)
+  - [EVSE](#evse)
+
+## Utility Device Types
+
+Utility device types may be include in any device.
+
+### Root Node
+
+All devices must include a Root Node on Endpoint 0. This endpoint is akin to a "read me first" endpoint that describes itself and the other endpoints that make up the node.
+
+### Power Source
+
+This utility device type can be used on one or more endpoints to describe the configuration and capabilities of a physical power source that provides power to one or more endpoints on a node.
+
+### OTA Requestor
+
+An OTA Requestor is a device that is capable of receiving an OTA software update.
+
+### OTA Provider
+
+An OTA Provider is a node that is capable of providing an OTA software update to other nodes on the same fabric.
+
+### Bridged Node
+
+A Bridged Node root endpoint is akin to a "read me first" endpoint that describes itself and any other endpoints that make up the Bridged Node. A Bridged Node endpoint represents a device on a foreign network, but is not the root endpoint of the bridge itself.
+
+### Electrical Sensor
+
+An Electrical Sensor device measures the electrical power and/or energy passing through it. This device type can be added to any matter device so that its electrical power and energy consumption or production can be reported.
+
+### Device Energy Management
+
+A Device Energy Management device provides reporting and optionally adjustment of the electrical power planned on being consumed or produced by the device. 
+
+This allows it to be used to help energy management systems to optimize the energy use across multiple devices in the home (e.g. to match the local solar power being generated, or to provide assistance to the grid). 
+
+
+## Application Device Types
 
 ### On/Off Light
 
