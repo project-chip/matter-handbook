@@ -6,7 +6,7 @@ weight = 10
 
 In order to be certified a Matter device must conform to one of the approved device types.
 
-As of Matter 1.2 the following types are certifiable.
+As of Matter 1.3 the following types are certifiable.
 
 - Lighting
   - [On/Off Light](#onoff-light)
@@ -17,6 +17,7 @@ As of Matter 1.2 the following types are certifiable.
   - [On/Off Plug in Unit](#onoff-plug-in-unit)
   - [Dimmable Plug in Unit](#dimmable-plug-in-unit)
   - [Pump](#pump)
+  - NEW in 1.3 [Water Valve](#water-valve)
 - Switches and Controls
   - [On/Off Light Switch](#onoff-light-switch)
   - [Dimmer Switch](#dimmer-switch)
@@ -34,6 +35,9 @@ As of Matter 1.2 the following types are certifiable.
   - [Humidity Sensor](#humidity-sensor)
   - [On/Off Sensor](#onoff-sensor)
   - [Smoke CO Alarm](#smoke-co-alarm)
+  - NEW in 1.3 [Water Freeze Detector](#water-freeze-detector)
+  - NEW in 1.3 [Water Leak Detector](#water-leak-detector)
+  - NEW in 1.3 [Rain Sensor](#rain-sensor)
 - Closures
   - [Door Lock](#door-lock)
   - [Door Lock Controller](#door-lock-controller)
@@ -60,6 +64,14 @@ As of Matter 1.2 the following types are certifiable.
   - [Room Air Conditioner](#room-air-conditioner)
   - [Laundry Washer](#laundry-washer)
   - [Dishwasher](#dishwasher)
+  - NEW in 1.3 [Laundry Dryer](#laundry-dryer)
+  - NEW in 1.3 [Cook Surface](#cook-surface)
+  - NEW in 1.3 [Cooktop](#cooktop)
+  - NEW in 1.3 [Oven](#oven)
+  - NEW in 1.3 [Extractor Hood](#extractor-hood)
+  - NEW in 1.3 [Microwave Oven](#microwave-oven)
+- Energy Devices
+  - NEW in 1.3 [EVSE](#evse) 
 
 ### On/Off Light
 
@@ -88,6 +100,10 @@ A Dimmable Plug-In Unit is a device that is capable of being switched on or off 
 ### Pump
 
 A Pump device is a pump that may have variable speed. It may have optional built-in sensors and a regulation mechanism. It is typically used for pumping fluids like water.
+
+### Water Valve
+
+A Water Valve can be used to control the flow of water, including automatic closing after a specified duration, with optional features to support opening levels. It may optionally include flow measurement sensors.
 
 ### On/Off Light Switch
 
@@ -157,6 +173,18 @@ An On/Off Sensor is a measurement and sensing device that, when bound to a light
 A Smoke CO Alarm device is capable of sensing smoke, carbon monoxide or both. It is capable of issuing a visual and audible alert to indicate elevated concentration of smoke or carbon monoxide.
 Smoke CO Alarms are capable of monitoring themselves and issuing visual and audible alerts for hardware faults, critical low battery conditions, and end of service. Optionally, some of the audible alerts can be temporarily silenced. Smoke CO Alarms are capable of performing a self-test which performs a diagnostic of the primary sensor and issuing a cycle of the audible and visual life safety alarm indications.
 Some smoke alarms MAY be capable of adjusting sensitivity. Smoke CO Alarm MAY have the ability to detect and report humidity levels, temperature levels, and contamination levels.
+
+### Water Freeze Detector
+
+A Water Freeze Detector device is able to indicate the likelihood that water could potentially freeze in the current ambient conditions.
+
+### Water Leak Detector
+
+A Water Leak Detector device is able to indicate if a water leak is detected.
+
+### Rain Sensor
+
+A Rain Sensor device is able to indicate if rain is detected.
 
 ### Door Lock
 
@@ -247,3 +275,33 @@ A Laundry Washer represents a device that is capable of laundering consumer item
 ### Dishwasher
 
 A dishwasher is a device that is generally installed in residential homes and is capable of washing dishes, cutlery, and other items associate with food preparation and consumption. The device can be permanently installed or portable and can have variety of filling and draining methods.
+
+### Laundry Dryer
+
+A Laundry Dryer represents a device that is capable of drying laundry items.
+
+### Cook Surface
+
+A Cook Surface device type represents a heating object on a cooktop or other similar device. It SHALL only be used when composed as part of another device type.
+
+### Cooktop
+
+A cooktop is a cooking surface that heats food either by transferring currents from an electromagnetic field located below the glass surface directly to the magnetic induction cookware placed above or through traditional gas or electric burners.
+
+### Oven
+
+An oven represents a device that contains one or more cabinets, and optionally a single cooktop, that are all capable of heating food. Examples of consumer products implementing this device type include ovens, wall ovens, convection ovens, etc.
+
+### Extractor Hood
+
+An Extractor Hood is a device that is generally installed above a cooking surface in residential kitchens. An Extractor Hood’s primary purpose is to reduce odors that arise during the cooking process by either extracting the air above the cooking surface or by recirculating and filtering it. It may also contain a light for illuminating the cooking surface.
+
+### Microwave Oven
+
+ A Microwave Oven is a device with the primary function of heating foods and beverages using a magnetron. A Microwave Oven is a device which at a minimum is capable of being started and stopped and of setting a power level.
+
+
+### EVSE
+
+An EVSE (Electric Vehicle Supply Equipment) is a device that allows an EV (Electric Vehicle) to be connected to the mains electricity supply to allow it to be charged (or discharged in case of Vehicle to Grid / Vehicle to Home applications).
+
