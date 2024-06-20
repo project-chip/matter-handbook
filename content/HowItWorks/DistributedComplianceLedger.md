@@ -2,33 +2,31 @@
 
 ## Table of Contents
 - [DCL Introduction](#dcl-introduction)
-  - [Types of nodes that operate in the DCL](#types-of-accounts-that-can-interact-with-the-dcl)
+  - [Types of nodes that operate in the DCL](#types-of-nodes-that-operate-in-the-dcl)
   - [Types of account roles that can interact with the DCL](#types-of-account-roles-that-can-interact-with-the-dcl)
   - [Main-Net and Test-Net?](#main-net-and-test-net)
   - [Access and Interaction with the DCL](#access-and-interaction-with-the-dcl)
   - [Getting an account for writing to the DCL](#getting-an-account-for-writing-to-the-dcl)
+  - [Interacting with the DCL](#interacting-with-the-dcl)
+    - [Web User Interface](#web-user-interface)
+    - [Command Line Interface](#command-line-interface)
   - [Observer Nodes](#observer-nodes)
     - [Main-Net public ONs](#main-net-public-ons)
     - [Test-Net public ONs](#test-net-public-ons)
 - [FAQs](#faqs)
   - [Why is my Vendor information not listed in the DCL?](#why-is-my-vendor-information-not-listed-in-the-dcl)
-  - [How do I interact with the DCL?](#how-do-i-interact-with-the-dcl)
-    - [Web User Interface](#web-user-interface)
-    - [Command Line Interface](#command-line-interface)
   - [When should I write my product information to the Main-Net DCL?](#when-should-i-write-my-product-information-to-the-main-net-dcl)
 - [Contact](#contact)
 
 ## DCL Introduction
 The DCL is a blockchain-based system owned and hosted by Alliance members. It is used by the Matter protocol for storing information such as:
 
--   Vendor information: Information about the manufacturer or vendor of a device. Data is entered by an approved Vendor account.
-
--   Product information: Information about the device including description, software version, OTA information, etc. Data is entered by an approved Vendor account.
-
--   Compliance status: Information about the certification status including certification ID, certification date, etc. Data is entered by the Alliance's Certification team.
-
--   Product Attestation Authorities (PAA) Root CAs: Information about Root CAs used by commissioners during Device Attestation process. 
-    Data is proposed by the Alliance's Trustee and approved by other Trustees.
+| Information          | Description                                               | Account Role involved                                                                    |
+| -------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Vendor               | Information about the manufacturer or vendor of a device. | Data is entered by an approved Vendor account.                                             |
+| Product              | Information about the product device including description, software version, OTA information, etc. | Data is entered by an approved Vendor account.   |
+| Compliance status    | Information about the certification status including certification ID, certification date, etc. | Data is entered by the Alliance's Certification Center account.|
+| PAA Root CAs         | Information about Product Attestation Authorities (PAA) Root CAs used by commissioners during Device Attestation process. | Data is proposed by the Alliance's Trustee and approved by other DCL Trustees.|
 
 Additional information available in the [Distributed Compliance Ledger (DCL) Policies, Procedure and Governance](https://groups.csa-iot.org/wg/members-all/document/26075).
 
@@ -52,7 +50,7 @@ Additional information available in the [Distributed Compliance Ledger (DCL) Pol
 
 ### Main-Net and Test-Net
 
-| DCL Type             | Description                                                                                                                                                |
+| DCL Deployment       | Description                                                                                                                                                |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Main-Net             |  It is the DCL utilized by the public and is regarded as the production environment. Transactions on the Main-Net involve real products and data.          |
 | Test-Net             |  It is used for testing and development purposes. It provides a safe environment for experimentation and troubleshooting before deploying to the Main-Net. |
@@ -65,12 +63,12 @@ Additional information available in the [Distributed Compliance Ledger (DCL) Pol
 
 ### Getting an account for writing to the DCL
 
--   Enrollment for a Main-Net DCL account is managed through the "DCL Account(s)" section in the Certification Tool system (Knack). You can request access to the Certification Tool 
+-   Enrollment for Main-Net DCL accounts is managed through the "DCL Account(s)" section in the Certification Tool system (Knack). You can request access to the Certification Tool 
     by sending an email to <help@csa-iot.org>.
 
 > Note: The Certification Tool portal will depend on the Membership type.
 
--   Enrollment for a Test-Net DCL account can be requested by sending an email to <dcl-admin@csa-iot.org>
+-   Enrollment for Test-Net DCL accounts can be requested by sending an email to <dcl-admin@csa-iot.org>
 
 Review the following document for instructions: [HowTo - Writing to the DCL.pdf](https://groups.csa-iot.org/wg/members-all/document/27881)
 
@@ -119,7 +117,7 @@ broad accessibility and reliable interaction with the DCL from different locatio
 
 ### Why is my Vendor information not listed in the DCL?
 
-Each member add their own Vendor information using an approved Vendor account.
+Each member must add their own Vendor information using an approved Vendor account.
 
 Review the following document for instructions: [HowTo - Writing to the DCL.pdf](https://groups.csa-iot.org/wg/members-all/document/27881)
 
