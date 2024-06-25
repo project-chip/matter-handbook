@@ -105,6 +105,7 @@ broad accessibility and reliable interaction with the DCL from different locatio
 | ---------------- | ------------ | ---------------------------------- | --------------------------- | ------- | ------- | ------- |
 | The Alliance     | US, EU       | <https://webui.dcl.csa-iot.org>    | on.dcl.csa-iot.org          | 443     | 26657   | 8443    |
 | TrustAsia        | CN           | <https://main-net.trustasia.com>   | on.main-net.trustasia.com   | 443     | 26657   | 8443    |
+| Tuya             | CN           | N/A                                | on-dcl.tuyacn.com           | 1317    | 26657   | 9090    |
 
 #### Test-Net public ONs
 
@@ -112,6 +113,7 @@ broad accessibility and reliable interaction with the DCL from different locatio
 | ---------------- | ------------ | ---------------------------------- | --------------------------- | ------- | ------- | ------- |
 | The Alliance     | US, EU       | <https://testnet.iotledger.io>     | on.test-net.dcl.csa-iot.org |  443    | 26657   | 8443    |
 | TrustAsia        | CN           | <https://test-net.trustasia.com>   | on.test-net.trustasia.com   |  443    | 26657   | 8443    |
+| Tuya             | CN           | N/A                                | on-dcl-testnet.tuyacn.com   | 1317    | 26657   | 9090    |
 
 ## FAQs
 
