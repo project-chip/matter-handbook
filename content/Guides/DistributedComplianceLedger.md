@@ -1,5 +1,6 @@
 +++
-title = "Distributed Compliance Ledger"
+title = "Distributed Compliance Ledger (DCL)"
+
 chapter = false
 weight = 10
 +++
