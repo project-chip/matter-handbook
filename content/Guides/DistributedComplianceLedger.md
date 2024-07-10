@@ -1,3 +1,9 @@
++++
+title = "Distributed Compliance Ledger"
+chapter = false
+weight = 10
++++
+
 # Distributed Compliance Ledger (DCL)
 
 ## Table of Contents
