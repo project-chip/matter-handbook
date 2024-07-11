@@ -46,4 +46,4 @@ The platform layer contains device specific delegate implementations for most of
 
 The SDK contains abstraction layers for Python, Java and Kotlin controllers.
 
-The SDK is publically available on [GitHub](https://github.com/project-chip/connectedhomeip)
+The SDK is publicly available on [GitHub](https://github.com/project-chip/connectedhomeip)
