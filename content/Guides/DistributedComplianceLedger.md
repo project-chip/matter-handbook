@@ -27,12 +27,12 @@ weight = 10
 ## DCL Introduction
 The DCL is a blockchain-based system owned and hosted by Alliance members. It is used by the Matter protocol for storing information such as:
 
-| Information          | Description                                               | Account Role involved                                                                    |
-| -------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Vendor               | Information about the manufacturer or vendor of a device. | Data is entered by an approved Vendor account.                                             |
-| Product              | Information about the product device including description, software version, OTA information, etc. | Data is entered by an approved Vendor account.   |
-| Compliance status    | Information about the certification status including certification ID, certification date, etc. | Data is entered by the Alliance's Certification Center account.|
-| PAA Root CAs         | Information about Product Attestation Authorities (PAA) Root CAs used by commissioners during Device Attestation process. | Data is proposed by the Alliance's Trustee and approved by other DCL Trustees.|
+| Information          | Description                                               | Account Role involved                                                    |
+| -------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Vendor               | The manufacturer or vendor of a device. | Data is entered by an approved Vendor account.                                             |
+| Product              | The product device including description, software version, OTA information, etc. | Data is entered by an approved Vendor account.   |
+| Compliance status    | The certification status including certification ID, certification date, etc. | Data is entered by the Alliance's Certification Center account.|
+| PAA Root CAs         | Product Attestation Authorities (PAA) Root CAs used by commissioners during Device Attestation process. | Data is proposed by the Alliance's Trustee and approved by other DCL Trustees.|
 
 Additional information available in the [Distributed Compliance Ledger (DCL) Policies, Procedure and Governance](https://groups.csa-iot.org/wg/members-all/document/26075).
 
@@ -40,26 +40,26 @@ Additional information available in the [Distributed Compliance Ledger (DCL) Pol
 
 | Type of Node         | Description                                                                                                                                          |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Validator Node (VN)  | It participates in creating a "consensus" process to add information into the ledger.                                                                |
-| Sentry Node (SN)     | It doesn\'t participate in consensus and wraps the VN representing it for the rest of the network as one of the ways for DDoS and access protection. |
-| Observer Node (ON)   | It doesn\'t participate in consensus and is optimized for public data read and authenticated write interactions with the ledger.                     |
+| Validator Node (VN)  | Participates in creating the consensus process to add information into the ledger. The consensus is the process by which the nodes agree on the state and data of the blockchain; ensuring all nodes have a consistent ledger, while verifying the validity of transactions.                                                                                                                                       |
+| Sentry Node (SN)     | Doesn\'t participate in consensus and wraps the VN representing it for the rest of the network as one of the ways for DDoS and access protection.    |
+| Observer Node (ON)   | Doesn\'t participate in consensus and is optimized for public data read and authenticated write interactions with the ledger.                        |
 
 ### Types of account roles that can interact with the DCL
 
-| Account Role         | Description                                                                                                                                          |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Trustee              | It is entrusted to approve or deny other DCL roles and PAA Root CAs in the ledger, as well as to disable Validator Nodes.                            |
-| Node Admin           | It can instantiate a single Validator Node.                                                                                                          |
-| Vendor               | It can write vendor and product information to the ledger. Alliance members can have one or more vendor accounts.                                    |
-| Vendor Admin         | It can add and update the Vendor information table of the ledger.                                                                                    |
-| Certification Center | It can submit, update, delete or revoke certification status of a product based on the Certification application in the Certification Tool.          |
+| Account Role         | Description                                                                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Trustee              | Entrusted to approve or deny other DCL roles and PAA Root CAs in the ledger, as well as to disable Validator Nodes.                               |
+| Node Admin           | Can instantiate a single Validator Node.                                                                                                          |
+| Vendor               | Can write vendor and product information to the ledger. Alliance members can have one or more vendor accounts.                                    |
+| Vendor Admin         | Can add and update the Vendor information table of the ledger.                                                                                    |
+| Certification Center | Can submit, update, delete or revoke certification status of a product based on the Certification application in the Certification Tool.          |
 
 ### Main-Net and Test-Net
 
 | DCL Deployment       | Description                                                                                                                                                |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Main-Net             |  It is the DCL utilized by the public and is regarded as the production environment. Transactions on the Main-Net involve real products and data.          |
-| Test-Net             |  It is used for testing and development purposes. It provides a safe environment for experimentation and troubleshooting before deploying to the Main-Net. |
+| Main-Net             |  The production environment that is utilized by the public. Transactions on the Main-Net involve real products and data.          |
+| Test-Net             |  Used for testing and development purposes. It provides a safe environment for experimentation and troubleshooting before deploying to the Main-Net. |
 
 ### Access and interaction with the DCL
 
@@ -87,12 +87,11 @@ There are different options available for users and/or systems to interact with 
 -   Command Line Interface (CLI), for efficient management.
 
 #### Web User Interface
-The Web UI allows users to interact with the DCL through a visual interface, making tasks more intuitive and reducing the likelihood of errors. There is no need to install any 
-application client or configuration setup.
+The Web UI allows users to interact with the DCL through a visual interface, making tasks more intuitive and reducing the likelihood of errors. There is no need to install any application client or configuration setup.
 
 #### Command Line Interface
 
-The DCL CLI software (dcld) allows users to interact with the DCL via command line using a connection to a specific available ON. The CLI software is available at the following link: 
+The DCL CLI software (`dcld`) allows users to interact with the DCL via command line using a connection to a specific available Observer Node. The CLI software is available at the following link: 
 <https://github.com/zigbee-alliance/distributed-compliance-ledger/releases>.
 
 The instructions for the DCL client are available at the following link: <https://github.com/zigbee-alliance/distributed-compliance-ledger/blob/master/docs/how-to.md>.
