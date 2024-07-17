@@ -40,7 +40,8 @@ Additional information available in the [Distributed Compliance Ledger (DCL) Pol
 
 | Type of Node         | Description                                                                                                                                          |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Validator Node (VN)  | Participates in creating the consensus process to add information into the ledger. The consensus is the process by which the nodes agree on the state and data of the blockchain; ensuring all nodes have a consistent ledger, while verifying the validity of transactions.                                                                                                                                       |
+| Validator Node (VN)  | Participates in creating the consensus process to add information into the ledger. The consensus is the process by which the nodes agree on the state and data of the blockchain, ensuring all nodes have a consistent ledger while verifying the validity of transactions.                                                                                                                                       |
+
 | Sentry Node (SN)     | Doesn\'t participate in consensus and wraps the VN representing it for the rest of the network as one of the ways for DDoS and access protection.    |
 | Observer Node (ON)   | Doesn\'t participate in consensus and is optimized for public data read and authenticated write interactions with the ledger.                        |
 
