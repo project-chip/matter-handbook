@@ -23,7 +23,7 @@ pre = "<b>6. </b>"
 | DM       | Data Model. The data model describes the organization of data within a cluster. DM is sometimes also used to refer to the DMTT.                                           |
 | DMTT     | Data Model Tiger Team.                                                                                                                                                    |
 | DNS-SD   | Domain name service (DNS) service discovery. This is the mechanism used to locate Matter devices on the IP network                                                        |
-| DRLC     | Demand Load Response Control                                                                                                                                              |
+| DRLC     | Demand Response Load Control                                                                                                                                              |
 | EVSE     | Electric Vehicle Supply Equipment                                                                                                                                         |
 | ICAC     | Intermediate Certificate Authority Certificate See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                     |
 | ICD      | Intermittently Connected Devices. These device can sleep for relatively long periods and will be unreachable over Matter during these times.                              |
