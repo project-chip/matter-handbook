@@ -28,7 +28,7 @@ pre = "<b>6. </b>"
 | ICAC     | Intermediate Certificate Authority Certificate See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                     |
 | ICD      | Intermittently Connected Devices. These device can sleep for relatively long periods and will be unreachable over Matter during these times.                              |
 | mDNS     | Multicast DNS - the mechanism used to perform DNS-SD over Wi-Fi                                                                                                           |
-| MPSG     | Marketing and product subgroup [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup)                                                                                |
+| MPSG     | Marketing and Product Sub Group [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup)                                                                                |
 | NOC      | Node operational certificate. See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                                      |
 | NOSCR    | Node Operational Certificate Signing Request. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                             |
 | PAA      | Product attestation authority. Root certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                   |
