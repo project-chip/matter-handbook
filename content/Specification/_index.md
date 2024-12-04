@@ -12,7 +12,7 @@ The Matter Specification is updated twice a year in Spring and Fall.
 - Version 1.0 was published in November 2022
 - Version 1.1 was published in April 2023
 - Version 1.2 was published in October 2023
-- Version 1.3 was published in May 2023
+- Version 1.3 was published in May 2024
 - Version 1.4 was published in November 2024
 
 The specification is made up of a number of documents:
