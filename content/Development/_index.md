@@ -9,7 +9,7 @@ pre = "<b>4. </b>"
 
 Developers have multiple options for creating Matter-certified devices, bridges, or controllers. The official Matter SDK is the recommended choice for most projects, but alternative implementations, such as JavaScript, also offer compelling features for certain use cases.
 
-The following table tries to give a rough overview about some use cases for the available SDKs:
+The following table provides a general overview of various use cases for the available SDKs:
 
 | Use Case                                                                  | Official SDK | JavaScript SDK |
 |---------------------------------------------------------------------------|--------------|----------------|
