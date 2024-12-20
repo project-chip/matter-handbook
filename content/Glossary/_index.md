@@ -1,8 +1,8 @@
 +++
 title = "Glossary"
 chapter = true
-weight = 6
-pre = "<b>6. </b>"
+weight = 7
+pre = "<b>7. </b>"
 +++
 
 # Glossary & Acronym Decoder
