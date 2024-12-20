@@ -21,13 +21,13 @@ FastTrack allows Members to self-test without additional Log Review by an Author
 **What other benefits does FastTrack Recertification provide?**
 
 * Encourages Rapid Improvement in Quality Products
-* Members may deploy bug and security fixes without external schedule dependencies such as ATL validation or waiting for completion of Alliance recertification documentation verification and payment processing. It reduces obstacles to Members upgrading their products to the latest version of Matter, improving the experience for Matter product customers. 
+  * Members may deploy bug and security fixes without external schedule dependencies such as ATL validation or waiting for completion of Alliance recertification documentation verification and payment processing. It reduces obstacles to Members upgrading their products to the latest version of Matter, improving the experience for Matter product customers. 
 * Reduces Certification Fees
-* With this new approach, recertification fees paid to ATLs and the Alliance can be reduced to zero. Initial certification which requires ATL validation and Alliance certification fees is still required, but subsequent recertifications can be issued without these costs. 
+  * With this new approach, recertification fees paid to ATLs and the Alliance can be reduced to zero. Initial certification which requires ATL validation and Alliance certification fees is still required, but subsequent recertifications can be issued without these costs. 
 * Clarifies Total Cost of Certification
-* Helps provide predictability in the business case for making Matter products, because Members will better understand the total cost associated with certification over the lifetime of products, during which software updates are expected.
+  * Helps provide predictability in the business case for making Matter products, because Members will better understand the total cost associated with certification over the lifetime of products, during which software updates are expected.
 * Enhances End User Experience
-* Each iteration of Matter includes bug fixes and performance improvements. Enabling Members to quickly and cost-effectively upgrade to the latest version of the Matter SDK enables a better user experience for Matter products. 
+  * Each iteration of Matter includes bug fixes and performance improvements. Enabling Members to quickly and cost-effectively upgrade to the latest version of the Matter SDK enables a better user experience for Matter products. 
 
 **Why should I update to the latest version of the Matter SDK?**
 
@@ -35,10 +35,10 @@ The open source SDK includes the latest optimizations and bug fixes to improve t
 
 **I have a Certified product. What do I need to do now to take advantage of this program?**
 
-***Step 0***  Train Members of your development team to become qualified to use this program by attending formally approved Rapid Recert Training programs
-***Step 1*** Test internally using the established Alliance-provided test suite. This will confirm protocol compliance.
-***Step 2*** Submit your documents to the Alliance Certification Team. 
-***Step 3*** Send 2 units to the Alliance Interoperability Testing Facility (Interop Lab). Alliance engineers will perform tests across Operating Systems and Ecosystems to confirm that your product works in the real world. It is not necessary to wait for the completion of the interop testing. You are permitted to implement your s/w update on your product, and ship it/OTA upgrade to deployed devices, as soon as step 2 is completed.
+* **Step 0**  Train Members of your development team to become qualified to use this program by attending formally approved Rapid Recert Training programs
+* **Step 1** Test internally using the established Alliance-provided test suite. This will confirm protocol compliance.
+* **Step 2** Submit your documents to the Alliance Certification Team. 
+* **Step 3** Send 2 units to the Alliance Interoperability Testing Facility (Interop Lab). Alliance engineers will perform tests across Operating Systems and Ecosystems to confirm that your product works in the real world. It is not necessary to wait for the completion of the interop testing. You are permitted to implement your s/w update on your product, and ship it/OTA upgrade to deployed devices, as soon as step 2 is completed.
 It’s important to note that while you don’t need to have tests run at an ATL, you do need to run the tests internally and keep the logs for 5 years.
 
 
@@ -47,14 +47,14 @@ It’s important to note that while you don’t need to have tests run at an ATL
 * First, you need a Matter certified product. All Matter devices must go through Initial Certification.
 * Second, you must attend a training to become qualified for the self-testing; there are two paths to completion. The first path is to attend a specification validation event (SVE); the second path is to attend Rapid Recertification Training offered during Alliance Member meetings.
 * The scope of changes permitted is limited to basic software updates; any additional changes to Matter-related functionality must go through General Recertification (including ATL testing). The scope of permissible changes includes: 
-* Security fixes
-* Critical bug fixes
-* Fixes to improve interoperability
-* Updates to a newer spec version
-* A spec version that is certifiable at the time of applying for recertification using FRP
-* The Alliance reserves the right to restrict the use of FastTrack for certain specification updates
-* SDK updates recommended by Matter SC and approved by the TCOC
-* Device improvements and bug fixes
+  * Security fixes
+  * Critical bug fixes
+  * Fixes to improve interoperability
+  * Updates to a newer spec version
+    * A spec version that is certifiable at the time of applying for recertification using FRP
+    * The Alliance reserves the right to restrict the use of FastTrack for certain specification updates
+  * SDK updates recommended by Matter SC and approved by the TCOC
+  * Device improvements and bug fixes
 
 **How do I send my products to the Interoperability Testing Facility?**
 
