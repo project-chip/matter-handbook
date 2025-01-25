@@ -6,7 +6,7 @@ weight = 10
 
 In order to be certified a Matter device must conform to one of the approved device types.
 
-As of Matter 1.3 the following types are certifiable.
+As of Matter 1.4 the following types are certifiable.
 
 - [Utility Device Types](#utility-device-types)
   - [Root Node](#root-node)
@@ -54,7 +54,9 @@ As of Matter 1.3 the following types are certifiable.
     - [Window Covering Controller](#window-covering-controller)
   - [HVAC](#hvac)
     - [Heating/Cooling Unit](#heatingcooling-unit)
+    - [Heat Pump](#heat-pump)
     - [Thermostat](#thermostat)
+    - [Water Heater](#water-heater)
     - [Fan](#fan)
     - [Air Purifier](#air-purifier)
     - [Air Quality Sensor](#air-quality-sensor)
@@ -80,7 +82,9 @@ As of Matter 1.3 the following types are certifiable.
     - [Extractor Hood](#extractor-hood)
     - [Microwave Oven](#microwave-oven)
   - [Energy Devices](#energy-devices)
+    - [Battery Storage](#battery-storage)
     - [EVSE](#evse)
+    - [Solar Power](#solar-power)
 
 ## Utility Device Types
 
@@ -264,9 +268,25 @@ A Window Covering Controller is a device that controls a window covering device.
 
 A Heating/Cooling Unit is a device capable of heating or cooling a space in a house. It is not mandatory to provide both functionalities (for example, the device may just heat but not cool). It may be an indoor air handler.
 
+#### Heat Pump
+
+A Heat Pump device is a device that uses electrical energy to heat either spaces
+or water tanks using ground, water or air as the heat source. These typically
+can heat the air or can pump water via central heating radiators or underfloor
+heating systems. It is typical to also heat hot water and store the heat in a
+hot water tank.
+
+Note that the Water Heater device type can also be heated by a heat pump and has
+similar requirements, but that device cannot be used for heating of spaces.
+
 #### Thermostat
 
 A Thermostat device is capable of having either built-in or separate sensors for temperature, humidity or occupancy. It allows the desired temperature to be set either remotely or locally. The thermostat is capable of sending heating and/or cooling requirement notifications to a heating/cool­ ing unit (for example, an indoor air handler) or is capable of including a mechanism to control a heating or cooling unit directly.
+
+#### Water Heater
+
+A water heater is a device that is generally installed in properties to heat
+water for showers, baths etc.
 
 #### Fan
 
@@ -366,7 +386,28 @@ An Extractor Hood is a device that is generally installed above a cooking surfac
 
 ### Energy Devices
 
+#### Battery Storage
+
+A Battery Storage device is a device that allows a DC battery, which can
+optionally be comprised of a set parallel strings of battery packs and
+associated controller, and an AC inverter, to be monitored and controlled by an
+Energy Management System in order to manage the peaks and troughs of supply and
+demand, and/or to optimize cost of the energy consumed in premises. It is not
+intended to be used for a UPS directly supplying a set of appliances, nor for
+portable battery storage devices.
+
 #### EVSE
 
-An EVSE (Electric Vehicle Supply Equipment) is a device that allows an EV (Electric Vehicle) to be connected to the mains electricity supply to allow it to be charged (or discharged in case of Vehicle to Grid / Vehicle to Home applications).
+An EVSE (Electric Vehicle Supply Equipment) is a device that allows an EV
+(Electric Vehicle) to be connected to the mains electricity supply to allow it
+to be charged (or discharged in case of Vehicle to Grid / Vehicle to Home
+applications).
+
+#### Solar Power
+
+A Solar Power device is a device that allows a solar panel array, which can
+optionally be comprised of a set parallel strings of solar panels, and its
+associated controller and, if appropriate, inverter, to be monitored and
+controlled by an Energy Management System.
+
 
