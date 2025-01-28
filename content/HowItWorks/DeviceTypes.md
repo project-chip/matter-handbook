@@ -155,7 +155,6 @@ An On/Off Plug-in Unit is a device that is capable of being switched on or off b
 
 A Dimmable Plug-In Unit is a device that is capable of being switched on or off and have its level adjusted by means of a bound controller device such as a Dimmer Switch or a Color Dimmer Switch. The Dimmable Plug-in Unit is typically used to control a conventional non-communicating light through its mains connection using phase cutting.
 
-
 #### Mounted On/Off Control
 
 A Mounted On/Off Control is a fixed device that provides power to another device that is plugged
