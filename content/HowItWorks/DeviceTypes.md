@@ -16,8 +16,6 @@ As of Matter 1.4 the following types are certifiable.
   - [Bridged Node](#bridged-node)
   - [Electrical Sensor](#electrical-sensor)
   - [Device Energy Management](#device-energy-management)
-  - [Secondary Network Interface](#secondary-network-interface)
-  - [Joint Fabric Administrator](#joint-fabric-administrator)
 - [Application Device Types](#application-device-types)
   - [Lighting](#lighting)
     - [On/Off Light](#onoff-light)
@@ -25,9 +23,8 @@ As of Matter 1.4 the following types are certifiable.
     - [Color Temperature Light](#color-temperature-light)
     - [Extended Color Light](#extended-color-light)
   - [Smart Plugs/Outlets and Other Actuators](#smart-plugsoutlets-and-other-actuators)
-    - [On/Off Plug in Unit](#onoff-plug-in-unit)
-    - [Dimmable Plug in Unit](#dimmable-plug-in-unit)
-    - [Dimmable Plug-in Unit](#dimmable-plug-in-unit-1)
+    - [On/Off Plug-in Unit](#onoff-plug-in-unit)
+    - [Dimmable Plug-in Unit](#dimmable-plug-in-unit)
     - [Mounted On/Off Control](#mounted-onoff-control)
     - [Mounted Dimmable Load Control](#mounted-dimmable-load-control)
     - [Pump](#pump)
@@ -127,16 +124,6 @@ A Device Energy Management device provides reporting and optionally adjustment o
 
 This allows it to be used to help energy management systems to optimize the energy use across multiple devices in the home (e.g. to match the local solar power being generated, or to provide assistance to the grid). 
 
-### Secondary Network Interface
-
-A Secondary Network Interface device provides an additional network interface supported by the
-Node, supplementing the primary interface hosted by the Root Node endpoint.
-
-### Joint Fabric Administrator
-
-A Joint Fabric Administrator device provides capabilities to manage the Joint Fabric Datastore and
-issue an ICAC signed by the Joint Fabric Anchor Root CA.
-
 
 
 ## Application Device Types
@@ -161,20 +148,14 @@ An Extended Color Light is a lighting device that is capable of being switched o
 
 ### Smart Plugs/Outlets and Other Actuators
 
-#### On/Off Plug in Unit
+#### On/Off Plug-in Unit
 
 An On/Off Plug-in Unit is a device that is capable of being switched on or off by means of a bound controller device such as an On/Off Light Switch or a Dimmer Switch. The On/Off Plug-in Unit is typically used to control a conventional non-communicating light by switching its mains connection. Other appliances can be controlled this way as well.
 
-#### Dimmable Plug in Unit
+#### Dimmable Plug-in Unit
 
 A Dimmable Plug-In Unit is a device that is capable of being switched on or off and have its level adjusted by means of a bound controller device such as a Dimmer Switch or a Color Dimmer Switch. The Dimmable Plug-in Unit is typically used to control a conventional non-communicating light through its mains connection using phase cutting.
 
-#### Dimmable Plug-in Unit
-
-A Dimmable Plug-In Unit is a device that provides power to another device that is plugged into it,
-and is capable of being switched on or off and have its level adjusted. The Dimmable Plug-in Unit is
-typically used to control a conventional non-communicating light through its mains connection
-using phase cutting.
 
 #### Mounted On/Off Control
 
