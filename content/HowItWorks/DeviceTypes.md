@@ -125,7 +125,6 @@ A Device Energy Management device provides reporting and optionally adjustment o
 This allows it to be used to help energy management systems to optimize the energy use across multiple devices in the home (e.g. to match the local solar power being generated, or to provide assistance to the grid). 
 
 
-
 ## Application Device Types
 
 ### Lighting
