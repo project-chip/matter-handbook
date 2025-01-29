@@ -6,7 +6,7 @@ weight = 10
 
 In order to be certified a Matter device must conform to one of the approved device types.
 
-As of Matter 1.3 the following types are certifiable.
+As of Matter 1.4 the following types are certifiable.
 
 - [Utility Device Types](#utility-device-types)
   - [Root Node](#root-node)
@@ -23,8 +23,10 @@ As of Matter 1.3 the following types are certifiable.
     - [Color Temperature Light](#color-temperature-light)
     - [Extended Color Light](#extended-color-light)
   - [Smart Plugs/Outlets and Other Actuators](#smart-plugsoutlets-and-other-actuators)
-    - [On/Off Plug in Unit](#onoff-plug-in-unit)
-    - [Dimmable Plug in Unit](#dimmable-plug-in-unit)
+    - [On/Off Plug-in Unit](#onoff-plug-in-unit)
+    - [Dimmable Plug-in Unit](#dimmable-plug-in-unit)
+    - [Mounted On/Off Control](#mounted-onoff-control)
+    - [Mounted Dimmable Load Control](#mounted-dimmable-load-control)
     - [Pump](#pump)
     - [Water Valve](#water-valve)
   - [Switches and Controls](#switches-and-controls)
@@ -44,6 +46,7 @@ As of Matter 1.3 the following types are certifiable.
     - [Humidity Sensor](#humidity-sensor)
     - [On/Off Sensor](#onoff-sensor)
     - [Smoke CO Alarm](#smoke-co-alarm)
+    - [Air Quality Sensor](#air-quality-sensor)
     - [Water Freeze Detector](#water-freeze-detector)
     - [Water Leak Detector](#water-leak-detector)
     - [Rain Sensor](#rain-sensor)
@@ -53,11 +56,9 @@ As of Matter 1.3 the following types are certifiable.
     - [Window Covering](#window-covering)
     - [Window Covering Controller](#window-covering-controller)
   - [HVAC](#hvac)
-    - [Heating/Cooling Unit](#heatingcooling-unit)
     - [Thermostat](#thermostat)
     - [Fan](#fan)
     - [Air Purifier](#air-purifier)
-    - [Air Quality Sensor](#air-quality-sensor)
   - [Media](#media)
     - [Basic Video Player](#basic-video-player)
     - [Casting Video Player](#casting-video-player)
@@ -81,6 +82,13 @@ As of Matter 1.3 the following types are certifiable.
     - [Microwave Oven](#microwave-oven)
   - [Energy Devices](#energy-devices)
     - [EVSE](#evse)
+    - [Water Heater](#water-heater)
+    - [Solar Power](#solar-power)
+    - [Battery Storage](#battery-storage)
+    - [Heat Pump](#heat-pump)
+  - [Network Infrastructure Devices](#network-infrastructure-devices)
+    - [Network Infrastructure Manager](#network-infrastructure-manager)
+    - [Thread Border Router](#thread-border-router)
 
 ## Utility Device Types
 
@@ -139,13 +147,25 @@ An Extended Color Light is a lighting device that is capable of being switched o
 
 ### Smart Plugs/Outlets and Other Actuators
 
-#### On/Off Plug in Unit
+#### On/Off Plug-in Unit
 
 An On/Off Plug-in Unit is a device that is capable of being switched on or off by means of a bound controller device such as an On/Off Light Switch or a Dimmer Switch. The On/Off Plug-in Unit is typically used to control a conventional non-communicating light by switching its mains connection. Other appliances can be controlled this way as well.
 
-#### Dimmable Plug in Unit
+#### Dimmable Plug-in Unit
 
 A Dimmable Plug-In Unit is a device that is capable of being switched on or off and have its level adjusted by means of a bound controller device such as a Dimmer Switch or a Color Dimmer Switch. The Dimmable Plug-in Unit is typically used to control a conventional non-communicating light through its mains connection using phase cutting.
+
+#### Mounted On/Off Control
+
+A Mounted On/Off Control is a fixed device that provides power to another device that is plugged
+into it, and is capable of switching that provided power on or off.
+
+#### Mounted Dimmable Load Control
+
+A Mounted Dimmable Load Control is a fixed device that provides power to another device that is
+plugged into it, and is capable of being switched on or off and have its level adjusted. The Mounted
+Dimmable Load Control is typically used to control a conventional non-communicating light
+through its mains connection using phase cutting.
 
 #### Pump
 
@@ -228,6 +248,11 @@ A Smoke CO Alarm device is capable of sensing smoke, carbon monoxide or both. It
 Smoke CO Alarms are capable of monitoring themselves and issuing visual and audible alerts for hardware faults, critical low battery conditions, and end of service. Optionally, some of the audible alerts can be temporarily silenced. Smoke CO Alarms are capable of performing a self-test which performs a diagnostic of the primary sensor and issuing a cycle of the audible and visual life safety alarm indications.
 Some smoke alarms MAY be capable of adjusting sensitivity. Smoke CO Alarm MAY have the ability to detect and report humidity levels, temperature levels, and contamination levels.
 
+#### Air Quality Sensor
+
+An air quality sensor is a device designed to monitor and measure various parameters related to
+the quality of ambient air in indoor or outdoor environments.
+
 #### Water Freeze Detector
 
 A Water Freeze Detector device is able to indicate the likelihood that water could potentially freeze in the current ambient conditions.
@@ -260,25 +285,19 @@ A Window Covering Controller is a device that controls a window covering device.
 
 ### HVAC
 
-#### Heating/Cooling Unit
-
-A Heating/Cooling Unit is a device capable of heating or cooling a space in a house. It is not mandatory to provide both functionalities (for example, the device may just heat but not cool). It may be an indoor air handler.
-
 #### Thermostat
 
 A Thermostat device is capable of having either built-in or separate sensors for temperature, humidity or occupancy. It allows the desired temperature to be set either remotely or locally. The thermostat is capable of sending heating and/or cooling requirement notifications to a heating/cool­ ing unit (for example, an indoor air handler) or is capable of including a mechanism to control a heating or cooling unit directly.
 
 #### Fan
 
+A Fan device is typically standalone or mounted on a ceiling or wall and is used
+to circulate air in a room.
+
 #### Air Purifier
 
 An Air Purifier is a standalone device that is designed to clean the air in a room.
 It is a device that has a fan to control the air speed while it is operating. Optionally, it can report on the condition of its filters.
-
-#### Air Quality Sensor
-
-This defines conformance for the Air Quality Sensor device type.
-An air quality sensor is a device designed to monitor and measure various parameters related to the quality of ambient air in indoor or outdoor environments.
 
 ### Media
 
@@ -368,5 +387,58 @@ An Extractor Hood is a device that is generally installed above a cooking surfac
 
 #### EVSE
 
-An EVSE (Electric Vehicle Supply Equipment) is a device that allows an EV (Electric Vehicle) to be connected to the mains electricity supply to allow it to be charged (or discharged in case of Vehicle to Grid / Vehicle to Home applications).
+An EVSE (Electric Vehicle Supply Equipment) is a device that allows an EV
+(Electric Vehicle) to be connected to the mains electricity supply to allow it
+to be charged (or discharged in case of Vehicle to Grid / Vehicle to Home
+applications).
+
+#### Water Heater
+
+A water heater is a device that is generally installed in properties to heat
+water for showers, baths etc.
+
+#### Solar Power
+
+A Solar Power device is a device that allows a solar panel array, which can
+optionally be comprised of a set parallel strings of solar panels, and its
+associated controller and, if appropriate, inverter, to be monitored and
+controlled by an Energy Management System.
+
+#### Battery Storage
+
+A Battery Storage device is a device that allows a DC battery, which can
+optionally be comprised of a set parallel strings of battery packs and
+associated controller, and an AC inverter, to be monitored and controlled by an
+Energy Management System in order to manage the peaks and troughs of supply and
+demand, and/or to optimize cost of the energy consumed in premises. It is not
+intended to be used for a UPS directly supplying a set of appliances, nor for
+portable battery storage devices.
+
+#### Heat Pump
+
+A Heat Pump device is a device that uses electrical energy to heat either spaces
+or water tanks using ground, water or air as the heat source. These typically
+can heat the air or can pump water via central heating radiators or underfloor
+heating systems. It is typical to also heat hot water and store the heat in a
+hot water tank.
+
+Note that the Water Heater device type can also be heated by a heat pump and has
+similar requirements, but that device cannot be used for heating of spaces.
+
+### Network Infrastructure Devices
+
+#### Network Infrastructure Manager
+
+A Network Infrastructure Manager provides interfaces that allow for the management of the Wi-Fi,
+Thread, and Ethernet networks underlying a Matter deployment, realizing the Star Network
+Topology.
+
+#### Thread Border Router
+
+A Thread Border Router device type provides interfaces for querying and configuring the
+associated Thread network.
+Instances of physical devices categorized as Thread Border Routers encompass standalone Thread
+Border Routers, conventional application devices like smart speakers, media streamers, and
+lighting fixtures equipped with a Thread Border Router, as well as Wi-Fi Routers incorporating
+Thread Border Router functionality.
 
