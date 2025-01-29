@@ -27,7 +27,7 @@ The official Matter SDK, written in C++, is fully aligned with the latest Matter
 
 The SDK is compatible with Linux and Darwin platforms and supports integration as a binary dependency for Python, Objective-C, and Java bindings. It includes several example applications for different platforms and supports configuration for various endpoints and clusters using the ZAP tool.
 
-To learn more, go to the [Matter SDK Documentation](https://project-chip.github.io/connectedhomeip-doc/index.htm).
+To learn more, go to the [Matter SDK Documentation](https://project-chip.github.io/connectedhomeip-doc/index.html).
 
 ## matter.js - The Matter JavaScript SDK
 
