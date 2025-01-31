@@ -20,7 +20,7 @@ defaults:
 
 jobs:
   build-preview:
-    if: github.repository == 'project-chip/matter-handbook'  
+    if: github.repository == 'project-chip/matter-handbook'
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4
@@ -28,7 +28,7 @@ jobs:
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
       - name: Checkout
@@ -51,9 +51,9 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "/pr-${{ github.event.number }}"          
+            --baseURL "/pr-${{ github.event.number }}"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
       - name: Deploy preview
@@ -64,7 +64,7 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          SOURCE_DIR: './public'      
+          SOURCE_DIR: './public'
           DEST_DIR: 'pr-${{ github.event.number }}'
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
