@@ -17,7 +17,7 @@ defaults:
 
 jobs:
   remove:
-    if: github.repository == 'project-chip/matter-handbook'  
+    if: github.repository == 'project-chip/matter-handbook'
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.4
@@ -41,7 +41,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v2
+        uses: thollander/actions-comment-pull-request@v3
         with:
           message: |
             Preview deployed at ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }}
