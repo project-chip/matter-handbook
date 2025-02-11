@@ -1,7 +1,7 @@
 name: Remove PR previews when PR is closed
 
 on:
-  pull_request_target:
+  pull_request:
     types:
       - closed
 
