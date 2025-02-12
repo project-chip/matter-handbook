@@ -30,18 +30,18 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "us-east-1"
+          AWS_REGION: ${{ vars.AWS_S3_BUCKET_REGION }}
           PATH_TO_DELETE: 'pr-${{ github.event.number }}'
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.AWS_CF_DISTRIBUTION }}
           PATHS: '/pr-${{ github.event.number }}/*'
-          AWS_REGION: "us-east-1"
+          AWS_REGION: ${{ vars.AWS_CF_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v3
         with:
           message: |
-            Preview deployed at ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }}
+            Preview ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }} has been removed
