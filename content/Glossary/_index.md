@@ -13,6 +13,8 @@ pre = "<b>7. </b>"
 | adoc     | The filename suffix for asciidoc, which is the markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                        |
 | Alliance | Refers to the Connectivity Standards Alliance (CSA)                                                                                                                       |
 | asciidoc | Markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                                                                       |
+| AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.
+| ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices.
 | Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
 | CASE     | Certificate Authenticated Session Establishment. This is the session establishment mechanism used during normal Matter operations                                         |
 | CD       | Certification Declaration - this declaration is provided by devices to prove they have passed certification                                                               |
