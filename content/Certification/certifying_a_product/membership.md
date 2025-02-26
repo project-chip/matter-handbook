@@ -1,0 +1,20 @@
++++
+title = "Membership"
+chapter = false
+weight = 5
++++
+
+![](../imgs/membership.png)
+
+Companies need to be a member of the Connectivity Standards Alliance (CSA) in order to certify and release a
+product using Matter.
+
+Information about joining the CSA can be found
+here: [Becoming a Member](https://csa-iot.org/become-member/).
+
+A vendor ID in used to identify products and is required before certifying a product. Vendor IDs
+are assigned by the CSA and appear in the device firmware and in the attestation
+certificates to identify the manufacture and show the product has been properly
+certified. Companies should send requests for new Vendor IDs to
+[help@csa-iot.org](help@csa-iot.org) or through the
+[Contact Us page](https://csa-iot.org/contact-us/).
