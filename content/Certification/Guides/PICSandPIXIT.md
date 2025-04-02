@@ -53,7 +53,7 @@ data model.
 
 Additionally, there are node-level PICS, which appear as a part of the MCORE
 PICS set. These PICS codes describe node level support such as the radio,
-whether the device is commissionable, whether the device comes with a QR code
+whether the device is commissionable, whether the device comes with a QR code,
 etc.
 
 PICS are used in testing in two ways. "Top level" PICS appear at the top of the
@@ -97,7 +97,7 @@ the full set of PICS XML files into the
 present for the endpoint being described. Documentation on how to use the PICS
 tool can be found in the PICS tool readme in the tool menu.
 
-Some of of the full-node MCORE elements really only apply to the root node,
+Some of the full-node MCORE elements really only apply to the root node,
 while others apply across all endpoints. For example, the entire device is
 commissionable, but commissioning tests only need to be run against EP0, so
 MCORE PICS should be set on the EP0 PICS set. Things like MCORE.IDM apply to
@@ -112,7 +112,7 @@ for certification.
 
 However, in Matter, many of the PICS codes correspond directly to elements that
 are exposed directly on the device. For example, cluster presence is determined
-from the server list on an endpoint, feature maps, attribute and command lists
+from the server list on an endpoint. Feature maps and attribute and command lists
 correspond directly to the PICS.S.Fxx, PICS.S.Axxxx and PICS.S.Cxx.Xx PICS
 codes. The Matter SDK provides a tool to pre-fill these values in the PICS XML
 files so they do not have to be individually, manually filled in the PICS tool.
@@ -129,7 +129,7 @@ tool:
 -   MCORE (base.xml) PICS
 -   Manual or other non-element PICS
 -   PICS describing whether optionally-writable attributes are writable
--   any other non-element PICS
+-   Any other non-element PICS
 
 It is important to note that this script is NOT the official tool for PICS
 generation, just a helper to assist with this manual process. It is very
