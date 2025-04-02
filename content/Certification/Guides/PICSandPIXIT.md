@@ -30,12 +30,12 @@ the following PICS codes would be defined
 | ANC.S.A0000   | Device implements ANC attribute 0x0000 on the ANC server cluster           |
 | ANC.S.A0001   | Device implements ANC attribute 0x0001 on the ANC server cluster           |
 | ANC.S.C00.Rsp | Device accepts ANC command 0x00 on the ANC server cluster                  |
-| ANC.S.C01.Rsp | Device accepts ANC command 0x00 on the ANC server cluster                  |
+| ANC.S.C01.Rsp | Device accepts ANC command 0x01 on the ANC server cluster                  |
 | ANC.S.C02.Tx  | Device generates ANC command response 0x02 on the ANC server cluster       |
 | ANC.S.E00     | Device generates ANC event 0x00 on the ANC server cluster                  |
 | ANC.C         | Device supports an ANC client                                              |
 | ANC.C.F00     | Device ANC client is capable of understanding the feature with bit 0       |
-| ANC.C.F01     | Device ANC client is capable of understanding the feature with bit 0       |
+| ANC.C.F01     | Device ANC client is capable of understanding the feature with bit 1       |
 | ANC.C.A0000   | Device ANC client is capable of reading or subscribing to attribute 0x0000 |
 | ANC.C.A0001   | Device ANC client is capable of reading or subscribing to attribute 0x0001 |
 | ANC.C.C00.Rsp | Device ANC client is capable of sending the command with id 0x00           |
@@ -67,8 +67,9 @@ The entire collection of PICS codes for a specification release is provided as a
 set of PICS XML files. These files are loaded into the PICS tool, which is used
 to manually set all the PICS codes for a device. The PICS XML files and the PICS
 tool are distributed as part of the official specification release package and
-are available on
-[Causeway](https://groups.csa-iot.org/wg/members-all/document/folder/2269).
+are available to members on
+[Causeway](https://groups.csa-iot.org/wg/members-all/document/folder/2269)
+(requires CSA member login).
 
 ## PIXITs
 
@@ -174,28 +175,25 @@ files for a single endpoint into the PICS tool and validate the PICS files. The
 PICS files should validate properly. This will also generate the list of test
 cases.
 
-Note that the TH will also guide test selection by pre-selecting the required
-tests based on the PICS file, but it is the responsibility of the testers and
-the ATL to ensure that all the required tests are run and the results are
+Note that the test harness will also guide test selection by pre-selecting the
+required tests based on the PICS file, but it is the responsibility of the testers
+and the ATL to ensure that all the required tests are run and the results are
 submitted.
 
-## Creating PICS / PIXITs for new cluster and use in test plans
+[//]: # (## Creating PICS / PIXITs for new cluster and use in test plans)
 
-Placeholder for more information coming in a subsequent PR. Needs to cover
+[//]: # (Placeholder for more information coming in a subsequent PR. Needs to cover)
 
--   formatting (link out to test plans doc)
--   requirement to have all the elements listed
--   how to do conformance in a way the PICS tool can handle - (note - special
-    attention to choice conformance, otherwise conformance)
--   why you shouldn't use PICS values in tests other than at the top level
+[//]: # (-   formatting - link out to test plans doc)
+[//]: # (-   requirement to have all the elements listed)
+[//]: # (-   how to do conformance in a way the PICS tool can handle)
+[//]: # (note - special attention to choice conformance, otherwise conformance)
+[//]: # (-   why you shouldn't use PICS values in tests other than at the top level)
 
-## Using PICS in test scripts
+[//]: # (## Using PICS in test scripts)
 
-Placeholder for more information coming in a subsequent PR. Needs to cover
-top-level and step-wise pics in yaml and python and also where they should NOT
-be used.
+[//]: # (Cover top-level and step-wise pics in yaml and python and also where they should NOT be used.)
 
-## CI PICS format
+[//]: # (## CI PICS format)
 
-Placeholder for information about the CI PICS format, CI-only PICS and the
-gotchas there.
+[//]: # (CI PICS format, CI-only PICS and the gotchas there.)
