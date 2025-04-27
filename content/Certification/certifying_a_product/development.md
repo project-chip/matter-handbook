@@ -92,8 +92,11 @@ A list of PKI providers can be found on the CSA site:
 The certification declaration is provided by the CSA after a device is
 certified. It is tied to the vendor and product ID (or IDs) of the certified
 device, and is signed by CSA. The public key corresponding to the signing key is
-well known and distributed by the CSA (TODO: It shows up everywhere, but where's
-the official source for this?)
+well known and distributed by the CSA through the DCL.
+
+- [CD Signing Certs Root CA](https://on.dcl.csa-iot.org/dcl/pki/all-certificates?subjectKeyId=97:E4:69:D0:C5:04:14:C2:6F:C7:01:F7:7E:94:77:39:09:8D:F6:A5)
+
+- [CD Signing Cert SKIDs](https://on.dcl.csa-iot.org/dcl/pki/child-certificates/MFIxDDAKBgNVBAoMA0NTQTEsMCoGA1UEAwwjTWF0dGVyIENlcnRpZmljYXRpb24gYW5kIFRlc3RpbmcgQ0ExFDASBgorBgEEAYKifAIBDARDNUEw/97:E4:69:D0:C5:04:14:C2:6F:C7:01:F7:7E:94:77:39:09:8D:F6:A5)
 
 The certification declaration is NOT a standard x.509 certificate, but is
 instead a CMS-encoded SignedData payload containing a TLV-encoded structure,

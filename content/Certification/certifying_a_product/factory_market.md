@@ -13,11 +13,12 @@ Placeholder - much of the technical side of the factory process is covered in th
 - add links to the marketing requirements for logos
 - add links to the marketing requirements for setup codes
 - additional badging? WW programs?
+
 ### Works-with programs
 - TODO: is that a universal name?
 
 ## DCL
-- add links to the DCL how-to information
+- [DCL Guide](https://handbook.buildwithmatter.com/guides/distributedcomplianceledger/)
 - still missing - timeline of when updates should happen and a simplified text around who has to make the updates
 
 ## Submission to the interoperability lab
