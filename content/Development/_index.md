@@ -13,7 +13,7 @@ The following table provides a general overview of various use cases for the ava
 
 | Use Case                                                                  | Official SDK | JavaScript SDK |
 |---------------------------------------------------------------------------|--------------|----------------|
-| Compliant with Matter version                                             | 1.4          | 1.3            |
+| Compliant with Matter version                                             | 1.4          | 1.4            |
 | Participate in development of new Matter features                         | X            | –              |
 | Use for embedded platforms with strict memory and performance constraints | X            | –              |
 | Chipset-specific implementations (e.g. Wi-Fi/Thread)                      | X            | –              |
