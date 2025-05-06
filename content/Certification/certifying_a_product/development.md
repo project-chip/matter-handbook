@@ -7,28 +7,26 @@ weight = 6
 ![](../imgs/development.png)
 
 The process of developing a Matter product is highly dependent on the device
-being developed, the platform being used and the policies of the company. There
+being developed, the platform being used and the policies of the company doing the development. There
 is no single "best" way to integrate Matter into a product. This guide aims to
 address the common considerations for Matter product development.
 
 SDK development guides are available to aid in the process of software
-development and system and data model design. Information on Matter
-implementations is available at The SDK documentation is available in the
-[Matter Handbook SDK documentation](https://handbook.buildwithmatter.com/sdk/).
+development and system and data model design:
 
-Information on the CSA open source SDK is available at the
+- Information on the CSA open source SDK is available at the
 [Matter SDK documentation site](https://project-chip.github.io/connectedhomeip-doc/index.html).
 
-Integration of the SDK on specific platforms is covered by the
+- Integration of the SDK on specific platforms is covered by the
 [Platform guides](https://project-chip.github.io/connectedhomeip-doc/platforms/index.html).
 
 
 ## Matter-specific product considerations
-The documentation in this section aims to give an brief overview of some of the
+The documentation in this section aims to give a brief overview of some of the
 common product and factory considerations and challenges that may differ from
 non-Matter products.
 
-Matter device require some material to be provisioned at the factory, after
+Matter devices require some material to be provisioned at the factory, after
 certification. Some of these materials need to be provisioned on a per-device
 basis, some are per-product-line.
 
@@ -70,8 +68,8 @@ As a part of the attestation chain, each device need to be provisioned with:
     -   Signed by a PAA (whose certificate is found in the DCL)
 
 Devices can either opt to purchase DAC provisioning packages from a Matter PKI provider or use their
-own PAA by operating a Certification Authority (CA) that conform to the CSA PKI
-requirements. Both of these options have impact on the operational and/or BOM
+own PAA by operating a Certification Authority (CA) that conforms to the CSA PKI
+requirements. Both of these options have an impact on the operational and/or BOM
 costs of the product and should therefore be considered early in the process.
 More information about this important product decision can be found in
 [Getting a DAC for your product](https://groups.csa-iot.org/wg/matter-tsg/document/25881).
@@ -87,9 +85,9 @@ A list of PKI providers can be found on the CSA site:
 
 -   [Product Attestation Authorities](https://csa-iot.org/certification/paa/)
 
-### Certification Declaration
+### Certification Declaration (CD)
 
-The certification declaration is provided by the CSA after a device is
+The Certification Declaration (CD) is provided by the CSA after a device is
 certified. It is tied to the vendor and product ID (or IDs) of the certified
 device, and is signed by CSA. The public key corresponding to the signing key is
 well known and distributed by the CSA through the DCL.
@@ -98,7 +96,7 @@ well known and distributed by the CSA through the DCL.
 
 - [CD Signing Cert SKIDs](https://on.dcl.csa-iot.org/dcl/pki/child-certificates/MFIxDDAKBgNVBAoMA0NTQTEsMCoGA1UEAwwjTWF0dGVyIENlcnRpZmljYXRpb24gYW5kIFRlc3RpbmcgQ0ExFDASBgorBgEEAYKifAIBDARDNUEw/97:E4:69:D0:C5:04:14:C2:6F:C7:01:F7:7E:94:77:39:09:8D:F6:A5)
 
-The certification declaration is NOT a standard x.509 certificate, but is
+The CD is NOT a standard x.509 certificate, but is
 instead a CMS-encoded SignedData payload containing a TLV-encoded structure,
 described in section 6.3.1 Certification Declaration of the spec. Certification
 Declarations can be viewed using the
@@ -176,8 +174,8 @@ In particular:
     certification of the supported device types works.
 
 Product manufacturers should be aware that the CSA has a sunset policy in effect
-for prior specification revisions. The sunset policy is available in full at
-(TODO: where's the sunset policy?).
+for prior specification revisions. The sunset policy is available in Causeway
+via this [link](https://groups.csa-iot.org/wg/members-all/document/39617).
 
 ## Distribution of Over-the-air updates (OTA) and re-certification
 
@@ -188,8 +186,8 @@ reasons, its important to consider delivering software updates using either the
 Matter OTA mechanism or a manufacturer-specific mechanism.
 
 The mechanism for delivering OTAs is an important product consideration that
-needs to be built into the shipping firmware. Update cadence affect the
-certification planning for the product since all updates need to be
+needs to be built into the shipping firmware. Update cadence affects the
+certification planning for products since all updates need to be
 re-certified.
 
 [//]: #(TODO: do we want to talk about factory shipping image / 0-day split?

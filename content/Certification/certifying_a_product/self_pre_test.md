@@ -26,7 +26,7 @@ available in the [PICS guide](https://project-chip.github.io/connectedhomeip-doc
 
 ## Running tests
 When tests are run for certification, they are run through the test harness, which is
-used to assist ATLs with test selection and the logs collection required for submissions
+used to assist ATLs with test selection and the collection of logs required for submissions
 to the certification program. The test harness runs on a raspberry pi, external to the
 development computer. This is the official tool for test submission for certification.
 
@@ -56,7 +56,7 @@ Information about running tests locally can be found in the SDK documentation:
 
 
 ## Running tests on the test harness
-A full description of how to build a test harness adn run tests is available in the
+A full description of how to build the test harness and run tests is available in the
 test harness user guide. Each specification release has a version of the test harness
 user guide for the specific specification revision. The user guide for each release
 is available in the [Matter release folder](https://groups.csa-iot.org/wg/members-all/document/folder/2269).
@@ -66,7 +66,7 @@ Documentation around common problems when running tests can be found in the matt
 scripts issue repo,
 - [Common Test Issues](https://github.com/project-chip/matter-test-scripts/tree/main/docs/common_test_failures)
 
-The CSA slack has a dedicated channel for test harness questions at (#csg-matter-test-harness-help).
+The CSA has a dedicated Slack channel for test harness questions at (#csg-matter-test-harness-help).
 
 Questions about tests for specific clusters can also be directed to the supporting tiger team.
 

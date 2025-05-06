@@ -28,4 +28,4 @@ Note: This entire section is just placeholders.
 
 ### Finding an ATL
 
-### CCB process
+### The Change Control Board (CCB) process

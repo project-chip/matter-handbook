@@ -17,7 +17,7 @@ Placeholder - much of the technical side of the factory process is covered in th
 ### Works-with programs
 - TODO: is that a universal name?
 
-## DCL
+## Distributed Compliance Ledger (DCL)
 - [DCL Guide](https://handbook.buildwithmatter.com/guides/distributedcomplianceledger/)
 - still missing - timeline of when updates should happen and a simplified text around who has to make the updates
 

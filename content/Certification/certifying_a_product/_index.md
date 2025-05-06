@@ -6,8 +6,8 @@ weight = 4
 
 ![](./imgs/product_certification_flow.png)
 
-The process of product development and certification is company dependent.
-Generally products follow a sequence similar to the steps outlined below.
+Although how companies develop products and apply for certification vary,
+they generally follow a sequence similar to the steps outlined below.
 Additional steps particularly in the development and factory process are likely.
 This guide aims only to give an outline of common considerations for the
 integration of Matter rather than a general outline of the development process
