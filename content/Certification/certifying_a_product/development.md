@@ -58,18 +58,18 @@ DCL and does not appear on the device.
 As a part of the attestation chain, each device need to be provisioned with:
 
 -   Device attestation private key
-    -   private, stored in the secure subsystem where possible
-    -   see Spec section 6.3.2 Firmware information
+    -   Private, stored in the secure subsystem where possible.
+    -   See Spec section 6.3.2 Firmware information.
     -   Covered by the
         [Security Attestation declaration](https://groups.csa-iot.org/wg/members-all/document/27432)
--   Device Attestation Certification (DAC)
-    -   public
-    -   signed by the PAI
+-   Device Attestation Certificate (DAC)
+    -   Public
+    -   Signed by a PAI
 -   Product Attestation Intermediate (PAI)
-    -   public
-    -   signed by the PAA (DCL)
+    -   Public
+    -   Signed by a PAA (whose certificate is found in the DCL)
 
-Devices can either opt to purchase DACs from a Matter PKI provider or use their
+Devices can either opt to purchase DAC provisioning packages from a Matter PKI provider or use their
 own PAA by operating a Certification Authority (CA) that conform to the CSA PKI
 requirements. Both of these options have impact on the operational and/or BOM
 costs of the product and should therefore be considered early in the process.
