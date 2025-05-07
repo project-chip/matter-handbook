@@ -142,13 +142,6 @@ recommended. The rules for QR and manual code inclusions are covered in section
 Information about on-package badging and QR and manual codes are documented in the
 [Brand Guidelines](https://csa-iot.org/wp-content/uploads/2022/11/Matter_Guideline_v15b_26102022_Public-Use.pdf).
 
-### Multi-product QR codes
-
-For products where multiple devices are in one box, it can be challenging for
-users to properly match individual on-boarding materials to the physical
-products in the box. In such situations, manufacturers should follow the
-guidance in the [Multi Device Setup Codes Best Practices Guide]().
-
 ### In-field updates to Matter
 
 If a product that has already been released with non-Matter firmware wishes to update
