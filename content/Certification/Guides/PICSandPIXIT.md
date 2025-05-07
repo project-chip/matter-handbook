@@ -120,12 +120,12 @@ files so they do not have to be individually, manually filled in the PICS tool.
 
 -   [PICS Generator](https://github.com/project-chip/connectedhomeip/tree/master/src/tools/PICS-generator)
 
-PICS codes filled using this tool still need to be validated by the PICS tool.
+PICS codes filled using this tool should still be validated by the PICS tool.
 Note that due to device limitations, the tool will NOT fill the following
 categories of PICS codes, and these will need to be filled manually in the PICS
 tool:
 
--   Event PICS (PICS.S.Exx)
+-   Optional or conditional event PICS (PICS.S.Exx)
 -   Client PICS
 -   MCORE (base.xml) PICS
 -   Manual or other non-element PICS
