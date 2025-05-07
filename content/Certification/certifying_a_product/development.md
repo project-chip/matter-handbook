@@ -11,9 +11,6 @@ being developed, the platform being used and the policies of the company doing t
 is no single "best" way to integrate Matter into a product. This guide aims to
 address the common considerations for Matter product development.
 
-SDK development guides are available to aid in the process of software
-development and system and data model design:
-
 - Information on the CSA open source SDK is available at the
 [Matter SDK documentation site](https://project-chip.github.io/connectedhomeip-doc/index.html).
 
@@ -85,6 +82,15 @@ A list of PKI providers can be found on the CSA site:
 
 -   [Product Attestation Authorities](https://csa-iot.org/certification/paa/)
 
+#### Development DACs
+During te development phase, developers often opt to use test DACs using the test vendor IDs. The SDK has a number of example DACs that chain up to the SDK test PAAs and these are loaded by default by the example apps. The development controllers load the test PAAs by default, which simplifies development.
+
+Development controllers can be switched to use production PAAs using the `--paa-trust-store-path` parameter.
+
+Test DACs are not permitted during certification testing, and devices must arrive with two instances with individually provisioned DACs in order to show that the device can meet the requirements around individual provisioning. Devices at certification are not required to use production DACs.
+
+Device manufacturers may wish to consider joining the CSA early in the process to understand the details of the security procedures within the Alliance.
+
 ### Certification Declaration (CD)
 
 The Certification Declaration (CD) is provided by the CSA after a device is
@@ -114,9 +120,6 @@ for discussion of CDs used for certification testing.
 
 ### Matter on-boarding materials (QR codes and manual codes)
 
--   TODO: need a way to address custom flow and the different requirements for
-    on-boarding material
-
 In addition to DACs, each individual unit needs to be provisioned with its own
 on-boarding material for discovery and initial commissioning. This includes the
 following per-unit items provisioned on the device:
@@ -134,10 +137,12 @@ corresponding unit:
 
 Manual codes are required for all devices, QR codes are optional but
 recommended. The rules for QR and manual code inclusions are covered in section
-5.7.6 and section 13.6 of the specification. These requirements are attested at
-certification in the
+5.7.6 and section 13.6 of the specification.
 
 [Matter Setup Code Guidelines](https://groups.csa-iot.org/wg/members-all/document/27481)
+
+Information about on-package badging and QR and manual codes documented in the
+[Brand Guidelines](https://csa-iot.org/wp-content/uploads/2022/11/Matter_Guideline_v15b_26102022_Public-Use.pdf).
 
 ### Multi-product QR codes
 
@@ -148,9 +153,14 @@ guidance in the [Multi Device Setup Codes Best Practices Guide]().
 
 ### In-field updates to Matter
 
-If the software being developed is for a product already in the field, the
-Matter firmware will need to distributed as an over-the-air update using the
-current update mechanism on the device. In-field update considerations are
+If a product that has already been released with non-Matter firmware wishes to update
+to include Matter functionality, the Matter firmware and supporting materials can be
+installed on the in-field devices using their already-available, non-Matter update
+mechanism. Devices can continue to use their original update mechanism for future
+Matter updates, or may opt to use the Matter-specified Over-the-Air (Matter OTA)
+update mechanism.
+
+In-field update considerations are
 discussed in section 5.8 of the specification, but it is important to note that
 in-field products are subject to the same per-unit requirements as Out-of-Box
 Natter products, and thus it is important to consider how to distribute not only
@@ -189,10 +199,3 @@ The mechanism for delivering OTAs is an important product consideration that
 needs to be built into the shipping firmware. Update cadence affects the
 certification planning for products since all updates need to be
 re-certified.
-
-[//]: #(TODO: do we want to talk about factory shipping image / 0-day split?
-Matter doesn't actually have a good solution here)
-
-## Other
-
-ANN - any other MP TTs that should fall into this bucket?

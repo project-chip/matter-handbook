@@ -35,12 +35,11 @@ is common for manufacturers to run tests locally until they are certain the test
 passing, then move on to use the official tool.
 
 The certification program uses a combination of different types of testing for
-certification.
+certification. Tests can either be automated in YAML or python.
 
-YAML-based tests are common for clusters. These tests are run using an external
-runner to parse and run the YAML code through chip-tool.
+Tests that are automated in YAMl are located in the [YAML SDK folder](https://github.com/project-chip/connectedhomeip/tree/master/src/app/tests/suites/certification).
 
-Python-based tests use the python controller directly from the chip python library.
+Tests that are implemented in python are located in the [Python SDK folder](https://github.com/project-chip/connectedhomeip/tree/master/src/python_testing).
 
 Some tests are not automated for various reasons, and consist of a set of manual
 steps that the tester need to perform and check. These test are run from the
