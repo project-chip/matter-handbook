@@ -44,7 +44,7 @@ the following PICS codes would be defined
 | ANC.C.E00     | Device ANC client understands the event with id 0x00                       |
 
 More information about the PICS code format can be found at
-[PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md).
+[PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md). (requires access to the CSA specifications repo)
 
 In addition to these standard cluster PICS, other PICS may be defined to
 describe capabilities that are not directly expressed via the data model. For
