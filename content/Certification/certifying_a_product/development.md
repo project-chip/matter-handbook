@@ -35,7 +35,7 @@ Matter materials. Please see the documentation for your selected
 
 ### Device Attestation Certificates and Certification Authorities
 
-Device attestation certificates are used to attest devices as being authentic
+Device attestation certificates are used to attest devices (or commissionable apps - in the case of Matter Casting) as being authentic
 devices that are manufactured by the stated vendor and certified as a Matter
 device. The full attestation procedure and certificate set is described in the
 handbook
@@ -47,10 +47,10 @@ The device attestation chain consists of the Device Attestation Certificate
 (DAC), which is signed by the Product Attestation Intermediate (PAI), which is
 signed by the Product Attestation Authority (PAA).
 
-The DAC and PAI are provided by the device, and the PAA is distributed in the
-DCL and does not appear on the device.
+The DAC and PAI are provided by the product being commissioned (device, app, etc), and the PAA is distributed in the
+DCL and does not appear on the product.
 
-As a part of the attestation chain, each device need to be provisioned with:
+As a part of the attestation chain, each attesting product needs to be provisioned with:
 
 -   Device attestation private key
     -   Private, stored in the secure subsystem where possible.
@@ -64,7 +64,7 @@ As a part of the attestation chain, each device need to be provisioned with:
     -   Public
     -   Signed by a PAA (whose certificate is found in the DCL)
 
-Devices can either opt to purchase DAC provisioning packages from a Matter PKI provider or use their
+Attesting products can either opt to purchase DAC provisioning packages from a Matter PKI provider or use their
 own PAA by operating a Certification Authority (CA) that conforms to the CSA PKI
 requirements. Both of these options have an impact on the operational and/or BOM
 costs of the product and should therefore be considered early in the process.
@@ -93,16 +93,16 @@ Device manufacturers may wish to consider joining the CSA early in the process t
 
 ### Certification Declaration (CD)
 
-The Certification Declaration (CD) is provided by the CSA after a device is
+The Certification Declaration (CD) is provided by the CSA after n attesting product is
 certified. It is tied to the vendor and product ID (or IDs) of the certified
-device, and is signed by CSA. The public key corresponding to the signing key is
+product, and is signed by CSA. The public key corresponding to the signing key is
 well known and distributed by the CSA through the DCL.
 
 - [CD Signing Certs Root CA](https://on.dcl.csa-iot.org/dcl/pki/all-certificates?subjectKeyId=97:E4:69:D0:C5:04:14:C2:6F:C7:01:F7:7E:94:77:39:09:8D:F6:A5)
 
 - [CD Signing Cert SKIDs](https://on.dcl.csa-iot.org/dcl/pki/child-certificates/MFIxDDAKBgNVBAoMA0NTQTEsMCoGA1UEAwwjTWF0dGVyIENlcnRpZmljYXRpb24gYW5kIFRlc3RpbmcgQ0ExFDASBgorBgEEAYKifAIBDARDNUEw/97:E4:69:D0:C5:04:14:C2:6F:C7:01:F7:7E:94:77:39:09:8D:F6:A5)
 
-The CD is NOT a standard x.509 certificate, but is
+The CD is NOT a standard X.509 certificate, but is
 instead a CMS-encoded SignedData payload containing a TLV-encoded structure,
 described in section 6.3.1 Certification Declaration of the spec. Certification
 Declarations can be viewed using the
@@ -139,9 +139,7 @@ Manual codes are required for all devices, QR codes are optional but
 recommended. The rules for QR and manual code inclusions are covered in section
 5.7.6 and section 13.6 of the specification.
 
-[Matter Setup Code Guidelines](https://groups.csa-iot.org/wg/members-all/document/27481)
-
-Information about on-package badging and QR and manual codes documented in the
+Information about on-package badging and QR and manual codes are documented in the
 [Brand Guidelines](https://csa-iot.org/wp-content/uploads/2022/11/Matter_Guideline_v15b_26102022_Public-Use.pdf).
 
 ### Multi-product QR codes
