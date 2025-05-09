@@ -13,7 +13,7 @@ During the commissioning process, a device cryptographically proves (attests) to
 
 In order to accomplish those goals, the device carries:
 
-- A Device Attestation Certificate (DAC) that conveys device's manufacturer ID (VID) and product ID (PID). The DAC chains up to a set of trusted roots, approved by the Alliance members.
+- A Device Attestation Certificate (DAC) that conveys device's manufacturer ID (VID) and Product ID (PID). The DAC chains up to a set of trusted roots, approved by the Alliance members.
 - A securely-stored, private key associated with the public key stored in the DAC that proves the device owns this unique certificate.
 - Certificate declaration is a statement cryptographically signed by the Alliance that states that a tuple (VID,PID) has passed Matter compliance tests.
 
