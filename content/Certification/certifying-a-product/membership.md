@@ -4,7 +4,7 @@ chapter = false
 weight = 5
 +++
 
-![](../imgs/membership.png)
+![](../../../certification/membership.png)
 
 Companies need to be a member of the Connectivity Standards Alliance (CSA) in order to certify and release
 products using Matter.

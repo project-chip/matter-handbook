@@ -4,7 +4,7 @@ chapter = false
 weight = 4
 +++
 
-![](./imgs/product-certification-flow.png)
+![](../../../certification/product-certification-flow.png)
 
 This guide aims to give an outline of common considerations for the
 integration of Matter rather than a general outline of the development process

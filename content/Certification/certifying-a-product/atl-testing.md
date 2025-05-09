@@ -4,4 +4,5 @@ chapter = false
 weight = 8
 +++
 
-![](../imgs/atl-testing.png)
+![](../../../certification/atl-testing.png)
+

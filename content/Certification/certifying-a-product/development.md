@@ -30,7 +30,7 @@ Matter devices require some material to be provisioned at the factory, after
 certification. Some of these materials need to be provisioned on a per-device
 basis, some are per-product-line.
 
-![](../img/factory-data.png)
+![](../../../certification/factory-data.png)
 
 Most platforms provide a comprehensive factory data solution customized to
 Matter materials. To learn more, see the documentation for your selected
