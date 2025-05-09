@@ -4,4 +4,4 @@ chapter = false
 weight = 11
 +++
 
-![](../imgs/ota_recert.png)
+![](../imgs/ota-recert.png)

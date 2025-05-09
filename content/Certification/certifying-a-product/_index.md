@@ -4,7 +4,7 @@ chapter = false
 weight = 4
 +++
 
-![](./imgs/product_certification_flow.png)
+![](./imgs/product-certification-flow.png)
 
 This guide aims to give an outline of common considerations for the
 integration of Matter rather than a general outline of the development process
@@ -16,8 +16,8 @@ Additional steps in the development and factory process are expected.
 
 - [Membership](./membership.md)
 - [Development](./development.md)
-- [Self Pre-Test](./self_pre_test.md)
-- [ATL Testing](./atl_testing.md)
-- [Submission for Certification](./submission_for_certification.md)
-- [Factory and Go To Market](./factory_market.md)
-- [OTA and Re-Certification](./ota_recert.md)
+- [Self Pre-Test](./self-pre-test.md)
+- [ATL Testing](./atl-testing.md)
+- [Submission for Certification](./submission-for-certification.md)
+- [Factory and Go To Market](./factory-market.md)
+- [OTA and Re-Certification](./ota-recert.md)

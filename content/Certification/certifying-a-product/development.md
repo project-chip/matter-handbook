@@ -27,7 +27,7 @@ Matter devices require some material to be provisioned at the factory, after
 certification. Some of these materials need to be provisioned on a per-device
 basis, some are per-product-line.
 
-![](../img/factory_data.png)
+![](../img/factory-data.png)
 
 Most platforms provide a comprehensive factory data solution customized to
 Matter materials. To learn more, see the documentation for your selected
@@ -159,13 +159,13 @@ Matter updates, or may opt to use the Matter-specified Over-the-Air (Matter OTA)
 update mechanism.
 
 In-field update considerations are
-discussed in section 5.8 of the specification, but it is important to note that
+discussed in section 5.8 of the specification. It is important to note that
 in-field products are subject to the same per-unit requirements as Out-of-Box
-Matter products, and thus it is important to consider how to distribute not only
-the firmware, but also how to display the on-boarding material or how to do a
-background update using the current connected application and how to provision
-the per-unit materials discussed earlier in this section in a secure manner
-using the security materials available to the current firmware.
+Matter products. It is therefore important to consider not only how to distribute
+the firmware but also either how to display the on-boarding material or perform a
+background commissioning. It is also necessary to to provision the per-unit materials
+discussed earlier in this section in a secure manner, using the security materials
+present on the device before the update.
 
 ## Certification programs
 

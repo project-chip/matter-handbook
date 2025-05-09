@@ -4,4 +4,4 @@ chapter = false
 weight = 11
 +++
 
-![](../imgs/factory_market.png)
+![](../imgs/factory-market.png)

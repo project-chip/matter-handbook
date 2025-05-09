@@ -4,7 +4,7 @@ chapter = false
 weight = 7
 +++
 
-![](../imgs/self_pre_test.png)
+![](../imgs/self-pre-test.png)
 
 Before submitting a product for formal certification testing, doing a self-pre-test is
 important to identify and fix certification-blocking bugs.
