@@ -70,7 +70,7 @@ The CSA has a dedicated Slack channel for test harness questions at (#csg-matter
 
 Questions about tests for specific clusters can also be directed to the supporting tiger team.
 
-In the case where a test case bug is identified, it is necessary to file a request with
+In the case where a test case bug is identified, the affected manufacturer should file a request with
 the Change Control Board (CCB). Information about the CCB process can be found in the
 [CSA policies and procedures](https://groups.csa-iot.org/wg/members/document/21624), chapter 11.
 
