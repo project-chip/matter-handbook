@@ -6,7 +6,7 @@ weight = 7
 
 ![](../imgs/self_pre_test.png)
 
-Before taking a product for formal certification, doing a self-pre-test is
+Before submitting a product for formal certification testing, doing a self-pre-test is
 important to identify and fix certification-blocking bugs.
 
 During formal certification, tests are run through the test harness, which
