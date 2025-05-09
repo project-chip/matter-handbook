@@ -45,10 +45,9 @@ Tests that are implemented in Python are located in the
 
 Some tests are not automated for various reasons, and consist of a set of manual
 steps that the tester needs to perform and check. These tests are run from the
-verification steps document, which can be found in the official release
-documentation for each specification revision.
-
-[Matter releases](https://groups.csa-iot.org/wg/members-all/document/folder/2269)
+verification steps document, which can be found in the official
+[release documentation](https://groups.csa-iot.org/wg/members-all/document/folder/2269)
+for each specification revision.
 
 ## Running Tests Locally
 Information about running tests locally can be found in the SDK documentation:
