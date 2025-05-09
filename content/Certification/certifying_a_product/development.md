@@ -41,7 +41,7 @@ devices that are manufactured by the stated vendor and certified as a Matter
 device. The full attestation procedure and certificate set is described in the
 Handbook's
 [Device Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)
-section. The attestation certificate chain matches the vendor and product IDs
+section. The attestation certificate chain matches the Vendor and Product IDs
 declared on the device and in the certification declaration.
 
 The device attestation chain consists of the Device Attestation Certificate
@@ -84,7 +84,7 @@ A list of PKI providers can be found on the CSA site:
 -   [Product Attestation Authorities](https://csa-iot.org/certification/paa/)
 
 #### Development DACs
-During the development phase, developers often opt to use test DACs using the test vendor IDs.
+During the development phase, developers often opt to use test DACs using the test Vendor IDs.
 The SDK has a number of example DACs that chain up to the SDK test PAAs and these are loaded
 by default by the example apps. The development controllers load the test PAAs by default, which
 simplifies development.
@@ -101,7 +101,7 @@ the details of the security procedures within the Alliance.
 ### Certification Declaration (CD)
 
 The Certification Declaration (CD) is provided by the CSA after an attesting product is
-certified. It is tied to the vendor and product ID (or IDs) of the certified
+certified. It is tied to the Vendor ID and Product ID (or IDs) of the certified
 product, and is signed by CSA. The public key corresponding to the signing key is
 well known and distributed by the CSA through the DCL.
 
