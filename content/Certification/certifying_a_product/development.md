@@ -182,8 +182,9 @@ In particular:
     certification of the supported device types works.
 
 Product manufacturers should be aware that the CSA has a sunset policy in effect
-for prior specification revisions. The sunset policy is available in Causeway
-via this [link](https://groups.csa-iot.org/wg/members-all/document/39617).
+for prior specification revisions. See the
+[Sunset Policy](https://groups.csa-iot.org/wg/members-all/document/39617) for more
+information.
 
 ## Distribution of Over-the-air updates (OTA) and re-certification
 
