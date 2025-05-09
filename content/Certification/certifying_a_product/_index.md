@@ -6,12 +6,13 @@ weight = 4
 
 ![](./imgs/product_certification_flow.png)
 
-Although how companies develop products and apply for certification vary,
-they generally follow a sequence similar to the steps outlined below.
-Additional steps particularly in the development and factory process are likely.
-This guide aims only to give an outline of common considerations for the
+This guide aims to give an outline of common considerations for the
 integration of Matter rather than a general outline of the development process
 of an entire product line.
+
+How companies develop products and apply for certification vary,
+but they generally follow a sequence similar to the steps outlined below.
+Additional steps in the development and factory process are expected.
 
 - [Membership](./membership.md)
 - [Development](./development.md)

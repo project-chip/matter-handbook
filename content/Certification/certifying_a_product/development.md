@@ -7,11 +7,11 @@ weight = 6
 ![](../imgs/development.png)
 
 The process of developing a Matter product is highly dependent on the device
-being developed, the platform being used and the policies of the company doing the development. There
+being developed, the platform being used, and the policies of the company doing the development. There
 is no single "best" way to integrate Matter into a product. This guide aims to
 address the common considerations for Matter product development.
 
-- Information on the CSA open source SDK is available at the
+- Information on the Connectivity Standards Alliance (CSA) open source SDK is available at the
 [Matter SDK documentation site](https://project-chip.github.io/connectedhomeip-doc/index.html).
 
 - Integration of the SDK on specific platforms is covered by the
@@ -30,15 +30,16 @@ basis, some are per-product-line.
 ![](../img/factory_data.png)
 
 Most platforms provide a comprehensive factory data solution customized to
-Matter materials. Please see the documentation for your selected
+Matter materials. To learn more, see the documentation for your selected
 [Platform](https://project-chip.github.io/connectedhomeip-doc/platforms/index.html).
 
 ### Device Attestation Certificates and Certification Authorities
 
-Device attestation certificates are used to attest devices (or commissionable apps - in the case of Matter Casting) as being authentic
+Device attestation certificates are used to attest devices (or commissionable apps,
+in the case of Matter Casting) as being authentic
 devices that are manufactured by the stated vendor and certified as a Matter
 device. The full attestation procedure and certificate set is described in the
-handbook
+Handbook's
 [Device Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)
 section. The attestation certificate chain matches the vendor and product IDs
 declared on the device and in the certification declaration.
@@ -53,8 +54,8 @@ DCL and does not appear on the product.
 As a part of the attestation chain, each attesting product needs to be provisioned with:
 
 -   Device attestation private key
-    -   Private, stored in the secure subsystem where possible.
-    -   See Spec section 6.3.2 Firmware information.
+    -   Private, stored in the secure subsystem where possible
+    -   See Spec section 6.3.2 Firmware information
     -   Covered by the
         [Security Attestation declaration](https://groups.csa-iot.org/wg/members-all/document/27432)
 -   Device Attestation Certificate (DAC)
@@ -83,17 +84,23 @@ A list of PKI providers can be found on the CSA site:
 -   [Product Attestation Authorities](https://csa-iot.org/certification/paa/)
 
 #### Development DACs
-During te development phase, developers often opt to use test DACs using the test vendor IDs. The SDK has a number of example DACs that chain up to the SDK test PAAs and these are loaded by default by the example apps. The development controllers load the test PAAs by default, which simplifies development.
+During the development phase, developers often opt to use test DACs using the test vendor IDs.
+The SDK has a number of example DACs that chain up to the SDK test PAAs and these are loaded
+by default by the example apps. The development controllers load the test PAAs by default, which
+simplifies development.
 
-Development controllers can be switched to use production PAAs using the `--paa-trust-store-path` parameter.
+Development controllers can be switched to use production PAAs by using the `--paa-trust-store-path` parameter.
 
-Test DACs are not permitted during certification testing, and devices must arrive with two instances with individually provisioned DACs in order to show that the device can meet the requirements around individual provisioning. Devices at certification are not required to use production DACs.
+Test DACs are not permitted during certification testing, and devices must arrive with two instances
+with individually provisioned DACs in order to show that the device can meet the requirements
+around individual provisioning. Devices at certification are not required to use production DACs.
 
-Device manufacturers may wish to consider joining the CSA early in the process to understand the details of the security procedures within the Alliance.
+Device manufacturers may wish to consider joining the CSA early in the process to understand
+the details of the security procedures within the Alliance.
 
 ### Certification Declaration (CD)
 
-The Certification Declaration (CD) is provided by the CSA after n attesting product is
+The Certification Declaration (CD) is provided by the CSA after an attesting product is
 certified. It is tied to the vendor and product ID (or IDs) of the certified
 product, and is signed by CSA. The public key corresponding to the signing key is
 well known and distributed by the CSA through the DCL.
@@ -104,24 +111,24 @@ well known and distributed by the CSA through the DCL.
 
 The CD is NOT a standard X.509 certificate, but is
 instead a CMS-encoded SignedData payload containing a TLV-encoded structure,
-described in section 6.3.1 Certification Declaration of the spec. Certification
+described in section 6.3.1 Certification Declaration of the Matter specification. Certification
 Declarations can be viewed using the
-[Certificate Tool](https://project-chip.github.io/connectedhomeip-doc/src/tools/chip-cert/README.html),
+[Certificate Tool](https://project-chip.github.io/connectedhomeip-doc/src/tools/chip-cert/README.html).
 
-The certification declaration for the product line is provided after
-certification testing, and therefore cannot be hard coded in the firmware. New
-certification declarations are issued for each certified firmware update.
+The Certification Declaration for the product line is provided after
+certification testing, and therefore cannot be hard-coded in the firmware. New
+Certification Declarations are issued for each certified firmware update.
 Therefore, product development should include a strategy for initial
-provisioning and updates of the certification declaration.
+provisioning and updates of the Certification Declaration.
 
 See
 [Preparing a Device for Certification](#preparing-a-device-for-certification)
 for discussion of CDs used for certification testing.
 
-### Matter on-boarding materials (QR codes and manual codes)
+### Matter onboarding materials (QR codes and manual codes)
 
 In addition to DACs, each individual unit needs to be provisioned with its own
-on-boarding material for discovery and initial commissioning. This includes the
+onboarding material for discovery and initial commissioning. This includes the
 following per-unit items provisioned on the device:
 
 -   discriminator
@@ -146,7 +153,7 @@ Information about on-package badging and QR and manual codes are documented in t
 
 If a product that has already been released with non-Matter firmware wishes to update
 to include Matter functionality, the Matter firmware and supporting materials can be
-installed on the in-field devices using their already-available, non-Matter update
+installed on the in-field devices using their already available, non-Matter update
 mechanism. Devices can continue to use their original update mechanism for future
 Matter updates, or may opt to use the Matter-specified Over-the-Air (Matter OTA)
 update mechanism.
@@ -154,7 +161,7 @@ update mechanism.
 In-field update considerations are
 discussed in section 5.8 of the specification, but it is important to note that
 in-field products are subject to the same per-unit requirements as Out-of-Box
-Natter products, and thus it is important to consider how to distribute not only
+Matter products, and thus it is important to consider how to distribute not only
 the firmware, but also how to display the on-boarding material or how to do a
 background update using the current connected application and how to provision
 the per-unit materials discussed earlier in this section in a secure manner
