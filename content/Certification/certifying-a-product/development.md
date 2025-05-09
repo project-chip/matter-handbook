@@ -4,15 +4,9 @@ chapter = false
 weight = 6
 +++
 
-![](../imgs/development.png)
-
-```
-Some links on this page are only accessible to CSA members.
-```
+![](../../../certification/development.png)
 
 > Some links on this page are only accessible to CSA members.
-
-`Some links on this page are only accessible to CSA members.`
 
 The process of developing a Matter product is highly dependent on the device
 being developed, the platform being used, and the policies of the company doing the development. There
