@@ -19,6 +19,7 @@ address the common considerations for Matter product development.
 
 
 ## Matter-specific product considerations
+
 The documentation in this section aims to give a brief overview of some of the
 common product and factory considerations and challenges that may differ from
 non-Matter products.
@@ -84,6 +85,7 @@ A list of PKI providers can be found on the CSA site:
 -   [Product Attestation Authorities](https://csa-iot.org/certification/paa/)
 
 #### Development DACs
+
 During the development phase, developers often opt to use test DACs using the test Vendor IDs.
 The SDK has a number of example DACs that chain up to the SDK test PAAs and these are loaded
 by default by the example apps. The development controllers load the test PAAs by default, which
