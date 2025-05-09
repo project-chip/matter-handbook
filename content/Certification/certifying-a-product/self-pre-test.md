@@ -72,7 +72,7 @@ Documentation around common problems when running tests can be found in the
 
 The CSA has a dedicated Slack channel for test harness questions at (#csg-matter-test-harness-help).
 
-Questions about tests for specific clusters can also be directed to the supporting tiger team.
+Questions about tests for specific clusters can also be directed to the supporting Tiger Team.
 
 In the case where a test case bug is identified, the affected manufacturer should file a request with
 the Change Control Board (CCB). Information about the CCB process can be found in the
