@@ -55,7 +55,7 @@ As a part of the attestation chain, each attesting product needs to be provision
 
 -   Device attestation private key
     -   Private, stored in the secure subsystem where possible
-    -   See Spec section 6.3.2 Firmware information
+    -   See section 6.3.2 Firmware information of the Matter specification
     -   Covered by the
         [Security Attestation declaration](https://groups.csa-iot.org/wg/members-all/document/27432)
 -   Device Attestation Certificate (DAC)
