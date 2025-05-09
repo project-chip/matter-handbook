@@ -6,6 +6,8 @@ weight = 7
 
 ![](../../../certification/self-pre-test.png)
 
+> Some links on this page are only accessible to CSA members.
+
 Before submitting a product for formal certification testing, doing a self pre-test is
 important to identify and fix certification-blocking bugs.
 
