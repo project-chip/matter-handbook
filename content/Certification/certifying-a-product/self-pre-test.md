@@ -39,7 +39,7 @@ is common for manufacturers to run tests locally until they are certain the test
 passing, then move on to use the official tool.
 
 The certification program uses a combination of different types of testing for
-certification. Tests can be automated in YAML or python.
+certification. Tests can be automated in YAML or Python.
 
 Tests that are automated in YAMl are located in the
 [YAML SDK folder](https://github.com/project-chip/connectedhomeip/tree/master/src/app/tests/suites/certification).
