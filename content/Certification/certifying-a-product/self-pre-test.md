@@ -53,7 +53,7 @@ verification steps document, which can be found in the official
 [release documentation](https://groups.csa-iot.org/wg/members-all/document/folder/2269)
 for each specification revision.
 
-## Running Tests Locally
+## Running tests locally
 
 Information about running tests locally can be found in the SDK documentation:
 - [YAML](https://project-chip.github.io/connectedhomeip-doc/testing/yaml.html#running-yaml-tests)

@@ -14,7 +14,7 @@ joining the CSA.
 
 A Vendor ID is used to identify the manufacturer of products and is required before
 certifying a product. Vendor IDs are assigned by the CSA and appear in the device
-firmware and in the attestation certificates to identify the manufacture and show the
+firmware and in the attestation certificates to identify the manufacturer and show the
 product has been properly certified. Companies should send requests for new Vendor
 IDs to [help@csa-iot.org](mailto:help@csa-iot.org) or through the
 [Contact Us page](https://csa-iot.org/contact-us/).
