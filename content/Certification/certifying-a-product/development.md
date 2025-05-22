@@ -167,7 +167,7 @@ discussed in section 5.8 of the specification. It is important to note that
 in-field products are subject to the same per-unit requirements as Out-of-Box
 Matter products. It is therefore important to consider not only how to distribute
 the firmware but also either how to display the on-boarding material or perform a
-background commissioning. It is also necessary to to provision the per-unit materials
+background commissioning. It is also necessary to provision the per-unit materials
 discussed earlier in this section in a secure manner, using the security materials
 present on the device before the update.
 
