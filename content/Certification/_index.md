@@ -13,4 +13,4 @@ This section contains information on the Matter certification process, including
 - [Developing a Certification Program for a New Feature](./certification-program-development/)
 
 
-- [Guides](./Guides/)
+- [Guides](./guides/)
