@@ -11,6 +11,7 @@ pre = "<b>7. </b>"
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ACL      | Access Control List. This is a list of entries in the Access Control cluster that grant access privileges to device and groups                                            |
 | adoc     | The filename suffix for asciidoc, which is the markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                        |
+| Alchemy  | Alchemy is a command line tool for modifying and transforming Matter spec documents. [Alchemy](https://github.com/project-chip/alchemy) |
 | Alliance | Refers to the Connectivity Standards Alliance (CSA)                                                                                                                       |
 | asciidoc | Markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                                                                       |
 | AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.
