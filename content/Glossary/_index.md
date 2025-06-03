@@ -13,11 +13,11 @@ pre = "<b>7. </b>"
 | adoc     | The filename suffix for asciidoc, which is the markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                        |
 | Alchemy  | Alchemy is a command line tool for modifying and transforming Matter spec documents. [Alchemy](https://github.com/project-chip/alchemy) |
 | Alliance | Refers to the Connectivity Standards Alliance (CSA)                                                                                                                       |
+| AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.|
 | asciidoc | Markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                                                                       |
-| AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.
-| ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices.
-| Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
+| ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices. |
 | CASE     | Certificate Authenticated Session Establishment. This is the session establishment mechanism used during normal Matter operations                                         |
+| Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
 | CD       | Certification Declaration - this declaration is provided by devices to prove they have passed certification                                                               |
 | CHIP     | Matter used to be called Project CHIP (Connected Home over IP) before it got its current name. Much of the SDK still uses that prefix.                                            |
 | CSA      | Connectivity Standards Alliance - the member-driven organization that manages the Matter standard                                                                                                   |
@@ -33,7 +33,7 @@ pre = "<b>7. </b>"
 | mDNS     | Multicast DNS - the mechanism used to perform DNS-SD over Wi-Fi                                                                                                           |
 | MPSG     | Marketing and Product Sub Group [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup)                                                                                |
 | NOC      | Node operational certificate. See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                                      |
-| NOSCR    | Node Operational Certificate Signing Request. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                             |
+| NOCSR    | Node Operational Certificate Signing Request. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                             |
 | PAA      | Product Attestation Authority. Root certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                   |
 | PAI      | Product attestation intermediate - Intermediate certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)       |
 | PASE     | Password Authenticated Session Establishment. This is the session establishment mechanism used to commission devices.                                                     |
