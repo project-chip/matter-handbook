@@ -19,7 +19,7 @@ The following table provides a general overview of various use cases for the ava
 | Chipset-specific implementations (e.g. Wi-Fi/Thread)                      | X            | –              |
 | Use on OS-based platforms: Linux, macOS                                   | X            | X              |
 | Use on Windows                                                            | –            | X              |
-| Ideal for rapid prototyping and testing                                   | –            | X              | 
+| Ideal for rapid prototyping and testing                                   | –            | X              |
 
 ## The official Matter SDK
 
