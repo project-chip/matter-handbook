@@ -1,7 +1,7 @@
 matrix:
 - name: markdown
   aspell:
-  lang: en
+    lang: en
   dictionary:
     wordlists:
     - .wordlist.txt
