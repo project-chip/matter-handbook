@@ -8,11 +8,14 @@ matrix:
     encoding: utf-8
   pipeline:
   - pyspelling.filters.markdown:
-  - pyspelling.filters.html:
-      comments: false
-      ignores:
-      - code
-      - pre
+  #- pyspelling.filters.html:
+  #    comments: false
+  #    ignores:
+  #    - code
+  #    - pre
   sources:
   - 'content/**/*.md'
   default_encoding: utf-8
+  re_exclude:
+  - '\[.*?\]\(https?://[^\s)]+\)' # Matches [link text](url)
+  - 'https?://[^\s)]+'          # Matches standalone URLs
