@@ -47,6 +47,7 @@ DAC
 DACs
 DAC's
 dcl
+DDoS
 decrypting
 desc
 dimmable
@@ -99,6 +100,7 @@ kbps
 LLN
 lossy
 
+macOS
 magnetron
 MatterDACName
 MCORE
@@ -108,6 +110,7 @@ MRDs
 MTU
 multicast
 
+namespace
 NOC
 NOCs
 NOCSR
@@ -153,6 +156,7 @@ Rsp
 RTT
 
 SDK
+SDKs
 SignedData
 SKIDs
 SKUs
@@ -170,12 +174,15 @@ TCOC
 testnet
 TLS
 TLV
+TrustAsia
+trustasia
 TSG
 TT
 Tuya
-TrustAsia
+tuyaca
 Tx
 TXT
+TypeScript’s
 
 UDP
 UI
@@ -190,9 +197,12 @@ unprovisioned
 untimed
 UX
 
+validator
 verifier
 VID
+VN
 
+webui
 WG
 Wi-Fi
 Wi
