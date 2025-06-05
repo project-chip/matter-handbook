@@ -1,9 +1,15 @@
 AAAA
+ACL
+adoc
 ANC
 ANeatCluster
+AoE
+asciidoc
 ATL
 ATLs
+Axxxx
 
+badging
 bitmask
 BLE
 BOM
@@ -11,12 +17,18 @@ bootloader
 BRs
 
 CA
+CA's
+CAs
 CCB
 chipset
+CLI
 CMS
+CN
 commissionable
 commissionee
+commissionees
 config
+connectedhomeip
 controlee
 cooktop
 CRL
@@ -29,40 +41,58 @@ csg
 CSR
 CSRSR
 CTP
+Cxx
 
 DAC
 DACs
-DCL
+DAC's
+dcl
 decrypting
 desc
 dimmable
 DM
 DMs
+DMTT
 DNS
+DRLC
 
+EP
 EV
 EVSE
 eXtra
+Exx
 
 FastTrack
+FC
 Fi
 filesystem
 firewalled
 FRP
+Fxx
 
+github
 groupcast
+gRPC
 
+HowTo
+https
 HVAC
 
+ICAC
+ICD
 ICMPv
+IDM
 illuminance
 IM
 interop
 io
 iot
 IoT
+iotledger
 IPv
 ITU
+
+js
 
 kbps
 
@@ -85,6 +115,7 @@ NOKP
 
 onboarding
 OnOff
+ONs
 openthread
 OSI
 OTA
@@ -97,6 +128,7 @@ PAKE
 PASE
 passcode
 passcodes
+pdf
 PHY
 PID
 PIXIT
@@ -105,7 +137,10 @@ PKI
 pre
 provisioner
 proxied
+py
 
+RCAC
+readme
 recert
 recertification
 recertifications
@@ -113,6 +148,7 @@ repo
 requestor
 retransmissions
 routable
+RPC
 Rsp
 RTT
 
@@ -127,12 +163,17 @@ subnet
 subnets
 subtypes
 SVE
+SWTT
 
 TCO
 TCOC
+testnet
 TLS
 TLV
 TSG
+TT
+Tuya
+TrustAsia
 Tx
 TXT
 
@@ -149,6 +190,7 @@ unprovisioned
 untimed
 UX
 
+verifier
 VID
 
 WG
@@ -157,8 +199,10 @@ Wi
 
 xFD
 xFF
+xml
+XMLs
 XY
 
 YAML
 
-Zigbee
+zigbee
