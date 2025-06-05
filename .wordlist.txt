@@ -4,6 +4,7 @@ adoc
 ANC
 ANeatCluster
 AoE
+APIs
 asciidoc
 ATL
 ATLs
@@ -183,6 +184,7 @@ tuyaca
 tuyacn
 Tx
 TXT
+TypeScript’s
 TypeScript’s
 
 UDP
