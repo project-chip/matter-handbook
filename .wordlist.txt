@@ -1,4 +1,6 @@
 AAAA
+ANC
+ANeatCluster
 ATL
 ATLs
 
@@ -9,7 +11,9 @@ bootloader
 BRs
 
 CA
+CCB
 chipset
+CMS
 commissionable
 commissionee
 config
@@ -21,7 +25,7 @@ cryptographical
 cryptographically
 crypto
 csa
-CSG
+csg
 CSR
 CSRSR
 CTP
@@ -30,12 +34,15 @@ DAC
 DACs
 DCL
 decrypting
+desc
 dimmable
 DM
+DMs
 DNS
 
 EV
 EVSE
+eXtra
 
 FastTrack
 Fi
@@ -62,7 +69,9 @@ kbps
 LLN
 lossy
 
+magnetron
 MatterDACName
+MCORE
 mDNS
 MPSG
 MRDs
@@ -79,13 +88,19 @@ OnOff
 openthread
 OSI
 OTA
+OTAs
 
 PAA
+PAAs
 PAI
+PAKE
 PASE
 passcode
+passcodes
 PHY
 PID
+PIXIT
+PIXITs
 PKI
 pre
 provisioner
@@ -94,16 +109,22 @@ proxied
 recert
 recertification
 recertifications
+repo
 requestor
 retransmissions
 routable
+Rsp
 RTT
 
 SDK
+SignedData
+SKIDs
+SKUs
 SRP
 SSL
 stateful
 subnet
+subnets
 subtypes
 SVE
 
@@ -112,6 +133,7 @@ TCOC
 TLS
 TLV
 TSG
+Tx
 TXT
 
 UDP
@@ -121,6 +143,8 @@ ULA
 uncommissioned
 unencrypted
 unicast
+unicasts
+unmute
 unprovisioned
 untimed
 UX
@@ -134,5 +158,7 @@ Wi
 xFD
 xFF
 XY
+
+YAML
 
 Zigbee
