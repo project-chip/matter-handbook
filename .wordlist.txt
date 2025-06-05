@@ -1,5 +1,6 @@
 AAAA
 ATL
+ATLs
 
 bitmask
 BLE
@@ -26,14 +27,18 @@ CSRSR
 CTP
 
 DAC
+DACs
+DCL
 decrypting
 dimmable
 DM
 DNS
 
+EV
 EVSE
 
 FastTrack
+Fi
 filesystem
 firewalled
 FRP
@@ -48,6 +53,7 @@ IM
 interop
 io
 iot
+IoT
 IPv
 ITU
 
@@ -69,6 +75,7 @@ NOCSR
 NOKP
 
 onboarding
+OnOff
 openthread
 OSI
 OTA
@@ -86,6 +93,7 @@ proxied
 
 recert
 recertification
+recertifications
 requestor
 retransmissions
 routable
@@ -110,8 +118,10 @@ UDP
 UI
 uint
 ULA
+uncommissioned
 unencrypted
 unicast
+unprovisioned
 untimed
 UX
 
@@ -119,6 +129,7 @@ VID
 
 WG
 Wi-Fi
+Wi
 
 xFD
 xFF
