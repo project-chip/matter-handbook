@@ -9,5 +9,5 @@ matrix:
   pipeline:
   - pyspelling.filters.text
   sources:
-  - '**/*.md'
+  - 'content/**/*.md'
   default_encoding: utf-8
