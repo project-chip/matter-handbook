@@ -8,15 +8,15 @@ matrix:
     - .wordlist.txt
     encoding: utf-8
   pipeline:
-  - pyspelling.filters.text
-  #- pyspelling.filters.html:
-  #    comments: false
-  #    ignores:
-  #    - code
-  #    - pre
+  - pyspelling.filters.markdown:
+  - pyspelling.filters.html:
+      comments: false
+      ignores:
+      - code
+      - pre
   sources:
   - 'content/**/*.md'
   default_encoding: utf-8
   re_exclude:
-  - '\[.*?\]\(https?://[^\s)]+\)' # Matches [link text](url)
+  - '\[.*?\]\([^\s)]+\)' # Matches [link text](url)
   - 'https?://[^\s)]+'          # Matches standalone URLs
