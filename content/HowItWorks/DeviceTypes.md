@@ -316,7 +316,7 @@ For example, a Casting Video Player can be a smart TV device, a TV Set Top Box, 
 #### Speaker
 
 This feature controls the speaker volume of the device.
-To control unmute/mute, the On/Off cluster SHALL be used. A value of TRUE for the OnOff attribute SHALL represent the volume on (not muted) state, while a value of FALSE SHALL represent the vol­ume off (muted) state. For volume level control, the Level cluster SHALL be used.
+To control unmute/mute, the On/Off cluster SHALL be used. A value of TRUE for the OnOff attribute SHALL represent the volume on (not muted) state, while a value of FALSE SHALL represent the volume off (muted) state. For volume level control, the Level cluster SHALL be used.
 A dedicated endpoint is needed because the On/Off cluster can also be used for other purposes, such as for power control.
 
 #### Content App
