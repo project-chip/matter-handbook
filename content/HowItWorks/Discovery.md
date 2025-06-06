@@ -22,7 +22,7 @@ In either method, the commissionable node advertises information as shown in the
 
 As per the Matter specification, Vendor ID and Product ID are not required but can be included. The Discriminator is mandatory and is crucial during the commissioning process to provision the correct device, in case multiple identical devices are connected at the same time. Extended data may be used to encode custom vendor-specific information.
 
-Many devices will advertise for a short period of time (~3-15 mins) after power-up. Other devices must not start advertising either because their primary control does not originate from the fabric or because automatic unprovisioned advertising of devices such as locks isn't safe. This table summarizes the behavior.
+Many devices will advertise for a short period of time (~3-15 minutes) after power-up. Other devices must not start advertising either because their primary control does not originate from the fabric or because automatic unprovisioned advertising of devices such as locks isn't safe. This table summarizes the behavior.
 
 | Primary Device Function                                                                      | Automatic Announcement |
 |----------------------------------------------------------------------------------------------|------------------------|

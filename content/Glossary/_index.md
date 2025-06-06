@@ -32,7 +32,7 @@ pre = "<b>7. </b>"
 | mDNS     | Multicast DNS - the mechanism used to perform DNS-SD over Wi-Fi                                                                                                           |
 | MPSG     | Marketing and Product Sub Group [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup)                                                                                |
 | NOC      | Node operational certificate. See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                                      |
-| NOSCR    | Node Operational Certificate Signing Request. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                             |
+| NOCSR    | Node Operational Certificate Signing Request. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                             |
 | PAA      | Product Attestation Authority. Root certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                   |
 | PAI      | Product attestation intermediate - Intermediate certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)       |
 | PASE     | Password Authenticated Session Establishment. This is the session establishment mechanism used to commission devices.                                                     |

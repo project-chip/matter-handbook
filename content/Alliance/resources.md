@@ -16,7 +16,7 @@ If you are already a member of the Alliance, here are some helpful links found i
 
 - [Matter Working Group](https://groups.csa-iot.org/wg/matter-wg/dashboard)
 - [How to Join the Matter Working Group and Subgroups (pg. 32-35)](https://groups.csa-iot.org/wg/members-all/document/folder/2817)
-- [Meeting Calendar for Matter Working Groups and Subroups](https://groups.csa-iot.org/wg/matter-wg/calendar) _Not seeing a calendar for a specific group? Make sure you’re a member of that group for visibility_
+- [Meeting Calendar for Matter Working Groups and Subgroups](https://groups.csa-iot.org/wg/matter-wg/calendar) _Not seeing a calendar for a specific group? Make sure you’re a member of that group for visibility_
 
 ### Subgroups
 

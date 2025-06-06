@@ -41,9 +41,8 @@ Additional information available in the [Distributed Compliance Ledger (DCL) Pol
 | Type of Node         | Description                                                                                                                                          |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Validator Node (VN)  | Participates in creating the consensus process to add information into the ledger. The consensus is the process by which the nodes agree on the state and data of the blockchain, ensuring all nodes have a consistent ledger while verifying the validity of transactions.                                                                                                                                       |
-
-| Sentry Node (SN)     | Doesn\'t participate in consensus and wraps the VN representing it for the rest of the network as one of the ways for DDoS and access protection.    |
-| Observer Node (ON)   | Doesn\'t participate in consensus and is optimized for public data read and authenticated write interactions with the ledger.                        |
+| Sentry Node (SN)     | Doesn't participate in consensus and wraps the VN representing it for the rest of the network as one of the ways for DDoS and access protection.    |
+| Observer Node (ON)   | Doesn't participate in consensus and is optimized for public data read and authenticated write interactions with the ledger.                        |
 
 ### Types of account roles that can interact with the DCL
 
@@ -92,18 +91,16 @@ The Web UI allows users to interact with the DCL through a visual interface, mak
 
 #### Command Line Interface
 
-The DCL CLI software (`dcld`) allows users to interact with the DCL via command line using a connection to a specific available Observer Node. The CLI software is available at the following link: 
+The DCL CLI software (`dcld`) allows users to interact with the DCL via command line using a connection to a specific available Observer Node. The CLI software is available at the following link:
 <https://github.com/zigbee-alliance/distributed-compliance-ledger/releases>.
 
 The instructions for the DCL client are available at the following link: <https://github.com/zigbee-alliance/distributed-compliance-ledger/blob/master/docs/how-to.md>.
 
 ### Observer Nodes
 
-An Observer Node (ON) offers APIs or Web User Interfaces for users or systems to interact with the DCL. This facilitates both manual and automated authorized writes, as well as 
-public queries to the DCL.
+An Observer Node (ON) offers APIs or Web User Interfaces for users or systems to interact with the DCL. This facilitates both manual and automated authorized writes, as well as public queries to the DCL.
 
-It is not a requirement to deploy an Observer Node. The Alliance has ONs available in various regions across the globe, including trusted ONs managed by our members. This ensures 
-broad accessibility and reliable interaction with the DCL from different locations.
+It is not a requirement to deploy an Observer Node. The Alliance has ONs available in various regions across the globe, including trusted ONs managed by our members. This ensures broad accessibility and reliable interaction with the DCL from different locations.
 
 #### Main-Net public ONs
 
