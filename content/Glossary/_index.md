@@ -11,12 +11,13 @@ pre = "<b>7. </b>"
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ACL      | Access Control List. This is a list of entries in the Access Control cluster that grant access privileges to device and groups                                            |
 | adoc     | The filename suffix for asciidoc, which is the markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                        |
+| Alchemy  | Alchemy is a command line tool for modifying and transforming Matter spec documents. [Alchemy](https://github.com/project-chip/alchemy) |
 | Alliance | Refers to the Connectivity Standards Alliance (CSA)                                                                                                                       |
+| AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.|
 | asciidoc | Markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                                                                       |
-| AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.
-| ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices.
-| Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
+| ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices. |
 | CASE     | Certificate Authenticated Session Establishment. This is the session establishment mechanism used during normal Matter operations                                         |
+| Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
 | CD       | Certification Declaration - this declaration is provided by devices to prove they have passed certification                                                               |
 | CHIP     | Matter used to be called Project CHIP (Connected Home over IP) before it got its current name. Much of the SDK still uses that prefix.                                            |
 | CSA      | Connectivity Standards Alliance - the member-driven organization that manages the Matter standard                                                                                                   |
