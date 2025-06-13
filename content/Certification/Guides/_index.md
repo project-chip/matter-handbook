@@ -4,4 +4,6 @@ chapter = false
 weight = 4
 +++
 
-This section contains Guides related to General certification processes.
+This section contains detailed guides about specific parts of the certification processes.
+
+- [PICS and PIXITs](./picsandpixit/)
