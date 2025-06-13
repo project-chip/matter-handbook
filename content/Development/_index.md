@@ -13,13 +13,13 @@ The following table provides a general overview of various use cases for the ava
 
 | Use Case                                                                  | Official SDK | JavaScript SDK |
 |---------------------------------------------------------------------------|--------------|----------------|
-| Compliant with Matter version                                             | 1.4          | 1.4            |
+| Compliant with Matter version                                             | 1.4.1        | 1.4.1          |
 | Participate in development of new Matter features                         | X            | –              |
 | Use for embedded platforms with strict memory and performance constraints | X            | –              |
 | Chipset-specific implementations (e.g. Wi-Fi/Thread)                      | X            | –              |
 | Use on OS-based platforms: Linux, macOS                                   | X            | X              |
 | Use on Windows                                                            | –            | X              |
-| Ideal for rapid prototyping and testing                                   | –            | X              | 
+| Ideal for rapid prototyping and testing                                   | –            | X              |
 
 ## The official Matter SDK
 
