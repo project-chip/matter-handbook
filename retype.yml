@@ -1,0 +1,15 @@
+input: src/
+output: .retype
+url: https://handbook.buildwithmatter.com/
+start:
+  pro: true
+poweredByRetype: false
+branding:
+  logo: static/logos/matter_light.svg
+  logoDark: static/logos/matter_dark.svg
+  label: Handbook
+# links:
+#   - text: Getting Started
+#     link: https://retype.com/guides/getting-started/
+footer:
+  copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. All rights reserved."
