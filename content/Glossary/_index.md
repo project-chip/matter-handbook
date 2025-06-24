@@ -11,7 +11,9 @@ pre = "<b>7. </b>"
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ACL      | Access Control List. This is a list of entries in the Access Control cluster that grant access privileges to device and groups                                            |
 | adoc     | The filename suffix for asciidoc, which is the markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                        |
+| Alchemy  | Alchemy is a command line tool for modifying and transforming Matter spec documents. [Alchemy](https://github.com/project-chip/alchemy) |
 | Alliance | Refers to the Connectivity Standards Alliance (CSA)                                                                                                                       |
+| AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.|
 | asciidoc | Markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                                                                       |
 | AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.
 | ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices.
@@ -19,8 +21,8 @@ pre = "<b>7. </b>"
 | BOM      | Bill of Materials. This term is generally used to refer to the total cost to manufacture one unit of a product.
 | BR       | Border Router. This type of router connects two communication protocols. Matter uses both Thread and Wi-Fi as operational transports, and therefore a Thread border router (TBR) is required to route packets between the Thread and Wi-Fi networks.|
 | CA       | Certificate Authority. These entities store, sign and issue digital certificates. In Matter, the Device attestation certificate chain is backed by a Product Attestation Authority certificate that is issues by a manufacturer CA or the CA of a certificate provider (also called a Public Key Infrastructure (PKI) provider). The Node Operational Certificate (NOC) chains are backed by a Trusted Root Certificate that chains to a CA managed by the Fabric administrator. |
-| Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
 | CASE     | Certificate Authenticated Session Establishment. This is the session establishment mechanism used during normal Matter operations                                         |
+| Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
 | CCB      | Change Control Board. In the CSA, CCB is also used as a short-form to refer to issues raised in the CCB system. CCB issues may be raised by members to report issues in either the specification or the test plan. These are most commonly raised for test issues found at certification. The certification section has more information about the [CCB process](../Certification/certifying-a-product/self-pre-test#fixing-bugs). |
 | CD       | Certification Declaration - this declaration is provided by devices to prove they have passed certification                                                               |
 | CHIP     | Matter used to be called Project CHIP (Connected Home over IP) before it got its current name. Much of the SDK still uses that prefix.                                            |
@@ -56,8 +58,8 @@ pre = "<b>7. </b>"
 | MTU      | Maximum Transmission Unit. MTU refers to the largest size of a packet (Protocol Data Unit) that can be transmitted over a network without being fragmented.
 | NFR      | New Feature Request. A new feature request is submitted to the MPSG by a team looking to implement a new feature. These are used for medium-sized features that the MPSG determines does not require a full marketing requirements document (MRD), but is too large for a technical change request (TCR).|
 | NOC      | Node Operational Certificate. See [Commissioning](../howitworks/commisioning)|
-| NOCSR    | Node Operational Certificate Signing Request. See [Commissioning](../HowItWorks/Commisioning)|
-| NOKP     | Node Operational Key Pair. This is the key pair generated on the device as part of the operational certificate signing process. See [Commissioning](../HowItWorks/Commisioning)|
+| NOCSR    | Node Operational Certificate Signing Request. See [Commissioning](../howitworks/commisioning)|
+| NOKP     | Node Operational Key Pair. This is the key pair generated on the device as part of the operational certificate signing process. See [Commissioning](../howitworks/commisioning)|
 | OpenThread | [OpenThread](https://openthread.io/) is an implementation of the thread protocol.|
 | OTA      | Over The Air. This acronym normally refers to software updates delivered to deployed devices.|
 | PAA      | Product Attestation Authority. Root certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                   |
