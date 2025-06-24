@@ -26,7 +26,7 @@ pre = "<b>7. </b>"
 | CHIP     | Matter used to be called Project CHIP (Connected Home over IP) before it got its current name. Much of the SDK still uses that prefix.                                            |
 | CI       | Continuous Integration. This is normally used to refer to the tests performed before pull requests can be merged into any of the Matter-owned repositories.               |
 | CLI      | Command line interface.                                                                                                                                                   |
-| commissioning | This is the process by which Matter devices are attested, issued operational certificates and credentials for the operational network. More information about the commissioning process can be found in the [Commissioning guide](../HowItWorks/Commisioning/). |
+| commissioning | This is the process by which Matter devices are attested, issued operational certificates and credentials for the operational network. More information about the commissioning process can be found in the [Commissioning guide](../howitworks/commissioning). |
 | CRL      | Certificate revocation list. This is a list of certificates that were previously issued by a CA, but that have since been revoked.                                        |
 | CSA      | Connectivity Standards Alliance - the member-driven organization that manages the Matter standard                                                                                                   |
 | CSG      | Certification Sub Group [CSG](https://groups.csa-iot.org/wg/matter-csg/workgroup)                                                                                          |
@@ -48,17 +48,17 @@ pre = "<b>7. </b>"
 | IM       | Interaction Model. The [Interaction Model](../HowItWorks/InteractionModel/) section has more information on this layer.
 | ICAC     | Intermediate Certificate Authority Certificate See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                     |
 | ICD      | Intermittently Connected Devices. These device can sleep for relatively long periods and will be unreachable over Matter during these times.                              |
-| MCORE    | MOCRE PICS codes describe device elements that are not directly tied to data model elements. For example, TCP support.|
+| MCORE    | MCORE PICS codes describe device elements that are not directly tied to data model elements. For example, TCP support.|
 | mDNS     | Multicast DNS - the mechanism used to perform DNS-SD over Wi-Fi                                                                                                           |
 | MPSG     | Marketing and Product Sub Group [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup)                                                                                |
 | MRD      | Market Requirements Document. Large new features are required to have an MRD approved by the MPSG.|
 | MRP      | Message Reliability Protocol. The Matter specification uses MRP to provide reliable communication over UDP. MRP includes protocols for message acknowledgements, retransmissions and duplicate message detection.|
 | MTU      | Maximum Transmission Unit. MTU refers to the largest size of a packet (Protocol Data Unit) that can be transmitted over a network without being fragmented.
 | NFR      | New Feature Request. A new feature request is submitted to the MPSG by a team looking to implement a new feature. These are used for medium-sized features that the MPSG determines does not require a full marketing requirements document (MRD), but is too large for a technical change request (TCR).|
-| NOC      | Node Operational Certificate. See [Commissioning](../HowItWorks/Attestation/)|
+| NOC      | Node Operational Certificate. See [Commissioning](../howitworks/commisioning)|
 | NOCSR    | Node Operational Certificate Signing Request. See [Commissioning](../HowItWorks/Commisioning)|
 | NOKP     | Node Operational Key Pair. This is the key pair generated on the device as part of the operational certificate signing process. See [Commissioning](../HowItWorks/Commisioning)|
-| OpenThread | [OpenThread](http://openthread.io/) is an implementation of the thread protocol.|
+| OpenThread | [OpenThread](https://openthread.io/) is an implementation of the thread protocol.|
 | OTA      | Over The Air. This acronym normally refers to software updates delivered to deployed devices.|
 | PAA      | Product Attestation Authority. Root certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                   |
 | PAI      | Product attestation intermediate - Intermediate certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)       |
@@ -66,7 +66,7 @@ pre = "<b>7. </b>"
 | PASE     | Password Authenticated Session Establishment. This is the session establishment mechanism used to commission devices.                                                     |
 | PHY      | PHY refers to the Physical Layer. The PHY is the lowest layer of the network stack, responsible for the actual transmission and reception of raw data bits over a physical medium. |
 | PICS     | Protocol Implementation Conformance Statement. PICS are also used to determine testing requirements for certification                                                     |
-| PID      | Product identifier. Product identifiers are allocated by the manufacturer and used to identify individual Matter-enabled proucts.                                         |
+| PID      | Product identifier. Product identifiers are allocated by the manufacturer and used to identify individual Matter-enabled products.                                         |
 | PIXIT    | Protocol Implementation eXtra Information for Testing. These are configuration values provided to certification tests.                                                    |
 | PKI      | Public key infrastructure. For Matter, PKI is used for provisioning operational certificates and attesting devices. A "PKI provider" is a company that can provide Matter device attestation certificates for companies that do not run their own certificate authorities.|
 | PR       | Pull Request. This is the mechanism used to contribute to the Matter-owned repositories. Information on [GitHub pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) can be found on the GitHub site.|
