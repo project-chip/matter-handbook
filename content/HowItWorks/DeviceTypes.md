@@ -287,7 +287,7 @@ A Window Covering Controller is a device that controls a window covering device.
 
 #### Thermostat
 
-A Thermostat device is capable of having either built-in or separate sensors for temperature, humidity or occupancy. It allows the desired temperature to be set either remotely or locally. The thermostat is capable of sending heating and/or cooling requirement notifications to a heating/cool­ ing unit (for example, an indoor air handler) or is capable of including a mechanism to control a heating or cooling unit directly.
+A Thermostat device is capable of having either built-in or separate sensors for temperature, humidity or occupancy. It allows the desired temperature to be set either remotely or locally. The thermostat is capable of sending heating and/or cooling requirement notifications to a heating/cooling unit (for example, an indoor air handler) or is capable of including a mechanism to control a heating or cooling unit directly.
 
 #### Fan
 
@@ -316,7 +316,7 @@ For example, a Casting Video Player can be a smart TV device, a TV Set Top Box, 
 #### Speaker
 
 This feature controls the speaker volume of the device.
-To control unmute/mute, the On/Off cluster SHALL be used. A value of TRUE for the OnOff attribute SHALL represent the volume on (not muted) state, while a value of FALSE SHALL represent the vol­ume off (muted) state. For volume level control, the Level cluster SHALL be used.
+To control unmute/mute, the On/Off cluster SHALL be used. A value of TRUE for the OnOff attribute SHALL represent the volume on (not muted) state, while a value of FALSE SHALL represent the volume off (muted) state. For volume level control, the Level cluster SHALL be used.
 A dedicated endpoint is needed because the On/Off cluster can also be used for other purposes, such as for power control.
 
 #### Content App

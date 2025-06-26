@@ -59,4 +59,4 @@ Data shared between Matter nodes is strictly for a defined purpose, namely, for 
 
 ### Privacy preserving mechanisms
 
-Encryption to ensure that messages or identities of communicating parties are not in cleartext on the network
+Encryption to ensure that messages or identities of communicating parties are not in clear text on the network
