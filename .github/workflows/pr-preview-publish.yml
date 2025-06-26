@@ -2,6 +2,7 @@ name: PR preview - Publish    # PR Preview using Retype
 
 on:
   # Trigger on pull request target events (opened, reopened, synchronized) or manual workflow dispatch.
+  # Use 'pull_request_target' so secrets are available for preview builds.
   pull_request_target:
     types:
       - opened
@@ -9,7 +10,8 @@ on:
       - synchronize
   workflow_dispatch:
 
-# Ensure only one preview build per PR.
+# Limit concurrency to one preview build per pull request. 
+# Cancel any in-progress preview build when a new commit is pushed to the same PR.
 concurrency: preview-${{ github.ref }}
 
 # Grant necessary permissions for writing content and PR comments.
@@ -45,7 +47,6 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           submodules: recursive
-          fetch-depth: 0
 
       # Generate the static site from the PR content using Retype.
       - name: Build with Retype
