@@ -1,0 +1,84 @@
+name: PR preview - Publish    # PR Preview using Retype
+
+on:
+  # Trigger on pull request target events (opened, reopened, synchronized) or manual workflow dispatch.
+  # Use 'pull_request_target' so secrets are available for preview builds.
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+  workflow_dispatch:
+
+# Limit concurrency to one preview build per pull request. 
+# Cancel any in-progress preview build when a new commit is pushed to the same PR.
+concurrency: preview-${{ github.ref }}
+
+# Grant necessary permissions for writing content and PR comments.
+permissions:
+  contents: write
+  pull-requests: write
+
+# Set default shell to bash.
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build-preview:
+    # Run build on Ubuntu.
+    runs-on: ubuntu-latest
+    steps:
+      # Setup Node.js for npm, required for Retype installation.
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Install Retype CLI globally using npm for building the site.
+      - name: Install Retype CLI
+        run: |
+          npm install retypeapp --global
+          retype --version
+
+      # Fetch PR code for building the preview.
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          submodules: recursive
+
+      # Generate the static site from the PR content using Retype.
+      - name: Build with Retype
+        run: |
+          retype build
+
+      # Upload the generated site to S3 for preview hosting.
+      - name: Deploy preview
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: './public'
+          DEST_DIR: 'pr-${{ github.event.number }}'
+
+      # Clear CloudFront cache for the updated preview.
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.AWS_CF_DISTRIBUTION }}
+          PATHS: '/pr-${{ github.event.number }}/*'
+          AWS_REGION: ${{ vars.AWS_S3_BUCKET_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      # Post the preview URL as a comment on the pull request.
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            Preview deployed at ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }}
+            
