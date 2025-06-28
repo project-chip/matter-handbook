@@ -24,9 +24,9 @@ Information on how to get started writing test plans is available in the test pl
 Further information about test plan development is available in the [Test Plans documentation](https://github.com/CHIP-Specifications/chip-test-plans/tree/master/docs).
 
 ## Test Automation
-All new server-side tests are required to be fully automated either in YAML or Python with the exception of testing actions triggered outside of Matter. (ex. press a button to test switch event generation, trigger a sensor to confirm a state change in a cluster.)
+All new server-side tests are required to be fully automated either in YAML or Python with the exception of testing actions triggered outside of Matter. (e.g., press a button to test switch event generation, trigger a sensor to confirm a state change in a cluster.)
 
-Further information about the Automation requirements can be found in the [Test plans Getting Started Guide](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/getting_started.md#automation-requirements).
+Further information about the Automation requirements can be found in the [Test Plans Getting Started Guide](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/getting_started.md#automation-requirements).
 
 During certification testing, tests are run in the test harness. Certification tests are also run in the SDK CI. Most tests can also be run locally for development purposes.
 
@@ -41,15 +41,15 @@ The feature tiger team is responsible for supporting the validation of the tests
 
 Specification features cannot be declared officially certifiable until three separate implementations are tested at an official validation event. One of those implementations may be the SDK, as tested by the quality assurance team.
 
-Specification Validation Events (SVEs) are held in conjunction with each release. These are gated, in-person test events. Manufacturers who are bringing an implementation of the feature travel to the validation event location and work with a members from an Authorized Test Lab (ATL) to validate the tests.
+Specification Validation Events (SVEs) are held in conjunction with each release. These are gated, in-person test events. Manufacturers who are bringing an implementation of the feature travel to the validation event location and work with members from an Authorized Test Lab (ATL) to validate the tests.
 
 Participation in the Specification Validation Event is gated by participating in the Test Events (TEs) leading up to the SVE. The number and requirements of the test events can vary based on the contents of the release. Generally, there are multiple test events. The first event is normally lighter, and focused on getting manufacturers familiar with the test harness and running tests. The test event before the SVE is a trial run of the SVE. All tests need to be complete by this test event.
 
 Test events are run virtually, where manufacturers run tests against their implementation themselves, and then upload the results to the CSA test event database - [Test Event Data Stockpile - TEDS](https://zigbeecertifiedproducts.knack.com/test-event-data-stockpile-teds#teds-for-matter/).
 
-SVEs are run in-person and participating manufacturers and ALTs are required to travel to the event location. Most SVE events are now held in multiple global locations and manufacturers can select their preferred location. SVE events last one week, and manufacturers are expected to be present for the entire week to run and debug tests. The set of required tests is identified before the event by the CSA staff and CSG. All manufacturers at an SVE are required to run the full suite of applicable tests from the SVE test suite, in order to support both their own feature, as well as core improvements.
+SVEs are run in-person and participating manufacturers and ATLs are required to travel to the event location. Most SVE events are now held in multiple global locations and manufacturers can select their preferred location. SVE events last one week, and manufacturers are expected to be present for the entire week to run and debug tests. The set of required tests is identified before the event by the CSA staff and CSG. All manufacturers at an SVE are required to run the full suite of applicable tests from the SVE test suite, in order to support both their own feature, as well as core improvements.
 
-Event participants are supported by the CSA staff and supporting volunteer members. Participants can communicate on a private event slack and raise issues in the github repo. Bugs found and fixed during the validation event should be re-run by participants in order to validate the fixes.
+Event participants are supported by the CSA staff and supporting volunteer members. Participants can communicate on a private event slack and raise issues in the GitHub repo. Bugs found and fixed during the validation event should be re-run by participants in order to validate the fixes.
 
 Participants in test and validation events are required to abide by the [Test Event Rules of Engagement](https://groups.csa-iot.org/wg/members-all/document/128), which include confidentiality rules. These are in place to allow manufacturers to participate in test events with unreleased products.
 
