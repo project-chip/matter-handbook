@@ -12,4 +12,4 @@ branding:
 #   - text: Getting Started
 #     link: https://retype.com/guides/getting-started/
 footer:
-  copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. All rights reserved."
+  copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners."
