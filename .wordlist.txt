@@ -138,6 +138,7 @@ PID
 PIXIT
 PIXITs
 PKI
+PMTT
 pre
 provisioner
 proxied
