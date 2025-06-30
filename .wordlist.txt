@@ -30,6 +30,7 @@ commissionee
 commissionees
 config
 connectedhomeip
+connectionless
 controlee
 cooktop
 CRL
@@ -47,6 +48,7 @@ Cxx
 DAC
 DACs
 DAC's
+datagram
 dcl
 DDoS
 decrypting
@@ -77,6 +79,7 @@ groupcast
 gRPC
 
 HowTo
+HRAP
 https
 HVAC
 
@@ -107,11 +110,14 @@ MatterDACName
 MCORE
 mDNS
 MPSG
+MRD
 MRDs
+MRP
 MTU
 multicast
 
 namespace
+NFR
 NOC
 NOCs
 NOCSR
@@ -170,8 +176,11 @@ subtypes
 SVE
 SWTT
 
+TBR
 TCO
 TCOC
+TCP
+TCR
 testnet
 TLS
 TLV
@@ -203,6 +212,7 @@ UX
 validator
 verifier
 VID
+VIDs
 VN
 
 webui
