@@ -13,6 +13,7 @@ Although this process is occasionally depicted as a waterfall, test development 
 Certification program development consists of several different components, each of which is handled by the feature tiger team:
 - Test plan development
 - Test automation
+- Test harness support
 - Test validation through test and validation events
 - Ongoing support
 
@@ -39,6 +40,21 @@ Information about the test harness including the test harness user guide can be 
 Information about the SDK and certification testing can be found in the [SDK Testing Guide](https://project-chip.github.io/connectedhomeip-doc/testing/index.html).
 
 Certification tests can be automated either in YAML or Python. Information on how to automate tests can be found in the [Integration Testing Guide](https://project-chip.github.io/connectedhomeip-doc/testing/integration_tests.html).
+
+Members automating tests should join the [Test Harness Tiger Team](https://groups.csa-iot.org/wg/matter-csg-thd/dashboard)(under the Certification Sub-Group).
+
+## Test harness support
+The test harness is used by the test laboratories when doing official testing of devices for certification. The test harness runs on a raspberry pi and contains the official versions of all the tests approved for a particular specification revision.
+
+Tiger teams are responsible for ensuring that their tests run properly not only in the CI and locally, but also in the test harness.
+
+For many features, the standard TH is sufficient to run the tests required. Developers automating tests should use the [Test Harness Helper functions](https://project-chip.github.io/connectedhomeip-doc/testing/python.html#test-harness-helpers) to ensure the test steps and results are reported correctly.
+
+Some features require special settings or hardware to properly test devices. For example, NFC chips, cameras, particular network settings. Teams that have these types of requirements should engage with the test harness tiger team early to ensure that the test harness can accommodate the requirements and any required hardware can be obtained by the test labs (ATLs). Tiger team members are responsible for implementing the required test harness changes, with the support of the test harness development team.
+
+Members doing test harness development should join the [Test Harness Tiger Team](https://groups.csa-iot.org/wg/matter-csg-thd/dashboard)(under the Certification Sub-Group).
+
+Code for the test harness itself is available in the [Matter certification-tool GitHub](https://github.com/project-chip/certification-tool).
 
 ## Test validation through test and validation events
 The feature tiger team is responsible for supporting the validation of the tests through the test and validation events.
