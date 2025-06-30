@@ -17,11 +17,15 @@ Certification program development consists of several different components, each
 - Ongoing support
 
 ## Test plan development
-The test plans form the official record of the certification program requirements and are a part of the official ballot.
+The test plans form the official record of the certification program requirements and are a part of the official ballot per the [CSA policies and procedures](https://csa-iot.org/wp-content/uploads/2022/10/13-0625-090-organizational-processes-and-procedures_2023-03-23.pdf)
 
 Information on how to get started writing test plans is available in the test plans repo [Getting Started Guide](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/getting_started.md).
 
 Further information about test plan development is available in the [Test Plans documentation](https://github.com/CHIP-Specifications/chip-test-plans/tree/master/docs).
+
+Test plans are developed in the [test-plans GitHub](https://github.com/CHIP-Specifications/chip-test-plans).
+
+Compiled versions of the test plans can be found on the [CSA-IOT document site - test plans](https://docs.csa-iot.org/chip-test-plans/).
 
 ## Test Automation
 All server-side tests are required to be fully automated either in YAML or Python with the exception of testing actions triggered outside of Matter. (e.g., press a button to test switch event generation, trigger a sensor to confirm a state change in a cluster.)
