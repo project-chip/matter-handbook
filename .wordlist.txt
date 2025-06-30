@@ -138,6 +138,7 @@ PID
 PIXIT
 PIXITs
 PKI
+PMTT
 pre
 provisioner
 proxied
@@ -168,6 +169,7 @@ subnet
 subnets
 subtypes
 SVE
+SVEs
 SWTT
 
 TCO
