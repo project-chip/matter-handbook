@@ -15,6 +15,7 @@ Certification program development consists of several different components, each
 - Test automation
 - Test harness support
 - Test validation through test and validation events
+- Interop lab support
 - Ongoing support
 
 ## Test plan development
@@ -73,10 +74,27 @@ Event participants are supported by the CSA staff and supporting volunteer membe
 
 Participants in test and validation events are required to abide by the [Test Event Rules of Engagement](https://groups.csa-iot.org/wg/members-all/document/128), which include confidentiality rules. These are in place to allow manufacturers to participate in test events with unreleased products.
 
+Team members that are validating their features at test and validation events, but who are not actively participating by testing against their own device, can and should request to be added as support staff for the event. Support staff are also required to abide by the [Test Event Rules of Engagement](https://groups.csa-iot.org/wg/members-all/document/128) and are permitted to participate and engage with testers on the slack channel. This type of timely support is key to ensuring that bugs can be fixed before the end of the event. Tiger team members should make this request to either the CSG lead or the CSA staff before the start of the event registration (prior to 4 weeks before the event).
+
 Official information about the test and validation events is available in the [Certification Policy](https://groups.csa-iot.org/wg/members-all/document/previewpdf/125)
 
 ### Minimal Validation Events
 The Matter working group is now also testing Minimal Validation Events. These events are smaller, virtual and are used to support smaller improvements and technical changes that would otherwise be difficult for manufacturers to travel to support. The certification policy for these events is currently under development, and the first event of this type is being tested as a part of the 1.4.2 release.
+
+## Interoperability lab support
+The interop lab runs tests on production devices in a simulation of a standard household set up and use case. Devices submitted to the interoperability lab are run through a series of tests by the lab technicians. Some of these tests are standard across all devices (ex. setup, commission to multiple fabrics etc.) There are also device-specific tests where the technicians exercise the functionality of the devices using various ecosystems.
+
+The test plans for the interoperability lab are designed in conjunction with the tiger team, the ecosystem and the lab technicians through the interoperability tiger team. Properly designing the interoperability test plans ensures that the desired functionality can be tested.
+
+Many ecosystems also accept results from the interoperability lab for certifying devices with their "Works With" (WW) programs and designing a proper test plan for the interop lab facilitates the use of the interoperability lab for these new features and device types.
+
+Information about the interoperability testing facility can be found on the [CSA-IOT Interoperability Testing Facility](https://csa-iot.org/certification/interop-lab/) page.
+
+Members are welcome to join the [Matter CSG Interoperability Tiger Team](https://groups.csa-iot.org/wg/matter-csg-interop/workgroup) (under the Certification Sub-Group).
+
+Members may also join the [Matter MPSG PMTT Interop Lab Works With Tiger Team](https://groups.csa-iot.org/wg/matter-mpsg-pmtt-int/workgroup)(under the Marketing and Product Sub-Group -> Product Marketing Tiger Team).
+
+Interop lab test plans can be found on the [matter-interoperability GitHub](https://github.com/CHIP-Specifications/matter-interoperability).
 
 ## Ongoing support
 As manufactures begin certifying the feature in their products, device, test and implementation bugs often arise. Manufacturers facing challenges during development and certification may reach out over slack or by filing a [Change Control Board (CCB) request](https://zigbeecertifiedproducts.knack.com/zigbee-alliance-ccb-tool#home/) that should be addressed by the tiger team.
