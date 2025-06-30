@@ -24,11 +24,7 @@ Information on how to get started writing test plans is available in the test pl
 Further information about test plan development is available in the [Test Plans documentation](https://github.com/CHIP-Specifications/chip-test-plans/tree/master/docs).
 
 ## Test Automation
-<<<<<<< HEAD
-All new server-side tests are required to be fully automated either in YAML or Python with the exception of testing actions triggered outside of Matter. (e.g., press a button to test switch event generation, trigger a sensor to confirm a state change in a cluster.)
-=======
-All server-side tests are required to be fully automated either in YAML or Python with the exception of testing actions triggered outside of Matter. (ex. press a button to test switch event generation, trigger a sensor to confirm a state change in a cluster.)
->>>>>>> 0e9e411 (Missed some changes)
+All server-side tests are required to be fully automated either in YAML or Python with the exception of testing actions triggered outside of Matter. (e.g., press a button to test switch event generation, trigger a sensor to confirm a state change in a cluster.)
 
 Further information about the Automation requirements can be found in the [Test Plans Getting Started Guide](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/getting_started.md#automation-requirements).
 
