@@ -1,6 +1,6 @@
 input: src/
 output: .retype
-url: https://handbook.buildwithmatter.com/
+url: https://handbook.buildwithmatter.com
 start:
   pro: true
 poweredByRetype: false
