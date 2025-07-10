@@ -1,6 +1,3 @@
----
-icon: home
----
 ![|600](/static/logos/handbook-light.svg){class="relight"}
 ![|600](/static/logos/handbook-dark.svg){class="redark"}
 # Welcome
