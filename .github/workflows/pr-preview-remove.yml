@@ -1,27 +1,30 @@
-name: Remove PR previews when PR is closed
+name: PR preview - Remove  # When PR is closed
 
 on:
+  # Trigger when a pull request target is closed.
   pull_request_target:
     types:
       - closed
 
+# Ensure only one removal process per PR.
 concurrency: preview-${{ github.ref }}
 
+# Grant necessary permissions for writing content and PR comments.
 permissions:
   contents: write
   pull-requests: write
 
+# Set default shell to bash.
 defaults:
   run:
     shell: bash
 
 jobs:
   remove:
-    if: github.repository == 'project-chip/matter-handbook'
+    # Run removal process on Ubuntu.
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.115.4
     steps:
+      # Remove the PR preview directory from S3.
       - name: Remove from S3
         uses: vitorsgomes/s3-rm-action@master
         with:
@@ -32,6 +35,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ vars.AWS_S3_BUCKET_REGION }}
           PATH_TO_DELETE: 'pr-${{ github.event.number }}'
+
+      # Invalidate CloudFront cache for the removed preview.
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
         env:
@@ -40,6 +45,8 @@ jobs:
           AWS_REGION: ${{ vars.AWS_CF_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      # Comment on the pull request that the preview has been removed.
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v3
         with:
