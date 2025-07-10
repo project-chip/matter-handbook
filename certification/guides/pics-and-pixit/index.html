@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.805486110592">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.11.0">
+
+    <!-- Primary Meta Tags -->
+    <title>PICS and PIXIT</title>
+    <meta name="title" content="PICS and PIXIT">
+    <meta name="description" content="In many Standards Defining Organizations including the CSA, the concept of a“Protocol Implementation Conformance Statement” or “PICS” code is...">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://handbook.buildwithmatter.com/certification/guides/pics-and-pixit/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://handbook.buildwithmatter.com/certification/guides/pics-and-pixit/">
+    <meta property="og:title" content="PICS and PIXIT">
+    <meta property="og:description" content="In many Standards Defining Organizations including the CSA, the concept of a“Protocol Implementation Conformance Statement” or “PICS” code is...">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://handbook.buildwithmatter.com/certification/guides/pics-and-pixit/">
+    <meta property="twitter:title" content="PICS and PIXIT">
+    <meta property="twitter:description" content="In many Standards Defining Organizations including the CSA, the concept of a“Protocol Implementation Conformance Statement” or “PICS” code is...">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../../resources/css/retype.css?v=3.11.0.805486110592" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.805486110592" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.805486110592" data-turbo-eval="false" defer></script>
+
+    <!-- Add content to _includes/head.html to include here -->
+    <style>
+      .relight {
+        display: inline !important;
+      }
+
+      .dark .relight {
+        display: none !important;
+      }
+
+      .redark {
+        display: none !important;
+      }
+
+      .dark .redark {
+        display: inline !important;
+      }
+    </style>
+
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../../../" class="flex items-center leading-snug text-2xl">
+                            <span class="grow-0 shrink-0 overflow-hidden">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../static/logos/matter_light.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../../static/logos/matter_dark.svg">
+                            </span>
+                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Handbook</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 bg-body-bg">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="pics-and-pixit" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pics-and-pixit">#</doc-anchor-trigger>
+        <span>PICS and PIXIT</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="pics">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pics">#</doc-anchor-trigger>
+        <span>PICS</span>
+    </h2>
+</doc-anchor-target>
+<p>In many Standards Defining Organizations including the CSA, the concept of a
+“Protocol Implementation Conformance Statement” or “PICS” code is introduced to
+simplify description of protocol elements.</p>
+<p>Each PICS code is a binary value that describes the presence or absence of a
+particular element or capability on a device. Each cluster has a defined PICS
+prefix string and defines a set of PICS codes to describe whether the cluster is
+present, and the presence of each feature, attribute, command, and event for
+both the server and client side.</p>
+<p>For example if there was a cluster ANeatCluster with the PICS code ANC, two
+features (bit 0 and 1), two attributes (0x0000 and 0x0001), two accepted
+commands (0x00 and 0x01), a single command response (0x02) and one event (0x00),
+the following PICS codes would be defined</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>CODE</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ANC.S</td>
+<td>Device implements the ANC cluster as a server</td>
+</tr>
+<tr>
+<td>ANC.S.F00</td>
+<td>Device implements ANC feature at bit 0 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.S.F01</td>
+<td>Device implements ANC feature at bit 1 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.S.A0000</td>
+<td>Device implements ANC attribute 0x0000 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.S.A0001</td>
+<td>Device implements ANC attribute 0x0001 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.S.C00.Rsp</td>
+<td>Device accepts ANC command 0x00 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.S.C01.Rsp</td>
+<td>Device accepts ANC command 0x01 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.S.C02.Tx</td>
+<td>Device generates ANC command response 0x02 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.S.E00</td>
+<td>Device generates ANC event 0x00 on the ANC server cluster</td>
+</tr>
+<tr>
+<td>ANC.C</td>
+<td>Device supports an ANC client</td>
+</tr>
+<tr>
+<td>ANC.C.F00</td>
+<td>Device ANC client is capable of understanding the feature with bit 0</td>
+</tr>
+<tr>
+<td>ANC.C.F01</td>
+<td>Device ANC client is capable of understanding the feature with bit 1</td>
+</tr>
+<tr>
+<td>ANC.C.A0000</td>
+<td>Device ANC client is capable of reading or subscribing to attribute 0x0000</td>
+</tr>
+<tr>
+<td>ANC.C.A0001</td>
+<td>Device ANC client is capable of reading or subscribing to attribute 0x0001</td>
+</tr>
+<tr>
+<td>ANC.C.C00.Rsp</td>
+<td>Device ANC client is capable of sending the command with id 0x00</td>
+</tr>
+<tr>
+<td>ANC.C.C01.Rsp</td>
+<td>Device ANC client is capable of sending the command with id 0x01</td>
+</tr>
+<tr>
+<td>ANC.C.C02.Tx</td>
+<td>Device ANC client understands the command response with id 0x02</td>
+</tr>
+<tr>
+<td>ANC.C.E00</td>
+<td>Device ANC client understands the event with id 0x00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>More information about the PICS code format can be found at
+<a href="https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md">PICS Guidelines</a>. (requires access to the CSA specifications repo)</p>
+<p>In addition to these standard cluster PICS, other PICS may be defined to
+describe capabilities that are not directly expressed via the data model. For
+example, whether the device responds to manual operations that affect the Matter
+data model.</p>
+<p>Additionally, there are node-level PICS, which appear as a part of the MCORE
+PICS set. These PICS codes describe node level support such as the radio,
+whether the device is commissionable, whether the device comes with a QR code,
+etc.</p>
+<p>PICS are used in testing in two ways. &quot;Top level&quot; PICS appear at the top of the
+test plan and indicate whether an entire test case should be run. For example, a
+test case for ANeatCluster would have a top-level PICS of ANC.S to indicate that
+the test would only be run if the ANC cluster is present on the endpoint. Test
+cases also use PICS to gate individual steps of the test which are not
+applicable if a certain element or capability is not implemented.</p>
+<p>The entire collection of PICS codes for a specification release is provided as a
+set of PICS XML files. These files are loaded into the PICS tool, which is used
+to manually set all the PICS codes for a device. The PICS XML files and the PICS
+tool are distributed as part of the official specification release package and
+are available to members on
+<a href="https://groups.csa-iot.org/wg/members-all/document/folder/2269">Causeway</a>
+(requires CSA member login).</p>
+<doc-anchor-target id="pixits">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pixits">#</doc-anchor-trigger>
+        <span>PIXITs</span>
+    </h2>
+</doc-anchor-target>
+<p>PIXIT stands for Protocol Implementation eXtra Information for Testing. A PIXIT
+value provides an implementation-defined condition or value that is required by
+the test.</p>
+<p>PIXIT values are used to convey information that is required for testing, but
+not normally available to a client interacting with the device. For example, the
+key for a test event trigger on the device, or the network credentials for the
+test harness.</p>
+<p>More information on PIXITs and the PIXIT format can be found in the
+<a href="https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md">PICS Guidelines</a>.</p>
+<doc-anchor-target id="creating-pics-conformance-statements-for-matter-devices">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-pics-conformance-statements-for-matter-devices">#</doc-anchor-trigger>
+        <span>Creating PICS conformance statements for Matter devices</span>
+    </h2>
+</doc-anchor-target>
+<p>Because Matter devices may contain multiple, differing instances of the same
+cluster on multiple endpoints, it it not possible to unambiguously describe a
+Matter device with a single set of cluster-based PICS files. Instead, Matter
+devices use a full set of PICS XML files to describe each endpoint.</p>
+<p>To create a conformance statement for a Matter device, for each endpoint, load
+the full set of PICS XML files into the
+<a href="https://picstool.csa-iot.org/">PICS tool</a>, and select each of the PICS elements
+present for the endpoint being described. Documentation on how to use the PICS
+tool can be found in the PICS tool readme in the tool menu.</p>
+<p>Some of the full-node MCORE elements really only apply to the root node,
+while others apply across all endpoints. For example, the entire device is
+commissionable, but commissioning tests only need to be run against EP0, so
+MCORE PICS should be set on the EP0 PICS set. Things like MCORE.IDM apply to
+every endpoint.</p>
+<doc-anchor-target id="helper-scripts">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#helper-scripts">#</doc-anchor-trigger>
+        <span>Helper scripts</span>
+    </h3>
+</doc-anchor-target>
+<p>The official tooling for CSA certification is the PICS tool provided as a part
+of the release. PICS files need to pass validation on the PICS tool to be valid
+for certification.</p>
+<p>However, in Matter, many of the PICS codes correspond directly to elements that
+are exposed directly on the device. For example, cluster presence is determined
+from the server list on an endpoint. Feature maps and attribute and command lists
+correspond directly to the PICS.S.Fxx, PICS.S.Axxxx and PICS.S.Cxx.Xx PICS
+codes. The Matter SDK provides a tool to pre-fill these values in the PICS XML
+files so they do not have to be individually, manually filled in the PICS tool.</p>
+<ul>
+<li><a href="https://github.com/project-chip/connectedhomeip/tree/master/src/tools/PICS-generator">PICS Generator</a></li>
+</ul>
+<p>PICS codes filled using this tool should still be validated by the PICS tool.
+Note that due to device limitations, the tool will NOT fill the following
+categories of PICS codes, and these will need to be filled manually in the PICS
+tool:</p>
+<ul>
+<li>Optional or conditional event PICS (PICS.S.Exx)</li>
+<li>Client PICS</li>
+<li>MCORE (base.xml) PICS</li>
+<li>Manual or other non-element PICS</li>
+<li>PICS describing whether optionally-writable attributes are writable</li>
+<li>Any other non-element PICS</li>
+</ul>
+<p>It is important to note that this script is NOT the official tool for PICS
+generation, just a helper to assist with this manual process. It is very
+important to go back and check that the values are as expected and to fill in
+the other PICS.</p>
+<doc-anchor-target id="verifying-pics-using-the-idm-104-certification-test">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#verifying-pics-using-the-idm-104-certification-test">#</doc-anchor-trigger>
+        <span>Verifying PICS using the IDM-10.4 certification test</span>
+    </h3>
+</doc-anchor-target>
+<p>While not all PICS are verifiable on the device, we do have tests that verify
+the declared PICS against the device. This is one of the first tests that should
+be run at certification, as the PICS files are what determine which set of tests
+are required.</p>
+<p>To run these tests locally, follow the instructions at
+<a href="./python.md#running-tests-locally">Running Python tests locally</a>. The PICS
+checker test is TC-IDM-10.4, implemented in
+<a href="https://github.com/project-chip/connectedhomeip/blob/master/src/python_testing/TC_pics_checker.py">TC_pics_checker.py</a>.
+These tests run a single set of PICS XML files against an endpoint. The
+<code v-pre>--endpoint</code> and <code v-pre>--PICS</code> flags are therefore required.</p>
+<p>Note that you can run tests locally against the PICS XMLs for an endpoint by
+supplying the name of the directory containing the set of PICS XML files for
+that endpoint.</p>
+<doc-anchor-target id="setting-pixits-for-matter-devices">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-pixits-for-matter-devices">#</doc-anchor-trigger>
+        <span>Setting PIXITs for Matter devices</span>
+    </h2>
+</doc-anchor-target>
+<p>Matter tests do not currently have support to read PIXIT values from the PICS
+XML files. Instead, tests implement PIXITs as test-specific flags. When running
+locally, these are specified on the command line. When running in the test
+harness, these are specified in the test parameters section of the test
+configuration.</p>
+<doc-anchor-target id="pics-for-test-selection">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pics-for-test-selection">#</doc-anchor-trigger>
+        <span>PICS for test selection</span>
+    </h2>
+</doc-anchor-target>
+<p>The official source that the CSA certification team uses to determine if all the
+required tests have been run at certification is the submitted set of PICS XML
+files and the PICS tool.</p>
+<p>To generate this set of tests for each endpoint, load all the filled PICS XML
+files for a single endpoint into the PICS tool and validate the PICS files. The
+PICS files should validate properly. This will also generate the list of test
+cases.</p>
+<p>Note that the test harness will also guide test selection by pre-selecting the
+required tests based on the PICS file, but it is the responsibility of the testers
+and the ATL to ensure that all the required tests are run and the results are
+submitted.</p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../certification/guides/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Guides</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../certification/fast-track-recertification-faq/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">Matter Fast​Track Recertification FAQ</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link-weight text-sm leading-relaxed"><p>© Copyright 2025 Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "PICS and PIXIT", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>

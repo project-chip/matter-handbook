@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.805486110592">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.11.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Supported Device Types</title>
+    <meta name="title" content="Supported Device Types">
+    <meta name="description" content="In order to be certified a Matter device must conform to one of the approved device types.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://handbook.buildwithmatter.com/how-it-works/device-types/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://handbook.buildwithmatter.com/how-it-works/device-types/">
+    <meta property="og:title" content="Supported Device Types">
+    <meta property="og:description" content="In order to be certified a Matter device must conform to one of the approved device types.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://handbook.buildwithmatter.com/how-it-works/device-types/">
+    <meta property="twitter:title" content="Supported Device Types">
+    <meta property="twitter:description" content="In order to be certified a Matter device must conform to one of the approved device types.">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=3.11.0.805486110592" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.805486110592" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.805486110592" data-turbo-eval="false" defer></script>
+
+    <!-- Add content to _includes/head.html to include here -->
+    <style>
+      .relight {
+        display: inline !important;
+      }
+
+      .dark .relight {
+        display: none !important;
+      }
+
+      .redark {
+        display: none !important;
+      }
+
+      .dark .redark {
+        display: inline !important;
+      }
+    </style>
+
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="grow-0 shrink-0 overflow-hidden">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logos/matter_light.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logos/matter_dark.svg">
+                            </span>
+                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Handbook</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 bg-body-bg">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="supported-device-types" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#supported-device-types">#</doc-anchor-trigger>
+        <span>Supported Device Types</span>
+    </h1>
+</doc-anchor-target>
+<p>In order to be certified a Matter device must conform to one of the approved device types.</p>
+<p>As of Matter 1.4 the following types are certifiable.</p>
+<ul>
+<li><doc-anchor-trigger to="#utility-device-types">Utility Device Types</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#root-node">Root Node</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#power-source">Power Source</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#ota-requestor">OTA Requestor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#ota-provider">OTA Provider</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#bridged-node">Bridged Node</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#electrical-sensor">Electrical Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#device-energy-management">Device Energy Management</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#application-device-types">Application Device Types</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#lighting">Lighting</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#onoff-light">On/Off Light</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dimmable-light">Dimmable Light</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#color-temperature-light">Color Temperature Light</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#extended-color-light">Extended Color Light</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#smart-plugsoutlets-and-other-actuators">Smart Plugs/Outlets and Other Actuators</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#onoff-plug-in-unit">On/Off Plug-in Unit</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dimmable-plug-in-unit">Dimmable Plug-in Unit</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#mounted-onoff-control">Mounted On/Off Control</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#mounted-dimmable-load-control">Mounted Dimmable Load Control</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#pump">Pump</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#water-valve">Water Valve</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#switches-and-controls">Switches and Controls</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#onoff-light-switch">On/Off Light Switch</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dimmer-switch">Dimmer Switch</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#color-dimmer-switch">Color Dimmer Switch</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#control-bridge">Control Bridge</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#pump-controller">Pump Controller</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#generic-switch">Generic Switch</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#sensors">Sensors</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#contact-sensor">Contact Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#light-sensor">Light Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#occupancy-sensor">Occupancy Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#temperature-sensor">Temperature Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#pressure-sensor">Pressure Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#flow-sensor">Flow Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#humidity-sensor">Humidity Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#onoff-sensor">On/Off Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#smoke-co-alarm">Smoke CO Alarm</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#air-quality-sensor">Air Quality Sensor</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#water-freeze-detector">Water Freeze Detector</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#water-leak-detector">Water Leak Detector</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#rain-sensor">Rain Sensor</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#closures">Closures</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#door-lock">Door Lock</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#door-lock-controller">Door Lock Controller</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#window-covering">Window Covering</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#window-covering-controller">Window Covering Controller</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#hvac">HVAC</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#thermostat">Thermostat</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#fan">Fan</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#air-purifier">Air Purifier</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#media">Media</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#basic-video-player">Basic Video Player</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#casting-video-player">Casting Video Player</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#speaker">Speaker</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#content-app">Content App</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#casting-video-client">Casting Video Client</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#video-remote-control">Video Remote Control</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#robotic-devices">Robotic Devices</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#robotic-vacuum-cleaner">Robotic Vacuum Cleaner</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#appliances">Appliances</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#refrigerator">Refrigerator</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#temperature-controlled-cabinet">Temperature Controlled Cabinet</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#room-air-conditioner">Room Air Conditioner</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#laundry-washer">Laundry Washer</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#dishwasher">Dishwasher</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#laundry-dryer">Laundry Dryer</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#cook-surface">Cook Surface</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#cooktop">Cooktop</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#oven">Oven</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#extractor-hood">Extractor Hood</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#microwave-oven">Microwave Oven</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#energy-devices">Energy Devices</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#evse">EVSE</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#water-heater">Water Heater</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#solar-power">Solar Power</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#battery-storage">Battery Storage</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#heat-pump">Heat Pump</doc-anchor-trigger></li>
+</ul>
+</li>
+<li><doc-anchor-trigger to="#network-infrastructure-devices">Network Infrastructure Devices</doc-anchor-trigger>
+<ul>
+<li><doc-anchor-trigger to="#network-infrastructure-manager">Network Infrastructure Manager</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#thread-border-router">Thread Border Router</doc-anchor-trigger></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="utility-device-types">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#utility-device-types">#</doc-anchor-trigger>
+        <span>Utility Device Types</span>
+    </h2>
+</doc-anchor-target>
+<p>Utility device types may be include in any device.</p>
+<doc-anchor-target id="root-node">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#root-node">#</doc-anchor-trigger>
+        <span>Root Node</span>
+    </h3>
+</doc-anchor-target>
+<p>All devices must include a Root Node on Endpoint 0. This endpoint is akin to a &quot;read me first&quot; endpoint that describes itself and the other endpoints that make up the node.</p>
+<doc-anchor-target id="power-source">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#power-source">#</doc-anchor-trigger>
+        <span>Power Source</span>
+    </h3>
+</doc-anchor-target>
+<p>This utility device type can be used on one or more endpoints to describe the configuration and capabilities of a physical power source that provides power to one or more endpoints on a node.</p>
+<doc-anchor-target id="ota-requestor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ota-requestor">#</doc-anchor-trigger>
+        <span>OTA Requestor</span>
+    </h3>
+</doc-anchor-target>
+<p>An OTA Requestor is a device that is capable of receiving an OTA software update.</p>
+<doc-anchor-target id="ota-provider">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ota-provider">#</doc-anchor-trigger>
+        <span>OTA Provider</span>
+    </h3>
+</doc-anchor-target>
+<p>An OTA Provider is a node that is capable of providing an OTA software update to other nodes on the same fabric.</p>
+<doc-anchor-target id="bridged-node">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bridged-node">#</doc-anchor-trigger>
+        <span>Bridged Node</span>
+    </h3>
+</doc-anchor-target>
+<p>A Bridged Node root endpoint is akin to a &quot;read me first&quot; endpoint that describes itself and any other endpoints that make up the Bridged Node. A Bridged Node endpoint represents a device on a foreign network, but is not the root endpoint of the bridge itself.</p>
+<doc-anchor-target id="electrical-sensor">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#electrical-sensor">#</doc-anchor-trigger>
+        <span>Electrical Sensor</span>
+    </h3>
+</doc-anchor-target>
+<p>An Electrical Sensor device measures the electrical power and/or energy passing through it. This device type can be added to any matter device so that its electrical power and energy consumption or production can be reported.</p>
+<doc-anchor-target id="device-energy-management">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#device-energy-management">#</doc-anchor-trigger>
+        <span>Device Energy Management</span>
+    </h3>
+</doc-anchor-target>
+<p>A Device Energy Management device provides reporting and optionally adjustment of the electrical power planned on being consumed or produced by the device.</p>
+<p>This allows it to be used to help energy management systems to optimize the energy use across multiple devices in the home (e.g. to match the local solar power being generated, or to provide assistance to the grid).</p>
+<doc-anchor-target id="application-device-types">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#application-device-types">#</doc-anchor-trigger>
+        <span>Application Device Types</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="lighting">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lighting">#</doc-anchor-trigger>
+        <span>Lighting</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="onoff-light">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#onoff-light">#</doc-anchor-trigger>
+        <span>On/Off Light</span>
+    </h4>
+</doc-anchor-target>
+<p>The On/Off Light is a lighting device that is capable of being switched on or off by means of a bound controller device such as an On/Off Light Switch or a Dimmer Switch. In addition, an on/off light is also capable of being switched by means of a bound occupancy sensor.</p>
+<doc-anchor-target id="dimmable-light">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dimmable-light">#</doc-anchor-trigger>
+        <span>Dimmable Light</span>
+    </h4>
+</doc-anchor-target>
+<p>A Dimmable Light is a lighting device that is capable of being switched on or off and the intensity of its light adjusted by means of a bound controller device such as a Dimmer Switch or a Color Dimmer Switch. In addition, a Dimmable Light device is also capable of being switched by means of a bound occupancy sensor or other device(s).</p>
+<doc-anchor-target id="color-temperature-light">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#color-temperature-light">#</doc-anchor-trigger>
+        <span>Color Temperature Light</span>
+    </h4>
+</doc-anchor-target>
+<p>A Color Temperature Light is a lighting device that is capable of being switched on or off, the intensity of its light adjusted, and its color temperature adjusted by means of a bound controller device such as a Color Dimmer Switch.</p>
+<doc-anchor-target id="extended-color-light">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extended-color-light">#</doc-anchor-trigger>
+        <span>Extended Color Light</span>
+    </h4>
+</doc-anchor-target>
+<p>An Extended Color Light is a lighting device that is capable of being switched on or off, the intensity of its light adjusted, and its color adjusted by means of a bound controller device such as a Color Dimmer Switch or Control Bridge. The device supports adjustment of color by means of hue/saturation, enhanced hue, color looping, XY coordinates, and color temperature. In addition, the extended color light is also capable of being switched by means of a bound occupancy sensor.</p>
+<doc-anchor-target id="smart-plugsoutlets-and-other-actuators">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#smart-plugsoutlets-and-other-actuators">#</doc-anchor-trigger>
+        <span>Smart Plugs/Outlets and Other Actuators</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="onoff-plug-in-unit">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#onoff-plug-in-unit">#</doc-anchor-trigger>
+        <span>On/Off Plug-in Unit</span>
+    </h4>
+</doc-anchor-target>
+<p>An On/Off Plug-in Unit is a device that is capable of being switched on or off by means of a bound controller device such as an On/Off Light Switch or a Dimmer Switch. The On/Off Plug-in Unit is typically used to control a conventional non-communicating light by switching its mains connection. Other appliances can be controlled this way as well.</p>
+<doc-anchor-target id="dimmable-plug-in-unit">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dimmable-plug-in-unit">#</doc-anchor-trigger>
+        <span>Dimmable Plug-in Unit</span>
+    </h4>
+</doc-anchor-target>
+<p>A Dimmable Plug-In Unit is a device that is capable of being switched on or off and have its level adjusted by means of a bound controller device such as a Dimmer Switch or a Color Dimmer Switch. The Dimmable Plug-in Unit is typically used to control a conventional non-communicating light through its mains connection using phase cutting.</p>
+<doc-anchor-target id="mounted-onoff-control">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mounted-onoff-control">#</doc-anchor-trigger>
+        <span>Mounted On/Off Control</span>
+    </h4>
+</doc-anchor-target>
+<p>A Mounted On/Off Control is a fixed device that provides power to another device that is plugged
+into it, and is capable of switching that provided power on or off.</p>
+<doc-anchor-target id="mounted-dimmable-load-control">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mounted-dimmable-load-control">#</doc-anchor-trigger>
+        <span>Mounted Dimmable Load Control</span>
+    </h4>
+</doc-anchor-target>
+<p>A Mounted Dimmable Load Control is a fixed device that provides power to another device that is
+plugged into it, and is capable of being switched on or off and have its level adjusted. The Mounted
+Dimmable Load Control is typically used to control a conventional non-communicating light
+through its mains connection using phase cutting.</p>
+<doc-anchor-target id="pump">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pump">#</doc-anchor-trigger>
+        <span>Pump</span>
+    </h4>
+</doc-anchor-target>
+<p>A Pump device is a pump that may have variable speed. It may have optional built-in sensors and a regulation mechanism. It is typically used for pumping fluids like water.</p>
+<doc-anchor-target id="water-valve">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#water-valve">#</doc-anchor-trigger>
+        <span>Water Valve</span>
+    </h4>
+</doc-anchor-target>
+<p>A Water Valve can be used to control the flow of water, including automatic closing after a specified duration, with optional features to support opening levels. It may optionally include flow measurement sensors.</p>
+<doc-anchor-target id="switches-and-controls">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#switches-and-controls">#</doc-anchor-trigger>
+        <span>Switches and Controls</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="onoff-light-switch">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#onoff-light-switch">#</doc-anchor-trigger>
+        <span>On/Off Light Switch</span>
+    </h4>
+</doc-anchor-target>
+<p>An On/Off Light Switch is a controller device that, when bound to a lighting device such as an On/Off Light, is capable of being used to switch the device on or off.</p>
+<doc-anchor-target id="dimmer-switch">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dimmer-switch">#</doc-anchor-trigger>
+        <span>Dimmer Switch</span>
+    </h4>
+</doc-anchor-target>
+<p>A Dimmer Switch is a controller device that, when bound to a lighting device such as a Dimmable Light, is capable of being used to switch the device on or off and adjust the intensity of the light being emitted.</p>
+<doc-anchor-target id="color-dimmer-switch">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#color-dimmer-switch">#</doc-anchor-trigger>
+        <span>Color Dimmer Switch</span>
+    </h4>
+</doc-anchor-target>
+<p>A Color Dimmer Switch is a controller device that, when bound to a lighting device such as an Extended Color Light, is capable of being used to adjust the color of the light being emitted.</p>
+<doc-anchor-target id="control-bridge">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#control-bridge">#</doc-anchor-trigger>
+        <span>Control Bridge</span>
+    </h4>
+</doc-anchor-target>
+<p>A Control Bridge is a controller device that, when bound to a lighting device such as an Extended Color Light, is capable of being used to switch the device on or off, adjust the intensity of the light being emitted and adjust the color of the light being emitted. In addition, a Control Bridge device is capable of being used for setting scenes.</p>
+<doc-anchor-target id="pump-controller">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pump-controller">#</doc-anchor-trigger>
+        <span>Pump Controller</span>
+    </h4>
+</doc-anchor-target>
+<p>A Pump Controller device is capable of configuring and controlling a Pump device.</p>
+<doc-anchor-target id="generic-switch">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#generic-switch">#</doc-anchor-trigger>
+        <span>Generic Switch</span>
+    </h4>
+</doc-anchor-target>
+<p>A generic switch can be either momentary or latching in state, with multiple positions.</p>
+<p>The Generic Switch device type and the On/Off Light Switch device type both convey information about interactions with a switch to another device.</p>
+<ul>
+<li>The On/Off Light Switch will send On/Off/Toggle commands from its On/Off (client) cluster to a device implementing the On/Off (server) cluster to control the on/off functionality of that device. An On/Off Light Switch device can also implement Groups and Scenes clusters and thus send group and scene commands. Basically, it is targeted at directly sending control commands to other devices. The binding table is used to tell the device where to send the commands.</li>
+<li>The Generic Switch device type will send updates of attributes (for Latching Switch only) and events to subscribed parties which implement the Switch client cluster, as indications of inter­ action with the switch - leaving the interpretation (e.g. which device should be actuated because of the interaction) to the subscribed party. So it can be compared to a sensor-type device.</li>
+</ul>
+<p>This allows a more comprehensive controller to combine the information from the switch with other inputs or information sources (e.g. time of day, user presence) to determine which control commands (e.g. on/off, scene recall, attribute change) are sent to other devices in the network.</p>
+<doc-anchor-target id="sensors">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sensors">#</doc-anchor-trigger>
+        <span>Sensors</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="contact-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contact-sensor">#</doc-anchor-trigger>
+        <span>Contact Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>The Contact Sensor is a device that reports a boolean state, typically open/closed.</p>
+<doc-anchor-target id="light-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#light-sensor">#</doc-anchor-trigger>
+        <span>Light Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>A Light Sensor device is a measurement and sensing device that is capable of measuring and reporting the intensity of light (illuminance) to which the sensor is being subjected.</p>
+<doc-anchor-target id="occupancy-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#occupancy-sensor">#</doc-anchor-trigger>
+        <span>Occupancy Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>An Occupancy Sensor is a measurement and sensing device that is capable of measuring and reporting the occupancy state in a designated area.</p>
+<doc-anchor-target id="temperature-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#temperature-sensor">#</doc-anchor-trigger>
+        <span>Temperature Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>A Temperature Sensor device reports measurements of temperature.</p>
+<doc-anchor-target id="pressure-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pressure-sensor">#</doc-anchor-trigger>
+        <span>Pressure Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>A Pressure Sensor device measures and reports the pressure of a fluid.</p>
+<doc-anchor-target id="flow-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#flow-sensor">#</doc-anchor-trigger>
+        <span>Flow Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>A Flow Sensor device measures and reports the flow rate of a fluid.</p>
+<doc-anchor-target id="humidity-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#humidity-sensor">#</doc-anchor-trigger>
+        <span>Humidity Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>A humidity sensor (in most cases a Relative humidity sensor) reports humidity measurements.</p>
+<doc-anchor-target id="onoff-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#onoff-sensor">#</doc-anchor-trigger>
+        <span>On/Off Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>An On/Off Sensor is a measurement and sensing device that, when bound to a lighting device such as a Dimmable Light, is capable of being used to switch the device on or off.</p>
+<doc-anchor-target id="smoke-co-alarm">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#smoke-co-alarm">#</doc-anchor-trigger>
+        <span>Smoke CO Alarm</span>
+    </h4>
+</doc-anchor-target>
+<p>A Smoke CO Alarm device is capable of sensing smoke, carbon monoxide or both. It is capable of issuing a visual and audible alert to indicate elevated concentration of smoke or carbon monoxide.
+Smoke CO Alarms are capable of monitoring themselves and issuing visual and audible alerts for hardware faults, critical low battery conditions, and end of service. Optionally, some of the audible alerts can be temporarily silenced. Smoke CO Alarms are capable of performing a self-test which performs a diagnostic of the primary sensor and issuing a cycle of the audible and visual life safety alarm indications.
+Some smoke alarms MAY be capable of adjusting sensitivity. Smoke CO Alarm MAY have the ability to detect and report humidity levels, temperature levels, and contamination levels.</p>
+<doc-anchor-target id="air-quality-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#air-quality-sensor">#</doc-anchor-trigger>
+        <span>Air Quality Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>An air quality sensor is a device designed to monitor and measure various parameters related to
+the quality of ambient air in indoor or outdoor environments.</p>
+<doc-anchor-target id="water-freeze-detector">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#water-freeze-detector">#</doc-anchor-trigger>
+        <span>Water Freeze Detector</span>
+    </h4>
+</doc-anchor-target>
+<p>A Water Freeze Detector device is able to indicate the likelihood that water could potentially freeze in the current ambient conditions.</p>
+<doc-anchor-target id="water-leak-detector">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#water-leak-detector">#</doc-anchor-trigger>
+        <span>Water Leak Detector</span>
+    </h4>
+</doc-anchor-target>
+<p>A Water Leak Detector device is able to indicate if a water leak is detected.</p>
+<doc-anchor-target id="rain-sensor">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rain-sensor">#</doc-anchor-trigger>
+        <span>Rain Sensor</span>
+    </h4>
+</doc-anchor-target>
+<p>A Rain Sensor device is able to indicate if rain is detected.</p>
+<doc-anchor-target id="closures">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#closures">#</doc-anchor-trigger>
+        <span>Closures</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="door-lock">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#door-lock">#</doc-anchor-trigger>
+        <span>Door Lock</span>
+    </h4>
+</doc-anchor-target>
+<p>A Door Lock is a device used to secure a door. It is possible to actuate a door lock either by means of a manual or a remote method.</p>
+<doc-anchor-target id="door-lock-controller">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#door-lock-controller">#</doc-anchor-trigger>
+        <span>Door Lock Controller</span>
+    </h4>
+</doc-anchor-target>
+<p>A Door Lock Controller is a device capable of controlling a door lock.</p>
+<doc-anchor-target id="window-covering">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#window-covering">#</doc-anchor-trigger>
+        <span>Window Covering</span>
+    </h4>
+</doc-anchor-target>
+<p>A window covering is a device that actuates a cover for a window, typically a blind. The covering can be vertical or horizontal and optionally the tilt of the sections in the covering can be changed.</p>
+<doc-anchor-target id="window-covering-controller">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#window-covering-controller">#</doc-anchor-trigger>
+        <span>Window Covering Controller</span>
+    </h4>
+</doc-anchor-target>
+<p>A Window Covering Controller is a device that controls a window covering device.</p>
+<doc-anchor-target id="hvac">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hvac">#</doc-anchor-trigger>
+        <span>HVAC</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="thermostat">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#thermostat">#</doc-anchor-trigger>
+        <span>Thermostat</span>
+    </h4>
+</doc-anchor-target>
+<p>A Thermostat device is capable of having either built-in or separate sensors for temperature, humidity or occupancy. It allows the desired temperature to be set either remotely or locally. The thermostat is capable of sending heating and/or cooling requirement notifications to a heating/cooling unit (for example, an indoor air handler) or is capable of including a mechanism to control a heating or cooling unit directly.</p>
+<doc-anchor-target id="fan">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fan">#</doc-anchor-trigger>
+        <span>Fan</span>
+    </h4>
+</doc-anchor-target>
+<p>A Fan device is typically standalone or mounted on a ceiling or wall and is used
+to circulate air in a room.</p>
+<doc-anchor-target id="air-purifier">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#air-purifier">#</doc-anchor-trigger>
+        <span>Air Purifier</span>
+    </h4>
+</doc-anchor-target>
+<p>An Air Purifier is a standalone device that is designed to clean the air in a room.
+It is a device that has a fan to control the air speed while it is operating. Optionally, it can report on the condition of its filters.</p>
+<doc-anchor-target id="media">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#media">#</doc-anchor-trigger>
+        <span>Media</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="basic-video-player">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basic-video-player">#</doc-anchor-trigger>
+        <span>Basic Video Player</span>
+    </h4>
+</doc-anchor-target>
+<p>A Basic Video Player  represents a device that is able to play media to a physical output or to a display screen which is part of the device.
+A Basic Video Player has playback controls (play, pause, etc.) and keypad remote controls (up, down, number input), but is not able to launch content and is not a content app platform.
+For example, a Basic Video Player can be a traditional TV device a physical media playback device such as a DVD Player, or a device that provides input to another device like a TV or computer monitor.</p>
+<doc-anchor-target id="casting-video-player">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#casting-video-player">#</doc-anchor-trigger>
+        <span>Casting Video Player</span>
+    </h4>
+</doc-anchor-target>
+<p>A Casting Video Player  represents a device that is able to play media to a physical  output or to a display screen which is part of the device.
+A Casting Video Player has basic controls for playback (play, pause, etc.) and keypad input (up, down, number input), and is able to launch content.
+For example, a Casting Video Player can be a smart TV device, a TV Set Top Box, or a content streaming device that provides input to another device like a TV or computer monitor.</p>
+<doc-anchor-target id="speaker">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#speaker">#</doc-anchor-trigger>
+        <span>Speaker</span>
+    </h4>
+</doc-anchor-target>
+<p>This feature controls the speaker volume of the device.
+To control unmute/mute, the On/Off cluster SHALL be used. A value of TRUE for the OnOff attribute SHALL represent the volume on (not muted) state, while a value of FALSE SHALL represent the volume off (muted) state. For volume level control, the Level cluster SHALL be used.
+A dedicated endpoint is needed because the On/Off cluster can also be used for other purposes, such as for power control.</p>
+<doc-anchor-target id="content-app">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#content-app">#</doc-anchor-trigger>
+        <span>Content App</span>
+    </h4>
+</doc-anchor-target>
+<p>A Content App is usually an application built by a Content Provider. A Casting Video Player with a Content App Platform is able to launch Content Apps and represent these apps as separate end­ points.</p>
+<doc-anchor-target id="casting-video-client">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#casting-video-client">#</doc-anchor-trigger>
+        <span>Casting Video Client</span>
+    </h4>
+</doc-anchor-target>
+<p>A Casting Video Client is a client that can launch content on a Casting Video Player, for example, a Smart Speaker or a Content Provider phone app.</p>
+<doc-anchor-target id="video-remote-control">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#video-remote-control">#</doc-anchor-trigger>
+        <span>Video Remote Control</span>
+    </h4>
+</doc-anchor-target>
+<p>A Video Remote Control is a client that can control a Video Player, for example, a traditional universal remote control.</p>
+<doc-anchor-target id="robotic-devices">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#robotic-devices">#</doc-anchor-trigger>
+        <span>Robotic Devices</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="robotic-vacuum-cleaner">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#robotic-vacuum-cleaner">#</doc-anchor-trigger>
+        <span>Robotic Vacuum Cleaner</span>
+    </h4>
+</doc-anchor-target>
+<p>A robotic vacuum cleaner is a device capable of autonomous cleaning, the cleaning mode may be selected from a number of predefined options and the device should report back any error states.</p>
+<doc-anchor-target id="appliances">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#appliances">#</doc-anchor-trigger>
+        <span>Appliances</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="refrigerator">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#refrigerator">#</doc-anchor-trigger>
+        <span>Refrigerator</span>
+    </h4>
+</doc-anchor-target>
+<p>A refrigerator represents a device that contains one or more cabinets that are capable of chilling or freezing food. Examples of consumer products that MAY make use of this device type include refrigerators, freezers, and wine coolers.</p>
+<doc-anchor-target id="temperature-controlled-cabinet">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#temperature-controlled-cabinet">#</doc-anchor-trigger>
+        <span>Temperature Controlled Cabinet</span>
+    </h4>
+</doc-anchor-target>
+<p>A Temperature Controlled Cabinet only exists composed as part of another device type. It represents a single cabinet chilling or freezing food in a refrigerator, freezer, wine chiller or other similar device.</p>
+<doc-anchor-target id="room-air-conditioner">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#room-air-conditioner">#</doc-anchor-trigger>
+        <span>Room Air Conditioner</span>
+    </h4>
+</doc-anchor-target>
+<p>A Room Air Conditioner is a device with the primary function of controlling the air temperature in a single room.</p>
+<doc-anchor-target id="laundry-washer">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#laundry-washer">#</doc-anchor-trigger>
+        <span>Laundry Washer</span>
+    </h4>
+</doc-anchor-target>
+<p>A Laundry Washer represents a device that is capable of laundering consumer items. Any laundry washer product may utilize this device type.</p>
+<doc-anchor-target id="dishwasher">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dishwasher">#</doc-anchor-trigger>
+        <span>Dishwasher</span>
+    </h4>
+</doc-anchor-target>
+<p>A dishwasher is a device that is generally installed in residential homes and is capable of washing dishes, cutlery, and other items associate with food preparation and consumption. The device can be permanently installed or portable and can have variety of filling and draining methods.</p>
+<doc-anchor-target id="laundry-dryer">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#laundry-dryer">#</doc-anchor-trigger>
+        <span>Laundry Dryer</span>
+    </h4>
+</doc-anchor-target>
+<p>A Laundry Dryer represents a device that is capable of drying laundry items.</p>
+<doc-anchor-target id="cook-surface">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cook-surface">#</doc-anchor-trigger>
+        <span>Cook Surface</span>
+    </h4>
+</doc-anchor-target>
+<p>A Cook Surface device type represents a heating object on a cooktop or other similar device. It SHALL only be used when composed as part of another device type.</p>
+<doc-anchor-target id="cooktop">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cooktop">#</doc-anchor-trigger>
+        <span>Cooktop</span>
+    </h4>
+</doc-anchor-target>
+<p>A cooktop is a cooking surface that heats food either by transferring currents from an electromagnetic field located below the glass surface directly to the magnetic induction cookware placed above or through traditional gas or electric burners.</p>
+<doc-anchor-target id="oven">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#oven">#</doc-anchor-trigger>
+        <span>Oven</span>
+    </h4>
+</doc-anchor-target>
+<p>An oven represents a device that contains one or more cabinets, and optionally a single cooktop, that are all capable of heating food. Examples of consumer products implementing this device type include ovens, wall ovens, convection ovens, etc.</p>
+<doc-anchor-target id="extractor-hood">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extractor-hood">#</doc-anchor-trigger>
+        <span>Extractor Hood</span>
+    </h4>
+</doc-anchor-target>
+<p>An Extractor Hood is a device that is generally installed above a cooking surface in residential kitchens. An Extractor Hood’s primary purpose is to reduce odors that arise during the cooking process by either extracting the air above the cooking surface or by recirculating and filtering it. It may also contain a light for illuminating the cooking surface.</p>
+<doc-anchor-target id="microwave-oven">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#microwave-oven">#</doc-anchor-trigger>
+        <span>Microwave Oven</span>
+    </h4>
+</doc-anchor-target>
+<p>A Microwave Oven is a device with the primary function of heating foods and beverages using a magnetron. A Microwave Oven is a device which at a minimum is capable of being started and stopped and of setting a power level.</p>
+<doc-anchor-target id="energy-devices">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#energy-devices">#</doc-anchor-trigger>
+        <span>Energy Devices</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="evse">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#evse">#</doc-anchor-trigger>
+        <span>EVSE</span>
+    </h4>
+</doc-anchor-target>
+<p>An EVSE (Electric Vehicle Supply Equipment) is a device that allows an EV
+(Electric Vehicle) to be connected to the mains electricity supply to allow it
+to be charged (or discharged in case of Vehicle to Grid / Vehicle to Home
+applications).</p>
+<doc-anchor-target id="water-heater">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#water-heater">#</doc-anchor-trigger>
+        <span>Water Heater</span>
+    </h4>
+</doc-anchor-target>
+<p>A water heater is a device that is generally installed in properties to heat
+water for showers, baths etc.</p>
+<doc-anchor-target id="solar-power">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#solar-power">#</doc-anchor-trigger>
+        <span>Solar Power</span>
+    </h4>
+</doc-anchor-target>
+<p>A Solar Power device is a device that allows a solar panel array, which can
+optionally be comprised of a set parallel strings of solar panels, and its
+associated controller and, if appropriate, inverter, to be monitored and
+controlled by an Energy Management System.</p>
+<doc-anchor-target id="battery-storage">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#battery-storage">#</doc-anchor-trigger>
+        <span>Battery Storage</span>
+    </h4>
+</doc-anchor-target>
+<p>A Battery Storage device is a device that allows a DC battery, which can
+optionally be comprised of a set parallel strings of battery packs and
+associated controller, and an AC inverter, to be monitored and controlled by an
+Energy Management System in order to manage the peaks and troughs of supply and
+demand, and/or to optimize cost of the energy consumed in premises. It is not
+intended to be used for a UPS directly supplying a set of appliances, nor for
+portable battery storage devices.</p>
+<doc-anchor-target id="heat-pump">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#heat-pump">#</doc-anchor-trigger>
+        <span>Heat Pump</span>
+    </h4>
+</doc-anchor-target>
+<p>A Heat Pump device is a device that uses electrical energy to heat either spaces
+or water tanks using ground, water or air as the heat source. These typically
+can heat the air or can pump water via central heating radiators or underfloor
+heating systems. It is typical to also heat hot water and store the heat in a
+hot water tank.</p>
+<p>Note that the Water Heater device type can also be heated by a heat pump and has
+similar requirements, but that device cannot be used for heating of spaces.</p>
+<doc-anchor-target id="network-infrastructure-devices">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#network-infrastructure-devices">#</doc-anchor-trigger>
+        <span>Network Infrastructure Devices</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="network-infrastructure-manager">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#network-infrastructure-manager">#</doc-anchor-trigger>
+        <span>Network Infrastructure Manager</span>
+    </h4>
+</doc-anchor-target>
+<p>A Network Infrastructure Manager provides interfaces that allow for the management of the Wi-Fi,
+Thread, and Ethernet networks underlying a Matter deployment, realizing the Star Network
+Topology.</p>
+<doc-anchor-target id="thread-border-router">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#thread-border-router">#</doc-anchor-trigger>
+        <span>Thread Border Router</span>
+    </h4>
+</doc-anchor-target>
+<p>A Thread Border Router device type provides interfaces for querying and configuring the
+associated Thread network.
+Instances of physical devices categorized as Thread Border Routers encompass standalone Thread
+Border Routers, conventional application devices like smart speakers, media streamers, and
+lighting fixtures equipped with a Thread Border Router, as well as Wi-Fi Routers incorporating
+Thread Border Router functionality.</p>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../how-it-works/roles/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Roles</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../how-it-works/data-model/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">Device Data Model</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link-weight text-sm leading-relaxed"><p>© Copyright 2025 Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Supported Device Types", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
