@@ -22,4 +22,5 @@ matrix:
       - pre
   sources:
   - 'src/**/*.md'
+  - 'README.md'
   default_encoding: utf-8
