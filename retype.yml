@@ -1,15 +1,41 @@
-input: src/
-output: .retype
-url: https://handbook.buildwithmatter.com
+# -----------------------------------------------------------------------------
 start:
   pro: true
-poweredByRetype: false
+poweredByRetype: false               # Remove "Powered by Retype"
+
+# -----------------------------------------------------------------------------
+input: src/                          # Source 
+output: .retype                      # Output
+
+# -----------------------------------------------------------------------------
+url: https://handbook.buildwithmatter.com
+
+# -----------------------------------------------------------------------------
 branding:
   logo: static/logos/matter_light.svg
   logoDark: static/logos/matter_dark.svg
   label: Handbook
-# links:
-#   - text: Getting Started
-#     link: https://retype.com/guides/getting-started/
+
+# -----------------------------------------------------------------------------
+#links:                              # Links to add to the top bar
+#  - text: csa-iot.org
+#    link: https://csa-iot.org
+
+# -----------------------------------------------------------------------------
+favicon: static/logos/matter_favicon-32x32.png
+
+# -----------------------------------------------------------------------------
+editor:
+  enabled: false                     # Remove 'edit' button
+
+# -----------------------------------------------------------------------------
+meta:
+  title: " | Matter"                 # Appended to the <title> element on all pages
+
+# -----------------------------------------------------------------------------
+search:                              # Custom configuration of the website search
+  noResultsFoundMsg: "No results found" # Message when no results are found
+
+# -----------------------------------------------------------------------------
 footer:
   copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners."
