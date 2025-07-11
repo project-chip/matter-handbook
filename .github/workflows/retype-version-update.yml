@@ -1,7 +1,6 @@
 name: 'Update Retype Version'
 
 on:
-  pull_request:
   workflow_dispatch:
 
   schedule:
