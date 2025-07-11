@@ -45,7 +45,7 @@ jobs:
           LATEST_VERSION="${{ steps.get_version.outputs.result }}"
           echo $LATEST_VERSION
 
-          jq ".image = \"retypeapp/retype:$LATEST_VERSION\"": $JSON_FILE > tmp.$$.json && mv tmp.$$.json $JSON_FILE
+          jq ".image = \"retypeapp/retype:$LATEST_VERSION\"" $JSON_FILE > tmp.$$.json && mv tmp.$$.json $JSON_FILE
           cat $JSON_FILE
 
       #- name: Create Pull Request for retype version update
