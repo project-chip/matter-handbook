@@ -1,7 +1,10 @@
 name: 'Update Retype Version'
 
 on:
-  pull_request:
+  push:
+    branches:
+      - '**'
+
   workflow_dispatch:
 
   schedule:
