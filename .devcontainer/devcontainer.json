@@ -3,7 +3,7 @@
 {
   "name": "Retype",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "retypeapp/retype:latest"
+  "image": "retypeapp/retype:3.10.0"
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
