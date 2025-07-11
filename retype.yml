@@ -22,7 +22,6 @@ branding:
 #    link: https://csa-iot.org
 
 # -----------------------------------------------------------------------------
-theme: default
 favicon: static/logos/matter_favicon-32x32.png
 
 # -----------------------------------------------------------------------------
@@ -35,15 +34,7 @@ meta:
 
 # -----------------------------------------------------------------------------
 search:                              # Custom configuration of the website search
-  hotkeys:
-    - "/"                            # Keyboard key to set focus in the search field
-                                     # Default is "k"
-  maxResults: 20                     # Max number of search results to render
-  minChars: 2                        # Min characters required to trigger a search
-  mode: full                         # The search index creation mode
-                                     # Options include: full | partial | basic
   noResultsFoundMsg: "No results found" # Message when no results are found
-  placeholder: Search                # Placeholder text used in the input field
   
 # -----------------------------------------------------------------------------
 footer:
