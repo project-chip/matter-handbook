@@ -35,7 +35,7 @@ meta:
 # -----------------------------------------------------------------------------
 search:                              # Custom configuration of the website search
   noResultsFoundMsg: "No results found" # Message when no results are found
-  
+
 # -----------------------------------------------------------------------------
 footer:
   copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners."
