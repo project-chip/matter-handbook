@@ -1,15 +1,50 @@
-input: src/
-output: .retype
-url: https://handbook.buildwithmatter.com
+# -----------------------------------------------------------------------------
 start:
   pro: true
-poweredByRetype: false
+poweredByRetype: false               # Remove "Powered by Retype"
+
+# -----------------------------------------------------------------------------
+input: src/                          # Source 
+output: .retype                      # Output
+
+# -----------------------------------------------------------------------------
+url: https://handbook.buildwithmatter.com
+
+# -----------------------------------------------------------------------------
 branding:
   logo: static/logos/matter_light.svg
   logoDark: static/logos/matter_dark.svg
   label: Handbook
-# links:
-#   - text: Getting Started
-#     link: https://retype.com/guides/getting-started/
+
+# -----------------------------------------------------------------------------
+#links:                              # Links to add to the top bar
+#  - text: csa-iot.org
+#    link: https://csa-iot.org
+
+# -----------------------------------------------------------------------------
+theme: default
+favicon: static/logos/matter_favicon-32x32.png
+
+# -----------------------------------------------------------------------------
+editor:
+  enabled: false                     # Remove 'edit' button
+
+# -----------------------------------------------------------------------------
+meta:
+  title: " | Matter"                 # Appended to the <title> element on all pages
+
+# -----------------------------------------------------------------------------
+search:                              # Custom configuration of the website search
+  hotkeys:
+    - "/"                            # Keyboard key to set focus in the search field
+                                     # Default is "k"
+  maxResults: 20                     # Max number of search results to render
+  minChars: 2                        # Min characters required to trigger a search
+  mode: full                         # The search index creation mode
+                                     # Options include: full | partial | basic
+  noResultsFoundMsg: "No results found" # Message when no results are found
+  placeholder: Search                # Placeholder text used in the input field
+  
+# -----------------------------------------------------------------------------
 footer:
   copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners."
