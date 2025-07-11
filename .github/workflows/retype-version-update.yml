@@ -43,7 +43,7 @@ jobs:
           # The latest version from the previous step
           LATEST_VERSION="${{ steps.get_version.outputs.result }}"
 
-          jq ".image = \"retypeapp/retype:$LATEST_VERSION\"" $JSON_FILE > tmp.$$.json && mv tmp.$$.json $JSON_FILE
+          jq '.image = \"retypeapp/retype:$LATEST_VERSION\"' $JSON_FILE > tmp.$$.json && mv tmp.$$.json $JSON_FILE
 
       #- name: Create Pull Request for retype version update
       #  uses: peter-evans/create-pull-request@v6
