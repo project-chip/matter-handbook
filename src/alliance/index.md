@@ -1,4 +1,11 @@
+---
+label: The Alliance
+icon: people
+order: 900
+title: The Connectivity Standards Alliance
+---
 ![|600](/static/logos/csa-blue.png)
+
 # The Connectivity Standards Alliance
 
 Our wide-ranging global membership is on a mission. That mission is to ignite creativity and collaboration in the Internet of Things, by developing, evolving, and promoting universal open standards that enable all objects to securely connect and interact. We believe all objects can work together to enhance the way we live, work, and play.
