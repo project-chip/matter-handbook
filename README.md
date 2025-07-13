@@ -15,11 +15,11 @@ This is a public website. Do not include any Alliance confidential information i
 
 ### External links
 
-The handbook is meant to be used by a variety of users, not only CSA members. This may include adopter and associate members as well as companies considering membership.
+The handbook is meant to be used by a variety of users, not only Alliance members. This may include adopter and associate members as well as companies considering membership.
 
 Please use the following guidelines for links:
-- When possible, link to public resources (CSA public website, open source github repositories on project-chip)
+- When possible, link to public resources (Alliance public website, open source GitHub repositories on project-chip)
 - If a page contains links to any non public resource it should include the following disclaimer at the top:
-  - `> Some links on this page are only accessible to CSA members.`
+  - `> Some links on this page are only accessible to Alliance members.`
 - If a causeway link is required and the required resource is expected to be used by adopter members, ensure the resource is a subfolder in the "All Members" section (https://groups.csa-iot.org/wg/members-all/document). If the resource is expected to be accessible to adopter members and is not in that folder, consider moving it.
 - Pages that contain resources that are specifically aimed at Participant and Promoter members (ex. private github repos, access to documents in the Matter WG causeway) should include a disclaimer at the top of the file.
