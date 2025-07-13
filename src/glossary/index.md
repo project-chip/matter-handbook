@@ -11,7 +11,7 @@ order: 100
 | ACL      | Access Control List. This is a list of entries in the Access Control cluster that grant access privileges to device and groups                                            |
 | adoc     | The filename suffix for asciidoc, which is the markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                        |
 | Alchemy  | Alchemy is a command line tool for modifying and transforming Matter spec documents. [Alchemy](https://github.com/project-chip/alchemy) |
-| Alliance | Refers to the Connectivity Standards Alliance (CSA)                                                                                                                       |
+| Alliance | Refers to the Connectivity Standards Alliance                                                                                                                       |
 | AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.|
 | asciidoc | Markup language we use to write the specification and test plans. [asciidoc](https://asciidoc.org/)                                                                       |
 | ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices. |
@@ -49,4 +49,4 @@ order: 100
 | TSG      | Technical Sub Group [TSG](https://groups.csa-iot.org/wg/matter-tsg/workgroup)                                                                                              |
 | TT       | Tiger team - a small group focused on one activity or feature.                                                                                                            |
 | VID      | Vendor identifier                                                                                                                                                         |
-| WG       | Work Group. [Matter](https://groups.csa-iot.org/wg/matter-wg/workgroup) is a working group in the CSA.                                                                 |
+| WG       | Work Group. [Matter](https://groups.csa-iot.org/wg/matter-wg/workgroup) is a working group in the Alliance.                                                                 |

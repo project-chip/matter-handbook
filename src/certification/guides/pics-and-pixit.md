@@ -4,9 +4,8 @@ order: 100
 ---
 ## PICS
 
-In many Standards Defining Organizations including the CSA, the concept of a
-“Protocol Implementation Conformance Statement” or “PICS” code is introduced to
-simplify description of protocol elements.
+In many Standards Defining Organizations including the Connectivity Standards Alliance,
+the concept of a “Protocol Implementation Conformance Statement” or “PICS” code is introduced to simplify description of protocol elements.
 
 Each PICS code is a binary value that describes the presence or absence of a
 particular element or capability on a device. Each cluster has a defined PICS
@@ -41,7 +40,7 @@ the following PICS codes would be defined
 | ANC.C.E00     | Device ANC client understands the event with id 0x00                       |
 
 More information about the PICS code format can be found at
-[PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md). (requires access to the CSA specifications repo)
+[PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md). (requires access to the Matter specifications repo)
 
 In addition to these standard cluster PICS, other PICS may be defined to
 describe capabilities that are not directly expressed via the data model. For
@@ -66,7 +65,7 @@ to manually set all the PICS codes for a device. The PICS XML files and the PICS
 tool are distributed as part of the official specification release package and
 are available to members on
 [Causeway](https://groups.csa-iot.org/wg/members-all/document/folder/2269)
-(requires CSA member login).
+(requires Alliance member login).
 
 ## PIXITs
 
@@ -104,7 +103,7 @@ every endpoint.
 
 ### Helper scripts
 
-The official tooling for CSA certification is the PICS tool provided as a part
+The official tooling for Matter certification is the PICS tool provided as a part
 of the release. PICS files need to pass validation on the PICS tool to be valid
 for certification.
 
@@ -163,7 +162,7 @@ configuration.
 
 ## PICS for test selection
 
-The official source that the CSA certification team uses to determine if all the
+The official source that the Alliance certification team uses to determine if all the
 required tests have been run at certification is the submitted set of PICS XML
 files and the PICS tool.
 

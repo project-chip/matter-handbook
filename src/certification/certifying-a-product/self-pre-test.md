@@ -5,7 +5,7 @@ order: 98
 ![](/static/certification/self-pre-test.png)
 
 > [!NOTE]
-> Some links on this page are only accessible to CSA members.
+> Some links on this page are only accessible to Alliance members.
 
 Before submitting a product for formal certification testing, doing a self pre-test is
 important to identify and fix certification-blocking bugs.
@@ -71,12 +71,12 @@ is available in the [Matter release folder](https://groups.csa-iot.org/wg/member
 Documentation around common problems when running tests can be found in the
 [`matter-test-scripts` repository](https://github.com/project-chip/matter-test-scripts/tree/main/docs/common_test_failures).
 
-The CSA has a dedicated Slack channel for test harness questions at (#csg-matter-test-harness-help).
+The Matter test harness tiger team has a dedicated Slack channel for test harness questions at (#csg-matter-test-harness-help).
 
 Questions about tests for specific clusters can also be directed to the supporting Tiger Team.
 
 In the case where a test case bug is identified, the affected manufacturer should file a request with
 the Change Control Board (CCB). Information about the CCB process can be found in the
-[CSA policies and procedures](https://groups.csa-iot.org/wg/members/document/21624), chapter 11.
+[Alliance policies and procedures](https://groups.csa-iot.org/wg/members/document/21624), chapter 11.
 
 CCB requests are filed in the [CCB tool](https://zigbeecertifiedproducts.knack.com/zigbee-alliance-ccb-tool).

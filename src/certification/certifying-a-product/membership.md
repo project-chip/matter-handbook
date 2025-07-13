@@ -4,7 +4,7 @@ order: 100
 ---
 ![](/static/certification/membership.png)
 
-Companies need to be a member of the Connectivity Standards Alliance (CSA) in order to certify and release
+Companies need to be a member of the Connectivity Standards Alliance (Alliance) in order to certify and release
 products using Matter.
 
 See [Becoming a Member](https://csa-iot.org/become-member/) to learn more about
