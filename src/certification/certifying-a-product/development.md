@@ -184,7 +184,7 @@ In particular:
 -   Bridge devices should understand the bridge certification program and how
     certification of the supported device types works.
 
-Product manufacturers should be aware that the CSA has a sunset policy in effect
+Product manufacturers should be aware that the Alliance has a sunset policy in effect
 for prior specification revisions. See the
 [Sunset Policy](https://groups.csa-iot.org/wg/members-all/document/39617) for more
 information.
