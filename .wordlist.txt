@@ -210,7 +210,6 @@ webui
 WG
 Wi-Fi
 Wi
-wordlist
 
 xFD
 xFF
