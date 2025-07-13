@@ -3,6 +3,9 @@
 ## Author guidelines
 This is an informal set of guidelines for authors, where we can document the conventions that are being used in this handbook.
 
+### Connectivity Standards Alliance Naming
+When referring to the Alliance, in the first reference use the full name as "Connectivity Standards Alliance (Alliance)". Use "Alliance" in subsequent references on the same page.
+
 ### Public information
 
 This is a public website. Do not include any Alliance confidential information in these documents.
