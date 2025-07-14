@@ -1,0 +1,27 @@
+name: Publish to GitHub Pages
+
+on:
+  # Trigger on push to main branch
+  push:
+    branches:
+      - main
+  # Manual trigger
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish to retype branch
+    runs-on: ubuntu-22.04
+    steps:
+      # Checkout repo
+      - uses: actions/checkout@v4
+
+      # Build site using Retype. Include License
+      - uses: retypeapp/action-build@latest
+        env:
+          RETYPE_KEY: ${{ secrets.RETYPE_LICENSE }}
+
+      # Deploy to GitHub Pages
+      - uses: retypeapp/action-github-pages@latest
+        with:
+          update-branch: true
