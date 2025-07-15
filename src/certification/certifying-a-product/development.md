@@ -105,7 +105,7 @@ the details of the security procedures within the Alliance.
 
 The Certification Declaration (CD) is provided by the Connectivity Standards Alliance certification team after an attesting product is
 certified. It is tied to the Vendor ID and Product ID (or IDs) of the certified
-product, and is signed by Alliance key. The public key corresponding to the signing key is
+product, and is signed by the Alliance. The public key corresponding to the signing key is
 well known and distributed through the DCL.
 
 - [CD Signing Certs Root CA](https://on.dcl.csa-iot.org/dcl/pki/all-certificates?subjectKeyId=97:E4:69:D0:C5:04:14:C2:6F:C7:01:F7:7E:94:77:39:09:8D:F6:A5)
