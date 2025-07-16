@@ -37,5 +37,48 @@ search:                              # Custom configuration of the website searc
   noResultsFoundMsg: "No results found" # Message when no results are found
 
 # -----------------------------------------------------------------------------
+theme:
+  base:
+    base-bg: "#f3ffff"
+    base-color: "#29ab92"
+    base-text: "#131926"
+    base-text-muted: "#848c96"
+    base-text-strong: "#131926"
+    base-border: "#c8d1d9"
+    base-border-hover: "#848c96"
+    base-border-strong: "#848c96"
+    base-link: "#29ab92"
+    base-link-hover: "#218f7a"
+    base-item-text: "#131926"
+    base-item-text-active: "#218f7a"
+    base-item-bg-hover: "#e6f6f3"
+    base-item-bg-active: "#ccece5"
+    callout-base-bg: "#e6f6f3"
+    primary: "#29ab92"
+    badge-primary: "#e6f6f3"
+    badge-primary-border: "#ccece5"
+    callout-base-border: "#ccece5"
+  dark:
+    base-bg: "#131926"
+    base-color: "#50e3c2"
+    base-text: "#c8d1d9"
+    base-text-muted: "#848c96"
+    base-text-strong: "#f3ffff"
+    base-border: "#2a3442"
+    base-border-hover: "#c8d1d9"
+    base-border-strong: "#f3ffff"
+    base-link: "#50e3c2"
+    base-link-hover: "#94e9d7"
+    base-item-text: "#f3ffff"
+    base-item-text-active: "#94e9d7"
+    base-item-bg-hover: "#2a3442"
+    base-item-bg-active: "#3c4a5c"
+    callout-base-bg: "#2a3442"
+    primary: "#50e3c2"
+    badge-primary: "#2a3442"
+    badge-primary-border: "#3c4a5c"
+    callout-base-border: "#3c4a5c"
+
+# -----------------------------------------------------------------------------
 footer:
   copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners."
