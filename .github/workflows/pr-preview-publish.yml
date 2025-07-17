@@ -48,6 +48,11 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           submodules: recursive
 
+      # Replace URL in retype.yml before building
+      - name: Replace URL in retype.yml
+        run: |
+          sed -i "s|url: https://handbook.buildwithmatter.com|url: ${{ vars.PREVIEW_URL }}|" retype.yml
+
       # Generate the static site from the PR content using Retype.
       - name: Build with Retype
         run: |
