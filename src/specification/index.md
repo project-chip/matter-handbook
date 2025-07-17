@@ -18,6 +18,6 @@ The specification is made up of a number of documents:
 
 All these documents can be downloaded from [The Alliance website](https://csa-iot.org/developer-resource/specifications-download-request/).
 
-For members, in-progress versions of the specification can be found in the [Secure document access portal](https://docs.csa-iot.org/) (requires CSA member login).
+For members, in-progress versions of the specification can be found in the [Secure document access portal](https://docs.csa-iot.org/) (requires Alliance member login).
 
 Members that are working on an approved feature and actively contributing to specification development may submit and review content in the [Specification GitHub Repository](https://github.com/CHIP-Specifications/connectedhomeip-spec). If you are a Participant or Promoter member and require access to the Specification GitHub Repository as a contributor, please email help@csa-iot.org.
