@@ -1,0 +1,16 @@
+---
+# Warning: Bacon.TitleCase
+#
+# Use Title Case for headings.
+#
+# For a list of all options, see https://vale.sh/docs/topics/styles/
+extends: capitalization
+message: "'%s' should be in title case"
+level: error
+scope: heading
+# $title, $sentence, $lower, $upper, or a pattern.
+match: $title
+style: Chicago # AP or Chicago; only applies when match is set to $title.
+exceptions:
+  - ABC
+  - On/Off
