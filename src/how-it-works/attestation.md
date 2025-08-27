@@ -99,7 +99,7 @@ Message sent from the Commissionee to the Commissioner. The Attestation Informat
 
 Out-of-band challenge derived during Passcode Authenticated Session Establishment (PASE)/ Certificate Authenticated Session Establishment (CASE) session establishment and used to further secure the procedure and avoid replayed signatures. Comes from either CASE session, PASE session or a resumed CASE session.
 
-### Attestation Tbs (to Be Signed)
+### Attestation TBS (to Be Signed)
 
 Message containing the Attestation Elements and Attestation Challenge.
 
