@@ -20,7 +20,7 @@ We aggregate as much useful information as possible, including pointers to CSA m
 destinations may require CSA membership. If you frequently encounter gated links and want to participate directly,
 consider [joining the Connectivity Standards Alliance](alliance/membership#join-the-alliance).
 
--  Media: For official updates, see the [CSA Newsroom](https://csa-iot.org/newsroom/) or contact press@csa-iot.org.
+- Media: For official updates, see the [CSA Newsroom](https://csa-iot.org/newsroom/) or contact press@csa-iot.org.
 
 ## Source of Truth
 
