@@ -81,7 +81,7 @@ test harness.
 More information on PIXITs and the PIXIT format can be found in the
 [PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md).
 
-## Creating Pics Conformance Statements for Matter Devices
+## Creating PICS Conformance Statements for Matter Devices
 
 Because Matter devices may contain multiple, differing instances of the same
 cluster on multiple endpoints, it is not possible to unambiguously describe a
