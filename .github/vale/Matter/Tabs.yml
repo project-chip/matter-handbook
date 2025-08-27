@@ -4,7 +4,7 @@
 #
 # For a list of all options, see https://vale.sh/docs/topics/styles/
 extends: existence
-message: "Dont use tabs."
+message: "Don't use tabs."
 scope: paragraph
 nonword: true
 action:
