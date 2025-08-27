@@ -1,0 +1,10 @@
+# Warning: Matter.BadHexNumberFormat
+#
+# Checks hexadecimal numbers are written with uppercase letters.
+#
+# For a list of all options, see https://vale.sh/docs/topics/styles/
+extends: existence
+message: "Use uppercase letters for hexadecimal numbers"
+scope: ~raw
+level: error
+raw: '\b0x[0-9a-f]*[a-f][0-9a-f]*\b'

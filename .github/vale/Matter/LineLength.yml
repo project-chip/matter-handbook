@@ -1,0 +1,11 @@
+# Suggestion: Matter.LineLength
+#
+# Checks for lines that are longer than 120 characters. And suggests to break them into multiple lines.
+# Table cells are excluded from this check.
+#
+# For a list of all options, see https://vale.sh/docs/topics/styles/
+extends: existence
+message: 'Consider breaking this line into shorter segments that contain a logical part (e.g. break at a comma, at "and" or "or"), and keeping line length below 120 characters'
+level: suggestion
+scope: text & ~table.cell
+raw: '(?m)^.{121,}$'
