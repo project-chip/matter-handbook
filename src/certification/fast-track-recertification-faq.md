@@ -32,7 +32,7 @@ The open source SDK includes the latest optimizations and bug fixes to improve t
 
 **I have a Certified product. What do I need to do now to take advantage of this program?**
 
-* **Step 0**  Train Members of your development team to become qualified to use this program by attending formally approved Rapid Recert Training programs
+* **Step 0**  Train Members of your development team to become qualified to use this program by attending formally approved Rapid Recertification Training programs
 * **Step 1** Test internally using the established Alliance-provided test suite. This will confirm protocol compliance.
 * **Step 2** Submit your documents to the Alliance Certification Team.
 * **Step 3** Send 2 units to the Alliance Interoperability Testing Facility (Interop Lab). Alliance engineers will perform tests across Operating Systems and Ecosystems to confirm that your product works in the real world. It is not necessary to wait for the completion of the interop testing. You are permitted to implement your s/w update on your product, and ship it/OTA upgrade to deployed devices, as soon as step 2 is completed.
@@ -57,7 +57,7 @@ It’s important to note that while you don’t need to have tests run at an ATL
 
 You can find more information about the [Interop Lab](https://csa-iot.org/certification/interop-lab/) and its additional benefits on the Alliance’s website. You can also contact <interop@csa-iot.org>.
 
-**Can I use the Fast Track Recert program with the Certification Transfer Program (CTP)?**
+**Can I use the Fast Track Recertification program with the Certification Transfer Program (CTP)?**
 
-* Provided that you obtained your original certification via a Certification Transfer, you can subsequently use the Fast Track Recert program to obtain an Expedited Transfer when your original device developer (Transfer partner Member) updates their original product using the Fast Track program. In the case of an Expedited Transfer, the application process is the same as the original transfer, however, there is no certification fee associated with obtaining the recertification for your updated transfer product.
-* As there is no testing involved in a certification obtained by CTP or Expedited Transfer, this allows those Members who are not able to access Rapid Recert training, to benefit from the Fast Track Recert program.
+* Provided that you obtained your original certification via a Certification Transfer, you can subsequently use the Fast Track Recertification program to obtain an Expedited Transfer when your original device developer (Transfer partner Member) updates their original product using the Fast Track program. In the case of an Expedited Transfer, the application process is the same as the original transfer, however, there is no certification fee associated with obtaining the recertification for your updated transfer product.
+* As there is no testing involved in a certification obtained by CTP or Expedited Transfer, this allows those Members who are not able to access Rapid Recertification training, to benefit from the Fast Track Recertification program.
