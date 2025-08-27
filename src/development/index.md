@@ -15,7 +15,7 @@ The following table provides a general overview of various use cases for the ava
 | Use on Windows                                                            | :x:                | :white_check_mark:|
 | Ideal for rapid prototyping and testing                                   | :x:                | :white_check_mark:|
 
-## The official Matter SDK
+## The Official Matter SDK
 
 The official Matter SDK, written in C++, is fully aligned with the latest Matter specifications and optimized for embedded devices with strict memory and performance constraints. It serves as the foundation for most chipset-specific SDKs.
 

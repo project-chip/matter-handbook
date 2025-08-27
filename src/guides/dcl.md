@@ -14,7 +14,7 @@ The DCL is a blockchain-based system owned and hosted by Alliance members. It is
 
 Additional information available in the [Distributed Compliance Ledger (DCL) Policies, Procedure and Governance](https://groups.csa-iot.org/wg/members-all/document/26075).
 
-### Types of nodes that operate in the DCL
+### Types of Nodes that Operate in the DCL
 
 | Type of Node         | Description                                                                                                                                          |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ Additional information available in the [Distributed Compliance Ledger (DCL) Pol
 | Sentry Node (SN)     | Doesn't participate in consensus and wraps the VN representing it for the rest of the network as one of the ways for DDoS and access protection.    |
 | Observer Node (ON)   | Doesn't participate in consensus and is optimized for public data read and authenticated write interactions with the ledger.                        |
 
-### Types of account roles that can interact with the DCL
+### Types of Account Roles that Can Interact with the DCL
 
 | Account Role         | Description                                                                                                                                       |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ Additional information available in the [Distributed Compliance Ledger (DCL) Pol
 
 -   **Read** access is broadly available through observer nodes.
 
-### Getting an account for writing to the DCL
+### Getting an Account for Writing to the DCL
 
 -   Enrollment for Main-Net DCL accounts is managed through the "DCL Account(s)" section in the Certification Tool system (Knack). You can request access to the Certification Tool
     by sending an email to <help@csa-iot.org>.
@@ -81,7 +81,7 @@ An Observer Node (ON) offers APIs or Web User Interfaces for users or systems to
 
 It is not a requirement to deploy an Observer Node. The Alliance has ONs available in various regions across the globe, including trusted ONs managed by our members. This ensures broad accessibility and reliable interaction with the DCL from different locations.
 
-#### Main-Net public ONs
+#### Main-Net Public ONs
 
 | Host Owner       | Region       | Web User Interface                 | URL for API                 | REST    | RPC     | gRPC    |
 | ---------------- | ------------ | ---------------------------------- | --------------------------- | ------- | ------- | ------- |
@@ -89,7 +89,7 @@ It is not a requirement to deploy an Observer Node. The Alliance has ONs availab
 | TrustAsia        | CN           | <https://main-net.trustasia.com>   | on.main-net.trustasia.com   | 443     | 26657   | 8443    |
 | Tuya             | CN           | N/A                                | on-dcl.tuyacn.com           | 1317    | 26657   | 9090    |
 
-#### Test-Net public ONs
+#### Test-Net Public ONs
 
 | Host Owner       | Region       | Web User Interface                 | URL for API                 | REST    | RPC     | gRPC    |
 | ---------------- | ------------ | ---------------------------------- | --------------------------- | ------- | ------- | ------- |
@@ -99,13 +99,13 @@ It is not a requirement to deploy an Observer Node. The Alliance has ONs availab
 
 ## FAQs
 
-### Why is my Vendor information not listed in the DCL?
+### Why Is My Vendor Information Not Listed in the DCL?
 
 Each member must add their own Vendor information using an approved Vendor account.
 
 Review the following document for instructions: [HowTo - Writing to the DCL.pdf](https://groups.csa-iot.org/wg/members-all/document/27881)
 
-### When should I write my product information to the Main-Net DCL?
+### When Should I Write My Product Information to the Main-Net DCL?
 
 The DCL\'s product information comprises a Model and a Model-Version of the product. Members add this information using an approved Vendor account. This can be done before or after
 completing the certification process. The Compliance entry in the DCL is submitted by the Alliance's Certification team after the certification process is finalized. For this to
