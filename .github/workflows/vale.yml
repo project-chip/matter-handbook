@@ -5,11 +5,11 @@ on:
 
 jobs:
   vale:
-    name: Lint Documentation
+    name: Lint Source
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Checkout source code
+      - name: Checkout source
         uses: actions/checkout@v4
 
       - name: Vale Linter
