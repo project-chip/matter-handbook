@@ -37,7 +37,7 @@ Treat this site as an explainer and navigator; consult the spec for requirements
 
 ## Contributing and Feedback
 
-We welcome fixes and additions. Open an issue or submit a PR in the [GitHub repository](https://github.com/project-chip/matter-handbook).
+We welcome fixes and additions. Open an issue or submit a PR in the [Handbook GitHub repository](https://github.com/project-chip/matter-handbook).
 Helpful contributions include clarifying explanations, improved search cues, and additional examples.
 
 Editorial guardrails:
