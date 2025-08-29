@@ -6,7 +6,7 @@ order: 100
 
 # Glossary & Acronym Decoder
 
-<!-- vale Matter.Alliance = NO -->
+<!-- vale Matter.CSA = NO -->
 | Term     | Definition                                                                                                                                                                |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ACL      | Access Control List. This is a list of entries in the Access Control cluster that grant access privileges to device and groups                                            |
@@ -51,4 +51,4 @@ order: 100
 | TT       | Tiger team - a small group focused on one activity or feature.                                                                                                            |
 | VID      | Vendor identifier                                                                                                                                                         |
 | WG       | Work Group. [Matter](https://groups.csa-iot.org/wg/matter-wg/workgroup) is a working group in the Alliance.                                                               |
-<!-- vale Matter.Alliance = YES -->
+<!-- vale Matter.CSA = YES -->
