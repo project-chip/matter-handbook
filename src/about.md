@@ -16,9 +16,9 @@ and practical guidance for navigating SDKs and tools.
 
 ## Access and Openness
 
-We aggregate as much useful information as possible, including pointers to Alliance member resources. Some linked
-destinations may require Alliance membership. If you frequently encounter gated links and want to participate directly,
-consider [joining the Connectivity Standards Alliance](alliance/membership#join-the-alliance).
+We aggregate as much useful information as possible, including pointers to Alliance member-only resources. Some linked
+destinations therefore may require Alliance membership. If you frequently encounter gated links and want to participate
+directly, consider [joining the Connectivity Standards Alliance](alliance/membership#join-the-alliance).
 
 - Media: For official updates, see the [Alliance Newsroom](https://csa-iot.org/newsroom/) or contact press@csa-iot.org.
 
