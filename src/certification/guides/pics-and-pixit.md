@@ -40,7 +40,7 @@ the following PICS codes would be defined
 | ANC.C.E00     | Device ANC client understands the event with id 0x00                       |
 
 More information about the PICS code format can be found at
-[PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md). (requires access to the Matter specifications repo)
+[PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md). (requires access to the Matter specifications repository)
 
 In addition to these standard cluster PICS, other PICS may be defined to
 describe capabilities that are not directly expressed via the data model. For
@@ -81,10 +81,10 @@ test harness.
 More information on PIXITs and the PIXIT format can be found in the
 [PICS Guidelines](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md).
 
-## Creating PICS conformance statements for Matter devices
+## Creating PICS Conformance Statements for Matter Devices
 
 Because Matter devices may contain multiple, differing instances of the same
-cluster on multiple endpoints, it it not possible to unambiguously describe a
+cluster on multiple endpoints, it is not possible to unambiguously describe a
 Matter device with a single set of cluster-based PICS files. Instead, Matter
 devices use a full set of PICS XML files to describe each endpoint.
 
@@ -92,7 +92,7 @@ To create a conformance statement for a Matter device, for each endpoint, load
 the full set of PICS XML files into the
 [PICS tool](https://picstool.csa-iot.org/), and select each of the PICS elements
 present for the endpoint being described. Documentation on how to use the PICS
-tool can be found in the PICS tool readme in the tool menu.
+tool can be found in the PICS tool README in the tool menu.
 
 Some of the full-node MCORE elements really only apply to the root node,
 while others apply across all endpoints. For example, the entire device is
@@ -101,7 +101,7 @@ MCORE PICS should be set on the EP0 PICS set. Things like MCORE.IDM apply to
 every endpoint.
 
 
-### Helper scripts
+### Helper Scripts
 
 The official tooling for Matter certification is the PICS tool provided as a part
 of the release. PICS files need to pass validation on the PICS tool to be valid
@@ -133,7 +133,7 @@ generation, just a helper to assist with this manual process. It is very
 important to go back and check that the values are as expected and to fill in
 the other PICS.
 
-### Verifying PICS using the IDM-10.4 certification test
+### Verifying PICS Using the IDM-10.4 Certification Test
 
 While not all PICS are verifiable on the device, we do have tests that verify
 the declared PICS against the device. This is one of the first tests that should
@@ -160,7 +160,7 @@ locally, these are specified on the command line. When running in the test
 harness, these are specified in the test parameters section of the test
 configuration.
 
-## PICS for test selection
+## PICS for Test Selection
 
 The official source that the Alliance certification team uses to determine if all the
 required tests have been run at certification is the submitted set of PICS XML

@@ -2,7 +2,7 @@
 label: Discovery
 order: 150
 ---
-## Commissionable discovery
+## Commissionable Discovery
 
 Commissionable discovery happens before Commissioning and refers to the process of discovering and identifying a commissionable Node. There are two methods through which a commissionable Node may advertise itself:
 
@@ -20,7 +20,9 @@ In either method, the commissionable node advertises information as shown in the
 
 As per the Matter specification, Vendor ID and Product ID are not required but can be included. The Discriminator is mandatory and is crucial during the commissioning process to provision the correct device, in case multiple identical devices are connected at the same time. Extended data may be used to encode custom vendor-specific information.
 
-Many devices will advertise for a short period of time (~3-15 minutes) after power-up. Other devices must not start advertising either because their primary control does not originate from the fabric or because automatic unprovisioned advertising of devices such as locks isn't safe. This table summarizes the behavior.
+Many devices will advertise for a short period of time (~3-15 minutes) after power-up.
+Other devices must not start advertising either because their primary control does not originate from the fabric
+or because automatic unprovisioned advertising of devices such as locks isn't safe. This table summarizes the behavior.
 
 | Primary Device Function                                                                      | Automatic Announcement |
 |----------------------------------------------------------------------------------------------|------------------------|
@@ -52,13 +54,13 @@ The DNS-SD instance name for device discovery is `_matterc._udp` and the host na
 
 After discovery, IPv6 addresses are returned in the AAAA records and key/value pairs are returned in the DNS‑SD TXT record. The key/value pair contains information such as the Discriminator, Vendor ID, and Product ID. The node also advertises commissioning subtypes, which enables filtering of results to find only Commissionees that match a particular attribute.
 
-## Operational discovery
+## Operational Discovery
 
 Operational discovery is the process of discovering and identifying a commissioned node. Operational discovery only happens through the IP-based DNS-SD method. The node instance name will be composed of the 64 bit compressed Fabric ID and 64 bit Node ID. These IDs in hexadecimal are then concatenated with a hyphen, such as in 2906C908D115D362-8FC7772401CD0696.local.. Operational discovery shares the same target host name as DNS-SD Device Discovery.
 
 The DNS-SD service type is `_matter._tcp.` Although `_tcp` naming is used, the device might use other transports such as UDP.
 
-## Commissioner discovery
+## Commissioner Discovery
 
 Commissioner discovery is the process used by Commissionees to discover Commissioners on the network. Commissioner discovery only happens through the IP-based DNS-SD method.
 

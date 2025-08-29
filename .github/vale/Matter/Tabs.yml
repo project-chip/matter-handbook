@@ -1,0 +1,19 @@
+# Warning: Matter.Tabs
+#
+# Checks for tabs in text.
+#
+# For a list of all options, see https://vale.sh/docs/topics/styles/
+extends: existence
+message: "Don't use tabs."
+scope: paragraph
+nonword: true
+action:
+  name: remove
+# Alternative Action: Replace tabs with 2 spaces
+# action:
+#   name: replace
+#   params:
+#     - "  "
+level: error
+tokens:
+  - '\t'

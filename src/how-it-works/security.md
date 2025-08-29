@@ -41,22 +41,22 @@ Matter embeds data privacy principles for all interactions between devices and s
 
 Matter uses the highest possible level of civilian cryptographic standards for network communications to ensure that unauthorized entities cannot easily access or tamper with data communicated between Matter devices.
 
-### Proof of identity
+### Proof of Identity
 
 Required for Matter devices with cryptographic certificates so data is shared only between known Matter entities.
 
-### Open standard
+### Open Standard
 
 Enables anyone to inspect the template for Matter interactions between legitimate Matter nodes.
 
-### Minimizing data
+### Minimizing Data
 
 Data shared within Matter interactions is minimized, thereby reducing the potential for inadvertent leakage of information.
 
-### Defined purpose
+### Defined Purpose
 
 Data shared between Matter nodes is strictly for a defined purpose, namely, for the specific operations of devices as required by the Matter protocol.
 
-### Privacy preserving mechanisms
+### Privacy Preserving Mechanisms
 
 Encryption to ensure that messages or identities of communicating parties are not in clear text on the network.
