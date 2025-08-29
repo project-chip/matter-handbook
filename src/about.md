@@ -4,7 +4,7 @@ layout: page
 # About
 
 This handbook helps you plan, build, and ship Matter devices by answering common questions and connecting
-you to the right resources. You’ll find orientation on working with CSA Working Groups, foundational Matter concepts,
+you to the right resources. You’ll find orientation on working with Alliance Working Groups, foundational Matter concepts,
 and practical guidance for navigating SDKs and tools.
 
 ## What This Handbook Is (and Isn’t)
@@ -16,16 +16,16 @@ and practical guidance for navigating SDKs and tools.
 
 ## Access and Openness
 
-We aggregate as much useful information as possible, including pointers to CSA member resources. Some linked
-destinations may require CSA membership. If you frequently encounter gated links and want to participate directly,
+We aggregate as much useful information as possible, including pointers to Alliance member resources. Some linked
+destinations may require Alliance membership. If you frequently encounter gated links and want to participate directly,
 consider [joining the Connectivity Standards Alliance](alliance/membership#join-the-alliance).
 
-- Media: For official updates, see the [CSA Newsroom](https://csa-iot.org/newsroom/) or contact press@csa-iot.org.
+- Media: For official updates, see the [Alliance Newsroom](https://csa-iot.org/newsroom/) or contact press@csa-iot.org.
 
 ## Source of Truth
 
 Content here is compiled by contributors as an educational guide. When there’s any discrepancy,
-the official Matter specification, SDK documentation, and CSA policies take precedence.
+the official Matter specification, SDK documentation, and Alliance policies take precedence.
 Treat this site as an explainer and navigator; consult the spec for requirements.
 
 ## Who This Is For
