@@ -1,0 +1,14 @@
+---
+# Error: Matter.CSA
+#
+# Ensures that the acronym "CSA" is not used instead of "Alliance."
+#
+# For a list of all options, see https://vale.sh/docs/topics/styles/
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+ignorecase: false
+action:
+  name: replace
+swap:
+  CSA: Alliance
