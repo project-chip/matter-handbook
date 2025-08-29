@@ -4,7 +4,7 @@ chapter = false
 weight = 4
 +++
 
-> Some links on this page are only accessible to CSA members.
+> Some links on this page are only accessible to Alliance members.
 
 Feature developers are not only tasked with developing the specification and implementation (SDK) for a new feature, but are also required to develop and support the certification program that is used to ensure that devices implementing the feature are compliant.
 
