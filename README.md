@@ -25,4 +25,4 @@ Please use the following guidelines for links:
 - If a page contains links to any non-public resource it should include the following disclaimer at the top:
   - `> Some links on this page are only accessible to Alliance members.`
 - If a Causeway link is required and the required resource is expected to be used by Adopter members, ensure the resource is a sub-folder in the ["All Members" section](https://groups.csa-iot.org/wg/members-all/document). If the resource is expected to be accessible to Adopter members and is not in that folder, consider moving it.
-- Pages that contain resources that are specifically aimed at Participant and Promoter members (for example, private GitHub repositories, or access to documents in the Matter work group causeway) should include a disclaimer at the top of the file.
+- Pages that contain resources that are specifically aimed at Participant and Promoter members (for example, private GitHub repositories, or access to documents in the Matter working group in Causeway) should include a disclaimer at the top of the file.
