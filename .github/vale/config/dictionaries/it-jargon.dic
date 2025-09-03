@@ -1,4 +1,4 @@
-276
+280
 actuation/S
 address/A
 affordance/S
@@ -93,6 +93,7 @@ fragilest
 framerate
 frontend
 fulfill/S
+generis
 ghostscript
 glitch/DG
 glob/DG
@@ -121,6 +122,7 @@ invoke/B
 keycode
 latency
 lexer/S
+licensor/S
 lifecycle
 lint/GD
 live/P
@@ -261,6 +263,7 @@ validator/S
 vaporware
 videotex
 viewport/S
+waive/B
 wakeup
 wayfinding
 webhook/S
