@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810212779456">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810213940613">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/logos/matter_favicon-32x32.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.810212779456" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.810213940613" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
 
     <!-- Add content to _includes/head.html to include here -->
     <style>
@@ -203,81 +203,81 @@
     <figcaption class="caption">Commissioning Flow - High Level</figcaption>
 </figure>
 </p>
-<doc-anchor-target id="1-device-discovery">
+<doc-anchor-target id="device-discovery">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1-device-discovery">#</doc-anchor-trigger>
-        <span>1 Device discovery</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#device-discovery">#</doc-anchor-trigger>
+        <span>Device Discovery</span>
     </h2>
 </doc-anchor-target>
 <p>Prior to start of the Commissioning flow, the Commissionee must start advertising itself. The Commissionee may advertise itself using any of the three <a href="../discovery/#commissionable-discovery">Commissionable Discovery</a> methods. The Commissionee must also provide the onboarding payload.</p>
-<doc-anchor-target id="2-connect-to-device-using-pase">
+<doc-anchor-target id="connect-to-device-using-pase">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-connect-to-device-using-pase">#</doc-anchor-trigger>
-        <span>2 Connect to device using PASE</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#connect-to-device-using-pase">#</doc-anchor-trigger>
+        <span>Connect to Device Using PASE</span>
     </h2>
 </doc-anchor-target>
 <p>Once the Commissioner has seen the advertisement and matches up the Discriminator, the Commissioner uses the passcode from the onboarding payload to do Passcode Authenticated Session Establishment (PASE) to connect to the device. This is the method to securely establish keys that both devices will be able to use to establish communication. At this step, the Commissioner also arms a fail-safe. A fail-safe provides a way to roll back the device to its original state if commissioning doesn&#x27;t complete successfully.</p>
-<doc-anchor-target id="3-get-commissionee-information">
+<doc-anchor-target id="get-commissionee-information">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#3-get-commissionee-information">#</doc-anchor-trigger>
-        <span>3 Get Commissionee information</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-commissionee-information">#</doc-anchor-trigger>
+        <span>Get Commissionee Information</span>
     </h2>
 </doc-anchor-target>
 <p>The Commissioner reads all the descriptors from the Commissionee. The <code v-pre>DescriptorCluster</code> is on endpoint 0 of the device and describes all the other endpoints. Commissioner also reads the Basic Information Cluster which includes information like the Vendor ID, Product ID, Product Name and the Serial Number. At this step, the Commissioner also reads the device type of the Commissionee which helps drive the UX on the Commissioner side.</p>
-<doc-anchor-target id="4-regulatory-config">
+<doc-anchor-target id="regulatory-config">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4-regulatory-config">#</doc-anchor-trigger>
-        <span>4 Regulatory config</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#regulatory-config">#</doc-anchor-trigger>
+        <span>Regulatory Config</span>
     </h2>
 </doc-anchor-target>
 <p>The Commissioner configures regulatory information on the Commissionee using the <code v-pre>SetRegulatoryConfig</code> command. Regulatory information includes information like configuring the location (indoor/outdoor/both) of the device or setting up the country code.</p>
-<doc-anchor-target id="5-commissionee-attestation">
+<doc-anchor-target id="commissionee-attestation">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#5-commissionee-attestation">#</doc-anchor-trigger>
-        <span>5 Commissionee attestation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commissionee-attestation">#</doc-anchor-trigger>
+        <span>Commissionee Attestation</span>
     </h2>
 </doc-anchor-target>
 <p>The goal of the Commissionee attestation procedure is to determine whether a device has been certified and is a genuine Matter device. Commissioner extracts the Device Attestation Certificate (DAC) and the Product Attestation Intermediate (PAI) certificate from the Commissionee. These certificates contain the Vendor ID, Product ID and Attestation Public Key. Once the certificates are received, the Commissioner does a challenge request that should be signed by the Attestation Private Key and uses that to establish the authenticity of the Commissionee.</p>
-<doc-anchor-target id="6-certificate-signing-request-csr">
+<doc-anchor-target id="certificate-signing-request-csr">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#6-certificate-signing-request-csr">#</doc-anchor-trigger>
-        <span>6 Certificate Signing Request (CSR)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#certificate-signing-request-csr">#</doc-anchor-trigger>
+        <span>Certificate Signing Request (CSR)</span>
     </h2>
 </doc-anchor-target>
 <p>The Commissioner sends a Certificate Signing Request (CSR) to the Commissionee. The Commissionee creates a unique operational key pair that will be used in a Certificate Authenticated Session Establishment (CASE) later. The Commissionee returns the resulting CSR information back to the Commissioner.</p>
-<doc-anchor-target id="7-add-node-operational-certificate-noc">
+<doc-anchor-target id="add-node-operational-certificate-noc">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#7-add-node-operational-certificate-noc">#</doc-anchor-trigger>
-        <span>7 Add Node Operational Certificate (NOC)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-node-operational-certificate-noc">#</doc-anchor-trigger>
+        <span>Add Node Operational Certificate (NOC)</span>
     </h2>
 </doc-anchor-target>
 <p>The Commissioner uses the CSR information received from the Commissionee and passes it to the Administrative Domain Manager (ADM) to generate a trusted NOC. The Commissioner installs the Root Certificate on the Commissionee using the <code v-pre>AddTrustedRootCertReq</code> command and then installs the Node Operational Certificate using the <code v-pre>AddNOC</code> command.</p>
-<doc-anchor-target id="8-network-provisioning">
+<doc-anchor-target id="network-provisioning">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#8-network-provisioning">#</doc-anchor-trigger>
-        <span>8 Network provisioning</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#network-provisioning">#</doc-anchor-trigger>
+        <span>Network Provisioning</span>
     </h2>
 </doc-anchor-target>
 <p>The Commissioner configures the operational network on the Commissionee. This step is needed for Thread or Wi-Fi devices. This step is not needed for Ethernet Devices where the device is already connected to the network. It uses <code v-pre>ScanNetworks</code>, <code v-pre>AddOrUpdateWifiNetwork</code> and <code v-pre>ConnectNetwork</code> commands.</p>
-<doc-anchor-target id="9-operational-discovery">
+<doc-anchor-target id="operational-discovery">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#9-operational-discovery">#</doc-anchor-trigger>
-        <span>9 Operational discovery</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#operational-discovery">#</doc-anchor-trigger>
+        <span>Operational Discovery</span>
     </h2>
 </doc-anchor-target>
 <p>Once the newly commissioned node is connected to the network, the Commissioner uses <a href="../discovery/#operational-discovery">Operational Discovery</a> to find the node on the operational network. Operational discovery is the process by which commissioned nodes are found on the operational network using DNS-SD. If the Commissionee is a Wi-Fi device, it will use mDNS to discover the device.</p>
 <p>Operational discovery helps the Commissioner and other Nodes in the network know which IP address and port the Commissionee is using.</p>
-<doc-anchor-target id="10-case-session-establishment">
+<doc-anchor-target id="case-session-establishment">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#10-case-session-establishment">#</doc-anchor-trigger>
-        <span>10 CASE session establishment</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#case-session-establishment">#</doc-anchor-trigger>
+        <span>CASE Session Establishment</span>
     </h2>
 </doc-anchor-target>
 <p>Once the newly commissioned node has been discovered, a CASE session is established between the Commissioner and the device. This session is initiated by the Commissioner and is responded to by the device. In this step, operational certificates are exchanged and a shared trust is established by validating they&#x27;re in the same logical fabric.</p>
-<doc-anchor-target id="11-commissioning-complete">
+<doc-anchor-target id="commissioning-complete">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#11-commissioning-complete">#</doc-anchor-trigger>
-        <span>11 Commissioning complete</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commissioning-complete">#</doc-anchor-trigger>
+        <span>Commissioning Complete</span>
     </h2>
 </doc-anchor-target>
 <p>The Commissioner uses CASE to send the <code v-pre>CommissioningComplete</code> command to the newly commissioned device. This is the last step in the commissioning process. <code v-pre>CommissioningComplete</code> also automatically disarms the fail-safe timer. Once commissioning is successfully completed, the device operates like any other Node on the operational network.</p>

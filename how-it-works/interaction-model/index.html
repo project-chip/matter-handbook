@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810212779456">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810213940613">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Interaction Model | Matter</title>
     <meta name="title" content="Interaction Model | Matter">
-    <meta name="description" content="The Data Model (DM) of a Node isn't relevant if we can't perform operations on them.">
+    <meta name="description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with...">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
@@ -20,24 +20,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
     <meta property="og:title" content="Interaction Model | Matter">
-    <meta property="og:description" content="The Data Model (DM) of a Node isn't relevant if we can't perform operations on them.">
+    <meta property="og:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with...">
     <meta property="og:image" content="https://handbook.buildwithmatter.com/static/primer-im-hierarchy.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
     <meta property="twitter:title" content="Interaction Model | Matter">
-    <meta property="twitter:description" content="The Data Model (DM) of a Node isn't relevant if we can't perform operations on them.">
+    <meta property="twitter:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with...">
     <meta property="twitter:image" content="https://handbook.buildwithmatter.com/static/primer-im-hierarchy.png">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/logos/matter_favicon-32x32.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.810212779456" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.810213940613" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
 
     <!-- Add content to _includes/head.html to include here -->
     <style>
@@ -202,12 +202,14 @@
         <span>Concepts</span>
     </h2>
 </doc-anchor-target>
-<p>The Data Model (DM) of a Node isn&#x27;t relevant if we can&#x27;t perform operations on them. The Interaction Model (IM), defines a Node&#x27;s DM relationship with the DM of other Nodes: a common language for communication between DMs.</p>
+<p>The Data Model (DM) of a Node is only relevant if we can perform operations on it.
+The Interaction Model (IM) defines a Node&#x27;s DM relationship with the DM of other Nodes,
+providing a common language for communication between DMs.</p>
 <p>Nodes interact with each other by:</p>
 <ul>
 <li>Reading and Subscribing to Attributes and Events</li>
 <li>Writing to Attributes</li>
-<li>Invoking Commands.</li>
+<li>Invoking Commands</li>
 </ul>
 <p>Whenever a Node establishes an encrypted communication sequence with another Node, they constitute an Interaction relationship. Interactions may be composed of one or more Transactions, and Transactions are composed of one or more of Actions which can be understood as IM-level messages between Nodes.</p>
 <p><figure class="content-center">
@@ -274,7 +276,7 @@ Eve intercepts again and prevents Bob from receiving it.</li>
 <doc-anchor-target id="sdk-abstractions">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#sdk-abstractions">#</doc-anchor-trigger>
-        <span>SDK abstractions</span>
+        <span>SDK Abstractions</span>
     </h3>
 </doc-anchor-target>
 <p>The sections Read Transactions, Write Transactions, and Invoke Transactions provide a high-level overview of the Interaction Model Actions performed by the SDK.</p>
@@ -459,7 +461,7 @@ After the Read Request Action is received by the Target it will assemble a Repor
 <doc-anchor-target id="timed-request-action">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#timed-request-action">#</doc-anchor-trigger>
-        <span>Timed request action</span>
+        <span>Timed Request Action</span>
     </h4>
 </doc-anchor-target>
 <p>Direction: Initiator -&gt; Target</p>

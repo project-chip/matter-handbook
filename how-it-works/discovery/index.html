@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810212779456">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810213940613">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/logos/matter_favicon-32x32.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.810212779456" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.810213940613" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
 
     <!-- Add content to _includes/head.html to include here -->
     <style>
@@ -197,7 +197,7 @@
 <doc-anchor-target id="commissionable-discovery">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#commissionable-discovery">#</doc-anchor-trigger>
-        <span>Commissionable discovery</span>
+        <span>Commissionable Discovery</span>
     </h2>
 </doc-anchor-target>
 <p>Commissionable discovery happens before Commissioning and refers to the process of discovering and identifying a commissionable Node. There are two methods through which a commissionable Node may advertise itself:</p>
@@ -240,7 +240,9 @@
 </table>
 </div>
 <p>As per the Matter specification, Vendor ID and Product ID are not required but can be included. The Discriminator is mandatory and is crucial during the commissioning process to provision the correct device, in case multiple identical devices are connected at the same time. Extended data may be used to encode custom vendor-specific information.</p>
-<p>Many devices will advertise for a short period of time (~3-15 minutes) after power-up. Other devices must not start advertising either because their primary control does not originate from the fabric or because automatic unprovisioned advertising of devices such as locks isn&#x27;t safe. This table summarizes the behavior.</p>
+<p>Many devices will advertise for a short period of time (~3-15 minutes) after power-up.
+Other devices must not start advertising either because their primary control does not originate from the fabric
+or because automatic unprovisioned advertising of devices such as locks isn&#x27;t safe. This table summarizes the behavior.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -293,7 +295,7 @@
 <doc-anchor-target id="operational-discovery">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#operational-discovery">#</doc-anchor-trigger>
-        <span>Operational discovery</span>
+        <span>Operational Discovery</span>
     </h2>
 </doc-anchor-target>
 <p>Operational discovery is the process of discovering and identifying a commissioned node. Operational discovery only happens through the IP-based DNS-SD method. The node instance name will be composed of the 64 bit compressed Fabric ID and 64 bit Node ID. These IDs in hexadecimal are then concatenated with a hyphen, such as in 2906C908D115D362-8FC7772401CD0696.local.. Operational discovery shares the same target host name as DNS-SD Device Discovery.</p>
@@ -301,7 +303,7 @@
 <doc-anchor-target id="commissioner-discovery">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#commissioner-discovery">#</doc-anchor-trigger>
-        <span>Commissioner discovery</span>
+        <span>Commissioner Discovery</span>
     </h2>
 </doc-anchor-target>
 <p>Commissioner discovery is the process used by Commissionees to discover Commissioners on the network. Commissioner discovery only happens through the IP-based DNS-SD method.</p>

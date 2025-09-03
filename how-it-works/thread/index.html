@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810212779456">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810213940613">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/logos/matter_favicon-32x32.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.810212779456" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.810213940613" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
 
     <!-- Add content to _includes/head.html to include here -->
     <style>
@@ -201,7 +201,7 @@
     </h2>
 </doc-anchor-target>
 <p>Some Matter Nodes are wired and have energy budgets that allow them to keep their radios continuously on. Other types of Nodes such as sensors have requirements to run for years on a battery, operating their radios on low-power networks such as Thread. The proxy architecture, along with Thread Sleepy End Devices, allows full-powered Nodes to provide both network-level and application-level functionality that insulates their child Nodes from energy-intensive transactions.</p>
-<p>A fundamental aspect of Matter is that it works both on high-throughput network mediums such as Wi-Fi and Ethernet, but also on low-latency, low-bandwidth, such as Thread. If all Multicast packets from Wi-Fi were bridged into Thread, we&#x27;d overburden the network, and potentially flood it. Thread&#x27;s goal is to enable IPv6 in low-power, low-latency mesh networking, not high-bandwidth data transfer. While Thread&#x27;s ICMPv6 pings in a local network are typically under few tens of milliseconds RTT, its total bandwidth is limited to 250 kbps at the IEEE 802.15.4 PHY. With packet retransmissions and overhead, the typical max bandwidth is around 125 kbps. In other words, orders of magnitude less than Wi-Fi.</p>
+<p>A fundamental aspect of Matter is that it works both on high-throughput network mediums such as Wi-Fi and Ethernet, but also on low-latency, low-bandwidth, such as Thread. If all Multicast packets from Wi-Fi were bridged into Thread, we&#x27;d overburden the network, and potentially flood it. Thread&#x27;s goal is to enable IPv6 in low-power, low-latency mesh networking, not high-bandwidth data transfer. While Thread&#x27;s ICMPv6 pings in a local network are typically under few tens of milliseconds RTT, its total bandwidth is limited to 250 Kbps at the IEEE 802.15.4 PHY. With packet retransmissions and overhead, the typical max bandwidth is around 125 Kbps. In other words, orders of magnitude less than Wi-Fi.</p>
 <p>Frames on the IEEE 802.15.4 PHY are 127 bytes, but the largest (and typical) maximum transmission unit (MTU) of IPv6 packets in Thread is 1280 bytes. Thus IPv6 packets often need to be split into several PHY frames. This process is defined by RFC 4944.</p>
 <p>To learn more, refer to IPv6 Addressing in the <a href="https://openthread.io/guides/thread-primer" class="outbound" target="_blank"><span>Thread Primer on openthread.io</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <doc-anchor-target id="border-routers">

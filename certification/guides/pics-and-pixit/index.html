@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810212779456">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.810213940613">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../../static/logos/matter_favicon-32x32.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.11.0.810212779456" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.11.0.810213940613" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.810212779456" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.11.0.810213940613" data-turbo-eval="false" defer></script>
 
     <!-- Add content to _includes/head.html to include here -->
     <style>
@@ -304,7 +304,7 @@ the following PICS codes would be defined</p>
 </table>
 </div>
 <p>More information about the PICS code format can be found at
-<a href="https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md" class="outbound" target="_blank"><span>PICS Guidelines</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. (requires access to the Matter specifications repo)</p>
+<a href="https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md" class="outbound" target="_blank"><span>PICS Guidelines</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. (requires access to the Matter specifications repository)</p>
 <p>In addition to these standard cluster PICS, other PICS may be defined to
 describe capabilities that are not directly expressed via the data model. For
 example, whether the device responds to manual operations that affect the Matter
@@ -344,18 +344,18 @@ test harness.</p>
 <doc-anchor-target id="creating-pics-conformance-statements-for-matter-devices">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#creating-pics-conformance-statements-for-matter-devices">#</doc-anchor-trigger>
-        <span>Creating PICS conformance statements for Matter devices</span>
+        <span>Creating PICS Conformance Statements for Matter Devices</span>
     </h2>
 </doc-anchor-target>
 <p>Because Matter devices may contain multiple, differing instances of the same
-cluster on multiple endpoints, it it not possible to unambiguously describe a
+cluster on multiple endpoints, it is not possible to unambiguously describe a
 Matter device with a single set of cluster-based PICS files. Instead, Matter
 devices use a full set of PICS XML files to describe each endpoint.</p>
 <p>To create a conformance statement for a Matter device, for each endpoint, load
 the full set of PICS XML files into the
 <a href="https://picstool.csa-iot.org/" class="outbound" target="_blank"><span>PICS tool</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, and select each of the PICS elements
 present for the endpoint being described. Documentation on how to use the PICS
-tool can be found in the PICS tool readme in the tool menu.</p>
+tool can be found in the PICS tool README in the tool menu.</p>
 <p>Some of the full-node MCORE elements really only apply to the root node,
 while others apply across all endpoints. For example, the entire device is
 commissionable, but commissioning tests only need to be run against EP0, so
@@ -364,7 +364,7 @@ every endpoint.</p>
 <doc-anchor-target id="helper-scripts">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#helper-scripts">#</doc-anchor-trigger>
-        <span>Helper scripts</span>
+        <span>Helper Scripts</span>
     </h3>
 </doc-anchor-target>
 <p>The official tooling for Matter certification is the PICS tool provided as a part
@@ -398,7 +398,7 @@ the other PICS.</p>
 <doc-anchor-target id="verifying-pics-using-the-idm-104-certification-test">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#verifying-pics-using-the-idm-104-certification-test">#</doc-anchor-trigger>
-        <span>Verifying PICS using the IDM-10.4 certification test</span>
+        <span>Verifying PICS Using the IDM-10.4 Certification Test</span>
     </h3>
 </doc-anchor-target>
 <p>While not all PICS are verifiable on the device, we do have tests that verify
@@ -428,7 +428,7 @@ configuration.</p>
 <doc-anchor-target id="pics-for-test-selection">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#pics-for-test-selection">#</doc-anchor-trigger>
-        <span>PICS for test selection</span>
+        <span>PICS for Test Selection</span>
     </h2>
 </doc-anchor-target>
 <p>The official source that the Alliance certification team uses to determine if all the
