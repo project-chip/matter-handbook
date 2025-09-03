@@ -15,10 +15,9 @@ autoconfiguration
 autocorrect
 automation/S
 backoff
-bandwidth
 badge/G
+bandwidth
 bioclimatic
-provision/UD
 biometric
 bitmask/S
 bitrate
@@ -186,6 +185,7 @@ prepend/D
 preprocess/DG
 preprocessor/S
 preset/SM
+provision/UD
 proxy/GD
 pseudocode
 query/R
