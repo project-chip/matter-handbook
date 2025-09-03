@@ -19,7 +19,7 @@ address the common considerations for Matter product development.
 [Platform guides](https://project-chip.github.io/connectedhomeip-doc/platforms/index.html).
 
 
-## Matter-specific product considerations
+## Matter-Specific Product Considerations
 
 The documentation in this section aims to give a brief overview of some of the
 common product and factory considerations and challenges that may differ from
@@ -128,7 +128,7 @@ See
 [Preparing a Device for Certification](#preparing-a-device-for-certification)
 for discussion of CDs used for certification testing.
 
-### Matter onboarding materials (QR codes and manual codes)
+### Matter Onboarding Materials (QR Codes and Manual Codes)
 
 In addition to DACs, each individual unit needs to be provisioned with its own
 onboarding material for discovery and initial commissioning. This includes the
@@ -152,7 +152,7 @@ recommended. The rules for QR and manual code inclusions are covered in section
 Information about on-package badging and QR and manual codes are documented in the
 [Brand Guidelines](https://csa-iot.org/wp-content/uploads/2022/11/Matter_Guideline_v15b_26102022_Public-Use.pdf).
 
-### In-field updates to Matter
+### In-Field Updates to Matter
 
 If a product that has already been released with non-Matter firmware wishes to update
 to include Matter functionality, the Matter firmware and supporting materials can be
@@ -170,7 +170,7 @@ background commissioning. It is also necessary to provision the per-unit materia
 discussed earlier in this section in a secure manner, using the security materials
 present on the device before the update.
 
-## Certification programs
+## Certification Programs
 
 Product developers should be aware of the various certification programs and how
 they may impact the product development process across the entire line.
@@ -189,7 +189,7 @@ for prior specification revisions. See the
 [Sunset Policy](https://groups.csa-iot.org/wg/members-all/document/39617) for more
 information.
 
-## Distribution of Over-the-air updates (OTA) and re-certification
+## Distribution of Over-the-Air Updates (OTA) and Re-Certification
 
 As development continues on the Matter SDK, developers continue to find and fix
 bugs, improve performance and maintainability. Ongoing specification development

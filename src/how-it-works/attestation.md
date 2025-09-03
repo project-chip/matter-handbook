@@ -77,7 +77,7 @@ The CD allows the Matter product to prove its compliance with the Matter protoco
 - Certification Type (development, provisional, or official)
 - Signature.
 
-### Firmware Information (optional)
+### Firmware Information (Optional)
 
 The Firmware Information contains the CD Version Number and one or more digests of components in the firmware, such as the OS, filesystem, bootloader. The digests may be either a hash of the software components or a hash of the signed manifests of the software components.
 
@@ -99,7 +99,7 @@ Message sent from the Commissionee to the Commissioner. The Attestation Informat
 
 Out-of-band challenge derived during Passcode Authenticated Session Establishment (PASE)/ Certificate Authenticated Session Establishment (CASE) session establishment and used to further secure the procedure and avoid replayed signatures. Comes from either CASE session, PASE session or a resumed CASE session.
 
-### Attestation TBS (to be signed)
+### Attestation TBS (to Be Signed)
 
 Message containing the Attestation Elements and Attestation Challenge.
 

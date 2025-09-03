@@ -4,13 +4,15 @@ order: 160
 ---
 ## Concepts
 
-The Data Model (DM) of a Node isn't relevant if we can't perform operations on them. The Interaction Model (IM), defines a Node's DM relationship with the DM of other Nodes: a common language for communication between DMs.
+The Data Model (DM) of a Node is only relevant if we can perform operations on it.
+The Interaction Model (IM) defines a Node's DM relationship with the DM of other Nodes,
+providing a common language for communication between DMs.
 
 Nodes interact with each other by:
 
 - Reading and Subscribing to Attributes and Events
 - Writing to Attributes
-- Invoking Commands.
+- Invoking Commands
 
 Whenever a Node establishes an encrypted communication sequence with another Node, they constitute an Interaction relationship. Interactions may be composed of one or more Transactions, and Transactions are composed of one or more of Actions which can be understood as IM-level messages between Nodes.
 
@@ -64,7 +66,7 @@ To prevent these types of attacks, Timed Actions set a maximum Transaction timeo
 
 Timed Transactions increase the complexity and number of Actions. Thus they are not recommended for every Transaction, but only the critical operations on Devices that have control over physical or virtual security and privacy assets.
 
-### SDK abstractions
+### SDK Abstractions
 
 The sections Read Transactions, Write Transactions, and Invoke Transactions provide a high-level overview of the Interaction Model Actions performed by the SDK.
 
@@ -196,7 +198,7 @@ To enable this behavior, the Path used in the Write Requests list may contain Gr
 
 Timed write transactions add a few steps to untimed write transactions.
 
-#### Timed request action
+#### Timed Request Action
 
 Direction: Initiator -> Target
 
