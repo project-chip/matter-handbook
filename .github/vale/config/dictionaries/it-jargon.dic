@@ -1,4 +1,4 @@
-276
+275
 actuation/S
 address/A
 affordance/S
@@ -134,7 +134,6 @@ lossy
 luminaire/S
 mailbomb/SGD
 makefile/S
-manged
 mangler/S
 microcontroller/S
 microservice/S
@@ -206,7 +205,6 @@ requestor/S
 requestor/SM
 responder/SM
 revoke/B
-rewriteable
 root
 route/BA
 scatterplot
