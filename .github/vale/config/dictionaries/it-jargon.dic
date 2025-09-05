@@ -1,4 +1,4 @@
-275
+280
 actuation/S
 address/A
 affordance/S
@@ -15,10 +15,9 @@ autoconfiguration
 autocorrect
 automation/S
 backoff
-bandwidth
 badge/G
+bandwidth
 bioclimatic
-provision/UD
 biometric
 bitmask/S
 bitrate
@@ -94,6 +93,7 @@ fragilest
 framerate
 frontend
 fulfill/S
+generis
 ghostscript
 glitch/DG
 glob/DG
@@ -122,6 +122,7 @@ invoke/B
 keycode
 latency
 lexer/S
+licensor/S
 lifecycle
 lint/GD
 live/P
@@ -186,6 +187,7 @@ prepend/D
 preprocess/DG
 preprocessor/S
 preset/SM
+provision/UD
 proxy/GD
 pseudocode
 query/R
@@ -261,7 +263,9 @@ validator/S
 vaporware
 videotex
 viewport/S
+waive/B
 wakeup
+wayfinding
 webhook/S
 webmail
 webserver
