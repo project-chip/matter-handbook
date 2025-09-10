@@ -1,0 +1,11 @@
+# Error: Matter.BadListFormat
+#
+# Checks if there is a newline or a title preceding a list.
+#
+# For a list of all options, see https://vale.sh/docs/topics/styles/
+extends: existence
+message: 'Either a newline or a title is required before lists.'
+level: error
+scope: text
+raw:
+  - '(?<![*\-\.].*|\n)\n[*\-\.]'
