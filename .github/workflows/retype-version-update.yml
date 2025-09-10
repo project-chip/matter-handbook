@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get latest Retype version
         id: get_version
@@ -45,7 +45,7 @@ jobs:
           jq ".image = \"retypeapp/retype:$LATEST_VERSION\"" $JSON_FILE > tmp.$$.json && mv tmp.$$.json $JSON_FILE
 
       - name: Create Pull Request for retype version update
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'Bot: update retype to version ${{ steps.get_version.outputs.result }}'

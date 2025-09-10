@@ -1,0 +1,10 @@
+SET UTF-8                # Set character encoding to UTF-8
+FLAG UTF-8               # Using UTF-8 flag
+
+# Suffix rules for adding 's' to form plurals
+SFX S Y 1
+SFX S   0       s       .
+
+# Suffix rules for adding "'s" to indicate possession
+SFX M Y 1
+SFX M   0       's      .

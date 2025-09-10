@@ -5,7 +5,7 @@ order: 98
 ![](/static/certification/self-pre-test.png)
 
 > [!NOTE]
-> Some links on this page are only accessible to CSA members.
+> Some links on this page are only accessible to Alliance members.
 
 Before submitting a product for formal certification testing, doing a self pre-test is
 important to identify and fix certification-blocking bugs.
@@ -15,7 +15,7 @@ provides logs and certification materials for submission to the certification
 program. In the self pre-test phase, tests can either be run through the test
 harness or locally on a desktop for faster test iteration.
 
-## Test selection and PICS
+## Test Selection and PICS
 
 The set of tests required to certify a device is determined from the
 Protocol Implementation Conformance Statement (PICS). This conformance statement
@@ -26,7 +26,7 @@ and the set of templates for a specific release of the specification:
 Detailed information about PICS, how to fill them out, and the tools available is
 available in the [PICS guide](https://project-chip.github.io/connectedhomeip-doc/testing/pics_and_pixit.html).
 
-## Running tests
+## Running Tests
 
 When tests are run for certification, they are run through the test harness, which is
 used to assist ATLs with test selection and the collection of logs required for submissions
@@ -52,31 +52,31 @@ verification steps document, which can be found in the official
 [release documentation](https://groups.csa-iot.org/wg/members-all/document/folder/2269)
 for each specification revision.
 
-## Running tests locally
+## Running Tests Locally
 
 Information about running tests locally can be found in the SDK documentation:
 - [YAML](https://project-chip.github.io/connectedhomeip-doc/testing/yaml.html#running-yaml-tests)
 - [Python](https://project-chip.github.io/connectedhomeip-doc/testing/python.html#running-tests)
 
 
-## Running tests on the test harness
+## Running Tests on the Test Harness
 
 A full description of how to build the test harness and run tests is available in the
 test harness user guide. Each specification release contains a version of the test harness
 user guide specific to that release. The user guide for each release
 is available in the [Matter release folder](https://groups.csa-iot.org/wg/members-all/document/folder/2269).
 
-## Fixing bugs
+## Fixing Bugs
 
 Documentation around common problems when running tests can be found in the
 [`matter-test-scripts` repository](https://github.com/project-chip/matter-test-scripts/tree/main/docs/common_test_failures).
 
-The CSA has a dedicated Slack channel for test harness questions at (#csg-matter-test-harness-help).
+The Matter test harness tiger team has a dedicated Slack channel for test harness questions at (#csg-matter-test-harness-help).
 
 Questions about tests for specific clusters can also be directed to the supporting Tiger Team.
 
 In the case where a test case bug is identified, the affected manufacturer should file a request with
 the Change Control Board (CCB). Information about the CCB process can be found in the
-[CSA policies and procedures](https://groups.csa-iot.org/wg/members/document/21624), chapter 11.
+[Alliance policies and procedures](https://groups.csa-iot.org/wg/members/document/21624), chapter 11.
 
 CCB requests are filed in the [CCB tool](https://zigbeecertifiedproducts.knack.com/zigbee-alliance-ccb-tool).

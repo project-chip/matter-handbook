@@ -1,4 +1,4 @@
-# matter-handbook
+# Matter Handbook
 
 ## Author guidelines
 This is an informal set of guidelines for authors, where we can document the conventions that are being used in this Handbook.

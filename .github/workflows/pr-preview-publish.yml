@@ -43,15 +43,20 @@ jobs:
 
       # Fetch PR code for building the preview.
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           submodules: recursive
 
+      # Replace URL in retype.yml before building
+      - name: Replace URL in retype.yml
+        run: |
+          sed -i "s|url: https://handbook.buildwithmatter.com|url: ${{ vars.PREVIEW_URL }}|" retype.yml
+
       # Generate the static site from the PR content using Retype.
       - name: Build with Retype
         run: |
-          retype build
+          retype build --key ${{ secrets.RETYPE_LICENSE_PR_PREVIEW }}
 
       # Upload the generated site to S3 for preview hosting.
       - name: Deploy preview
