@@ -15,7 +15,7 @@ Certification program development consists of several different components, each
 ## Test Plan Development
 The test plans form the official record of the certification program requirements and are a part of the official ballot per the [Alliance policies and procedures](https://csa-iot.org/wp-content/uploads/2022/10/13-0625-090-organizational-processes-and-procedures_2023-03-23.pdf)
 
-Information on how to get started writing test plans is available in the test plans repo [Getting Started Guide](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/getting_started.md).
+Information on how to get started writing test plans is available in the test plans repository [Getting Started Guide](https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/getting_started.md).
 
 Further information about test plan development is available in the [Test Plans documentation](https://github.com/CHIP-Specifications/chip-test-plans/tree/master/docs).
 
@@ -64,7 +64,7 @@ Test events are run virtually, where manufacturers run tests against their imple
 
 SVEs are run in-person and participating manufacturers and ATLs are required to travel to the event location. Most SVE events are now held in multiple global locations and manufacturers can select their preferred location. SVE events last one week, and manufacturers are expected to be present for the entire week to run and debug tests. The set of required tests is identified before the event by the Alliance staff and CSG. All manufacturers at an SVE are required to run the full suite of applicable tests from the SVE test suite, in order to support both their own feature, as well as core improvements.
 
-Event participants are supported by the Alliance staff and supporting volunteer members. Participants can communicate on a private event slack and raise issues in the GitHub repo. Bugs found and fixed during the validation event should be re-run by participants in order to validate the fixes.
+Event participants are supported by the Alliance staff and supporting volunteer members. Participants can communicate on a private event slack and raise issues in the GitHub repository. Bugs found and fixed during the validation event should be re-run by participants in order to validate the fixes.
 
 Participants in test and validation events are required to abide by the [Test Event Rules of Engagement](https://groups.csa-iot.org/wg/members-all/document/128), which include confidentiality rules. These are in place to allow manufacturers to participate in test events with unreleased products.
 
