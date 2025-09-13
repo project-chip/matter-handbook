@@ -1,0 +1,120 @@
+# -----------------------------------------------------------------------------
+start:
+  pro: true
+poweredByRetype: false # Remove "Powered by Retype"
+
+# -----------------------------------------------------------------------------
+input: src/
+output: .retype
+
+breadcrumb:
+  home: ":icon-home:"
+
+# -----------------------------------------------------------------------------
+url: https://handbook.buildwithmatter.com
+
+# -----------------------------------------------------------------------------
+branding:
+  logo: static/logos/matter_light.svg
+  logoDark: static/logos/matter_dark.svg
+  label: Handbook
+
+# -----------------------------------------------------------------------------
+#links:                              # Links to add to the top bar
+#  - text: csa-iot.org
+#    link: https://csa-iot.org
+
+# -----------------------------------------------------------------------------
+favicon: static/logos/matter_favicon-32x32.png
+
+# -----------------------------------------------------------------------------
+editor:
+  enabled: false # Remove 'edit' button
+
+# -----------------------------------------------------------------------------
+meta:
+  title: " | Matter Handbook" # Appended to the <title> element on all pages
+
+# -----------------------------------------------------------------------------
+search: # Custom configuration of the website search
+  noResultsFoundMsg: "No results found" # Message when no results are found
+
+# -----------------------------------------------------------------------------
+theme:
+  base:
+    # Define common base colors as anchors with leading underscores
+    # to indicate these keys are not meant to be parsed by the application.
+    _base-color-value: &base-color "#29ab92"
+    _base-text-value: &base-text "#131926"
+    _base-muted-value: &base-muted "#848c96"
+    _base-bg-value: &base-bg "#f3ffff"
+    _base-border-value: &base-border "#c8d1d9"
+    _base-link-hover-value: &base-link-hover "#218f7a"
+    _base-item-bg-hover-value: &base-item-bg-hover "#e6f6f3"
+    _base-item-bg-active-value: &base-item-bg-active "#ccece5"
+
+    # Use aliases for repeated values
+    base-bg: *base-bg
+    base-color: *base-color
+    base-text: *base-text
+    base-text-muted: *base-muted
+    base-text-strong: *base-text
+    base-border: *base-border
+    base-border-hover: *base-muted
+    base-border-strong: *base-muted
+    base-link: *base-color
+    base-link-hover: *base-link-hover
+    base-item-text: *base-text
+    base-item-text-active: *base-link-hover
+    base-item-bg-hover: *base-item-bg-hover
+    base-item-bg-active: *base-item-bg-active
+    callout-base-bg: *base-item-bg-hover
+    primary: *base-color
+    badge-primary: *base-item-bg-hover
+    badge-primary-border: *base-item-bg-active
+    callout-base-border: *base-item-bg-active
+  dark:
+    # Define common dark colors as anchors with leading underscores
+    # to indicate these keys are not meant to be parsed by the application.
+    _dark-color-value: &dark-color "#50e3c2"
+    _dark-text-value: &dark-text "#c8d1d9"
+    _dark-muted-value: &dark-muted "#848c96"
+    _dark-bg-value: &dark-bg "#131926"
+    _dark-border-value: &dark-border "#2a3442"
+    _dark-link-hover-value: &dark-link-hover "#94e9d7"
+    _dark-item-bg-hover-value: &dark-item-bg-hover "#2a3442"
+    _dark-item-bg-active-value: &dark-item-bg-active "#3c4a5c"
+
+    # Use aliases for repeated values
+    base-bg: *dark-bg
+    base-color: *dark-color
+    base-text: *dark-text
+    base-text-muted: *dark-muted
+    base-text-strong: &dark-strong-text "#f3ffff" # This value is unique and anchored for itself
+    base-border: *dark-border
+    base-border-hover: *dark-text
+    base-border-strong: *dark-strong-text
+    base-link: *dark-color
+    base-link-hover: *dark-link-hover
+    base-item-text: *dark-strong-text
+    base-item-text-active: *dark-link-hover
+    base-item-bg-hover: *dark-item-bg-hover
+    base-item-bg-active: *dark-item-bg-active
+    callout-base-bg: *dark-item-bg-hover
+    primary: *dark-color
+    badge-primary: *dark-item-bg-hover
+    badge-primary-border: *dark-item-bg-active
+    callout-base-border: *dark-item-bg-active
+
+# -----------------------------------------------------------------------------
+footer:
+  copyright: "&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners."
+
+  links:
+    - text: About the Matter Handbook
+      link: about.md
+      icon: question
+
+    - text: License
+      link: license.md
+      icon: shield-check
