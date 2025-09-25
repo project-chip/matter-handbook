@@ -97,6 +97,10 @@ It is not a requirement to deploy an Observer Node. The Alliance has ONs availab
 | TrustAsia        | CN           | <https://test-net.trustasia.com>   | on.test-net.trustasia.com   |  443    | 26657   | 8443    |
 | Tuya             | CN           | N/A                                | on-dcl-testnet.tuyacn.com   | 1317    | 26657   | 9090    |
 
+#### API Documentation
+The DCL provides programmatic access through well-defined APIs, available in both REST and gRPC formats. These interfaces allow developers to integrate, extend, and automate functionality in a consistent way.
+Refer to available documentation: [REST and gRPC Gateway docs](https://zigbee-alliance.github.io/distributed-compliance-ledger/)
+
 ## FAQs
 
 ### Why Is My Vendor Information Not Listed in the DCL?
@@ -116,3 +120,4 @@ Review the following document for instructions: [HowTo - Writing to the DCL.pdf]
 
 ## Contact
 For any questions related to the DCL, please contact the DCL Admin (<dcl-admin@csa-iot.org>).
+
