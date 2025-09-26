@@ -1,0 +1,48 @@
+name: 🔴 Error report
+description: Create a report to help us improve
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file an error report! Please provide as much detail as possible.
+
+  - type: input
+    id: location
+    attributes:
+      label: 🔍 Where is the Issue?
+      description: Please include the URL or link to the markdown source file and line. Screenshots can be helpful.
+      placeholder: https://github.com/org/repo/path/to/file.md#L123 or page URL
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 💬 Describe the Error
+      description: What is wrong? Include context and any screenshots if helpful.
+      placeholder: Provide clear details of the issue...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: 🖇️ Reference (source of truth)
+      description: If this relates to content (rather than spelling), please provide a source of truth (e.g., spec, policy, link).
+      placeholder: Link to spec/policy or supporting documentation...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 🔭 Scope
+      description: What type of error is this?
+      multiple: true
+      options:
+        - Spelling/Grammar
+        - Content accuracy
+        - Broken link
+        - Formatting/Markdown
+        - Other

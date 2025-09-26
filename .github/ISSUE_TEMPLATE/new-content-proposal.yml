@@ -1,0 +1,65 @@
+name: ✨ Propose new content
+description: Propose new content for the Matter Handbook.
+labels:
+  - new content
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this content proposal!
+        We appreciate your contribution and will review your proposal as soon as possible.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📖 Description of Proposed Content
+      description: A clear and concise description of the proposed content.
+      placeholder: |
+        Add information about a specific topic or feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: 🤔 Why Is This Content Needed
+      description: Provide a clear and concise explanation of why this content is needed.
+      placeholder: |
+        This content is necessary because it will help users understand how to perform a specific task or how a feature functions.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: 👥 Who Will Benefit
+      description: Select the target audience for the proposed content.
+      multiple: true
+      options:
+        - Spec Developers/Reviewers
+        - Device Developers
+        - General Public
+    validations:
+      required: true
+
+  - type: dropdown
+    id: willing-to-author
+    attributes:
+      label: ✍️ Are you able and willing to create the content?
+      options:
+        - 'Yes'
+        - 'No'
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative-author
+    attributes:
+      label: 🫵 Alternative Author
+      description: If you are not able to create the content, please suggest someone who can.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 🧠 Additional Context
+      description: Additional information that may be helpful in understanding the proposed content.
