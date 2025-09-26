@@ -42,12 +42,15 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
-    id: author
+  - type: dropdown
+    id: willing-to-author
     attributes:
-      label: ✍️ Are You Able and Willing to Create the Content
+      label: ✍️ Are you able and willing to create the content?
       options:
-        - label: 'Yes'
+        - 'Yes'
+        - 'No'
+    validations:
+      required: true
 
   - type: textarea
     id: alternative-author
