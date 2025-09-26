@@ -48,7 +48,7 @@ body:
     attributes:
       label: ✍️ Are You Able and Willing to Create the Content
       options:
-        - label: Yes
+        - label: 'Yes'
 
   - type: textarea
     id: alternative-author
