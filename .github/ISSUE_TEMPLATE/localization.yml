@@ -36,7 +36,7 @@ body:
     attributes:
       label: ✍️ Will you translate it?
       options:
-        - Yes
-        - No (requesting a translator)
+        - 'Yes'
+        - 'No (requesting a translator)'
     validations:
       required: true
