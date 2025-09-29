@@ -25,7 +25,7 @@ body:
     id: target-language
     attributes:
       label: 🌍 Target language
-      description: Currently only Japanese is enabled.
+      description: Choose target language
       options:
         - ja
     validations:
