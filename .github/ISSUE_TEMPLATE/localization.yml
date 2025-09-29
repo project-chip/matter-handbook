@@ -1,0 +1,42 @@
+name: 🌐 Translation Request
+description: Request or propose a translation of existing Matter Handbook content.
+labels:
+  - i18n
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping localize the Matter Handbook!
+        Provide the minimal details below so the work can be tracked.
+
+  - type: textarea
+    id: source
+    attributes:
+      label: 📄 Source content
+      description: List the file(s) or section(s) to translate (paths or URLs).
+      placeholder: |
+        Examples:
+        - docs/development/cluster-overview.md (only "Lifecycle" section)
+        - https://github.com/project-chip/matter-handbook/blob/main/docs/architecture/xyz.md
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-language
+    attributes:
+      label: 🌍 Target language
+      description: Currently only Japanese is enabled.
+      options:
+        - ja
+    validations:
+      required: true
+
+  - type: dropdown
+    id: willing
+    attributes:
+      label: ✍️ Will you translate it?
+      options:
+        - Yes
+        - No (requesting a translator)
+    validations:
+      required: true
