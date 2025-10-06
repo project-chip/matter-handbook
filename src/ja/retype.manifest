@@ -1,0 +1,165 @@
+{
+  "version": "3.11.0",
+  "created": "2025-09-29T12:26:31Z",
+  "files": [
+    {
+      "path": ".nojekyll"
+    },
+    {
+      "path": "404.html"
+    },
+    {
+      "path": "about/index.html"
+    },
+    {
+      "path": "CNAME"
+    },
+    {
+      "path": "glossary/index.html"
+    },
+    {
+      "path": "index.html"
+    },
+    {
+      "path": "resources/css/retype.css"
+    },
+    {
+      "path": "resources/fonts/Inter-italic-latin-var.woff2"
+    },
+    {
+      "path": "resources/fonts/Inter-roman-latin-var.woff2"
+    },
+    {
+      "path": "resources/js/config.js"
+    },
+    {
+      "path": "resources/js/lunr.js"
+    },
+    {
+      "path": "resources/js/retype.js"
+    },
+    {
+      "path": "resources/js/search.json"
+    },
+    {
+      "path": "resources/lunr.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/mermaid.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/prism.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.js.LICENSE.txt"
+    },
+    {
+      "path": "resources/retype.LICENSE.txt"
+    },
+    {
+      "path": "robots.txt"
+    },
+    {
+      "path": "sitemap.xml.gz"
+    },
+    {
+      "path": "static/certification/atl-testing.png"
+    },
+    {
+      "path": "static/certification/development.png"
+    },
+    {
+      "path": "static/certification/factory-data.png"
+    },
+    {
+      "path": "static/certification/factory-market.png"
+    },
+    {
+      "path": "static/certification/membership.png"
+    },
+    {
+      "path": "static/certification/ota-recert.png"
+    },
+    {
+      "path": "static/certification/product-certification-flow.png"
+    },
+    {
+      "path": "static/certification/self-pre-test.png"
+    },
+    {
+      "path": "static/certification/submission-for-certification.png"
+    },
+    {
+      "path": "static/logos/csa-blue.png"
+    },
+    {
+      "path": "static/logos/handbook-dark.svg"
+    },
+    {
+      "path": "static/logos/handbook-light.svg"
+    },
+    {
+      "path": "static/logos/matter_dark.svg"
+    },
+    {
+      "path": "static/logos/matter_favicon-32x32.png"
+    },
+    {
+      "path": "static/logos/matter_light.svg"
+    },
+    {
+      "path": "static/logos/matter_logo_day.png"
+    },
+    {
+      "path": "static/logos/matter_logo_night.png"
+    },
+    {
+      "path": "static/primer-attestation-document-hierarchy.png"
+    },
+    {
+      "path": "static/primer-attestation-pki.png"
+    },
+    {
+      "path": "static/primer-client-server.png"
+    },
+    {
+      "path": "static/primer-commissioning.png"
+    },
+    {
+      "path": "static/primer-csr.png"
+    },
+    {
+      "path": "static/primer-device-node.png"
+    },
+    {
+      "path": "static/primer-device-type.png"
+    },
+    {
+      "path": "static/primer-im-hierarchy.png"
+    },
+    {
+      "path": "static/primer-im-reading.png"
+    },
+    {
+      "path": "static/primer-im-subscribing.png"
+    },
+    {
+      "path": "static/primer-im-timed-invoking.png"
+    },
+    {
+      "path": "static/primer-im-timed-writing.png"
+    },
+    {
+      "path": "static/primer-im-untimed-invoking.png"
+    },
+    {
+      "path": "static/primer-im-untimed-writing.png"
+    },
+    {
+      "path": "static/primer-matter-architecture.png"
+    },
+    {
+      "path": "static/primer-node-endpoint-attribute.png"
+    }
+  ]
+}
