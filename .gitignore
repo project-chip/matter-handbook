@@ -43,6 +43,9 @@ Temporary Items
 !.zed/settings.json
 !.zed/tasks.json
 
+### Retype ###
+.retype/*
+
 # Local History for Visual Studio Code
 .history/
 
