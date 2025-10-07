@@ -29,6 +29,24 @@ All changes flow through this PR pipeline (there is no direct push to main, even
 this ensures consistency, traceability, and required approvals without extra ceremony for contributors
 who are less familiar with GitHub.
 
+### Git Workflow
+
+| Contributor type | Branch location | How to create | After merge | Rationale |
+|------------------|-----------------|---------------|-------------|-----------|
+| Frequent (granted write access) | Branch in this repository | `git switch -c feature-short-description` (from up-to-date `main`) | Auto-deleted by settings / cleanup | Faster feedback, no fork sync overhead |
+| Infrequent / first-time | Fork (user namespace) | Fork on GitHub UI, clone fork, branch there | Branch stays in fork; can be deleted manually | Keeps main repository branch list focused |
+
+Guidelines:
+- Keep branches short-lived and narrowly scoped; open earlier rather than accumulating a large diff.
+- Update your local copy of `main` before branching (fetch and integrate the latest changes) to reduce conflicts.
+- Do not force-push over reviewed commits.
+- Name branches descriptively and succinctly (e.g. `certification-diagram`, `tooling-ci-cache`, `editorial-typos`).
+- One logical change per PR—open multiple PRs instead of a “grab bag”.
+- Frequent contributors should still fork when experimenting in a way that may not merge.
+- Delete local and remote branches after merge (the repository auto-deletes remote branches; you can prune locally with `git fetch --prune`).
+
+If you become a frequent contributor, maintainers may grant write access so you can use the streamlined in-repo branching workflow. This is a trust signal, maintain clear commit hygiene and respond promptly to review.
+
 ### Labels
 
 | If your change… | Use this label | Extra gate |
