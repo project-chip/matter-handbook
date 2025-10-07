@@ -16,7 +16,7 @@ and merged transparently.
 
 Classify the change with the most specific label (`editorial`, `tooling`, or one or more domain labels;
 add `do not merge` only when you deliberately want to block). Every PR requires at least one maintainer approval.
-When a domain label is present, the external `sme-aproval` check must also succeed, confirming that the appropriate
+When a domain label is present, the external `sme-approval` check must also succeed, confirming that the appropriate
 subject‑matter experts have signed off. All mandatory automated checks (including Vale) must be green,
 there must be zero unresolved review threads and no active “changes requested” reviews,
 the PR cannot be in draft state or have merge conflicts, and the blocking `do not merge` label must be absent.
@@ -53,7 +53,7 @@ If you become a frequent contributor, maintainers may grant write access so you 
 |-----------------|---------------|------------|
 | Pure wording / typos / formatting (no meaning change) | `editorial` | Maintainer approval |
 | CI, workflows, devcontainer, build infra | `tooling` | Maintainer approval |
-| Semantic/content change in a domain (e.g. certification) | Domain label (e.g. `certification`) | Maintainer approval + `sme-aproval` |
+| Semantic/content change in a domain (e.g. certification) | Domain label (e.g. `certification`) | Maintainer approval + `sme-approval` |
 | Needs a temporary hold | `do not merge` | Blocks merge |
 
 Rules:
@@ -67,7 +67,7 @@ Rules:
 
 All must be true for auto‑merge:
 - Maintainer approval present.
-- If domain label: `sme-aproval` succeeded.
+- If domain label: `sme-approval` succeeded.
 - Vale success.
 - No unresolved review threads (`#review-threads-unresolved=0`).
 - No “changes requested” reviews.
