@@ -45,7 +45,7 @@ Guidelines:
 - Frequent contributors should still fork when experimenting in a way that may not merge.
 - Delete local and remote branches after merge (the repository auto-deletes remote branches; you can prune locally with `git fetch --prune`).
 
-If you become a frequent contributor, maintainers may grant write access so you can use the streamlined in-repo branching workflow. This is a trust signal, maintain clear commit hygiene and respond promptly to review.
+If you become a frequent contributor, maintainers may grant write access so you can use the streamlined in-repo branching workflow. This is a trust signal. Maintain clear commit hygiene and respond promptly to review.
 
 ### Labels
 
@@ -57,9 +57,9 @@ If you become a frequent contributor, maintainers may grant write access so you 
 | Needs a temporary hold | `do not merge` | Blocks merge |
 
 Rules:
-- Any semantic impact then use a domain label (not `editorial`).
+- If a change has any semantic impact, use a domain label (not `editorial`).
 - Multiple domain labels allowed; external check enforces SME coverage.
-- Don’t remove a domain label to bypass review.
+- Do not remove a domain label to bypass review.
 
 ---
 
@@ -91,7 +91,7 @@ All must be true for auto‑merge:
 - Resolve threads only after action or explicit agreement.
 - Keep scope tight; split unrelated chunks.
 - Avoid large force-pushes mid-review (cleanup near the end is fine).
-- Don’t game the process by dropping needed labels.
+- Do not game the process by dropping needed labels.
 
 ---
 
