@@ -1,0 +1,55 @@
+name: Retype Build (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      url:
+        description: 'Base URL to inject via Retype override (always applied, even on main)'
+        required: true
+        type: string
+      upload_artifact:
+        description: 'Upload the generated .retype directory'
+        required: false
+        type: boolean
+        default: true
+    secrets:
+      retype_license:
+        required: true
+
+jobs:
+  build:
+    name: Build Retype
+    runs-on: ubuntu-22.04
+    outputs:
+      site_dir: .retype
+      artifact_name: retype-site
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Build English
+        uses: retypeapp/action-build@latest
+        with:
+          override: ${{ format('{"url":"{0}"}', inputs.url) }}
+        env:
+          RETYPE_KEY: ${{ secrets.retype_license }}
+
+      - name: Build Japanese
+        uses: retypeapp/action-build@latest
+        with:
+          config_path: src/ja
+          output: ja
+          override: ${{ format('{"url":"{0}"}', inputs.url) }}
+        env:
+          RETYPE_KEY: ${{ secrets.retype_license }}
+
+      - name: Upload artifact
+        if: inputs.upload_artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: retype-site
+          path: .retype
+          if-no-files-found: error
+          retention-days: 7
