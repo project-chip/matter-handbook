@@ -15,8 +15,17 @@ jobs:
     steps:
       # Checkout repo
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       # Build site using Retype. Include License
+      - uses: retypeapp/action-build@latest
+        env:
+          RETYPE_KEY: ${{ secrets.RETYPE_LICENSE }}
+        with:
+          config_path: src/ja
+          output: ja
+
       - uses: retypeapp/action-build@latest
         env:
           RETYPE_KEY: ${{ secrets.RETYPE_LICENSE }}
