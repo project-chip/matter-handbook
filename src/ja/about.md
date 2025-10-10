@@ -1,53 +1,47 @@
 ---
 layout: page
 ---
-# About
+# ハンドブックについて
 
-This handbook helps you plan, build, and ship Matter devices by answering common questions and connecting
-you to the right resources. You’ll find orientation on working with Alliance Working Groups, foundational Matter concepts,
-and practical guidance for navigating SDKs and tools.
+このハンドブックは、よくある質問に答え、適切なリソースへ案内することで、Matter対応機器の設計、開発、出荷をサポートします。アライアンスのワーキンググループとの連携方法、基本的なMatterの概念、そしてSDKやツールの利用に関する実践的なガイダンスがご覧いただけます。
 
-## What This Handbook Is (and Isn’t)
+## ハンドブックの内容（およびハンドブックには含まれない内容）
 
 {.list-icon}
-- :icon-info: **Informative companion**: Explains concepts, typical approaches, and decision points. No normative requirements live here.
-- :icon-telescope: **Wayfinding layer**: Each page points to the appropriate official sources where requirements and formal processes are defined.
-- :icon-workflow: **Practical guidance**: Focuses on explanations, patterns, and pointers you can apply in your workflow. Content may include tips or illustrative examples where useful, but it is not prescriptive.
+- :icon-info: **情報提供のガイド**: CSAの概念、一般的なアプローチ、そして意思決定について説明しています。ハンドブックには規範的な要件、仕様は掲載しません。
+- :icon-telescope: **参照ガイド**: 各ページでは、要件や正式なプロセスが定義されている公式資料へ参照リンクします。
+- :icon-workflow: **実践的ガイダンス**: 説明やパターン、ワークフローで活用できる指針に重点を置いています。内容には、有益とみなされるヒントや例が含まれることがありますが、それを強制するものではありません。
 
-## Access and Openness
+## 情報へのアクセスと公開
 
-We aggregate as much useful information as possible, including pointers to Alliance member-only resources. Some linked
-destinations therefore may require Alliance membership. If you frequently encounter gated links and want to participate
-directly, consider [joining the Connectivity Standards Alliance](alliance/membership#join-the-alliance).
+アライアンスメンバー限定のリソースへの案内も含めて、できるだけ多くの有用な情報をまとめています。したがって、一部のリンク先にはアライアンスの会員資格が必要な場合があります。もし頻繁に限定リンクに直面し、加入を希望される場合は[Connectivity Standards Allianceへの参加](alliance/membership#join-the-alliance)をご検討ください。
 
-- Media: For official updates, see the [Alliance Newsroom](https://csa-iot.org/newsroom/) or contact press@csa-iot.org.
+- メディア: 公式な最新情報は [アライアンスのニュースルーム](https://csa-iot.org/newsroom/) をご覧いただくか、<press@csa-iot.org> までご連絡ください。
 
-## Source of Truth
+## 情報の正当性（Source of Truth）
 
-Content here is compiled by contributors as an educational guide. When there’s any discrepancy,
-the official Matter specification, SDK documentation, and Alliance policies take precedence.
-Treat this site as an explainer and navigator; consult the spec for requirements.
+ここにある内容は、学習ガイドとして貢献メンバーによりまとめられています。齟齬がある場合は、公式のMatter仕様書、SDKドキュメント、およびConnectivity Standards Allianceポリシーが優先されます。当サイトは解説やナビゲーションとしてご利用ください。；要件については仕様書を参照ください。
 
 ## Who This Is For
 
-- **Builders**: device makers, platform vendors, bridge and controller developers
-- **Operators**: testers, certification coordinators, installers
-- **Contributors**: folks engaging with the standards process and Working Groups
-- **Media**: looking for high-level orientation and official contacts
+- **技術開発者**: デバイスメーカー、プラットフォームベンダー、ブリッジおよびコントローラーの開発者
+- **オペレーター**: テスター、認証コーディネーター、インストーラー
+- **貢献メンバー**: 標準化プロセスやワーキンググループに関与する方
+- **メディア**: 全体的な概要や公式の連絡先をお探しの方
 
-## Contributing and Feedback
+## 貢献とフィードバック
 
-We welcome fixes and additions. Open an issue or submit a PR in the [Handbook GitHub repository](https://github.com/project-chip/matter-handbook).
-Helpful contributions include clarifying explanations, improved search cues, and additional examples.
+ぜひ修正や追加を提案ください。 Open an issue or submit a PR in the [ハンドブックの GitHubリポジトリ](https://github.com/project-chip/matter-handbook) でIssueを作成するか、プルリクエストを提出してください。
+役立つ提案としては、説明の明確化、検索の手がかりになる改善、そして追加事例などが含まれます。
 
-Editorial guardrails:
-- Keep content informative; do not restate requirements.
-- Prefer durable, version‑agnostic terminology; add synonyms to aid discovery.
-- Non‑normative style: Avoids “must,” “shall,” and “required.” You’ll see “typically,” “consider,” and “common patterns.”
+編集ガイドライン:
+- 内容は有益な情報にすること; 要件・仕様を再定義しないでください。
+- 普遍性があり、バージョンに依存しない用語を優先すること; 探しやすくするため同義語を追加してください。
+- 非規範的な書き方にすること: "must"（しなければならない）、"shall"（するものとする）、および "required"（必須）を避けます。 "typically"（通常）、"consider"（考えられる）、"common patterns"（よくあるパターン）などの表現をお願いします。
 
-## Attribution and Trademarks
+## 帰属および商標について
 
-- Matter is a registered trademark of the Connectivity Standards Alliance. Other trademarks belong to their respective owners.
-- Unless otherwise noted, content is provided under the project’s documentation license.
+- Matterは、Connectivity Standards Allianceの登録商標です。 その他の商標は、それぞれの所有者に帰属します。
+- 特に記載がない限り、コンテンツはプロジェクトのドキュメントライセンスに従います。
 ---
-Thanks for building with Matter!
+Matterへの貢献に感謝します。
