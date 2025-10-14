@@ -19,6 +19,8 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-22.04
+    env:
+      RETYPE_OUTPUT_PATH: ${{ needs.build.outputs.site_dir }}
     steps:
       - name: Checkout (for gh-pages history)
         uses: actions/checkout@v5
