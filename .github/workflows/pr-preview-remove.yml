@@ -1,4 +1,4 @@
-name: PR preview - Remove  # When PR is closed
+name: PR preview - Remove # When PR is closed
 
 on:
   # Trigger when a pull request target is closed.

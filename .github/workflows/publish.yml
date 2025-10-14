@@ -1,27 +1,38 @@
 name: Publish to GitHub Pages
 
 on:
-  # Trigger on push to main branch
   push:
     branches:
       - main
-  # Manual trigger
   workflow_dispatch:
 
 jobs:
-  publish:
-    name: Publish to retype branch
+  build:
+    name: Build Retype Site
+    uses: ./.github/workflows/retype-build.yml
+    with:
+      url: ${{ vars.SITE_URL }}
+    secrets:
+      retype_license: ${{ secrets.RETYPE_LICENSE }}
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
     runs-on: ubuntu-22.04
     steps:
-      # Checkout repo
-      - uses: actions/checkout@v5
+      - name: Checkout (for gh-pages history)
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
-      # Build site using Retype. Include License
-      - uses: retypeapp/action-build@latest
-        env:
-          RETYPE_KEY: ${{ secrets.RETYPE_LICENSE }}
+      - name: Download built artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact_name }}
+          # Fixed Retype output directory
+          path: .retype
 
-      # Deploy to GitHub Pages
-      - uses: retypeapp/action-github-pages@latest
+      - name: Publish
+        uses: retypeapp/action-github-pages@latest
         with:
           update-branch: true
