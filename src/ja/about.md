@@ -32,7 +32,7 @@ layout: page
 
 ## 貢献とフィードバック
 
-ぜひ修正や追加を提案ください。  [ハンドブックの GitHubリポジトリ](https://github.com/project-chip/matter-handbook) でIssueを作成するか、プルリクエストを提出してください。
+ぜひ修正や追加を提案ください。[ハンドブックの GitHubリポジトリ](https://github.com/project-chip/matter-handbook) でIssueを作成するか、プルリクエストを提出してください。
 役立つ提案としては、説明の明確化、検索の手がかりになる改善、そして追加事例などが含まれます。
 
 編集ガイドライン:
