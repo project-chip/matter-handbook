@@ -38,6 +38,15 @@ jobs:
         env:
           RETYPE_KEY: ${{ secrets.retype_license }}
 
+      - name: Build Japanese
+        uses: retypeapp/action-build@latest
+        with:
+          config_path: src/ja
+          output: ja
+          override: '{"url":"${{ inputs.url }}"}'
+        env:
+          RETYPE_KEY: ${{ secrets.retype_license }}
+
       - name: Set outputs
         id: out
         shell: bash

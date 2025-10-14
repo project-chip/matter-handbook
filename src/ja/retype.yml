@@ -4,10 +4,10 @@ start:
 poweredByRetype: false # Remove "Powered by Retype"
 
 # -----------------------------------------------------------------------------
-input: src/en
-output: .retype
-exclude:
-  - 'src/ja'
+input: ./
+output: .retype/ja
+
+locale: ja
 
 breadcrumb:
   home: ':icon-home:'
@@ -26,10 +26,10 @@ links: # Links to add to the top bar
   #  - text: csa-iot.org
   #    link: https://csa-iot.org
   - text: English
-    link: /
+    link: /../
     icon: ':flag-us:'
   - text: Japanese
-    link: /ja/
+    link: ../ja
     icon: ':flag-jp:'
 
 # -----------------------------------------------------------------------------
@@ -116,13 +116,13 @@ theme:
 
 # -----------------------------------------------------------------------------
 footer:
-  copyright: '&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.'
+  copyright: '&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matterは、Connectivity Standards Alliance<br>の登録商標です。その他の商標は、それぞれの所有者に帰属します。'
 
   links:
-    - text: About the Matter Handbook
+    - text: 「Matter ハンドブックについて」
       link: about.md
       icon: question
 
-    - text: License
+    - text: ライセンス
       link: license.md
       icon: shield-check
