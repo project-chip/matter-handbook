@@ -20,7 +20,7 @@ jobs:
     needs: build
     runs-on: ubuntu-22.04
     env:
-      RETYPE_OUTPUT_PATH: .retype
+      RETYPE_OUTPUT_PATH: ${{ needs.build.outputs.site_dir }}
     steps:
       - name: Checkout (for gh-pages history)
         uses: actions/checkout@v5
@@ -31,8 +31,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.build.outputs.artifact_name }}
-          # Fixed Retype output directory
-          path: .retype
+          path: ${{ needs.build.outputs.site_dir }}
 
       - name: Publish
         uses: retypeapp/action-github-pages@latest
