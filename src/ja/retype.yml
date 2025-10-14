@@ -116,7 +116,7 @@ theme:
 
 # -----------------------------------------------------------------------------
 footer:
-  copyright: '&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.'
+  copyright: '&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matterは、Connectivity Standards Alliance<br>の登録商標です。その他の商標は、それぞれの所有者に帰属します。'
 
   links:
     - text: 「Matter ハンドブックについて」
