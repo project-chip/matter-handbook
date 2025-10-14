@@ -1,0 +1,54 @@
+name: Retype Build
+
+on:
+  workflow_call:
+    inputs:
+      url:
+        description: 'Base URL to inject via Retype override'
+        required: true
+        type: string
+    secrets:
+      retype_license:
+        required: true
+    outputs:
+      artifact_name:
+        description: 'Name of the uploaded artifact'
+        value: ${{ jobs.build.outputs.artifact_name }}
+      site_dir:
+        description: 'Directory containing the built site'
+        value: ${{ jobs.build.outputs.site_dir }}
+
+jobs:
+  build:
+    name: Build Retype
+    runs-on: ubuntu-22.04
+    outputs:
+      artifact_name: ${{ steps.out.outputs.artifact_name }}
+      site_dir: ${{ steps.out.outputs.site_dir }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Build English
+        uses: retypeapp/action-build@latest
+        with:
+          override: '{"url":"${{ inputs.url }}"}'
+        env:
+          RETYPE_KEY: ${{ secrets.retype_license }}
+
+      - name: Set outputs
+        id: out
+        shell: bash
+        run: |
+          echo "artifact_name=retype-site" >> "$GITHUB_OUTPUT"
+          echo "site_dir=${RETYPE_OUTPUT_PATH:-.retype}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.out.outputs.artifact_name }}
+          path: ${{ steps.out.outputs.site_dir }}
+          if-no-files-found: error
+          retention-days: 7
