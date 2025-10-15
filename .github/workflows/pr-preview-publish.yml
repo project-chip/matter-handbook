@@ -34,6 +34,10 @@ jobs:
           name: ${{ needs.build.outputs.artifact_name }}
           path: ${{ needs.build.outputs.site_dir }}
 
+          # list files in preview directory
+      - name: List files in preview directory
+        run: ls -l ${{ needs.build.outputs.site_dir }}
+
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@master
         with:
