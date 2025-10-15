@@ -6,8 +6,6 @@ poweredByRetype: false # Remove "Powered by Retype"
 # -----------------------------------------------------------------------------
 input: src/en
 output: .retype
-exclude:
-  - 'src/ja'
 
 breadcrumb:
   home: ':icon-home:'
@@ -33,7 +31,7 @@ links: # Links to add to the top bar
     icon: ':flag-jp:'
 
 # -----------------------------------------------------------------------------
-favicon: static/logos/matter_favicon-32x32.png
+favicon: static/logos/favicon.svg
 
 # -----------------------------------------------------------------------------
 editor:
