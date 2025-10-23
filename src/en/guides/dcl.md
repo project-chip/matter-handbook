@@ -98,7 +98,7 @@ It is not a requirement to deploy an Observer Node. The Alliance has ONs availab
 
 | Host Owner       | Region       | Web User Interface                 | URL for API                 | REST    | RPC     | gRPC    |
 | ---------------- | ------------ | ---------------------------------- | --------------------------- | ------- | ------- | ------- |
-| The Alliance     | US, EU       | <https://testnet.iotledger.io> (hosted by Comcast)| on.test-net.dcl.csa-iot.org |  443    | 26657   | 8443    |
+| The Alliance     | US, EU       | <https://testnet.iotledger.io> (hosted by Comcast) | on.test-net.dcl.csa-iot.org |  443    | 26657   | 8443    |
 | TrustAsia        | CN           | <https://test-net.trustasia.com>   | on.test-net.trustasia.com   |  443    | 26657   | 8443    |
 | Tuya             | CN           | N/A                                | on-dcl-testnet.tuyacn.com   | 1317    | 26657   | 9090    |
 
