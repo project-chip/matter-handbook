@@ -55,7 +55,7 @@ jobs:
           echo "site_dir=${RETYPE_OUTPUT_PATH:-.retype}" >> "$GITHUB_OUTPUT"
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ steps.out.outputs.artifact_name }}
           path: ${{ steps.out.outputs.site_dir }}
