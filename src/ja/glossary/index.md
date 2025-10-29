@@ -120,7 +120,7 @@ order: 100
 | Node |  | ノード |
 | Node Operational Certificate | NOC | ノード証明書 |
 | Node Operational Certificate Signing Request | NOCSR | ノード証明書署名要求 |
-| Onboarding Pay­ load |  | オンボーディングペイロード |
+| Onboarding Payload |  | オンボーディングペイロード |
 | Operational Dis­covery |  | 運用時発見 |
 | OTA Provider |  | OTA提供者 |
 | OTA Requestor |  | OTA要求者 |
