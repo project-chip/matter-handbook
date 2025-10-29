@@ -121,7 +121,7 @@ order: 100
 | Node Operational Certificate | NOC | ノード証明書 |
 | Node Operational Certificate Signing Request | NOCSR | ノード証明書署名要求 |
 | Onboarding Payload |  | オンボーディングペイロード |
-| Operational Dis­covery |  | 運用時発見 |
+| Operational Discovery |  | 運用時発見 |
 | OTA Provider |  | OTA提供者 |
 | OTA Requestor |  | OTA要求者 |
 | Over-the-air (used mostly in context of "Over-the-air Software Update") | OTA | オンラインアップデート |
