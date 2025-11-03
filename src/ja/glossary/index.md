@@ -87,7 +87,7 @@ order: 100
 | Commissioner Dis­covery |  | 機器発見 |
 | Commissioning |  | 機器登録 |
 | Connected Home over IP | CHIP | プロジェクトCHIP |
-| Controllee |  | 被制御機器 |
+| Controlee |  | 被制御機器 |
 | Controller |  | 制御機器 |
 | Connected Standards Alliance | CSA | コネクテッドスタンダーズアライアンス |
 | Data Model | DM | データモデル |
