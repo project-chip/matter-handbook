@@ -7,7 +7,7 @@ on:
       - closed
 
 # Ensure only one removal process per PR.
-concurrency: preview-${{ github.ref }}
+concurrency: preview-${{ github.event.pull_request.number }}
 
 # Grant necessary permissions for writing content and PR comments.
 permissions:
