@@ -7,6 +7,10 @@ on:
         description: 'Base URL to inject via Retype override'
         required: true
         type: string
+      checkout_ref:
+        description: 'Exact ref (commit SHA or tag) to checkout'
+        required: false
+        type: string
     secrets:
       retype_license:
         required: true
@@ -22,6 +26,8 @@ jobs:
   build:
     name: Build Retype
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
     outputs:
       artifact_name: ${{ steps.out.outputs.artifact_name }}
       site_dir: ${{ steps.out.outputs.site_dir }}
@@ -29,7 +35,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
+          ref: ${{ inputs.checkout_ref || github.sha }}
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Build English
         uses: retypeapp/action-build@latest
@@ -55,7 +63,7 @@ jobs:
           echo "site_dir=${RETYPE_OUTPUT_PATH:-.retype}" >> "$GITHUB_OUTPUT"
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ steps.out.outputs.artifact_name }}
           path: ${{ steps.out.outputs.site_dir }}

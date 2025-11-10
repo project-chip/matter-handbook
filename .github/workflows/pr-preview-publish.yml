@@ -1,4 +1,4 @@
-name: PR preview - Publish # PR Preview using Retype
+name: PR preview - Publish
 
 on:
   pull_request_target:
@@ -8,18 +8,19 @@ on:
       - synchronize
   workflow_dispatch:
 
-concurrency: preview-${{ github.ref }}
+concurrency: preview-${{ github.event.pull_request.number }}
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
 
 jobs:
   build:
-    name: Build
+    name: Build (PR Head)
     uses: ./.github/workflows/retype-build.yml
     with:
       url: ${{ vars.PREVIEW_URL }}
+      checkout_ref: ${{ github.event.pull_request.head.sha }}
     secrets:
       retype_license: ${{ secrets.RETYPE_LICENSE_PR_PREVIEW }}
 
@@ -27,9 +28,12 @@ jobs:
     name: Deploy preview
     needs: build
     runs-on: ubuntu-22.04
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - name: Download built artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: ${{ needs.build.outputs.artifact_name }}
           path: ${{ needs.build.outputs.site_dir }}
@@ -44,13 +48,13 @@ jobs:
       - name: Sync preview site to S3
         env:
           SRC_DIR: ${{ needs.build.outputs.site_dir }}
-          PR_NUMBER: ${{ github.event.number }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
           S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         run: |
           set -euo pipefail
           DEST_PREFIX="pr-${PR_NUMBER}"
           DEST_URI="s3://${S3_BUCKET}/${DEST_PREFIX}"
-            echo "Syncing ${SRC_DIR} => ${DEST_URI}"
+          echo "Syncing ${SRC_DIR} => ${DEST_URI}"
           aws s3 sync "${SRC_DIR}" "${DEST_URI}" --follow-symlinks --delete
           echo "S3 sync complete."
 
@@ -58,7 +62,7 @@ jobs:
         uses: chetan/invalidate-cloudfront-action@v2
         env:
           DISTRIBUTION: ${{ secrets.AWS_CF_DISTRIBUTION }}
-          PATHS: '/pr-${{ github.event.number }}/*'
+          PATHS: '/pr-${{ github.event.pull_request.number }}/*'
           AWS_REGION: ${{ vars.AWS_S3_BUCKET_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -67,4 +71,4 @@ jobs:
         uses: thollander/actions-comment-pull-request@v3
         with:
           message: |
-            Preview deployed at ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }}
+            Preview deployed at ${{ vars.PREVIEW_URL }}/pr-${{ github.event.pull_request.number }}
