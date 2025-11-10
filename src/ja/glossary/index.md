@@ -4,54 +4,53 @@ icon: book
 order: 100
 ---
 
-# 頭文字語定義表
+# 用語 (頭文字語) 解説
 
 <!-- vale Matter.CSA = NO -->
-| 頭文字語     | 定義                                                                                                                                                                |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ACL      | Access Control List. This is a list of entries in the Access Control cluster that grant access privileges to device and groups                                            |
-| .adoc     | The filename suffix for AsciiDoc, which is the markup language we use to write the specification and test plans. [AsciiDoc](https://asciidoc.org/)                       |
-| Alchemy  | Alchemy is a command line tool for modifying and transforming Matter spec documents. [Alchemy](https://github.com/project-chip/alchemy)                                   |
-| Alliance | Refers to the Connectivity Standards Alliance                                                                                                                             |
-| AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.                                                                 |
-| AsciiDoc | Markup language we use to write the specification and test plans. [AsciiDoc](https://asciidoc.org/)                                                                       |
-| ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices.                                                                                               |
-| CASE     | Certificate Authenticated Session Establishment. This is the session establishment mechanism used during normal Matter operations                                         |
-| Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
-| CD       | Certification Declaration - this declaration is provided by devices to prove they have passed certification                                                               |
-| CHIP     | Matter used to be called Project CHIP (Connected Home over IP) before it got its current name. Much of the SDK still uses that prefix.                                    |
-| CSA      | Connectivity Standards Alliance - the member-driven organization that manages the Matter standard                                                                         |
-| CSG      | Certification Sub Group [CSG](https://groups.csa-iot.org/wg/matter-csg/workgroup)                                                                                         |
-| DAC      | Device Attestation Certificates. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                                          |
-| DM       | Data Model. The data model describes the organization of data within a cluster. DM is sometimes also used to refer to the DMTT.                                           |
-| DMTT     | Data Model Tiger Team.                                                                                                                                                    |
-| DNS-SD   | Domain name service (DNS) service discovery. This is the mechanism used to locate Matter devices on the IP network                                                        |
-| DRLC     | Demand Response Load Control                                                                                                                                              |
-| EVSE     | Electric Vehicle Supply Equipment                                                                                                                                         |
-| ICAC     | Intermediate Certificate Authority Certificate See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                     |
-| ICD      | Intermittently Connected Devices. These device can sleep for relatively long periods and will be unreachable over Matter during these times.                              |
-| mDNS     | Multicast DNS - the mechanism used to perform DNS-SD over Wi-Fi                                                                                                           |
-| MPSG     | Marketing and Product Sub Group [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup)                                                                               |
-| NOC      | Node operational certificate. See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                                      |
-| NOCSR    | Node Operational Certificate Signing Request. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                             |
-| PAA      | Product Attestation Authority. Root certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                   |
-| PAI      | Product attestation intermediate - Intermediate certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)       |
-| PASE     | Password Authenticated Session Establishment. This is the session establishment mechanism used to commission devices.                                                     |
-| PICS     | Protocol Implementation Conformance Statement. PICS are also used to determine testing requirements for certification                                                     |
-| PID      | Product identifier                                                                                                                                                        |
-| PIXIT    | Protocol Implementation eXtra Information for Testing. These are configuration values provided to certification tests.                                                    |
-| RCAC     | Root Certificate Authority Certificate. See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                            |
-| SDK      | Software development kit - a software package implementing the specification [GitHub](https://github.com/project-chip/connectedhomeip)                                    |
-| spec     | Short for specification. [GitHub](https://github.com/CHIP-Specifications/connectedhomeip-spec)                                                                            |
-| SRP      | Service Registration Protocol. This is the mechanism used to register thread devices for DNS-SD. Border routers implement this protocol to allow Thread device discovery. |
-| SVE      | Specification Validation Event - this follows the test events and acts as the final check on the certification package for a release.                                     |
-| SWTT     | [Software development tiger team](https://groups.csa-iot.org/wg/matter-tsg-swd/workgroup). This is the group of people working on the SDK.                                |
-| TE       | Test Event. These events are held during development to verify that test scripts and SDK development are on track.                                                        |
-| TSG      | Technical Sub Group [TSG](https://groups.csa-iot.org/wg/matter-tsg/workgroup)                                                                                             |
-| TT       | Tiger team - a small group focused on one activity or feature.                                                                                                            |
-| VID      | Vendor identifier                                                                                                                                                         |
-| WG       | Work Group. [Matter](https://groups.csa-iot.org/wg/matter-wg/workgroup) is a working group in the Alliance.                                                               |
-<!-- vale Matter.CSA = YES -->
+| 用語 (頭文字語) | 解説 |
+| --- | --- |
+| ACL | アクセス制御リスト： これは、Access Control クラスター内のエントリーのリストで、機器やグループにアクセス権を付与するものです。 |
+| .adoc | AsciiDocのファイル名サフィックス（拡張子）です。AsciiDocは、私たちが仕様書や認証試験仕様書（テストプラン）を作成するために使用するマークアップ言語です。 [AsciiDoc](https://asciidoc.org/) |
+| Alchemy | Alchemyは、Matterの仕様書ドキュメントを変更・変換するためのコマンドラインツールです。 [Alchemy](https://github.com/project-chip/alchemy) |
+| Alliance | Connectivity Standards Alliance (コネクテッドスタンダーズアライアンス) を指します。英語で短縮形を用いるときはCSAでは無くAllianceを使用します。 |
+| AoE | Anywhere on Earth（地球上のどこでも）の略。この頭字語は、締め切りについて議論する際に、正確な終了時刻を明確にするためによく使われます。 |
+| AsciiDoc | 私たちが仕様書や認証試験仕様書（テストプラン）を作成するために使用するマークアップ言語です。 [AsciiDoc](https://asciidoc.org/) |
+| ATL | Authorized Test Laboratory (認定試験ラボ)。ATLは、機器の認証に必要なテストを実行します。 |
+| CASE | Certificate Authenticated Session Establishment (証明書認証付き通信セッション確立)。これは、通常のMatterの操作中に使用されるセッション確立メカニズムです。 |
+| Causeway | ドキュメントやカレンダーを保存し、グループメンバーシップなどを追跡するために使用されるサイトです。 [https://groups.csa-iot.org/](https://groups.csa-iot.org/) |
+| CD | Certification Declaration (適合性証明書) - この宣言は、機器が認証に合格したことを証明するために提供されます。 |
+| CHIP | Matterは、現在の名前になる前はProject CHIP (Connected Home over IP) と呼ばれていました。SDKの多くは、今でもそのプレフィックスを使用しています。 |
+| CSA | Connectivity Standards Alliance (コネクテッドスタンダーズアライアンス) - Matter標準を管理するメンバー主導の組織です。 |
+| CSG | Certification Sub Group (認証サブグループ) [CSG](https://groups.csa-iot.org/wg/matter-csg/workgroup) |
+| DAC | Device Attestation Certificates (Matter機器証明書)。 [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/) を参照してください。 |
+| DM | Data Model (データモデル)。データモデルは、クラスター内のデータの構成を記述します。DMは、DMTTを指すために使われることもあります。 |
+| DMTT | Data Model Tiger Team (データモデル・タイガーチーム)。 |
+| DNS-SD | ドメインネームサービス (DNS) サービスディスカバリー。これは、IPネットワーク上でMatter機器を見つけるために使用されるメカニズムです。 |
+| DRLC | Demand Response Load Control (需要応答負荷制御) |
+| EVSE | Electric Vehicle Supply Equipment (電気自動車充電設備) |
+| ICAC | Intermediate Certificate Authority Certificate (中間認証局証明書（ノード）)。 [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/) を参照してください。 |
+| ICD | Intermittently Connected Devices (間欠接続機器)。これらの機器は、比較的長い期間スリープすることができ、その間はMatter経由で到達不能になります。 |
+| mDNS | Multicast DNS (マルチキャストDNS) - Wi-Fi経由でDNS-SDを実行するために使用されるメカニズムです。 |
+| MPSG | Marketing and Product Sub Group (マーケティング & プロダクトサブグループ) [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup) |
+| NOC | Node operational certificate (ノード証明書)。 [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/) を参照してください。 |
+| NOCSR | Node Operational Certificate Signing Request (ノード証明書署名要求)。 [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/) を参照してください。 |
+| PAA | Product Attestation Authority (ルート認証局（デバイス）)。機器認証のためのルート証明書です。 [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/) を参照してください。 |
+| PAI | Product attestation intermediate (中間認証局（デバイス）) - 機器認証のための中間証明書です。 [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/) を参照してください。 |
+| PASE | Password Authenticated Session Establishment (パスコード認証による通信セッション確立)。これは、機器を登録 (commission) するために使用されるセッション確立メカニズムです。 |
+| PICS | Protocol Implementation Conformance Statement (実装宣言書)。PICSは、認証のためのテスト要件を決定するためにも使用されます。 |
+| PID | Product identifier (プロダクトID) |
+| PIXIT | Protocol Implementation eXtra Information for Testing。これらは、認証テストに提供される設定値です。 |
+| RCAC | Root Certificate Authority Certificate (ルート認証局証明書（ノード）)。 [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/) を参照してください。 |
+| SDK | Software development kit (ソフトウェア開発キット) - 仕様を実装したソフトウェアパッケージです。 [GitHub](https://github.com/project-chip/connectedhomeip) |
+| spec | specification (仕様) の略です。 [GitHub](https://github.com/CHIP-Specifications/connectedhomeip-spec) |
+| SRP | Service Registration Protocol (サービス登録プロトコル)。これは、DNS-SDのためにThread機器を登録するために使用されるメカニズムです。ボーダールーターがこのプロトコルを実装し、Thread機器の発見を可能にします。 |
+| SVE | Specification Validation Event (仕様検証イベント) - これはテストイベントに続いて行われ、リリースに向けた認証パッケージの最終チェックとして機能します。 |
+| SWTT | [Software development tiger team (ソフトウェア開発タイガーチーム)](https://groups.csa-iot.org/wg/matter-tsg-swd/workgroup). これは、SDKの開発に取り組んでいる人々のグループです。 |
+| TE | Test Event (テストイベント)。これらのイベントは、テストスクリプトとSDK開発が順調に進んでいることを確認するために、開発中に開催されます。 |
+| TSG | Technical Sub Group (技術サブグループ) [TSG](https://groups.csa-iot.org/wg/matter-tsg/workgroup) |
+| TT | Tiger team (タイガーチーム) - 1つの活動や機能に焦点を当てた小規模なグループです。 |
+| VID | Vendor identifier (ベンダーID) |
+| WG | Work Group (ワーキンググループ)。 [Matter](https://groups.csa-iot.org/wg/matter-wg/workgroup) は、アライアンス内のワーキンググループの一つです。 |<!-- vale Matter.CSA = YES -->
 
 # 日本語用語一覧
 <!-- vale Matter.CSA = NO -->
