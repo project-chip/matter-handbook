@@ -23,7 +23,7 @@ jobs:
       RETYPE_OUTPUT_PATH: ${{ needs.build.outputs.site_dir }}
     steps:
       - name: Checkout (for gh-pages history)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
