@@ -1,102 +1,115 @@
-## Contributing to the Matter Handbook
+## 📘 Contributing to the Matter Handbook
 
-Welcome - thanks for taking the time to improve the Matter Handbook.
+Welcome! Thank you for helping us improve the Matter Handbook.
 
 > [!NOTE]
-> For questions, clarifications, or early ideas, start a Discussion instead of opening an Issue;
-> Issues are reserved for concrete, actionable work items.
+> **Have a question?** Start a [Discussion](https://github.com/project-chip/matter-handbook/discussions).
+> 
+> **Ready to work?** Open an [Issue](https://github.com/project-chip/matter-handbook/issues/new/choose) or submit a [Pull Request](https://github.com/project-chip/matter-handbook/compare).
 
 ---
 
-### Summary
+### ⚙️ How We Work
 
-The contribution process is intentionally lightweight and entirely pull‑request (PR) based:
-every change - large or small, including typo fixes - comes in as a PR so it can be reviewed, validated by automation,
-and merged transparently.
+To keep this handbook accurate and high-quality, we follow a specific flow:
 
-Classify the change with the most specific label (`editorial`, `tooling`, or one or more domain labels;
-add `do not merge` only when you deliberately want to block). Every PR requires at least one maintainer approval.
-When a domain label is present, the external `sme-approval` check must also succeed, confirming that the appropriate
-subject‑matter experts have signed off. All mandatory automated checks (including Vale) must be green,
-there must be zero unresolved review threads and no active “changes requested” reviews,
-the PR cannot be in draft state or have merge conflicts, and the blocking `do not merge` label must be absent.
-Once these conditions are satisfied, the merge is performed automatically—no further manual action is needed.
-If you are new to GitHub: a PR is simply a proposed set of changes that others can comment on before it is merged.
+1.  **Everything is a Pull Request (PR):** Whether it is a typo fix or a new chapter, it goes through a PR. We do not push directly to the `main` branch.
+2.  **Automation First:** We use bots to check spelling and formatting automatically.
+3.  **Label-Driven:** The label you choose determines who needs to approve your work.
+4.  **Auto-Merge:** Once all approvals and checks pass, the system merges your work automatically. No manual "merge button" required.
 
 ---
 
-All changes flow through this PR pipeline (there is no direct push to main, even for small editorial tweaks);
-this ensures consistency, traceability, and required approvals without extra ceremony for contributors
-who are less familiar with GitHub.
+### 🔀 Git Workflow
 
-### Git Workflow
+Depending on how often you contribute, choose the right setup:
 
-| Contributor type | Branch location | How to create | After merge | Rationale |
-|------------------|-----------------|---------------|-------------|-----------|
-| Frequent (granted write access) | Branch in this repository | `git switch -c feature-short-description` (from up-to-date `main`) | Auto-deleted by settings / cleanup | Faster feedback, no fork sync overhead |
-| Infrequent / first-time | Fork (user namespace) | Fork on GitHub UI, clone fork, branch there | Branch stays in fork; can be deleted manually | Keeps main repository branch list focused |
-
-Guidelines:
-- Keep branches short-lived and narrowly scoped; open earlier rather than accumulating a large diff.
-- Update your local copy of `main` before branching (fetch and integrate the latest changes) to reduce conflicts.
-- Do not force-push over reviewed commits.
-- Name branches descriptively and succinctly (e.g. `certification-diagram`, `tooling-ci-cache`, `editorial-typos`).
-- One logical change per PR—open multiple PRs instead of a “grab bag”.
-- Frequent contributors should still fork when experimenting in a way that may not merge.
-- Delete local and remote branches after merge (the repository auto-deletes remote branches; you can prune locally with `git fetch --prune`).
-
-If you become a frequent contributor, maintainers may grant write access so you can use the streamlined in-repo branching workflow. This is a trust signal. Maintain clear commit hygiene and respond promptly to review.
-
-### Labels
-
-| If your change… | Use this label | Extra gate |
-|-----------------|---------------|------------|
-| Pure wording / typos / formatting (no meaning change) | `editorial` | Maintainer approval |
-| CI, workflows, devcontainer, build infra | `tooling` | Maintainer approval |
-| Semantic/content change in a domain (e.g. certification) | Domain label (e.g. `certification`) | Maintainer approval + `sme-approval` |
-| Needs a temporary hold | `do not merge` | Blocks merge |
-
-Rules:
-- If a change has any semantic impact, use a domain label (not `editorial`).
-- Multiple domain labels allowed; external check enforces SME coverage.
-- Do not remove a domain label to bypass review.
+| You are... | Where to work | Setup Command | After Merge |
+|:---|:---|:---|:---|
+| **First-timer / Infrequent** | A **Fork** (your own copy) | Click "Fork" on GitHub, then clone your fork. | You can delete the branch in your fork. |
+| **Frequent Contributor** | A **Branch** in this repo | `git switch -c feature-name` | Branch is auto-deleted by the system. |
 
 ---
 
-### Merge Conditions
+### 🚀 Step-by-Step Guide
 
-All must be true for auto‑merge:
-- Maintainer approval present.
-- If domain label: `sme-approval` succeeded.
-- Vale success.
-- No unresolved review threads (`#review-threads-unresolved=0`).
-- No “changes requested” reviews.
-- Not draft; no merge conflicts.
-- No `do not merge` label.
+Follow this standard workflow to ensure your contribution moves smoothly from idea to merged code.
+
+#### 1. Create Your Workspace (Fork & Clone)
+First, create your own copy of the repository so you can work freely without affecting the main handbook.
+*   **Fork:** Click the **Fork** button in the top-right corner of this page.
+*   **Clone:** Download your fork to your machine.
+    *   `git clone https://github.com/<your-username>/handbook.git`
+
+#### 2. Isolate Your Change (Branch)
+Always work on a specific branch, never directly on `main`. This keeps your changes organized.
+*   **Command:** `git switch -c <descriptive-name>`
+*   **Example:** `git switch -c fix-typo-intro` or `git switch -c add-certification-guide`
+
+#### 3. Edit and Preview
+We use **Retype** to build this handbook. The best way to work is using the **Dev Container** in VS Code, which installs all tools for you automatically.
+*   **Setup:** Open the project folder in VS Code. When prompted (or via the Command Palette), select **"Reopen in Container"**.
+*   **Run Preview:** Open the integrated terminal and follow the [Retype Getting Started guide](https://retype.com/guides/getting-started/) (typically running `retype watch`).
+*   **View:** Click the `localhost` link that appears in the terminal to browse the fully functional website on your computer.
+
+#### 4. Save Your Work (Commit)
+When you are happy with the preview, save a snapshot of your work:
+*   **Stage files:** `git add .`
+*   **Save snapshot:** `git commit -m "Brief description of change"`
+
+#### 5. Upload (Push)
+Send your changes from your machine up to your Fork on GitHub.
+*   **Command:** `git push -u origin <descriptive-name>`
+
+#### 6. Open the Pull Request (PR)
+1.  Go to the main repository page.
+2.  Click the yellow **Compare & pull request** banner.
+3.  **Crucial Step:** Select the correct **Label** (see table below) to ensure the right people review it.
 
 ---
 
-### Roles
+### 🏷️ Choosing the Right Label
 
-| Role | Responsibility |
-|------|----------------|
-| Author | Correct labels, clear scope, address feedback |
-| Maintainer | Process, risk, coherence |
-| SME (external) | Domain accuracy (per domain label) |
+Labels are critical. They tell our automation system how to handle your request.
 
----
+| What are you changing? | Label to use | Who reviews it? |
+|:---|:---|:---|
+| **Wording / Typos / Formatting** (Meaning stays the same) | `editorial` | Any Maintainer |
+| **Content / Meaning** (e.g., changing rules, adding guides) | Domain Label (e.g., `certification`, `transport`) | Maintainer + Subject Matter Expert (SME) |
+| **System / CI / Infra** | `tooling` | Maintainer |
+| **Work in Progress** (Not ready yet) | `do not merge` | *Merge is blocked* |
 
-### Review Discipline
-
-- Resolve threads only after action or explicit agreement.
-- Keep scope tight; split unrelated chunks.
-- Avoid large force-pushes mid-review (cleanup near the end is fine).
-- Do not game the process by dropping needed labels.
+**Important Rules:**
+*   If your change affects the *meaning* of the text, you **must** use a Domain label. Do not use `editorial` to bypass an expert review.
+*   If a domain label is present, an external "SME Approval" check will appear to ensure technical accuracy.
 
 ---
 
-### Escalation
+### ✅ When Will My PR Merge?
 
-If blocked >5 business days:
-- Comment and mention `@project-chip/handbook-maintainers`.
-- Open a Discussion for structural or multi-domain proposals.
+The system will automatically merge your PR when **all** of these are true:
+
+*   [ ] A Maintainer has approved.
+*   [ ] If a Domain Label is used: The SME has approved.
+*   [ ] **Vale** (our spell-checker) is green/passing.
+*   [ ] All review comments are resolved.
+*   [ ] The PR is not in "Draft" mode.
+*   [ ] The `do not merge` label is removed.
+
+---
+
+### 👥 Roles and Responsibilities
+
+| Role | What they do |
+|:---|:---|
+| **Author** (You) | Writes content, applies correct labels, fixes errors found by bots. |
+| **Maintainer** | Checks for structure, risk, and formatting. |
+| **SME** | Experts who verify the technical accuracy of the content. |
+
+---
+
+### 🤝 Review Etiquette
+
+*   **One thing at a time:** Don't force-push massive changes while people are actively reviewing.
+*   **Stay aligned:** Only resolve a conversation thread if the issue is actually fixed.
+*   **Be patient:** If you are blocked for more than 5 business days, mention `@project-chip/handbook-maintainers`.
