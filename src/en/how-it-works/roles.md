@@ -34,6 +34,6 @@ Matter Controller is the technical term for this role, though note that many sma
 
 A Matter Bridge translates from one protocol to another, allowing non-Matter smart home devices (such as those using Zigbee or Z-Wave) to connect to a Matter Fabric via the Bridge. This allows consumers to use their non-Matter smart home devices along with their new Matter devices to continue growing their unified smart home.
 
-A Matter Bridge is a different role than a Controller. A bridge serves as an intermediary for Matter and non-Matter devices. However, Bridges may be built into a number of devices like smart home “hubs” that also serve as Matter Controllers. For a deeper dive read Why Bridging Matters.
+A Matter Bridge is a different role than a Controller. A bridge serves as an intermediary for Matter and non-Matter devices. However, Bridges may be built into a number of devices like smart home “hubs” that also serve as Matter Controllers. For a deeper dive read [Why Bridging Matters](https://csa-iot.org/newsroom/why-bridging-matters/).
 
 _This content was first published on the Alliance website as a blog_
