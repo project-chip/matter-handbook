@@ -186,14 +186,23 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 *   **Query by Subject & SubjectKeyID:** `/dcl/pki/certificates/{subject}/{subjectKeyId}`
     *   **Returns:** A specific certificate.
+    *   **JSON Response Structure:**
+        ```json
+        {
+          "approvedCertificates": {
+            "certs": [ { "subject": "...", "pemCert": "...", ... } ]
+          }
+        }
+        ```
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/pki/root-certificates
+*   **Usage:** Lists all approved Root CA certificates.
 
 ---
 
 ## 7. Device Attestation PKI Revocation Distribution Points Schema
-**Description:** Provides the URLs where Certificate Revocation Lists (CRLs) can be downloaded.
+**Description:** Provides the URLs where Certificate Revocation Lists (CRLs) can be downloaded for PAAs and PAIs.
 
 ### REST API
 *   **Query All Revocation Points:** `/dcl/pki/revocation-points`
