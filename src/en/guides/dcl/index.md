@@ -78,7 +78,9 @@ The instructions for the DCL client are available at the following link: <https:
 #### API Documentation
 
 The DCL provides programmatic access through well-defined APIs, available in both REST and gRPC formats. These interfaces allow developers to integrate, extend, and automate functionality in a consistent way.
-Refer to available documentation: [REST and gRPC Gateway docs](https://zigbee-alliance.github.io/distributed-compliance-ledger/)
+
+-   [Matter DCL API & Web Interface Reference](api_reference.md) - A simplified guide to key DCL schemas and their endpoints.
+-   Refer to available documentation: [REST and gRPC Gateway docs](https://zigbee-alliance.github.io/distributed-compliance-ledger/)
 
 ### Observer Nodes
 
