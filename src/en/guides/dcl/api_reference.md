@@ -139,38 +139,8 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 5. CertifiedModel Schema
-**Description:** A simplified index or "view" for quick verification of certification status.
-
-### REST API
-*   **Query All Certified Models:** `/dcl/compliance/certified-models`
-    *   **Returns:** A list of all models that currently hold a valid certification.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "certifiedModel": [ { "value": true, ... } ],
-          "pagination": { "next_key": "...", "total": "..." }
-        }
-        ```
-    *   **Pagination:** **Required**.
-
-*   **Query by Specific Version:** `/dcl/compliance/certified-models/{vid}/{pid}/{softwareVersion}/{certificationType}`
-    *   **Returns:** A boolean-like record indicating certification.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "certifiedModel": { "value": true, ... }
-        }
-        ```
-    *   *Note: Intermediate queries by VID or VID/PID are NOT supported (Returns 501).*
-
-### Web Interface
-*   **Location:** https://webui.dcl.csa-iot.org/compliance
-
----
-
-## 6. Product Attestation Authority and Intermediate Certificate Schema
-**Description:** The root of trust for Matter device attestation (PAA Certificates).
+## 5. Product Attestation Authority and Intermediate Certificate Schema
+**Description:** The root of trust for Matter device attestation. Contains the root certificates (PAA) approved by the CSA.
 
 ### REST API
 *   **Query All Root Certificates:** `/dcl/pki/root-certificates`
@@ -183,6 +153,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
           }
         }
         ```
+    *   **Pagination:** Not explicitly paginated in current responses (returns full list), but client should be robust to future pagination.
 
 *   **Query by Subject & SubjectKeyID:** `/dcl/pki/certificates/{subject}/{subjectKeyId}`
     *   **Returns:** A specific certificate.
@@ -194,6 +165,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
           }
         }
         ```
+    *   **Pagination:** Not applicable.
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/pki/root-certificates
@@ -201,7 +173,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 7. Device Attestation PKI Revocation Distribution Points Schema
+## 6. Device Attestation PKI Revocation Distribution Points Schema
 **Description:** Provides the URLs where Certificate Revocation Lists (CRLs) can be downloaded for PAAs and PAIs.
 
 ### REST API
@@ -214,10 +186,52 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
           "pagination": { "next_key": "...", "total": "..." }
         }
         ```
-    *   **Pagination:** **Required**.
+    *   **Pagination:** **Required**. Use `pagination.next_key`.
 
 *   **Query by Issuer Subject Key ID:** `/dcl/pki/revocation-points/{issuerSubjectKeyID}`
     *   **Returns:** The distribution point details for a specific Issuer (PAA/PAI).
+    *   **JSON Response Structure:**
+        ```json
+        {
+          "pkiRevocationDistributionPoint": { "vid": 1, "dataUrl": "...", ... }
+        }
+        ```
+        *Note: If multiple points exist for an issuer (sharded by label), they may be returned in a list or require label qualification depending on implementation specifics.*
+    *   **Pagination:** Not typically applicable for single-issuer query.
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/pki/revocation-points
+
+---
+
+## 7. Other Accessors
+
+This section describes API endpoints that provide convenient views or indices of DCL data but do not correspond directly to a single schema defined in the Matter Specification.
+
+### CertifiedModel Index
+**Description:** A simplified index or "view" that allows for quick verification of certification status without retrieving the full compliance record. It is not a direct implementation of a specification table but rather aggregates data from the `DeviceSoftwareVersionModel` and `DeviceSoftwareCompliance` schemas to provide a boolean certification flag.
+
+#### REST API
+*   **Query All Certified Models:** `/dcl/compliance/certified-models`
+    *   **Returns:** A list of all models that currently hold a valid certification.
+    *   **JSON Response Structure:**
+        ```json
+        {
+          "certifiedModel": [ { "value": true, ... } ],
+          "pagination": { "next_key": "...", "total": "..." }
+        }
+        ```
+    *   **Pagination:** **Required**. Use `pagination.next_key`.
+
+*   **Query by VID, PID & Software Version:** `/dcl/compliance/certified-models/{vid}/{pid}/{softwareVersion}/{certificationType}`
+    *   **Returns:** A boolean-like record indicating if the specific version is certified.
+    *   **JSON Response Structure:**
+        ```json
+        {
+          "certifiedModel": { "value": true, ... }
+        }
+        ```
+    *   *Note: Intermediate queries by VID or VID/PID are NOT supported (Returns 501).*
+
+#### Web Interface
+*   **Location:** https://webui.dcl.csa-iot.org/compliance
