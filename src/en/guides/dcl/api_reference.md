@@ -61,7 +61,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
           "vendorProducts": { "vendorID": 1, "products": [ ... ] }
         }
         ```
-        *(Note: The key here is `vendorProducts`, distinct from the global query)*
+*Note: The key here is `vendorProducts`, distinct from the global query*
 
 *   **Query by VID & PID:** `/dcl/model/models/{vid}/{pid}`
     *   **Returns:** Details for a specific product.
