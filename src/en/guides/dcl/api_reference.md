@@ -18,8 +18,21 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "vendorInfo": [ { "vendorID": 1, ... } ],
-          "pagination": { "next_key": "...", "total": "..." }
+          "vendorInfo": [
+            {
+              "vendorID": number,
+              "vendorName": string,
+              "companyLegalName": string,
+              "companyPreferredName": string,
+              "vendorLandingPageUrl": string,
+              "creator": string,
+              "schemaVersion": number
+            }
+          ],
+          "pagination": {
+            "next_key": string,
+            "total": string
+          }
         }
         ```
     *   **Pagination:** **Required**.
@@ -29,7 +42,15 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "vendorInfo": { "vendorID": 1, ... }
+          "vendorInfo": {
+            "vendorID": number,
+            "vendorName": string,
+            "companyLegalName": string,
+            "companyPreferredName": string,
+            "vendorLandingPageUrl": string,
+            "creator": string,
+            "schemaVersion": number
+          }
         }
         ```
 
@@ -48,7 +69,22 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
         ```json
         {
           "approvedRootCertificates": {
-            "certs": [ { "subject": "...", ... } ]
+            "certs": [
+              {
+                "subject": string,
+                "subjectKeyId": string,
+                "pemCert": string,
+                "serialNumber": string,
+                "issuer": string,
+                "authorityKeyId": string,
+                "rootSubject": string,
+                "rootSubjectKeyId": string,
+                "isRoot": boolean,
+                "owner": string,
+                "vid": number,
+                "schemaVersion": number
+              }
+            ]
           }
         }
         ```
@@ -60,7 +96,22 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
         ```json
         {
           "approvedCertificates": {
-            "certs": [ { "subject": "...", "pemCert": "...", ... } ]
+            "certs": [
+              {
+                "subject": string,
+                "subjectKeyId": string,
+                "pemCert": string,
+                "serialNumber": string,
+                "issuer": string,
+                "authorityKeyId": string,
+                "rootSubject": string,
+                "rootSubjectKeyId": string,
+                "isRoot": boolean,
+                "owner": string,
+                "vid": number,
+                "schemaVersion": number
+              }
+            ]
           }
         }
         ```
@@ -92,8 +143,33 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "model": [ { "vid": 1, "pid": 1, ... } ],
-          "pagination": { "next_key": "...", "total": "..." }
+          "model": [
+            {
+              "vid": number,
+              "pid": number,
+              "deviceTypeId": number,
+              "productName": string,
+              "productLabel": string,
+              "partNumber": string,
+              "commissioningCustomFlow": number,
+              "commissioningCustomFlowUrl": string,
+              "commissioningModeInitialStepsHint": number,
+              "commissioningModeInitialStepsInstruction": string,
+              "commissioningModeSecondaryStepsHint": number,
+              "commissioningModeSecondaryStepsInstruction": string,
+              "userManualUrl": string,
+              "supportUrl": string,
+              "productUrl": string,
+              "lsfUrl": string,
+              "lsfRevision": number,
+              "creator": string,
+              "schemaVersion": number
+            }
+          ],
+          "pagination": {
+            "next_key": string,
+            "total": string
+          }
         }
         ```
     *   **Pagination:** **Required**.
@@ -103,17 +179,47 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "vendorProducts": { "vendorID": 1, "products": [ ... ] }
+          "vendorProducts": {
+            "vendorID": number,
+            "products": [
+              {
+                "pid": number,
+                "name": string,
+                "deviceType": number,
+                "skus": [ string ]
+              }
+            ]
+          }
         }
         ```
-*Note: The key here is `vendorProducts`, distinct from the global query*
+        *(Note: The key here is `vendorProducts`, distinct from the global query)*
 
 *   **Query by VID & PID:** `/dcl/model/models/{vid}/{pid}`
     *   **Returns:** Details for a specific product.
     *   **JSON Response Structure:**
         ```json
         {
-          "model": { "vid": 1, "pid": 1, ... }
+          "model": {
+            "vid": number,
+            "pid": number,
+            "deviceTypeId": number,
+            "productName": string,
+            "productLabel": string,
+            "partNumber": string,
+            "commissioningCustomFlow": number,
+            "commissioningCustomFlowUrl": string,
+            "commissioningModeInitialStepsHint": number,
+            "commissioningModeInitialStepsInstruction": string,
+            "commissioningModeSecondaryStepsHint": number,
+            "commissioningModeSecondaryStepsInstruction": string,
+            "userManualUrl": string,
+            "supportUrl": string,
+            "productUrl": string,
+            "lsfUrl": string,
+            "lsfRevision": number,
+            "creator": string,
+            "schemaVersion": number
+          }
         }
         ```
 
@@ -132,9 +238,9 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
         ```json
         {
           "modelVersions": {
-            "vid": 1,
-            "pid": 1,
-            "softwareVersions": [ 1, 2, 3 ]
+            "vid": number,
+            "pid": number,
+            "softwareVersions": [ number ]
           }
         }
         ```
@@ -145,7 +251,24 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "modelVersion": { "vid": 1, "pid": 1, "softwareVersion": 1, ... }
+          "modelVersion": {
+            "vid": number,
+            "pid": number,
+            "softwareVersion": number,
+            "softwareVersionString": string,
+            "cdVersionNumber": number,
+            "firmwareInformation": string,
+            "softwareVersionValid": boolean,
+            "otaUrl": string,
+            "otaFileSize": number,
+            "otaChecksum": string,
+            "otaChecksumType": number,
+            "minApplicableSoftwareVersion": number,
+            "maxApplicableSoftwareVersion": number,
+            "releaseNotesUrl": string,
+            "creator": string,
+            "schemaVersion": number
+          }
         }
         ```
 
@@ -163,8 +286,27 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "complianceInfo": [ { "vid": 1, ... } ],
-          "pagination": { "next_key": "...", "total": "..." }
+          "complianceInfo": [
+            {
+              "vid": number,
+              "pid": number,
+              "softwareVersion": number,
+              "softwareVersionString": string,
+              "certificationType": string,
+              "cDVersionNumber": number,
+              "softwareVersionCertificationStatus": number,
+              "date": string,
+              "reason": string,
+              "owner": string,
+              "history": [],
+              "cDCertificateId": string,
+              "schemaVersion": number
+            }
+          ],
+          "pagination": {
+            "next_key": string,
+            "total": string
+          }
         }
         ```
     *   **Pagination:** **Required**.
@@ -174,7 +316,21 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "complianceInfo": { "softwareVersionCertificationStatus": 2, ... }
+          "complianceInfo": {
+            "vid": number,
+            "pid": number,
+            "softwareVersion": number,
+            "softwareVersionString": string,
+            "certificationType": string,
+            "cDVersionNumber": number,
+            "softwareVersionCertificationStatus": number,
+            "date": string,
+            "reason": string,
+            "owner": string,
+            "history": [],
+            "cDCertificateId": string,
+            "schemaVersion": number
+          }
         }
         ```
     *   *Note: Intermediate queries by VID or VID/PID are NOT supported (Returns 501).*
@@ -193,8 +349,27 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "pkiRevocationDistributionPoint": [ { "dataUrl": "...", ... } ],
-          "pagination": { "next_key": "...", "total": "..." }
+          "pkiRevocationDistributionPoint": [
+            {
+              "vid": number,
+              "label": string,
+              "issuerSubjectKeyID": string,
+              "pid": number,
+              "isPAA": boolean,
+              "crlSignerDelegator": string,
+              "crlSignerCertificate": string,
+              "dataUrl": string,
+              "dataFileSize": number,
+              "dataDigest": string,
+              "dataDigestType": number,
+              "revocationType": number,
+              "schemaVersion": number
+            }
+          ],
+          "pagination": {
+            "next_key": string,
+            "total": string
+          }
         }
         ```
     *   **Pagination:** **Required**. Use `pagination.next_key`.
@@ -204,7 +379,21 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **JSON Response Structure:**
         ```json
         {
-          "pkiRevocationDistributionPoint": { "vid": 1, "dataUrl": "...", ... }
+          "pkiRevocationDistributionPoint": {
+            "vid": number,
+            "label": string,
+            "issuerSubjectKeyID": string,
+            "pid": number,
+            "isPAA": boolean,
+            "crlSignerDelegator": string,
+            "crlSignerCertificate": string,
+            "dataUrl": string,
+            "dataFileSize": number,
+            "dataDigest": string,
+            "dataDigestType": number,
+            "revocationType": number,
+            "schemaVersion": number
+          }
         }
         ```
         *Note: If multiple points exist for an issuer (sharded by label), they may be returned in a list or require label qualification depending on implementation specifics.*
@@ -228,8 +417,21 @@ This section describes API endpoints that provide convenient views or indices of
     *   **JSON Response Structure:**
         ```json
         {
-          "certifiedModel": [ { "value": true, ... } ],
-          "pagination": { "next_key": "...", "total": "..." }
+          "certifiedModel": [
+            {
+              "vid": "number",
+              "pid": "number",
+              "softwareVersion": "number",
+              "softwareVersionString": "string",
+              "certificationType": "string",
+              "value": "boolean",
+              "schemaVersion": "number"
+            }
+          ],
+          "pagination": {
+            "next_key": "string",
+            "total": "string"
+          }
         }
         ```
     *   **Pagination:** **Required**. Use `pagination.next_key`.
@@ -239,7 +441,15 @@ This section describes API endpoints that provide convenient views or indices of
     *   **JSON Response Structure:**
         ```json
         {
-          "certifiedModel": { "value": true, ... }
+          "certifiedModel": {
+            "vid": "number",
+            "pid": "number",
+            "softwareVersion": "number",
+            "softwareVersionString": "string",
+            "certificationType": "string",
+            "value": "boolean",
+            "schemaVersion": "number"
+          }
         }
         ```
     *   *Note: Intermediate queries by VID or VID/PID are NOT supported (Returns 501).*
