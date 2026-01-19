@@ -9,7 +9,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 1. Vendor Schema
+## Vendor Schema
 **Description:** Contains details about the companies registered on the ledger, including their Vendor ID (VID), legal name, and landing page URLs.
 
 ### REST API
@@ -38,7 +38,41 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 2. DeviceModel Schema
+## Product Attestation Authority and Intermediate Certificate Schema
+**Description:** The root of trust for Matter device attestation. Contains the root certificates (PAA) approved by the CSA.
+
+### REST API
+*   **Query All Root Certificates:** `/dcl/pki/root-certificates`
+    *   **Returns:** The list of all approved PAA certificates.
+    *   **JSON Response Structure:**
+        ```json
+        {
+          "approvedRootCertificates": {
+            "certs": [ { "subject": "...", ... } ]
+          }
+        }
+        ```
+    *   **Pagination:** Not explicitly paginated in current responses (returns full list), but client should be robust to future pagination.
+
+*   **Query by Subject & SubjectKeyID:** `/dcl/pki/certificates/{subject}/{subjectKeyId}`
+    *   **Returns:** A specific certificate.
+    *   **JSON Response Structure:**
+        ```json
+        {
+          "approvedCertificates": {
+            "certs": [ { "subject": "...", "pemCert": "...", ... } ]
+          }
+        }
+        ```
+    *   **Pagination:** Not applicable.
+
+### Web Interface
+*   **Location:** https://webui.dcl.csa-iot.org/pki/root-certificates
+*   **Usage:** Lists all approved Root CA certificates.
+
+---
+
+## DeviceModel Schema
 **Description:** Defines the base product models associated with a vendor. This includes immutable hardware details and shared product metadata.
 
 ### REST API
@@ -77,7 +111,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 3. DeviceSoftwareVersionModel Schema
+## DeviceSoftwareVersionModel Schema
 **Description:** Detailed information about specific software versions for a device model (release notes, OTA URLs).
 
 ### REST API
@@ -109,7 +143,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 4. DeviceSoftwareCompliance Schema
+## DeviceSoftwareCompliance Schema
 **Description:** Tracks the certification status of a specific software version ("Certified", "Provisional", "Revoked").
 
 ### REST API
@@ -139,41 +173,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 5. Product Attestation Authority and Intermediate Certificate Schema
-**Description:** The root of trust for Matter device attestation. Contains the root certificates (PAA) approved by the CSA.
-
-### REST API
-*   **Query All Root Certificates:** `/dcl/pki/root-certificates`
-    *   **Returns:** The list of all approved PAA certificates.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "approvedRootCertificates": {
-            "certs": [ { "subject": "...", ... } ]
-          }
-        }
-        ```
-    *   **Pagination:** Not explicitly paginated in current responses (returns full list), but client should be robust to future pagination.
-
-*   **Query by Subject & SubjectKeyID:** `/dcl/pki/certificates/{subject}/{subjectKeyId}`
-    *   **Returns:** A specific certificate.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "approvedCertificates": {
-            "certs": [ { "subject": "...", "pemCert": "...", ... } ]
-          }
-        }
-        ```
-    *   **Pagination:** Not applicable.
-
-### Web Interface
-*   **Location:** https://webui.dcl.csa-iot.org/pki/root-certificates
-*   **Usage:** Lists all approved Root CA certificates.
-
----
-
-## 6. Device Attestation PKI Revocation Distribution Points Schema
+## Device Attestation PKI Revocation Distribution Points Schema
 **Description:** Provides the URLs where Certificate Revocation Lists (CRLs) can be downloaded for PAAs and PAIs.
 
 ### REST API
@@ -204,7 +204,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
-## 7. Other Accessors
+## Other Accessors
 
 This section describes API endpoints that provide convenient views or indices of DCL data but do not correspond directly to a single schema defined in the Matter Specification.
 
