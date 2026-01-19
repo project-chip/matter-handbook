@@ -72,6 +72,17 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ---
 
+## Operational Trust Anchors Schema
+**Description:** Provides the list of Operational Root CA Certificates (RCAC) and Operational Intermediate CA Certificates (ICAC).
+
+### REST API
+*   **Status:** Under Development
+
+### Web Interface
+*   **Location:** https://webui.dcl.csa-iot.org/pki (Select **NOC Certificates** tab)
+
+---
+
 ## DeviceModel Schema
 **Description:** Defines the base product models associated with a vendor. This includes immutable hardware details and shared product metadata.
 
