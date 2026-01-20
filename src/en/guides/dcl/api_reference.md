@@ -73,16 +73,6 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
               {
                 "subject": string,
                 "subjectKeyId": string,
-                "pemCert": string,
-                "serialNumber": string,
-                "issuer": string,
-                "authorityKeyId": string,
-                "rootSubject": string,
-                "rootSubjectKeyId": string,
-                "isRoot": boolean,
-                "owner": string,
-                "vid": number,
-                "schemaVersion": number
               }
             ]
           }
@@ -91,6 +81,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
     *   **Pagination:** Not explicitly paginated in current responses (returns full list), but client should be robust to future pagination.
 
 *   **Query by Subject & SubjectKeyID:** `/dcl/pki/certificates/{subject}/{subjectKeyId}`
+    *   **Parameters:**: subject = subject name as a base64 formated string using percent encoding, subjectKeyId as upper case hex formatted
     *   **Returns:** A specific certificate.
     *   **JSON Response Structure:**
         ```json
@@ -109,6 +100,17 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
                 "isRoot": boolean,
                 "owner": string,
                 "vid": number,
+                "schemaVersion": number,
+                "approvals": [
+                  {
+                    "address": string,
+                    "time": number,
+                    "info": string
+                  }
+                ],
+                "subjectAsText": string,
+                "vid": number,
+                "certificateType": string,
                 "schemaVersion": number
               }
             ]
@@ -119,7 +121,7 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/pki/root-certificates
-*   **Usage:** Lists all approved Root CA certificates.
+
 
 ---
 
@@ -419,18 +421,18 @@ This section describes API endpoints that provide convenient views or indices of
         {
           "certifiedModel": [
             {
-              "vid": "number",
-              "pid": "number",
-              "softwareVersion": "number",
-              "softwareVersionString": "string",
-              "certificationType": "string",
-              "value": "boolean",
-              "schemaVersion": "number"
+              "vid": number,
+              "pid": number,
+              "softwareVersion": number,
+              "softwareVersionString": string,
+              "certificationType": string,
+              "value": boolean,
+              "schemaVersion": number
             }
           ],
           "pagination": {
-            "next_key": "string",
-            "total": "string"
+            "next_key": string,
+            "total": string
           }
         }
         ```
@@ -442,13 +444,13 @@ This section describes API endpoints that provide convenient views or indices of
         ```json
         {
           "certifiedModel": {
-            "vid": "number",
-            "pid": "number",
-            "softwareVersion": "number",
-            "softwareVersionString": "string",
-            "certificationType": "string",
-            "value": "boolean",
-            "schemaVersion": "number"
+            "vid": number,
+            "pid": number,
+            "softwareVersion": number,
+            "softwareVersionString": string,
+            "certificationType": string,
+            "value": boolean,
+            "schemaVersion": number
           }
         }
         ```
