@@ -3,9 +3,11 @@ label: API Reference
 order: 100
 ---
 
-This document provides a high-level overview of the REST API endpoints and corresponding Web UI locations for the key schemas defined in the Matter Distributed Compliance Ledger (DCL) specification.
+This document provides a high-level mapping of the REST API endpoints and corresponding Web UI locations for the key schemas defined in the Matter Distributed Compliance Ledger (DCL) specification.
 
 All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
+
+Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io/distributed-compliance-ledger/) for detailed response structures.
 
 ---
 
@@ -15,44 +17,10 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 ### REST API
 *   **Query All Vendors:** `/dcl/vendorinfo/vendors`
     *   **Returns:** A list of vendor records.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "vendorInfo": [
-            {
-              "vendorID": number,
-              "vendorName": string,
-              "companyLegalName": string,
-              "companyPreferredName": string,
-              "vendorLandingPageUrl": string,
-              "creator": string,
-              "schemaVersion": number
-            }
-          ],
-          "pagination": {
-            "next_key": string,
-            "total": string
-          }
-        }
-        ```
     *   **Pagination:** **Required**.
 
 *   **Query by VID:** `/dcl/vendorinfo/vendors/{vid}`
     *   **Returns:** Details for a specific vendor.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "vendorInfo": {
-            "vendorID": number,
-            "vendorName": string,
-            "companyLegalName": string,
-            "companyPreferredName": string,
-            "vendorLandingPageUrl": string,
-            "creator": string,
-            "schemaVersion": number
-          }
-        }
-        ```
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/vendors
@@ -60,64 +28,17 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 ---
 
 ## Product Attestation Authority and Intermediate Certificate Schema
-**Description:** The root of trust for Matter device attestation. Contains the root certificates (PAA) approved by the CSA.
+**Description:** The root of trust for Matter device attestation. Contains the approved root certificates (PAA).
 
 ### REST API
 *   **Query All Root Certificates:** `/dcl/pki/root-certificates`
-    *   **Returns:** The list of all approved PAA certificates.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "approvedRootCertificates": {
-            "certs": [
-              {
-                "subject": string,
-                "subjectKeyId": string,
-              }
-            ]
-          }
-        }
-        ```
+    *   **Returns:** The list of all approved PAA certificates + Alliance CD signing certificates. Returns Subject and SubjectKeyID only, certificatest need to be queried individually.
     *   **Pagination:** Not explicitly paginated in current responses (returns full list), but client should be robust to future pagination.
 
 *   **Query by Subject & SubjectKeyID:** `/dcl/pki/certificates/{subject}/{subjectKeyId}`
-    *   **Parameters:**: subject = subject name as a base64 formated string using percent encoding, subjectKeyId as upper case hex formatted
     *   **Returns:** A specific certificate.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "approvedCertificates": {
-            "certs": [
-              {
-                "subject": string,
-                "subjectKeyId": string,
-                "pemCert": string,
-                "serialNumber": string,
-                "issuer": string,
-                "authorityKeyId": string,
-                "rootSubject": string,
-                "rootSubjectKeyId": string,
-                "isRoot": boolean,
-                "owner": string,
-                "vid": number,
-                "schemaVersion": number,
-                "approvals": [
-                  {
-                    "address": string,
-                    "time": number,
-                    "info": string
-                  }
-                ],
-                "subjectAsText": string,
-                "vid": number,
-                "certificateType": string,
-                "schemaVersion": number
-              }
-            ]
-          }
-        }
-        ```
     *   **Pagination:** Not applicable.
+    * NOTE - subject needs to be percent formatted, which is a transformation of the data returned from the base root-certificates request.
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/pki/root-certificates
@@ -128,8 +49,6 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 ## Operational Trust Anchors Schema
 **Description:** Provides the list of Operational Root CA Certificates (RCAC) and Operational Intermediate CA Certificates (ICAC).
 
-### REST API
-*   **Status:** Under Development
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/pki (Select **NOC Certificates** tab)
@@ -142,88 +61,18 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 ### REST API
 *   **Query All Models:** `/dcl/model/models`
     *   **Returns:** A global list of all device models.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "model": [
-            {
-              "vid": number,
-              "pid": number,
-              "deviceTypeId": number,
-              "productName": string,
-              "productLabel": string,
-              "partNumber": string,
-              "commissioningCustomFlow": number,
-              "commissioningCustomFlowUrl": string,
-              "commissioningModeInitialStepsHint": number,
-              "commissioningModeInitialStepsInstruction": string,
-              "commissioningModeSecondaryStepsHint": number,
-              "commissioningModeSecondaryStepsInstruction": string,
-              "userManualUrl": string,
-              "supportUrl": string,
-              "productUrl": string,
-              "lsfUrl": string,
-              "lsfRevision": number,
-              "creator": string,
-              "schemaVersion": number
-            }
-          ],
-          "pagination": {
-            "next_key": string,
-            "total": string
-          }
-        }
-        ```
     *   **Pagination:** **Required**.
 
 *   **Query by VID:** `/dcl/model/models/{vid}`
     *   **Returns:** All models associated with a specific Vendor ID.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "vendorProducts": {
-            "vendorID": number,
-            "products": [
-              {
-                "pid": number,
-                "name": string,
-                "deviceType": number,
-                "skus": [ string ]
-              }
-            ]
-          }
-        }
-        ```
-        *(Note: The key here is `vendorProducts`, distinct from the global query)*
+    *   **Pagination:** **Required**.
+    * NOTE - Vendor ID (vid) is a decimal value
 
 *   **Query by VID & PID:** `/dcl/model/models/{vid}/{pid}`
     *   **Returns:** Details for a specific product.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "model": {
-            "vid": number,
-            "pid": number,
-            "deviceTypeId": number,
-            "productName": string,
-            "productLabel": string,
-            "partNumber": string,
-            "commissioningCustomFlow": number,
-            "commissioningCustomFlowUrl": string,
-            "commissioningModeInitialStepsHint": number,
-            "commissioningModeInitialStepsInstruction": string,
-            "commissioningModeSecondaryStepsHint": number,
-            "commissioningModeSecondaryStepsInstruction": string,
-            "userManualUrl": string,
-            "supportUrl": string,
-            "productUrl": string,
-            "lsfUrl": string,
-            "lsfRevision": number,
-            "creator": string,
-            "schemaVersion": number
-          }
-        }
-        ```
+    *   **Pagination:** Not applicable.
+    * NOTE - Vendor ID (vid) and Product ID (pid) are decimal values
+
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/models
@@ -236,43 +85,13 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 ### REST API
 *   **Query by VID & PID:** `/dcl/model/versions/{vid}/{pid}`
     *   **Returns:** A list of all software versions for a specific device model.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "modelVersions": {
-            "vid": number,
-            "pid": number,
-            "softwareVersions": [ number ]
-          }
-        }
-        ```
-    *   *Note: Querying by VID alone (`/dcl/model/versions/{vid}`) is NOT supported (Returns 501).*
+    *   **Pagination:** Not applicable (returns complete list in one object).
+    * NOTE: Querying by VID alone (`/dcl/model/versions/{vid}`) is NOT supported (Returns 501).
 
 *   **Query by VID, PID & Software Version:** `/dcl/model/versions/{vid}/{pid}/{softwareVersion}`
     *   **Returns:** The full details for a specific software version.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "modelVersion": {
-            "vid": number,
-            "pid": number,
-            "softwareVersion": number,
-            "softwareVersionString": string,
-            "cdVersionNumber": number,
-            "firmwareInformation": string,
-            "softwareVersionValid": boolean,
-            "otaUrl": string,
-            "otaFileSize": number,
-            "otaChecksum": string,
-            "otaChecksumType": number,
-            "minApplicableSoftwareVersion": number,
-            "maxApplicableSoftwareVersion": number,
-            "releaseNotesUrl": string,
-            "creator": string,
-            "schemaVersion": number
-          }
-        }
-        ```
+    *   **Pagination:** Not applicable.
+    * NOTE - Vendor ID (vid), Product ID (pid) and software version (softwareVersion) are decimal values
 
 ### Web Interface
 *   **Location:** Accessed via the **Models** view details page.
@@ -285,57 +104,14 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 ### REST API
 *   **Query All Compliance Records:** `/dcl/compliance/compliance-info`
     *   **Returns:** A list of all compliance records.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "complianceInfo": [
-            {
-              "vid": number,
-              "pid": number,
-              "softwareVersion": number,
-              "softwareVersionString": string,
-              "certificationType": string,
-              "cDVersionNumber": number,
-              "softwareVersionCertificationStatus": number,
-              "date": string,
-              "reason": string,
-              "owner": string,
-              "history": [],
-              "cDCertificateId": string,
-              "schemaVersion": number
-            }
-          ],
-          "pagination": {
-            "next_key": string,
-            "total": string
-          }
-        }
-        ```
     *   **Pagination:** **Required**.
 
 *   **Query by Specific Version:** `/dcl/compliance/compliance-info/{vid}/{pid}/{softwareVersion}/{certificationType}`
     *   **Returns:** The compliance status for a specific software version.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "complianceInfo": {
-            "vid": number,
-            "pid": number,
-            "softwareVersion": number,
-            "softwareVersionString": string,
-            "certificationType": string,
-            "cDVersionNumber": number,
-            "softwareVersionCertificationStatus": number,
-            "date": string,
-            "reason": string,
-            "owner": string,
-            "history": [],
-            "cDCertificateId": string,
-            "schemaVersion": number
-          }
-        }
-        ```
-    *   *Note: Intermediate queries by VID or VID/PID are NOT supported (Returns 501).*
+    *   **Pagination:** Not applicable.
+    * NOTE - Intermediate queries by VID or VID/PID are NOT supported (Returns 501).
+    * NOTE - Vendor ID (vid), Product ID (pid) and software version (softwareVersion) are decimal values
+    * NOTE - certification type is "matter" (`/dcl/compliance/compliance-info/{vid}/{pid}/{softwareVersion}/matter`)
 
 ### Web Interface
 *   **Location:** Accessed via the **Models** view details page.
@@ -346,115 +122,49 @@ All REST API queries are based on the root URL: `https://on.dcl.csa-iot.org`
 **Description:** Provides the URLs where Certificate Revocation Lists (CRLs) can be downloaded for PAAs and PAIs.
 
 ### REST API
+Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io/distributed-compliance-ledger/) for detailed response structures.
+
 *   **Query All Revocation Points:** `/dcl/pki/revocation-points`
     *   **Returns:** A list of all registered CRL distribution points.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "pkiRevocationDistributionPoint": [
-            {
-              "vid": number,
-              "label": string,
-              "issuerSubjectKeyID": string,
-              "pid": number,
-              "isPAA": boolean,
-              "crlSignerDelegator": string,
-              "crlSignerCertificate": string,
-              "dataUrl": string,
-              "dataFileSize": number,
-              "dataDigest": string,
-              "dataDigestType": number,
-              "revocationType": number,
-              "schemaVersion": number
-            }
-          ],
-          "pagination": {
-            "next_key": string,
-            "total": string
-          }
-        }
-        ```
-    *   **Pagination:** **Required**. Use `pagination.next_key`.
+    *   **Pagination:** **Required**.
 
 *   **Query by Issuer Subject Key ID:** `/dcl/pki/revocation-points/{issuerSubjectKeyID}`
     *   **Returns:** The distribution point details for a specific Issuer (PAA/PAI).
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "pkiRevocationDistributionPoint": {
-            "vid": number,
-            "label": string,
-            "issuerSubjectKeyID": string,
-            "pid": number,
-            "isPAA": boolean,
-            "crlSignerDelegator": string,
-            "crlSignerCertificate": string,
-            "dataUrl": string,
-            "dataFileSize": number,
-            "dataDigest": string,
-            "dataDigestType": number,
-            "revocationType": number,
-            "schemaVersion": number
-          }
-        }
-        ```
-        *Note: If multiple points exist for an issuer (sharded by label), they may be returned in a list or require label qualification depending on implementation specifics.*
-    *   **Pagination:** Not typically applicable for single-issuer query.
 
 ### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/pki/revocation-points
 
 ---
 
-## Other Accessors
+## Additional Schemas & Indices
 
-This section describes API endpoints that provide convenient views or indices of DCL data but do not correspond directly to a single schema defined in the Matter Specification.
+This section describes other schemas and indices available in the DCL. Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io/distributed-compliance-ledger/) for full details on endpoints and structures.
 
 ### CertifiedModel Index
-**Description:** A simplified index or "view" that allows for quick verification of certification status without retrieving the full compliance record. It is not a direct implementation of a specification table but rather aggregates data from the `DeviceSoftwareVersionModel` and `DeviceSoftwareCompliance` schemas to provide a boolean certification flag.
+**Description:** A simplified index or "view" that allows for quick verification of certification status without retrieving the full compliance record.
 
 #### REST API
 *   **Query All Certified Models:** `/dcl/compliance/certified-models`
     *   **Returns:** A list of all models that currently hold a valid certification.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "certifiedModel": [
-            {
-              "vid": number,
-              "pid": number,
-              "softwareVersion": number,
-              "softwareVersionString": string,
-              "certificationType": string,
-              "value": boolean,
-              "schemaVersion": number
-            }
-          ],
-          "pagination": {
-            "next_key": string,
-            "total": string
-          }
-        }
-        ```
-    *   **Pagination:** **Required**. Use `pagination.next_key`.
+    *   **Pagination:** **Required**.
 
 *   **Query by VID, PID & Software Version:** `/dcl/compliance/certified-models/{vid}/{pid}/{softwareVersion}/{certificationType}`
     *   **Returns:** A boolean-like record indicating if the specific version is certified.
-    *   **JSON Response Structure:**
-        ```json
-        {
-          "certifiedModel": {
-            "vid": number,
-            "pid": number,
-            "softwareVersion": number,
-            "softwareVersionString": string,
-            "certificationType": string,
-            "value": boolean,
-            "schemaVersion": number
-          }
-        }
-        ```
-    *   *Note: Intermediate queries by VID or VID/PID are NOT supported (Returns 501).*
 
 #### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/compliance
+
+### Auth Endpoint
+**Description:** Manages DCL accounts, roles (Vendor, Trustee, NodeAdmin), and permissions.
+*   **Key Endpoint:** `/dcl/auth/accounts`
+*   **Web Interface:**https://webui.dcl.csa-iot.org/accounts
+
+### DclUpgrade Schema
+**Description:** Manages the proposal and approval process for software upgrades to the DCL network itself.
+*   **Key Endpoint:** `/dcl/dclupgrade/proposed-upgrades`
+*   **Web Interface:**https://webui.dcl.csa-iot.org/upgrades
+
+### Validator Schema
+**Description:** Contains information about the Validator Nodes that maintain the DCL network consensus.
+*   **Key Endpoint:** `/dcl/validator/nodes`
+*   **Web Interface:**https://webui.dcl.csa-iot.org/validators
