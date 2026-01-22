@@ -32,7 +32,7 @@ Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io
 
 ### REST API
 *   **Query All Root Certificates:** `/dcl/pki/root-certificates`
-    *   **Returns:** The list of all approved PAA certificates + Alliance CD signing certificates. Returns Subject and SubjectKeyID only, certificatest need to be queried individually.
+    *   **Returns:** The list of all approved PAA certificates + Alliance CD signing certificates. Returns Subject and SubjectKeyID only, certificates need to be queried individually.
     *   **Pagination:** Not explicitly paginated in current responses (returns full list), but client should be robust to future pagination.
 
 *   **Query by Subject & SubjectKeyID:** `/dcl/pki/certificates/{subject}/{subjectKeyId}`
