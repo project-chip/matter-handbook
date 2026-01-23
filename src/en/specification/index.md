@@ -8,6 +8,8 @@ The Matter Specification is updated twice a year in Spring and Fall.
 - [!badge Version 1.3] was published in May 2024
 - [!badge Version 1.4] was published in November 2024
 - [!badge Version 1.4.1] was published in May 2025
+- [!badge Version 1.4.2] was published in August 2025
+- [!badge Version 1.5] was published in November 2025
 
 The specification is made up of a number of documents:
 
