@@ -31,6 +31,6 @@ This SDK includes ready-to-use example projects and is particularly suited for r
 
 To learn more, go to the [Matter JavaScript SDK GitHub page](https://github.com/matter-js/matter.js).
 
-Note: Some features of the Matter protocol are not yet implemented in the JavaScript SDK. For details about this check the [matter.js Compatibility Information](https://github.com/project-chip/matter.js/blob/main/docs/MATTER_COMPATIBILITY.md).
+Note: Some features of the Matter protocol are not yet implemented in the JavaScript SDK. For details about this check the [matter.js Compatibility Information](https://github.com/matter-js/matter.js/blob/main/docs/MATTER_COMPATIBILITY.md).
 
 matter.js is an open source project of the [Open Home Foundation](https://www.openhomefoundation.org/) and many community contributors.
