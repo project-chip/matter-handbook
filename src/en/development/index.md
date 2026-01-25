@@ -7,7 +7,7 @@ The following table provides a general overview of various use cases for the ava
 {.compact}
 | Use Case                                                                  | Official SDK       | JavaScript SDK    |
 |---------------------------------------------------------------------------|--------------------|-------------------|
-| Compliant with Matter version                                             | 1.5.0              | 1.4.2             |
+| Compliant with Matter version                                             | 1.5                | 1.4.2             |
 | Participate in development of new Matter features                         | :white_check_mark: | :x:               |
 | Use for embedded platforms with strict memory and performance constraints | :white_check_mark: | :x:               |
 | Chipset-specific implementations (e.g. Wi-Fi/Thread)                      | :white_check_mark: | :x:               |
