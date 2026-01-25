@@ -25,7 +25,7 @@ To learn more, go to the [Matter SDK Documentation](https://project-chip.github.
 
 ## matter.js - The Matter JavaScript SDK
 
-The JavaScript SDK implements Matter in pure JavaScript, using TypeScript’s typing system for automatic data and system model compliant development. It can be used to build devices, bridges, and controllers running an operating system where a JavaScript runtime - like Node.js, Bun.js, Electron, or React-Native - is available.
+The JavaScript SDK implements Matter in pure JavaScript, using TypeScript’s typing system for automatic data and system model compliant development. It can be used to build devices, bridges, and controllers running an operating system where a JavaScript runtime (like Node.js, Bun.js, Electron, or React-Native) is available.
 
 This SDK includes ready-to-use example projects and is particularly suited for rapid prototyping and testing, thanks to its compliance-by-default approach and the simple but powerful API design.
 
