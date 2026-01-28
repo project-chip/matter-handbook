@@ -66,12 +66,12 @@ Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io
 *   **Query by VID:** `/dcl/model/models/{vid}`
     *   **Returns:** All models associated with a specific Vendor ID.
     *   **Pagination:** **Required**.
-    * NOTE - Vendor ID (vid) is a decimal value
+    * NOTE - `vid` (Vendor ID) is a decimal value
 
 *   **Query by VID & PID:** `/dcl/model/models/{vid}/{pid}`
     *   **Returns:** Details for a specific product.
     *   **Pagination:** Not applicable.
-    * NOTE - Vendor ID (vid) and Product ID (pid) are decimal values
+    * NOTE - `vid` (Vendor ID) and `pid` (Product ID) are decimal values
 
 
 ### Web Interface
@@ -91,7 +91,7 @@ Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io
 *   **Query by VID, PID & Software Version:** `/dcl/model/versions/{vid}/{pid}/{softwareVersion}`
     *   **Returns:** The full details for a specific software version.
     *   **Pagination:** Not applicable.
-    * NOTE - Vendor ID (vid), Product ID (pid) and software version (softwareVersion) are decimal values
+    * NOTE - `vid` (Vendor ID), `pid` (Product ID) and `softwareVersion` are decimal values
 
 ### Web Interface
 *   **Location:** Accessed via the **Models** view details page.
@@ -110,7 +110,7 @@ Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io
     *   **Returns:** The compliance status for a specific software version.
     *   **Pagination:** Not applicable.
     * NOTE - Intermediate queries by VID or VID/PID are NOT supported (Returns 501).
-    * NOTE - Vendor ID (vid), Product ID (pid) and software version (softwareVersion) are decimal values
+    * NOTE - `vid` (Vendor ID), `pid` (Product ID) and `softwareVersion` are decimal values
     * NOTE - certification type is "matter" (`/dcl/compliance/compliance-info/{vid}/{pid}/{softwareVersion}/matter`)
 
 ### Web Interface
