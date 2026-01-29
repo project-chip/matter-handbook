@@ -64,7 +64,7 @@ Refer to the [Official REST API Documentation](https://zigbee-alliance.github.io
     *   **Pagination:** **Required**.
 
 *   **Query by VID:** `/dcl/model/models/{vid}`
-    *   **Returns:** All models associated with a specific Vendor ID.
+    *   **Returns:** All products associated with a specific Vendor ID. Product response contains info about pid, name and part number 
     *   **Pagination:** **Required**.
     * NOTE - `vid` (Vendor ID) is a decimal value
 
