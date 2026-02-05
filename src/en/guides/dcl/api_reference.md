@@ -149,7 +149,7 @@ This section describes other schemas and indices available in the DCL. Refer to 
     *   **Pagination:** **Required**.
 
 *   **Query by VID, PID & Software Version:** `/dcl/compliance/certified-models/{vid}/{pid}/{softwareVersion}/{certificationType}`
-    *   **Returns:** A boolean-like record indicating if the specific version is certified.
+    *   **Returns:** A boolean-like record indicating if the specific version is certified. Also contains info about associated softwareVersion, certificationType, vid and pid
 
 #### Web Interface
 *   **Location:** https://webui.dcl.csa-iot.org/compliance
