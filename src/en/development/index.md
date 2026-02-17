@@ -7,7 +7,7 @@ The following table provides a general overview of various use cases for the ava
 {.compact}
 | Use Case                                                                  | Official SDK       | JavaScript SDK    |
 |---------------------------------------------------------------------------|--------------------|-------------------|
-| Compliant with Matter version                                             | 1.4.1              | 1.4.1             |
+| Compliant with Matter version                                             | 1.5                | 1.4.2             |
 | Participate in development of new Matter features                         | :white_check_mark: | :x:               |
 | Use for embedded platforms with strict memory and performance constraints | :white_check_mark: | :x:               |
 | Chipset-specific implementations (e.g. Wi-Fi/Thread)                      | :white_check_mark: | :x:               |
@@ -25,10 +25,12 @@ To learn more, go to the [Matter SDK Documentation](https://project-chip.github.
 
 ## matter.js - The Matter JavaScript SDK
 
-The JavaScript SDK implements Matter in pure JavaScript, utilizing TypeScript’s typing system for automatic data and system model compliant development. It can be used to build devices, bridges, and controllers running an operating system where a JavaScript runtime, like Node.js, is available.
+The JavaScript SDK implements Matter in pure JavaScript, using TypeScript’s typing system for automatic data and system model compliant development. It can be used to build devices, bridges, and controllers running an operating system where a JavaScript runtime (like Node.js, Bun.js, Electron, or React-Native) is available.
 
 This SDK includes ready-to-use example projects and is particularly suited for rapid prototyping and testing, thanks to its compliance-by-default approach and the simple but powerful API design.
 
-To learn more, go to the [Matter JavaScript SDK documentation](https://matter-js.github.io/docs/index.html).
+To learn more, go to the [Matter JavaScript SDK GitHub page](https://github.com/matter-js/matter.js).
 
-Note: Some features of the Matter protocol are not yet implemented in the JavaScript SDK. For details about this check the [matter.js Compatibility Information](https://github.com/project-chip/matter.js/blob/main/docs/MATTER_COMPATIBILITY.md).
+Note: Some features of the Matter protocol are not yet implemented in the JavaScript SDK. For details about this check the [matter.js Compatibility Information](https://github.com/matter-js/matter.js/blob/main/docs/MATTER_COMPATIBILITY.md).
+
+matter.js is an open source project of the [Open Home Foundation](https://www.openhomefoundation.org/) and many community contributors.
