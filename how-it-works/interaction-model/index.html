@@ -3,41 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0.824676664794">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.828453739488">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.12.0">
+    <meta name="generator" content="Retype 4.4.0">
 
     <!-- Primary Meta Tags -->
     <title>Interaction Model | Matter Handbook</title>
     <meta name="title" content="Interaction Model | Matter Handbook">
-    <meta name="description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with...">
+    <meta name="description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
     <meta property="og:title" content="Interaction Model | Matter Handbook">
-    <meta property="og:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with...">
+    <meta property="og:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM">
     <meta property="og:image" content="https://handbook.buildwithmatter.com/static/primer-im-hierarchy.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Interaction Model | Matter Handbook">
+    <meta property="og:site_name" content="">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
-    <meta property="twitter:title" content="Interaction Model | Matter Handbook">
-    <meta property="twitter:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with...">
-    <meta property="twitter:image" content="https://handbook.buildwithmatter.com/static/primer-im-hierarchy.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
+    <meta name="twitter:title" content="Interaction Model | Matter Handbook">
+    <meta name="twitter:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM">
+    <meta name="twitter:image" content="https://handbook.buildwithmatter.com/static/primer-im-hierarchy.png">
+    <meta name="twitter:image:alt" content="Interaction Model | Matter Handbook">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/logos/favicon.svg" />
-    <link href="../../resources/css/retype.css?v=3.12.0.824676664794" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.4.0.828453739488" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0.824676664794" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.12.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0.824676664794" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.4.0.828453739488" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.4.0.828453739488" data-turbo-eval="false" defer></script>
 
     <!-- Add content to _includes/head.html to include here -->
     <style>
@@ -61,156 +68,146 @@
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
-        <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
     
-        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
-            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
-                <!-- Mobile menu button skeleton -->
-                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
-                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
-        
-                <!-- Logo -->
-                <div class="flex items-center justify-between h-full py-2 md:w-75">
-                    <div class="flex items-center px-2 md:px-6">
-                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-2xl">
-                            <span class="grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logos/matter_light.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logos/matter_dark.svg">
-                            </span>
-                        </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Handbook</span>
-                    </div>
-        
-                    <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://handbook.buildwithmatter.com/" class="flex items-center leading-snug text-2xl">
+                        <span class="grow-0 shrink-0 overflow-hidden">
+                            <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logos/matter_light.svg" alt="" width="116" height="40">
+                            <img class="max-h-10 hidden dark:inline-block" src="../../static/logos/matter_dark.svg" alt="" width="116" height="40">
+                        </span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Handbook</span>
                 </div>
-        
-                <div class="flex justify-between md:grow">
-                    <!-- Top Nav -->
-                    <nav id="retype-header-nav" class="hidden md:flex">
-                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../">
-                                    <span class="docs-emoji mr-1">🇺🇸</span>
-                                    <span>English</span>
-                                </a>
-                            </li>
-                            <li class="mr-6">
-                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../ja/">
-                                    <span class="docs-emoji mr-1">🇯🇵</span>
-                                    <span>Japanese</span>
-                                </a>
-                            </li>
-        
-                        </ul>
-                    </nav>
-        
-                    <div v-cloak class="flex justify-end grow">
-                        <div id="retype-mobile-search-button"></div>
-                        <doc-search-desktop></doc-search-desktop>
-        
-                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
-                        <doc-history></doc-history>
-                    </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../">
+                                <span class="docs-emoji mr-1.5">🇺🇸</span>
+                                <span>English</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../ja/">
+                                <span class="docs-emoji mr-1.5">🇯🇵</span>
+                                <span>Japanese</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
                 </div>
             </div>
-        </header>
-    
-    
-        <div id="retype-container" class="container relative flex bg-white">
-            <!-- Sidebar Skeleton -->
-            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
-            
-                <div class="flex items-center h-16 px-6">
-                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
-                </div>
-            
-                <div class="pl-6 mt-1 mb-4">
-                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                    <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                </div>
-            
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
             </div>
-            
-            <!-- Sidebar component -->
-            <doc-sidebar v-cloak>
-                <template #sidebar-footer>
-                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
-            
-                        <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
-                            <nav>
-                                <ul class="flex flex-wrap justify-center items-center">
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../">
-                                            <span class="docs-emoji mr-1">🇺🇸</span>
-                                            <span>English</span>
-                                        </a>
-                                    </li>
-                                    <li class="mr-6">
-                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../ja/">
-                                            <span class="docs-emoji mr-1">🇯🇵</span>
-                                            <span>Japanese</span>
-                                        </a>
-                                    </li>
-            
-                                </ul>
-                            </nav>
-                        </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../">
+                                        <span class="docs-emoji mr-1.5">🇺🇸</span>
+                                        <span>English</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../ja/">
+                                        <span class="docs-emoji mr-1.5">🇯🇵</span>
+                                        <span>Japanese</span>
+                                    </a>
+                                </li>
+        
+                            </ul>
+                        </nav>
                     </div>
-                </template>
-            </doc-sidebar>
-    
-            <div class="grow min-w-0 bg-body-bg">
-                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
-                <div class="flex">
-                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
-                        <main class="relative pb-12 lg:pt-2">
-                            <div class="retype-markdown" id="retype-content">
-                                <!-- Rendered if sidebar right is enabled -->
-                                <div id="retype-sidebar-right-toggle"></div>
-                                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
-                                    <ol role="list">
-                                        <li class="pr-4">
-                                            <a href="../../" class="pr-4">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
-                                                </svg>
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <a href="../../how-it-works/" class="pr-4">
-                                                How It Works
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
-                                            </svg>
-                                        </li>
-                                        <li class="pr-4">
-                                            <a href="../../how-it-works/interaction-model/" class="pr-4">
-                                                Interaction Model
-                                            </a>
-                                        </li>
-                                    </ol>
-                                </nav>
-                
-                                <!-- Page content  -->
-<doc-anchor-target id="interaction-model" class="break-words">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#interaction-model">#</doc-anchor-trigger>
-        <span>Interaction Model</span>
-    </h1>
-</doc-anchor-target>
-<doc-anchor-target id="concepts">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#concepts">#</doc-anchor-trigger>
-        <span>Concepts</span>
-    </h2>
-</doc-anchor-target>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                    <ol role="list">
+                        <li class="pr-4">
+                            <a href="../../" class="pr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../how-it-works/" class="pr-4">
+                                How It Works
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../how-it-works/interaction-model/" class="pr-4">
+                                Interaction Model
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Page content  -->
+<h1 id="interaction-model">Interaction Model</h1>
+<h2 id="concepts">Concepts</h2>
 <p>The Data Model (DM) of a Node is only relevant if we can perform operations on it.
 The Interaction Model (IM) defines a Node&#x27;s DM relationship with the DM of other Nodes,
 providing a common language for communication between DMs.</p>
@@ -221,55 +218,29 @@ providing a common language for communication between DMs.</p>
 <li>Invoking Commands</li>
 </ul>
 <p>Whenever a Node establishes an encrypted communication sequence with another Node, they constitute an Interaction relationship. Interactions may be composed of one or more Transactions, and Transactions are composed of one or more of Actions which can be understood as IM-level messages between Nodes.</p>
-<p><figure class="content-center">
-    <img src="../../static/primer-im-hierarchy.png" alt="Hierarchy of Interaction Model" class="rounded-image-rounded border-image-border border-image-border-width" />
+<figure class="content-center">
+    <img src="../../static/primer-im-hierarchy.png" alt="Hierarchy of Interaction Model" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="640" height="215" />
     <figcaption class="caption">Hierarchy of Interaction Model</figcaption>
 </figure>
-</p>
 <p>Several Actions are supported on Transactions, such as a Read Request Action that requests an Attribute or Event from another Node, or its response, the Report Data Action, which carries the information back from the server to the client.</p>
-<doc-anchor-target id="initiators-and-targets">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#initiators-and-targets">#</doc-anchor-trigger>
-        <span>Initiators and Targets</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="initiators-and-targets">Initiators and Targets</h3>
 <p>The Node that initiates a Transaction is the Initiator, while the Node that responds is the Target. Typically the Initiator is a Client Cluster and the Target is a Server Cluster. However, there are exceptions to this pattern, such as in the Subscription Interactions analyzed further down in this section.</p>
-<doc-anchor-target id="groups">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#groups">#</doc-anchor-trigger>
-        <span>Groups</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="groups">Groups</h3>
 <p>Nodes and Endpoints in Matter may belong to a Group. A Group is a mechanism for addressing and sending messages to several Nodes in the same Action simultaneously. All Nodes in a Group share the same Group ID, a 16-bit integer.</p>
 <p>To accomplish group-level communication (Groupcast), Matter leverages IPv6 Multicast messages, and all Group members have the same Multicast address.</p>
-<doc-anchor-target id="paths">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#paths">#</doc-anchor-trigger>
-        <span>Paths</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="paths">Paths</h3>
 <p>Whenever we want to interact with an Attribute, Event, or Command, we must specify the Path for this interaction: the location of an Attribute, Event or Command in the Data Model hierarchy of a Node. The caveat is that paths may also use Groups or Wildcard Operators to address several Nodes or Clusters simultaneously, aggregating these Interactions and thus decreasing the number of actions.</p>
 <p>This mechanism is important to enhance the responsiveness of communications. For example, when a user wants to shut down all lights, a voice assistant can establish a single interaction with several lights within a Group instead of a sequence of individual Interactions. If the Initiator creates individual Interactions with each light, it can generate human-perceptible latency in Device responsiveness. This effect causes the multiple Devices to react to a command with visible delays between them. This is often referred to as &quot;popcorn effect&quot;.</p>
 <p>A Path in Matter can be assembled using one of the options below:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="paths-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">&lt;path&gt; = &lt;node&gt; &lt;endpoint&gt; &lt;cluster&gt; &lt;attribute | event | command&gt;
 &lt;path&gt; = &lt;group ID&gt;        &lt;cluster&gt; &lt;attribute | event | command&gt;</code></pre>
 </doc-codeblock></div>
 <p>And within these Path building blocks, <code translate="no" v-pre>endpoint</code> and <code translate="no" v-pre>cluster</code> may also include Wildcards Operators for selecting more than one Node instance.</p>
-<doc-anchor-target id="timed-and-untimed">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#timed-and-untimed">#</doc-anchor-trigger>
-        <span>Timed and Untimed</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="timed-and-untimed">Timed and Untimed</h3>
 <p>There are two ways of performing a Write or Invoke Transaction: Timed and Untimed. Timed Transactions establish a maximum timeout for the Write/Invoke Action to be sent. The purpose of this timeout is to prevent an Intercept Attack on the Transaction. It is especially valid for Devices that gate access to assets, such as garage openers and locks.</p>
 <p>To understand Timed Transactions it&#x27;s useful to understand how Intercept Attacks can happen and why Timed Transactions are important.</p>
-<doc-anchor-target id="the-intercept-attack">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#the-intercept-attack">#</doc-anchor-trigger>
-        <span>The Intercept Attack</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="the-intercept-attack">The Intercept Attack</h4>
 <p>An Intercept Attack has the following pattern:</p>
 <ul>
 <li>Alice sends Bob an initial message, such as a Write Request Action.</li>
@@ -282,33 +253,13 @@ Eve intercepts again and prevents Bob from receiving it.</li>
 </ul>
 <p>To prevent these types of attacks, Timed Actions set a maximum Transaction timeout at the start of the Transaction. Even if Eve manages to execute the first six steps of the attack vector, it will not be able to replay the message on step 7 due to an expired timeout on the Transaction.</p>
 <p>Timed Transactions increase the complexity and number of Actions. Thus they are not recommended for every Transaction, but only the critical operations on Devices that have control over physical or virtual security and privacy assets.</p>
-<doc-anchor-target id="sdk-abstractions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sdk-abstractions">#</doc-anchor-trigger>
-        <span>SDK Abstractions</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="sdk-abstractions">SDK Abstractions</h3>
 <p>The sections Read Transactions, Write Transactions, and Invoke Transactions provide a high-level overview of the Interaction Model Actions performed by the SDK.</p>
 <p>The developer creating a product that uses the Matter SDK typically does not perform calls to execute Actions directly; the Actions are abstracted by SDK functions that will encapsulate them into an Interaction. However, understanding IM Actions is important to provide the engineer a good proficiency on the capabilities of Matter, as well as fine control over the SDK implementation.</p>
-<doc-anchor-target id="read-transactions">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#read-transactions">#</doc-anchor-trigger>
-        <span>Read Transactions</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="read-transaction">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#read-transaction">#</doc-anchor-trigger>
-        <span>Read Transaction</span>
-    </h3>
-</doc-anchor-target>
+<h2 id="read-transactions">Read Transactions</h2>
+<h3 id="read-transaction">Read Transaction</h3>
 <p>One of the first use cases when interacting with Nodes in Matter is the reading of an Attribute from another Node, such as a temperature value from a sensor. In such Interactions, the first Action that must be performed is the Read Request Action.</p>
-<doc-anchor-target id="read-request-action">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#read-request-action">#</doc-anchor-trigger>
-        <span>Read Request Action</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="read-request-action">Read Request Action</h3>
 <p>Direction: Initiator -&gt; Target</p>
 <p>In this Action the Initiator queries a Target providing:</p>
 <ul>
@@ -316,18 +267,12 @@ Eve intercepts again and prevents Bob from receiving it.</li>
 <li>Event Requests: list of zero or more Paths to the Target&#x27;s requested Events.
 After the Read Request Action is received by the Target it will assemble a Report Data Action with the requested information.</li>
 </ul>
-<p><figure class="content-center">
-    <img src="../../static/primer-im-reading.png" alt="Read Transaction" class="rounded-image-rounded border-image-border border-image-border-width" />
+<figure class="content-center">
+    <img src="../../static/primer-im-reading.png" alt="Read Transaction" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="288" height="216" />
     <figcaption class="caption">Read Transaction</figcaption>
 </figure>
-</p>
 <p>After the Read Request Action is received by the Target it will assemble a Report Data Action with the requested information.</p>
-<doc-anchor-target id="report-data-action">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#report-data-action">#</doc-anchor-trigger>
-        <span>Report Data Action</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="report-data-action">Report Data Action</h3>
 <p>Direction: Target -&gt; Initiator</p>
 <p>In this Action the Target responds with:</p>
 <ul>
@@ -336,44 +281,23 @@ After the Read Request Action is received by the Target it will assemble a Repor
 <li>Suppress Response: a flag that determines whether the status response to this action should be suppressed.</li>
 <li>Subscription ID: if this report is part of a subscribing transaction, it must include an integer used to identify the subscription transaction.</li>
 </ul>
-<doc-anchor-target id="status-response-action">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#status-response-action">#</doc-anchor-trigger>
-        <span>Status Response Action</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="status-response-action">Status Response Action</h3>
 <p>Direction: either Target -&gt; Initiator or Initiator -&gt; Target</p>
 <p>Once the Initiator receives the requested data, by default it must generate a Status Response Action. This action is sent from the Initiator, acknowledging the receipt of the reported data. If the flag Suppress Status Response is set, the Initiator must not send the Status Response Action.</p>
 <p>Once the Status Response Action is sent by the Initiator, or a Report Data Action is received by the Initiator with the Suppress Response flag enabled, the read/report query is finished.</p>
 <p>The Status Response Action simply contains a status field that will either acknowledge operation success or present a failure code.</p>
-<doc-anchor-target id="read-restrictions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#read-restrictions">#</doc-anchor-trigger>
-        <span>Read Restrictions</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="read-restrictions">Read Restrictions</h3>
 <p>The Read Request Action and Report Data Action are Unicast-only. Moreover, the Paths of these requests may not target a Group of Nodes.</p>
 <p>The Status Response Action is Unicast-only and can&#x27;t be generated as a response to a groupcast.</p>
-<doc-anchor-target id="subscription-transaction">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#subscription-transaction">#</doc-anchor-trigger>
-        <span>Subscription Transaction</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="subscribe-request-action">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#subscribe-request-action">#</doc-anchor-trigger>
-        <span>Subscribe Request Action</span>
-    </h3>
-</doc-anchor-target>
+<h2 id="subscription-transaction">Subscription Transaction</h2>
+<h3 id="subscribe-request-action">Subscribe Request Action</h3>
 <p>Direction: Initiator -&gt; Target</p>
 <p>In addition to a singular Read Request Action, an Initiator may also subscribe to periodic updates of an Attribute or Event. Thus the same Report Data Action can be generated as a result of periodic data updates that follow a Subscription Transaction.</p>
 <p>A Subscription Interaction creates a relationship between two Nodes, in which the Target periodically generates Report Data Actions to the Initiator. The Initiator is the Subscriber and the Target is the Publisher.</p>
-<p><figure class="content-center">
-    <img src="../../static/primer-im-subscribing.png" alt="Subscription Transaction" class="rounded-image-rounded border-image-border border-image-border-width" />
+<figure class="content-center">
+    <img src="../../static/primer-im-subscribing.png" alt="Subscription Transaction" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="288" height="404" />
     <figcaption class="caption">Subscription Transaction</figcaption>
 </figure>
-</p>
 <p>A Subscribe Request Action contains:</p>
 <ul>
 <li>Min Interval Floor: the minimum interval between reports.</li>
@@ -384,12 +308,7 @@ After the Read Request Action is received by the Target it will assemble a Repor
 <p>After the Subscribe Request, the Target responds to the Initiator with a Report Data Action containing the first batch of reported data: the Primed Published Data.</p>
 <p>The Initiator then acknowledges the Report Data Action with a Status Response Action sent to the Target. Once the Target receives a Status Response Action reporting no errors, it sends a Subscribe Response Action.</p>
 <p>The Target will subsequently send Report Data Action periodically at the negotiated interval and the Initiator will respond to those Actions until the subscription is lost or cancelled.</p>
-<doc-anchor-target id="subscribe-response-action">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#subscribe-response-action">#</doc-anchor-trigger>
-        <span>Subscribe Response Action</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="subscribe-response-action">Subscribe Response Action</h3>
 <p>Direction: Target -&gt; Initiator</p>
 <p>This is the last Action on the Subscription Transaction and concludes the process. It includes:</p>
 <ul>
@@ -397,12 +316,7 @@ After the Read Request Action is received by the Target it will assemble a Repor
 <li>Min Interval: the final, determined minimum interval between reports.</li>
 <li>Max Interval: the final, determined maximum interval between reports.</li>
 </ul>
-<doc-anchor-target id="subscribe-restrictions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#subscribe-restrictions">#</doc-anchor-trigger>
-        <span>Subscribe Restrictions</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="subscribe-restrictions">Subscribe Restrictions</h3>
 <ul>
 <li>The Subscribe Request Action and the Subscribe Response Action are Unicast-only actions.</li>
 <li>All Report Data Actions in a Subscription Interaction must have the same Subscription ID.</li>
@@ -410,25 +324,10 @@ After the Read Request Action is received by the Target it will assemble a Repor
 <li>As a consequence of the previous rule, the Publisher may terminate a Subscription Interaction by simply stopping sending periodic Report Data Actions.</li>
 <li>The Subscriber may terminate the Subscription Interaction by responding to a Report Data Action with an INACTIVE_SUBSCRIPTION status code.</li>
 </ul>
-<doc-anchor-target id="write-transactions">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#write-transactions">#</doc-anchor-trigger>
-        <span>Write Transactions</span>
-    </h2>
-</doc-anchor-target>
+<h2 id="write-transactions">Write Transactions</h2>
 <p>In the last section we discussed the reading interactions of Attributes and Events. In this section we&#x27;ll discuss the writing of Attributes, which is the change of an Attribute value on a Cluster such as Level.</p>
-<doc-anchor-target id="untimed-write-transaction">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#untimed-write-transaction">#</doc-anchor-trigger>
-        <span>Untimed Write Transaction</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="write-request-action">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#write-request-action">#</doc-anchor-trigger>
-        <span>Write Request Action</span>
-    </h4>
-</doc-anchor-target>
+<h3 id="untimed-write-transaction">Untimed Write Transaction</h3>
+<h4 id="write-request-action">Write Request Action</h4>
 <p>Direction: Initiator -&gt; Target</p>
 <p>Similar to the Read Request Action, in this Action the Initiator provides the Target with:</p>
 <ul>
@@ -436,90 +335,39 @@ After the Read Request Action is received by the Target it will assemble a Repor
 <li>Timed Request: a flag that indicates whether this Action is part of a Timed Write Transaction.</li>
 <li>Suppress Response: a flag that indicates whether the Response Status Action should be suppressed.</li>
 </ul>
-<p><figure class="content-center">
-    <img src="../../static/primer-im-untimed-writing.png" alt="Untimed Write Transaction" class="rounded-image-rounded border-image-border border-image-border-width" />
+<figure class="content-center">
+    <img src="../../static/primer-im-untimed-writing.png" alt="Untimed Write Transaction" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="288" height="187" />
     <figcaption class="caption">Untimed Write Transaction</figcaption>
 </figure>
-</p>
-<doc-anchor-target id="write-response-action">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#write-response-action">#</doc-anchor-trigger>
-        <span>Write Response Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="write-response-action">Write Response Action</h4>
 <p>Direction: Target -&gt; Initiator</p>
 <p>After the Target receives the Write Request Action it will finalize the transaction with a Write Response Action that carries:</p>
 <ul>
 <li>Write Responses: a list of paths and error codes for every Write Request sent on the Write Request Action.</li>
 </ul>
-<doc-anchor-target id="untimed-write-restrictions">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#untimed-write-restrictions">#</doc-anchor-trigger>
-        <span>Untimed Write Restrictions</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="untimed-write-restrictions">Untimed Write Restrictions</h4>
 <p>The Write Request Action may be a groupcast, but in this case the Suppress Response flag must be set. The rationale is that otherwise the network might be flooded by simultaneous responses from every member of a group.</p>
 <p>To enable this behavior, the Path used in the Write Requests list may contain Groups and alternatively they may contain wildcards, but only on the Endpoint field.</p>
-<doc-anchor-target id="timed-write-transaction">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#timed-write-transaction">#</doc-anchor-trigger>
-        <span>Timed Write Transaction</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="timed-write-transaction">Timed Write Transaction</h3>
 <p>Timed write transactions add a few steps to untimed write transactions.</p>
-<doc-anchor-target id="timed-request-action">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#timed-request-action">#</doc-anchor-trigger>
-        <span>Timed Request Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="timed-request-action">Timed Request Action</h4>
 <p>Direction: Initiator -&gt; Target</p>
 <p>A Initiator starts the Transaction sending this Action that contains:</p>
 <ul>
 <li>Timeout: how many milliseconds this transaction may remain open. During this period the next action sent by the Initiator will be considered valid.</li>
 </ul>
 <p>Once the Timed Request Action is received, the Target must acknowledge the Timed Request Action with a Status Response Action. Once the Initiator receives a Status Response Action reporting no errors, it will send a Write Request Action.</p>
-<doc-anchor-target id="write-request-action-1">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#write-request-action-1">#</doc-anchor-trigger>
-        <span>Write Request Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="write-request-action-1">Write Request Action</h4>
 <p>Same as the previously described Write Request Action.</p>
-<doc-anchor-target id="write-response-action-1">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#write-response-action-1">#</doc-anchor-trigger>
-        <span>Write Response Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="write-response-action-1">Write Response Action</h4>
 <p>Same as the previously described Write Response Action.</p>
-<doc-anchor-target id="timed-write-restrictions">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#timed-write-restrictions">#</doc-anchor-trigger>
-        <span>Timed Write Restrictions</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="timed-write-restrictions">Timed Write Restrictions</h4>
 <p>The Timed Request Action, the Write Request Action and the Write Response Action are unicast-only.</p>
-<doc-anchor-target id="invoke-transactions">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#invoke-transactions">#</doc-anchor-trigger>
-        <span>Invoke Transactions</span>
-    </h2>
-</doc-anchor-target>
+<h2 id="invoke-transactions">Invoke Transactions</h2>
 <p>Invoke Transactions are used for invoking one or more Cluster Commands on a Target Node. It is similar to remote procedures calls made to a command defined in the Cluster.</p>
 <p>In a similar way of Write Transactions, Invoke Transactions support Timed and Untimed Transactions. Please refer to the Timed and Untimed Actions section for further information on Timed Transactions.</p>
-<doc-anchor-target id="untimed-invoke-transaction">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#untimed-invoke-transaction">#</doc-anchor-trigger>
-        <span>Untimed Invoke Transaction</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="invoke-request-action">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#invoke-request-action">#</doc-anchor-trigger>
-        <span>Invoke Request Action</span>
-    </h4>
-</doc-anchor-target>
+<h3 id="untimed-invoke-transaction">Untimed Invoke Transaction</h3>
+<h4 id="invoke-request-action">Invoke Request Action</h4>
 <p>Direction: Initiator -&gt; Target</p>
 <p>Similar to the Read Request Action and Write Request Action, in this Action the Initiator provides the Target with:</p>
 <ul>
@@ -528,160 +376,129 @@ After the Read Request Action is received by the Target it will assemble a Repor
 <li>Suppress Response: a flag that indicates whether the Invoke Response Action should be suppressed.</li>
 <li>Interaction ID: an integer used for matching the Invoke Request Action to the Invoke Response Action.</li>
 </ul>
-<p><figure class="content-center">
-    <img src="../../static/primer-im-untimed-invoking.png" alt="Untimed Invoke Transaction" class="rounded-image-rounded border-image-border border-image-border-width" />
+<figure class="content-center">
+    <img src="../../static/primer-im-untimed-invoking.png" alt="Untimed Invoke Transaction" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="288" height="187" />
     <figcaption class="caption">Untimed Invoke Transaction</figcaption>
 </figure>
-</p>
-<doc-anchor-target id="invoke-response-action">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#invoke-response-action">#</doc-anchor-trigger>
-        <span>Invoke Response Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="invoke-response-action">Invoke Response Action</h4>
 <p>Direction: Target -&gt; Initiator</p>
 <p>After the Target receives the Invoke Request Action it will finalize the transaction with an Invoke Response Action that carries:</p>
 <ul>
 <li>Invoke Responses: a list of command responses or status for every invoke request sent.</li>
 <li>Interaction ID: a integer used for matching the Invoke Response Action to the Invoke Request Action.</li>
 </ul>
-<doc-anchor-target id="untimed-invoke-restrictions">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#untimed-invoke-restrictions">#</doc-anchor-trigger>
-        <span>Untimed Invoke Restrictions</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="untimed-invoke-restrictions">Untimed Invoke Restrictions</h4>
 <p>The Invoke Request Action may be a groupcast, but in this case the Suppress Response flag must be set. The rationale is that otherwise the network might be flooded by simultaneous responses from every member of a group.</p>
 <p>To enable this behavior the Path used in the Invoke Requests list may contain Groups and alternatively they may contain wildcards, but only on the Endpoint field. Moreover, if the Action is groupcast, this transaction terminates with no response.</p>
-<doc-anchor-target id="timed-invoke-transactions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#timed-invoke-transactions">#</doc-anchor-trigger>
-        <span>Timed Invoke Transactions</span>
-    </h3>
-</doc-anchor-target>
+<h3 id="timed-invoke-transactions">Timed Invoke Transactions</h3>
 <p>Similar to Timed Write Transactions, Timed Invoke Transactions also start with the Timed Request Action.</p>
-<doc-anchor-target id="timed-request-action-1">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#timed-request-action-1">#</doc-anchor-trigger>
-        <span>Timed Request Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="timed-request-action-1">Timed Request Action</h4>
 <p>Direction: Initiator -&gt; Target</p>
 <p>A Initiator starts the Transaction sending this Action that contains:</p>
 <ul>
 <li>Timeout: how many milliseconds this transaction may remain open. During this period the next action sent by the Initiator will be considered valid.</li>
 </ul>
 <p>Once the Timed Request Action is received, the Target must acknowledge the Timed Request Action with a Status Response Action. Once the Initiator receives a Status Response Action reporting no errors, it will send a Invoke Request Action.</p>
-<p><figure class="content-center">
-    <img src="../../static/primer-im-timed-invoking.png" alt="Timed Invoke Transaction" class="rounded-image-rounded border-image-border border-image-border-width" />
+<figure class="content-center">
+    <img src="../../static/primer-im-timed-invoking.png" alt="Timed Invoke Transaction" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" width="288" height="304" />
     <figcaption class="caption">Timed Invoke Transaction</figcaption>
 </figure>
-</p>
-<doc-anchor-target id="invoke-request-action-1">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#invoke-request-action-1">#</doc-anchor-trigger>
-        <span>Invoke Request Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="invoke-request-action-1">Invoke Request Action</h4>
 <p>Same as the previously described Invoke Request Action.</p>
-<doc-anchor-target id="invoke-response-action-1">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#invoke-response-action-1">#</doc-anchor-trigger>
-        <span>Invoke Response Action</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="invoke-response-action-1">Invoke Response Action</h4>
 <p>Same as the previously described Invoke Response Action</p>
-<doc-anchor-target id="timed-invoke-restrictions">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#timed-invoke-restrictions">#</doc-anchor-trigger>
-        <span>Timed Invoke Restrictions</span>
-    </h4>
-</doc-anchor-target>
+<h4 id="timed-invoke-restrictions">Timed Invoke Restrictions</h4>
 <p>All invoke commands may be called on a Timed Interaction. The Timed Request Action, the Invoke Request Action and the Invoke Response Action are Unicast-only and thus can&#x27;t be used as groupcast on Timed Invoke Transactions.</p>
 <p>The Invoke Request Action supports the usage of paths with Groups, as well as wildcards, but the Invoke Response Action does not support wildcard usage.</p>
-<p><em>This content was originally published on the <a href="https://developers.home.google.com/matter/primer" class="outbound" target="_blank"><span>Google Developer Site</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></em></p>
+<p><em>This content was originally published on the <a href="https://developers.home.google.com/matter/primer" class="outbound" target="_blank"><span>Google Developer Site</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></em></p>
 
-                                
-                                <!-- Required only on API pages -->
-                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
-                            </div>
-                            <footer id="retype-content-footer" class="clear-both">
-                            
-                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
-                                    <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../how-it-works/connectivity-transports/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                            <span>
-                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">Connectivity Transports</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                            
-                                    <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../how-it-works/discovery/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Discovery</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
-                                    </div>
-                                </nav>
-                            </footer>
-                        </main>
+                <div id="retype-tags" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-6 mb-6 clear-both">
                 
-                        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
-                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
-                                <div id="retype-footer-links" class="print:hidden">
-                                    <ul class="flex flex-wrap items-center text-sm">
-                                        <li>
-                                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-footer-link hover:text-footer-link-hover md:mb-0" href="../../about/">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                    <g fill="currentColor">
-                                                        <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
-                                                    </g>
-                                                </svg>
-                                                <span>About the Matter Handbook</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-footer-link hover:text-footer-link-hover md:mb-0" href="../../license/">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
-                                                    <g fill="currentColor">
-                                                        <path d="M16.53 9.78a.75.75 0 0 0-1.06-1.06L11 13.19l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5-5Z"/><path d="m12.54.637 8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.771 10.704-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.77 20.705 2 16.19 2 10V4.976c0-.758.489-1.43 1.21-1.664L11.46.637a1.748 1.748 0 0 1 1.08 0Zm-.617 1.426-8.25 2.676a.249.249 0 0 0-.173.237V10c0 5.46 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.461 20.5 10V4.976a.25.25 0 0 0-.173-.237l-8.25-2.676a.253.253 0 0 0-.154 0Z"/>
-                                                    </g>
-                                                </svg>
-                                                <span>License</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026 Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.</p></div>
-                            </footer>
-                        </div>
-                    </div>
-                
-                    <!-- Rendered if sidebar right is enabled -->
-                    <!-- Sidebar right skeleton-->
-                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
-                        <div class="pl-5">
-                            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
-                        </div>
-                    </div>
-                
-                    <!-- User should be able to hide sidebar right -->
-                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                    <time id="retype-last-updated" class="text-sm whitespace-nowrap text-base-text-muted ml-auto" datetime="2025-10-14T14:35:24" title="2025-10-14" data-absolute-label="Last updated on 2025-10-14" data-absolute-label-html="Last updated on 2025-10-14" data-relative-template="Last updated {0}" data-relative-template-html="Last updated RETYPETEMPLATELASTUPDATEDVALUETOKEN">
+                        Last updated on 2025-10-14
+                    </time>
                 </div>
 
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../how-it-works/connectivity-transports/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Connectivity Transports</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../how-it-works/discovery/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Discovery</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                        <li>
+                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-footer-link hover:text-footer-link-hover md:mb-0" href="../../about/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                    <g fill="currentColor">
+                                        <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
+                                    </g>
+                                </svg>
+                                <span>About the Matter Handbook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-footer-link hover:text-footer-link-hover md:mb-0" href="../../license/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                    <g fill="currentColor">
+                                        <path d="M16.53 9.78a.75.75 0 0 0-1.06-1.06L11 13.19l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5-5Z"/><path d="m12.54.637 8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.771 10.704-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.77 20.705 2 16.19 2 10V4.976c0-.758.489-1.43 1.21-1.664L11.46.637a1.748 1.748 0 0 1 1.08 0Zm-.617 1.426-8.25 2.676a.249.249 0 0 0-.173.237V10c0 5.46 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.461 20.5 10V4.976a.25.25 0 0 0-.173-.237l-8.25-2.676a.253.253 0 0 0-.154 0Z"/>
+                                    </g>
+                                </svg>
+                                <span>License</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026 Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.</p></div>
+            </footer>
         </div>
-    
-        <doc-search-mobile></doc-search-mobile>
-        <doc-back-to-top></doc-back-to-top>
     </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
 
 
     <div id="retype-overlay-target"></div>
