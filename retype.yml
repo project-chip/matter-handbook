@@ -19,6 +19,10 @@ branding:
   label: Handbook
 
 # -----------------------------------------------------------------------------
+backlinks:
+  enabled: false
+
+# -----------------------------------------------------------------------------
 links: # Links to add to the top bar
   #  - text: csa-iot.org
   #    link: https://csa-iot.org
