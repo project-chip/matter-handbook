@@ -15,8 +15,7 @@ url: https://handbook.buildwithmatter.com
 
 # -----------------------------------------------------------------------------
 branding:
-  logo: static/logos/matter_light.svg
-  logoDark: static/logos/matter_dark.svg
+  logo: static/logos/matter.svg
   label: Handbook
 
 # -----------------------------------------------------------------------------
