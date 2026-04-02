@@ -73,11 +73,14 @@ theme:
     base-item-text-active: *base-link-hover
     base-item-bg-hover: *base-item-bg-hover
     base-item-bg-active: *base-item-bg-active
+    callout-base: *base-color
     callout-base-bg: *base-item-bg-hover
     primary: *base-color
     badge-primary: *base-item-bg-hover
     badge-primary-border: *base-item-bg-active
     callout-base-border: *base-item-bg-active
+    callout-primary: *base-color
+    callout-success: *base-color
   dark:
     # Define common dark colors as anchors with leading underscores
     # to indicate these keys are not meant to be parsed by the application.
@@ -105,11 +108,14 @@ theme:
     base-item-text-active: *dark-link-hover
     base-item-bg-hover: *dark-item-bg-hover
     base-item-bg-active: *dark-item-bg-active
+    callout-base: *dark-color
     callout-base-bg: *dark-item-bg-hover
     primary: *dark-color
     badge-primary: *dark-item-bg-hover
     badge-primary-border: *dark-item-bg-active
     callout-base-border: *dark-item-bg-active
+    callout-primary: *dark-color
+    callout-success: *dark-color
 
 # -----------------------------------------------------------------------------
 footer:
