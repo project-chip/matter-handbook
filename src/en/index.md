@@ -5,7 +5,7 @@ toc:
   depth: 0
 ---
 #
-![](/static/logos/handbook.svg)
+![|700](/static/logos/handbook.svg)
 
 This handbook helps you build and ship devices with Matter. It covers the basics of the protocol, how to work with the SDK, how to get certified, and how to get involved with the Working Groups.
 
