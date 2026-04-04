@@ -82,9 +82,14 @@ theme:
     primary: *base-color
     badge-primary: *base-item-bg-hover
     badge-primary-border: *base-item-bg-active
+    badge-primary-text: *base-color
+    badge-success: *base-color
+    badge-success-text: '#ffffff'
+    badge-success-border: *base-link-hover
     callout-base-border: *base-item-bg-active
     callout-primary: *base-color
     callout-success: *base-color
+    button-base-text: '#ffffff'
   dark:
     # Define common dark colors as anchors with leading underscores
     # to indicate these keys are not meant to be parsed by the application.
@@ -117,9 +122,14 @@ theme:
     primary: *dark-color
     badge-primary: *dark-item-bg-hover
     badge-primary-border: *dark-item-bg-active
+    badge-primary-text: *dark-color
+    badge-success: *dark-color
+    badge-success-text: *dark-bg
+    badge-success-border: *dark-link-hover
     callout-base-border: *dark-item-bg-active
     callout-primary: *dark-color
     callout-success: *dark-color
+    button-base-text: *dark-bg
 
 # -----------------------------------------------------------------------------
 footer:
