@@ -1,4 +1,4 @@
-name: Request Approval
+name: Approvals
 on:
   pull_request_target:
     types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   approvals:
+    name: check
     runs-on: ubuntu-slim
     steps:
       - name: Run label approvals
