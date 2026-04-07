@@ -1,0 +1,8 @@
+﻿#  | Matter Handbook
+
+> Matterハンドブックへようこそ。このハンドブックは、Matter対応機器の開発と出荷をより簡単にしていただけるよう、よくある質問への回答を提供します。この中には、ワーキンググループへの参加方法から Matter の基本、SDK のナビゲート方法など、あらゆる情報が掲載されています。
+
+- [ようこそ](https://handbook.buildwithmatter.com/index.md): ようこそ
+- [用語 (頭文字語) 解説](https://handbook.buildwithmatter.com/glossary/index.md): 用語 (頭文字語)
+- [Creative Commons Attribution 4.0 International](https://handbook.buildwithmatter.com/license.md): Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship.
+- [ハンドブックについて](https://handbook.buildwithmatter.com/about.md): このハンドブックは、よくある質問に答え、適切なリソースへ案内することで、Matter対応機器の設計、開発、出荷をサポートします。アライアンスのワーキンググループとの連携方法、基本的なMatterの概念、そしてSDKやツールの利用に関する実践的なガイダンスがご覧いただけます。

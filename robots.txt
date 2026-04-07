@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://handbook.buildwithmatter.com/sitemap.xml.gz
+Sitemap: https://handbook.buildwithmatter.com/sitemap.xml

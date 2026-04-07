@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.4.0.828877588476">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.0.828885595983">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.4.0">
+    <meta name="generator" content="Retype 4.5.0">
 
     <!-- Primary Meta Tags -->
     <title>Interaction Model | Matter Handbook</title>
     <meta name="title" content="Interaction Model | Matter Handbook">
-    <meta name="description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM">
+    <meta name="description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM of other Nodes, providing a common language for communication between DMs.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://handbook.buildwithmatter.com/sitemap.xml">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
     <meta property="og:title" content="Interaction Model | Matter Handbook">
-    <meta property="og:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM">
+    <meta property="og:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM of other Nodes, providing a common language for communication between DMs.">
     <meta property="og:image" content="https://handbook.buildwithmatter.com/static/primer-im-hierarchy.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -33,18 +34,21 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://handbook.buildwithmatter.com/how-it-works/interaction-model/">
     <meta name="twitter:title" content="Interaction Model | Matter Handbook">
-    <meta name="twitter:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM">
+    <meta name="twitter:description" content="The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM of other Nodes, providing a common language for communication between DMs.">
     <meta name="twitter:image" content="https://handbook.buildwithmatter.com/static/primer-im-hierarchy.png">
     <meta name="twitter:image:alt" content="Interaction Model | Matter Handbook">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://handbook.buildwithmatter.com/how-it-works/interaction-model.md">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" data-href-light="../../static/logos/favicon.svg" data-href-dark="../../static/logos/favicon-dark.svg" href="../../static/logos/favicon.svg" />
-    <link href="../../resources/css/retype.css?v=4.4.0.828877588476" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.5.0.828885595983" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.4.0.828877588476" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.4.0.828877588476" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.0.828885595983" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.0.828885595983" data-turbo-eval="false" defer></script>
 
     <!-- Add content to _includes/head.html to include here -->
     <style>
@@ -174,7 +178,7 @@
 <div class="flex">
     <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
         <main class="relative pb-12 lg:pt-2">
-            <div class="retype-markdown" id="retype-content">
+            <div class="relative retype-markdown" id="retype-content">
                 <!-- Rendered if sidebar right is enabled -->
                 <div id="retype-sidebar-right-toggle"></div>
                 <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
@@ -204,6 +208,8 @@
                         </li>
                     </ol>
                 </nav>
+
+                <doc-page-actions></doc-page-actions>
 
                 <!-- Page content  -->
 <h1 id="interaction-model">Interaction Model</h1>
@@ -243,13 +249,25 @@ providing a common language for communication between DMs.</p>
 <h4 id="the-intercept-attack">The Intercept Attack</h4>
 <p>An Intercept Attack has the following pattern:</p>
 <ul>
-<li>Alice sends Bob an initial message, such as a Write Request Action.</li>
-<li>Eve, a man-in-the-middle, intercepts the message and prevents Bob from receiving it, for example through some type of radio jamming.</li>
-<li>Alice, not receiving a response from Bob, sends a second message.
-Eve intercepts again and prevents Bob from receiving it.</li>
-<li>Eve sends the first intercepted message to Bob, as if it were coming from Alice.</li>
-<li>Bob sends the response to Alice (and Eve).</li>
-<li>Eve holds the second intercepted message for a later replay. Since Bob never received the original second intercepted message from Alice, it will accept it. This message represent a security breach when the message encodes a command such as &quot;open lock&quot;.</li>
+<li>
+<p>Alice sends Bob an initial message, such as a Write Request Action.</p>
+</li>
+<li>
+<p>Eve, a man-in-the-middle, intercepts the message and prevents Bob from receiving it, for example through some type of radio jamming.</p>
+</li>
+<li>
+<p>Alice, not receiving a response from Bob, sends a second message.
+Eve intercepts again and prevents Bob from receiving it.</p>
+</li>
+<li>
+<p>Eve sends the first intercepted message to Bob, as if it were coming from Alice.</p>
+</li>
+<li>
+<p>Bob sends the response to Alice (and Eve).</p>
+</li>
+<li>
+<p>Eve holds the second intercepted message for a later replay. Since Bob never received the original second intercepted message from Alice, it will accept it. This message represent a security breach when the message encodes a command such as &quot;open lock&quot;.</p>
+</li>
 </ul>
 <p>To prevent these types of attacks, Timed Actions set a maximum Transaction timeout at the start of the Transaction. Even if Eve manages to execute the first six steps of the attack vector, it will not be able to replay the message on step 7 due to an expired timeout on the Transaction.</p>
 <p>Timed Transactions increase the complexity and number of Actions. Thus they are not recommended for every Transaction, but only the critical operations on Devices that have control over physical or virtual security and privacy assets.</p>
@@ -503,6 +521,6 @@ After the Read Request Action is received by the Target it will assemble a Repor
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Interaction Model", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Interaction Model", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/how-it-works/interaction-model.md" }</script>
 </body>
 </html>

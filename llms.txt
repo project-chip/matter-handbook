@@ -1,0 +1,60 @@
+﻿#  | Matter Handbook
+
+> This handbook helps you build and ship devices with Matter. It covers the basics of the protocol, how to work with the SDK, how to get certified, and how to get involved with the Working Groups.
+
+- [Home](https://handbook.buildwithmatter.com/index.md): Home
+- [How It Works](https://handbook.buildwithmatter.com/how-it-works/index.md): This section goes into detail about how Matter works. Click through the links in the sidebar to learn more about Matter roles, device types, connectivity transports, and more.
+- [The Connectivity Standards Alliance](https://handbook.buildwithmatter.com/alliance/index.md): Our wide-ranging global membership is on a mission. That mission is to ignite creativity and collaboration in the Internet of Things, by developing, evolving, and promoting universal open standards that enable all objects to securely connect and interact.
+- [The Matter Specifications](https://handbook.buildwithmatter.com/specification/index.md): The Matter Specification is updated twice a year in Spring and Fall.
+- [Certification](https://handbook.buildwithmatter.com/certification/index.md): This section contains information on the Matter certification process, including requirements for different certification programs, and steps for obtaining certification.
+- [Matter Development](https://handbook.buildwithmatter.com/development/index.md): Developers have multiple options for creating Matter-certified devices, bridges, or controllers. The official Matter SDK is the recommended choice for most projects, but alternative implementations, such as JavaScript, also offer compelling features for certain use cases.
+- [Guides](https://handbook.buildwithmatter.com/guides/index.md): This section contains detailed explanations of specific areas of Matter. There is not yet comprehensive coverage of all areas but we will endeavor to expand the topics over time.
+- [Glossary & Acronym Decoder](https://handbook.buildwithmatter.com/glossary/index.md): Term
+- [About](https://handbook.buildwithmatter.com/about.md): This handbook helps you plan, build, and ship Matter devices by answering common questions and connecting you to the right resources. You’ll find orientation on working with Alliance Working Groups, foundational Matter concepts, and practical guidance for navigating SDKs and tools.
+- [Creative Commons Attribution 4.0 International](https://handbook.buildwithmatter.com/license.md): Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship.
+
+## How It Works
+
+- [What is Matter](https://handbook.buildwithmatter.com/how-it-works/what-is-matter.md): Matter has the goal of being an interoperable standard that fosters technology adoption and innovation, gradually replacing proprietary protocols for smart home ecosystems.
+- [Roles](https://handbook.buildwithmatter.com/how-it-works/roles.md): An important note is that while these definitions explain the distinct roles as defined in the Matter specification, in many cases, the products in users’ homes have the ability to take on different roles or serve in multiple roles at once.
+- [Supported Device Types](https://handbook.buildwithmatter.com/how-it-works/device-types.md): In order to be certified a Matter device must conform to one of the approved device types.
+- [Device Data Model](https://handbook.buildwithmatter.com/how-it-works/data-model.md): Devices in Matter have a well-defined data model (DM), which is a hierarchical modeling of a Device's features. At the top level of this hierarchy there is a Device.
+- [Connectivity Transports](https://handbook.buildwithmatter.com/how-it-works/connectivity-transports.md): In principle, any IPv6-bearing network is suitable for Matter deployment, subject to supporting a few core IPv6 standards. In the current version of the specification, we focus on three link layer technologies: Ethernet, Wi-Fi and Thread.
+- [Interaction Model](https://handbook.buildwithmatter.com/how-it-works/interaction-model.md): The Data Model (DM) of a Node is only relevant if we can perform operations on it. The Interaction Model (IM) defines a Node's DM relationship with the DM of other Nodes, providing a common language for communication between DMs.
+- [Discovery](https://handbook.buildwithmatter.com/how-it-works/discovery.md): Commissionable discovery happens before Commissioning and refers to the process of discovering and identifying a commissionable Node. There are two methods
+- [The Fabric](https://handbook.buildwithmatter.com/how-it-works/fabric.md): The Matter spec uses sophisticated methods for encrypting and decrypting information, as well as safe mechanisms for assuring a Node's identity and sharing cryptographic credentials.
+- [Commissioning](https://handbook.buildwithmatter.com/how-it-works/commisioning.md): Commissioning in Matter refers to the process of assigning Fabric credentials to a new device or app. The Commissioner is the device or app that does the Commissioning process.
+- [Attestation](https://handbook.buildwithmatter.com/how-it-works/attestation.md): Certified Devices are Devices that have gone through the Connectivity Standards Alliance (Alliance) Matter Certification Process.
+- [Security & Privacy](https://handbook.buildwithmatter.com/how-it-works/security.md): Matter was created with security and privacy as key design tenets and provides a baseline for building secure IoT devices. The following are key principles of Matter security.
+- [Thread](https://handbook.buildwithmatter.com/how-it-works/thread.md): Some Matter Nodes are wired and have energy budgets that allow them to keep their radios continuously on. Other types of Nodes such as sensors have requirements to run for years on a battery, operating their radios on low-power networks such as Thread.
+
+## The Alliance
+
+- [What We Do](https://handbook.buildwithmatter.com/alliance/what-we-do.md): We create, evolve, and manage IoT technology standards through a well-established, collaborative process. We empower companies with practical, usable assets and tools to ease and accelerate development, freeing them to focus on new areas of IoT innovation.
+- [How We Work](https://handbook.buildwithmatter.com/alliance/how-we-work.md): The Alliance has a number of Working Groups responsible for each of the different standards that we manage.
+- [Membership](https://handbook.buildwithmatter.com/alliance/membership.md): Work with the world’s most innovative companies to create, evolve, and promote universal open standards that connect all IoT devices – regardless of country, network, brand, or function – for a unifying wireless experience that inspires new possibilities for people everywhere.
+- [Resources](https://handbook.buildwithmatter.com/alliance/resources.md): If you are already a member of the Alliance, here are some helpful links found in Causeway (you'll need to log in with your member credentials).
+
+## Certification
+
+### Certifying a Matter Product
+
+- [Certifying a Matter Product](https://handbook.buildwithmatter.com/certification/certifying-a-product/index.md): This guide aims to give an outline of common considerations for the integration of Matter rather than a general outline of the development process of an entire product line.
+- [Membership](https://handbook.buildwithmatter.com/certification/certifying-a-product/membership.md): Companies need to be a member of the Connectivity Standards Alliance (Alliance) in order to certify and release products using Matter.
+- [Development](https://handbook.buildwithmatter.com/certification/certifying-a-product/development.md): Some links on this page are only accessible to Alliance members.
+- [Self Pre-Test](https://handbook.buildwithmatter.com/certification/certifying-a-product/self-pre-test.md): Some links on this page are only accessible to Alliance members.
+- [ATL Testing](https://handbook.buildwithmatter.com/certification/certifying-a-product/atl-testing.md)
+- [Submission for Certification](https://handbook.buildwithmatter.com/certification/certifying-a-product/submission-for-certification.md)
+- [Factory and Go to Market](https://handbook.buildwithmatter.com/certification/certifying-a-product/factory-market.md)
+- [OTA and Re-certification](https://handbook.buildwithmatter.com/certification/certifying-a-product/ota-recert.md)
+- [Developing a Certification Program for a New Feature](https://handbook.buildwithmatter.com/certification/certification-program-development/index.md): Placeholder for this content.
+
+### Guides
+
+- [Guides](https://handbook.buildwithmatter.com/certification/guides/index.md): This section contains detailed guides about specific parts of the certification processes.
+- [PICS and PIXIT](https://handbook.buildwithmatter.com/certification/guides/pics-and-pixit.md): In many Standards Defining Organizations including the Connectivity Standards Alliance, the concept of a “Protocol Implementation Conformance Statement” or “PICS” code is introduced to simplify description of protocol elements.
+- [Matter FastTrack Recertification FAQ](https://handbook.buildwithmatter.com/certification/fast-track-recertification-faq.md): What is Matter FastTrack Recertification?
+
+## Guides
+
+- [Distributed Compliance Ledger (DCL)](https://handbook.buildwithmatter.com/guides/dcl.md): The DCL is a blockchain-based system owned and hosted by Alliance members. It is used by the Matter protocol for storing information such as:
