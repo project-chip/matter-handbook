@@ -1,0 +1,7 @@
+labels:
+  editorial:
+    approvers: [p0fi, cecille]
+
+requiredApprovals: 1
+ignoreDraft: true
+retractOnUnlabeled: true
