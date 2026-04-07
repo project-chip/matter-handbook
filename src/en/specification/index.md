@@ -63,4 +63,4 @@ Version | Published | Highlights
 [!badge text="1.3" variant="primary"] | May 2024 | Energy reporting, EV charging, water management, kitchen appliances, scenes
 [!badge text="1.2" variant="primary"] | October 2023 | Vacuums, appliances, smoke/CO alarms, air quality, fans, Namespace Spec
 [!badge text="1.1" variant="primary"] | May 2023 | Intermittently Connected Devices (ICD)
-[!badge text="1.0" variant="light"] [!badge text="Initial Release" variant="light"]| November 2022 | Lighting, plugs, locks, thermostats, blinds, sensors, media
+[!badge text="1.0" variant="light"] [!badge text="Initial Release" variant="light"] | November 2022 | Lighting, plugs, locks, thermostats, blinds, sensors, media
