@@ -31,6 +31,10 @@ permissions:
   pull-requests: write
   checks: write
 
+concurrency:
+  group: label-driven-review-and-approval-check-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
 jobs:
   approvals:
     name: check
