@@ -50,5 +50,5 @@ jobs:
       - name: Delete preview comment
         uses: thollander/actions-comment-pull-request@v3
         with:
-          comment_tag: pr-preview
+          comment-tag: pr-preview
           mode: delete
