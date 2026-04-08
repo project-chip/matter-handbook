@@ -1,7 +1,30 @@
 name: Approvals
 on:
   pull_request_target:
-    types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+      - labeled
+      - unlabeled
+  # Re-evaluate approval status whenever a review is submitted, edited, or dismissed.
+  pull_request_review:
+    types:
+      - submitted
+      - edited
+      - dismissed
+  # Allow a manual re-run / debugging of the evaluation without a PR event.
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Run in dry-run mode (no review request mutations)'
+        required: false
+        default: 'false'
+      summary-mode:
+        description: 'minimal | standard | verbose'
+        required: false
+        default: 'standard'
 
 permissions:
   contents: read
