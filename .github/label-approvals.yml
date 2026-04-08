@@ -1,6 +1,8 @@
 labels:
   editorial:
     approvers: [p0fi, cecille]
+  dependencies:
+    approvers: [p0fi]
 
 requiredApprovals: 1
 ignoreDraft: true
