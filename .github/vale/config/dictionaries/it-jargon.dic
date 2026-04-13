@@ -44,6 +44,7 @@ compiler/SD
 component/D
 config
 conform/N
+connectionless
 controlee/SM
 cookie/S
 cooktop/S
