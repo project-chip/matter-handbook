@@ -4,8 +4,10 @@ start:
 poweredByRetype: false # Remove "Powered by Retype"
 
 # -----------------------------------------------------------------------------
-input: src/en
-output: .retype
+input: ./
+output: .retype/ja
+
+locale: ja
 
 breadcrumb:
   home: ':icon-home:'
@@ -15,22 +17,19 @@ url: https://handbook.buildwithmatter.com
 
 # -----------------------------------------------------------------------------
 branding:
-  logo: static/logos/matter.svg
+  logo: static/logos/matter_light.svg
+  logoDark: static/logos/matter_dark.svg
   label: Handbook
-
-# -----------------------------------------------------------------------------
-backlinks:
-  enabled: false
 
 # -----------------------------------------------------------------------------
 links: # Links to add to the top bar
   #  - text: csa-iot.org
   #    link: https://csa-iot.org
   - text: English
-    link: /
+    link: /../
     icon: ':flag-us:'
   - text: Japanese
-    link: /ja/
+    link: ../ja
     icon: ':flag-jp:'
 
 # -----------------------------------------------------------------------------
@@ -77,19 +76,11 @@ theme:
     base-item-text-active: *base-link-hover
     base-item-bg-hover: *base-item-bg-hover
     base-item-bg-active: *base-item-bg-active
-    callout-base: *base-color
     callout-base-bg: *base-item-bg-hover
     primary: *base-color
     badge-primary: *base-item-bg-hover
     badge-primary-border: *base-item-bg-active
-    badge-primary-text: *base-color
-    badge-success: *base-color
-    badge-success-text: '#ffffff'
-    badge-success-border: *base-link-hover
     callout-base-border: *base-item-bg-active
-    callout-primary: *base-color
-    callout-success: *base-color
-    button-base-text: '#ffffff'
   dark:
     # Define common dark colors as anchors with leading underscores
     # to indicate these keys are not meant to be parsed by the application.
@@ -117,29 +108,21 @@ theme:
     base-item-text-active: *dark-link-hover
     base-item-bg-hover: *dark-item-bg-hover
     base-item-bg-active: *dark-item-bg-active
-    callout-base: *dark-color
     callout-base-bg: *dark-item-bg-hover
     primary: *dark-color
     badge-primary: *dark-item-bg-hover
     badge-primary-border: *dark-item-bg-active
-    badge-primary-text: *dark-color
-    badge-success: *dark-color
-    badge-success-text: *dark-bg
-    badge-success-border: *dark-link-hover
     callout-base-border: *dark-item-bg-active
-    callout-primary: *dark-color
-    callout-success: *dark-color
-    button-base-text: *dark-bg
 
 # -----------------------------------------------------------------------------
 footer:
-  copyright: '&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.'
+  copyright: '&copy; Copyright {{ year }} Matter Handbook Authors. <br>Matterは、Connectivity Standards Alliance<br>の登録商標です。その他の商標は、それぞれの所有者に帰属します。'
 
   links:
-    - text: About the Matter Handbook
+    - text: 「Matter ハンドブックについて」
       link: about.md
       icon: question
 
-    - text: License
+    - text: ライセンス
       link: license.md
       icon: shield-check

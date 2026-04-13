@@ -1,0 +1,50 @@
+name: Approvals
+on:
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+      - labeled
+      - unlabeled
+  # Re-evaluate approval status whenever a review is submitted, edited, or dismissed.
+  pull_request_review:
+    types:
+      - submitted
+      - edited
+      - dismissed
+  # Allow a manual re-run / debugging of the evaluation without a PR event.
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Run in dry-run mode (no review request mutations)'
+        required: false
+        default: 'false'
+      summary-mode:
+        description: 'minimal | standard | verbose'
+        required: false
+        default: 'standard'
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+concurrency:
+  group: label-driven-review-and-approval-check-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  approvals:
+    name: check
+    runs-on: ubuntu-slim
+    steps:
+      - name: Run label approvals
+        uses: p0fi/label-driven-review-and-approval-check@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-path: .github/label-approvals.yml
+          summary-mode: standard
+          dry-run: "false"
+          debug: "false"

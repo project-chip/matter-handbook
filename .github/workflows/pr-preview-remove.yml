@@ -1,4 +1,4 @@
-name: PR preview - Remove  # When PR is closed
+name: PR preview - Remove # When PR is closed
 
 on:
   # Trigger when a pull request target is closed.
@@ -7,7 +7,7 @@ on:
       - closed
 
 # Ensure only one removal process per PR.
-concurrency: preview-${{ github.ref }}
+concurrency: preview-${{ github.event.pull_request.number }}
 
 # Grant necessary permissions for writing content and PR comments.
 permissions:
@@ -46,9 +46,9 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      # Comment on the pull request that the preview has been removed.
-      - name: Comment PR
+      # Delete the preview comment from the pull request.
+      - name: Delete preview comment
         uses: thollander/actions-comment-pull-request@v3
         with:
-          message: |
-            Preview ${{ vars.PREVIEW_URL }}/pr-${{ github.event.number }} has been removed
+          comment-tag: pr-preview
+          mode: delete
