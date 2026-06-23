@@ -13,7 +13,7 @@ This is a public website. Do not include any Alliance confidential information i
 ### Acronyms
 - Write out acronyms on first use and include the acronym in parentheses
   - First use of a Three Letter Acronym (TLA) should look similar to this.
-- Add new acronyms to the `.wordlist.txt` file for the spell checker
+- Add new acronyms to the appropriate `.dic` dictionary in `.github/vale/config/dictionaries/` (for example, `acronyms.dic`) for the spell checker
 - Add new acronyms to the Glossary if appropriate
 
 ### External links
