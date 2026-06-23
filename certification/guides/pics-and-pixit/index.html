@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.832746972349">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.835533490834">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>PICS and PIXIT | Matter Handbook</title>
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" data-href-light="../../../static/logos/favicon.svg" data-href-dark="../../../static/logos/favicon-dark.svg" href="../../../static/logos/favicon.svg" />
-    <link href="../../../resources/css/retype.css?v=4.5.3.832746972349" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=4.6.0.835533490834" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.5.3.832746972349" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.5.3.832746972349" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=4.6.0.835533490834" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=4.6.0.835533490834" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -207,6 +207,26 @@ both the server and client side.</p>
 features (bit 0 and 1), two attributes (0x0000 and 0x0001), two accepted
 commands (0x00 and 0x01), a single command response (0x02) and one event (0x00),
 the following PICS codes would be defined</p>
+<retype-table copy-text="| CODE          | Desc                                                                       |
+| ------------- | -------------------------------------------------------------------------- |
+| ANC.S         | Device implements the ANC cluster as a server                              |
+| ANC.S.F00     | Device implements ANC feature at bit 0 on the ANC server cluster           |
+| ANC.S.F01     | Device implements ANC feature at bit 1 on the ANC server cluster           |
+| ANC.S.A0000   | Device implements ANC attribute 0x0000 on the ANC server cluster           |
+| ANC.S.A0001   | Device implements ANC attribute 0x0001 on the ANC server cluster           |
+| ANC.S.C00.Rsp | Device accepts ANC command 0x00 on the ANC server cluster                  |
+| ANC.S.C01.Rsp | Device accepts ANC command 0x01 on the ANC server cluster                  |
+| ANC.S.C02.Tx  | Device generates ANC command response 0x02 on the ANC server cluster       |
+| ANC.S.E00     | Device generates ANC event 0x00 on the ANC server cluster                  |
+| ANC.C         | Device supports an ANC client                                              |
+| ANC.C.F00     | Device ANC client is capable of understanding the feature with bit 0       |
+| ANC.C.F01     | Device ANC client is capable of understanding the feature with bit 1       |
+| ANC.C.A0000   | Device ANC client is capable of reading or subscribing to attribute 0x0000 |
+| ANC.C.A0001   | Device ANC client is capable of reading or subscribing to attribute 0x0001 |
+| ANC.C.C00.Rsp | Device ANC client is capable of sending the command with id 0x00           |
+| ANC.C.C01.Rsp | Device ANC client is capable of sending the command with id 0x01           |
+| ANC.C.C02.Tx  | Device ANC client understands the command response with id 0x02            |
+| ANC.C.E00     | Device ANC client understands the event with id 0x00                       |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -291,6 +311,7 @@ the following PICS codes would be defined</p>
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>More information about the PICS code format can be found at
 <a href="https://github.com/CHIP-Specifications/chip-test-plans/blob/master/docs/PICS%20Guidelines.md" class="outbound" target="_blank"><span>PICS Guidelines</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. (requires access to the Matter specifications repository)</p>
 <p>In addition to these standard cluster PICS, other PICS may be defined to
@@ -401,13 +422,7 @@ required tests based on the PICS file, but it is the responsibility of the teste
 and the ATL to ensure that all the required tests are run and the results are
 submitted.</p>
 
-                <div id="retype-tags" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-6 mb-6 clear-both">
                 
-                    <time id="retype-last-updated" class="text-sm whitespace-nowrap text-base-text-muted ml-auto" datetime="2025-10-14T14:35:24" title="2025-10-14" data-absolute-label="Last updated on 2025-10-14" data-absolute-label-html="Last updated on 2025-10-14" data-relative-template="Last updated {0}" data-relative-template-html="Last updated RETYPETEMPLATELASTUPDATEDVALUETOKEN">
-                        Last updated on 2025-10-14
-                    </time>
-                </div>
-
                 <!-- Required only on API pages -->
                 <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>

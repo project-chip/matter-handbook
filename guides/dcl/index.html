@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.832746972349">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.835533490834">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Distributed Compliance Ledger (DCL) | Matter Handbook</title>
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" data-href-light="../../static/logos/favicon.svg" data-href-dark="../../static/logos/favicon-dark.svg" href="../../static/logos/favicon.svg" />
-    <link href="../../resources/css/retype.css?v=4.5.3.832746972349" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.835533490834" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.832746972349" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.832746972349" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.835533490834" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.835533490834" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -189,6 +189,12 @@
 <h1 id="distributed-compliance-ledger-dcl">Distributed Compliance Ledger (DCL)</h1>
 <h2 id="dcl-introduction">DCL Introduction</h2>
 <p>The DCL is a blockchain-based system owned and hosted by Alliance members. It is used by the Matter protocol for storing information such as:</p>
+<retype-table copy-text="| Information          | Description                                               | Account Role involved                                                    |
+| -------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Vendor               | The manufacturer or vendor of a device. | Data is entered by an approved Vendor account.                                             |
+| Product              | The product device including description, software version, OTA information, etc. | Data is entered by an approved Vendor account.   |
+| Compliance status    | The certification status including certification ID, certification date, etc. | Data is entered by the Alliance's Certification Center account.|
+| PAA Root CAs         | Product Attestation Authorities (PAA) Root CAs used by commissioners during Device Attestation process. | Data is proposed by the Alliance's Trustee and approved by other DCL Trustees.|">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -222,8 +228,14 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Additional information available in the <a href="https://groups.csa-iot.org/wg/members-all/document/26075" class="outbound" target="_blank"><span>Distributed Compliance Ledger (DCL) Policies, Procedure and Governance</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <h3 id="types-of-nodes-that-operate-in-the-dcl">Types of Nodes that Operate in the DCL</h3>
+<retype-table copy-text="| Type of Node         | Description                                                                                                                                          |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Validator Node (VN)  | Participates in creating the consensus process to add information into the ledger. The consensus is the process by which the nodes agree on the state and data of the blockchain, ensuring all nodes have a consistent ledger while verifying the validity of transactions.                                                                                                                                       |
+| Sentry Node (SN)     | Doesn't participate in consensus and wraps the VN representing it for the rest of the network as one of the ways for DDoS and access protection.    |
+| Observer Node (ON)   | Doesn't participate in consensus and is optimized for public data read and authenticated write interactions with the ledger.                        |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -248,7 +260,15 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <h3 id="types-of-account-roles-that-can-interact-with-the-dcl">Types of Account Roles that Can Interact with the DCL</h3>
+<retype-table copy-text="| Account Role         | Description                                                                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Trustee              | Entrusted to approve or deny other DCL roles and PAA Root CAs in the ledger, as well as to disable Validator Nodes.                               |
+| Node Admin           | Can instantiate a single Validator Node.                                                                                                          |
+| Vendor               | Can write vendor and product information to the ledger. Alliance members can have one or more vendor accounts.                                    |
+| Vendor Admin         | Can add and update the Vendor information table of the ledger.                                                                                    |
+| Certification Center | Can submit, update, delete or revoke certification status of a product based on the Certification application in the Certification Tool.          |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -281,7 +301,12 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <h3 id="main-net-and-test-net">Main-Net and Test-Net</h3>
+<retype-table copy-text="| DCL Deployment       | Description                                                                                                                                                |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Main-Net             |  The production environment that is utilized by the public. Transactions on the Main-Net involve real products and data.          |
+| Test-Net             |  Used for testing and development purposes. It provides a safe environment for experimentation and troubleshooting before deploying to the Main-Net. |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -302,6 +327,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <h3 id="access-and-interaction-with-the-dcl">Access and interaction with the DCL</h3>
 <ul>
 <li>
@@ -358,6 +384,11 @@ Refer to available documentation: <a href="https://zigbee-alliance.github.io/dis
 <p>An Observer Node (ON) offers APIs or Web User Interfaces for users or systems to interact with the DCL. This facilitates both manual and automated authorized writes, as well as public queries to the DCL.</p>
 <p>It is not a requirement to deploy an Observer Node. The Alliance has ONs available in various regions across the globe, including trusted ONs managed by our members. This ensures broad accessibility and reliable interaction with the DCL from different locations.</p>
 <h4 id="main-net-public-ons">Main-Net Public ONs</h4>
+<retype-table copy-text="| Host Owner       | Region       | Web User Interface                                                | URL for API                 | REST    | RPC     | gRPC  |
+| ---------------- | ------------ | ----------------------------------------------------------------- | --------------------------- | ------- | ------- | ----- |
+| The Alliance     | US, EU       | [https://webui.dcl.csa-iot.org](https://webui.dcl.csa-iot.org)    | on.dcl.csa-iot.org          | 443     | 26657   | 8443  |
+| TrustAsia        | CN           | [https://main-net.trustasia.com](https://main-net.trustasia.com)  | on.main-net.trustasia.com   | 443     | 26657   | 8443  |
+| Tuya             | CN           | N/A                                                               | on-dcl.tuyacn.com           | 1317    | 26657   | 9090  |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -402,7 +433,13 @@ Refer to available documentation: <a href="https://zigbee-alliance.github.io/dis
 </tbody>
 </table>
 </div>
+</retype-table>
 <h4 id="test-net-public-ons">Test-Net Public ONs</h4>
+<retype-table copy-text="| Host Owner       | Region       | Web User Interface                                                                  | URL for API                 | REST    | RPC     | gRPC  |
+| ---------------- | ------------ | ----------------------------------------------------------------------------------- | --------------------------- | ------- | ------- | ----- |
+| The Alliance     | US, EU       | [https://testnet.iotledger.io](https://testnet.iotledger.io)&lt;br&gt;(hosted by Comcast) | on.test-net.dcl.csa-iot.org |  443    | 26657   | 8443  |
+| TrustAsia        | CN           | [https://test-net.trustasia.com](https://test-net.trustasia.com)                    | on.test-net.trustasia.com   |  443    | 26657   | 8443  |
+| Tuya             | CN           | N/A                                                                                 | on-dcl-testnet.tuyacn.com   | 1317    | 26657   | 9090  |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -447,6 +484,7 @@ Refer to available documentation: <a href="https://zigbee-alliance.github.io/dis
 </tbody>
 </table>
 </div>
+</retype-table>
 <h2 id="faqs">FAQs</h2>
 <h3 id="why-is-my-vendor-information-not-listed-in-the-dcl">Why Is My Vendor Information Not Listed in the DCL?</h3>
 <p>Each member must add their own Vendor information using an approved Vendor account.</p>
@@ -460,13 +498,7 @@ DCL information is ready.</p>
 <h2 id="contact">Contact</h2>
 <p>For any questions related to the DCL, please contact the DCL Admin (<a href="mailto:dcl-admin@csa-iot.org">dcl-admin@csa-iot.org</a>).</p>
 
-                <div id="retype-tags" class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 mt-6 mb-6 clear-both">
                 
-                    <time id="retype-last-updated" class="text-sm whitespace-nowrap text-base-text-muted ml-auto" datetime="2025-11-06T21:28:34" title="2025-11-06" data-absolute-label="Last updated on 2025-11-06" data-absolute-label-html="Last updated on 2025-11-06" data-relative-template="Last updated {0}" data-relative-template-html="Last updated RETYPETEMPLATELASTUPDATEDVALUETOKEN">
-                        Last updated on 2025-11-06
-                    </time>
-                </div>
-
                 <!-- Required only on API pages -->
                 <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
             </div>
