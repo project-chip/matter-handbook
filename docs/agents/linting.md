@@ -5,6 +5,17 @@ Actions (`.github/workflows/vale.yml`).
 
 ## Running Vale locally
 
+This repo uses [mise-en-place](https://mise.jdx.dev/) to install Vale at the
+same version used in CI. From the repo root:
+
+```sh
+mise install   # installs the pinned Vale (and Retype) versions from mise.toml
+mise exec -- vale src/
+```
+
+If you have Vale installed some other way, it will work too, just make sure
+the version matches the one pinned in `mise.toml` (and `.github/workflows/vale.yml`).
+
 ```sh
 vale src/
 ```

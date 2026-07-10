@@ -39,11 +39,21 @@
   `.github/vale/config/`.
 - **`.devcontainer/devcontainer.json`** — Dev Container using the official
   Retype Docker image.
+- **`mise.toml`** — [mise-en-place](https://mise.jdx.dev/) config that installs
+  Vale and Retype locally, pinned to the same versions used in CI
+  (`.github/workflows/vale.yml`) and the Dev Container
+  (`.devcontainer/devcontainer.json`). Run `mise install` once, then prefix
+  commands with `mise exec --` (e.g. `mise exec -- vale src/`) or run
+  `mise activate` in your shell so `vale` and `retype` are on `PATH` directly.
 
 ## Build and preview
 
 The recommended workflow is the VS Code Dev Container (`retypeapp/retype:4.4.0`).
 Reopen the project in the container, then run a build command in the terminal.
+
+Alternatively, if you have [mise](https://mise.jdx.dev/) installed, run
+`mise install` from the repo root to get local copies of Vale and Retype
+without needing the Dev Container.
 
 ```sh
 retype build             # Build the English site to .retype/
