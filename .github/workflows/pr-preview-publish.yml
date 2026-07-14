@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   build:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     name: Build (PR Head)
     uses: ./.github/workflows/retype-build.yml
     with:
@@ -25,6 +26,7 @@ jobs:
       retype_license: ${{ secrets.RETYPE_LICENSE_PR_PREVIEW }}
 
   deploy:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     name: Deploy preview
     needs: build
     runs-on: ubuntu-22.04
