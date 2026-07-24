@@ -1,0 +1,8 @@
+[tools]
+# Vale version pinned to match `.github/workflows/vale.yml`
+vale = "3.15.1"
+# Retype version pinned to match `.devcontainer/devcontainer.json`
+"npm:retypeapp" = "4.6.0"
+
+[settings]
+experimental = true

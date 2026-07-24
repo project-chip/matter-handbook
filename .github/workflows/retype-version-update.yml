@@ -19,11 +19,11 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Get latest Retype version
         id: get_version
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const release = await github.rest.repos.getLatestRelease({
