@@ -4,7 +4,7 @@ order: 97
 ---
 # Matter Product Development Best Practices
 
-This document outlines best practices for developing Matter enabled smart home products, drawing from industry best practices.
+This document outlines best practices for developing Matter-enabled smart home products, drawing from industry best practices.
 
 ## Overview of Product Development Process Stages
 
