@@ -11,7 +11,7 @@ This document outlines best practices for developing Matter-enabled smart home p
 The Product Development Process is a phased approach used for hardware development, from concept to end-of-life. Each phase has specific goals, activities, and exit criteria to ensure readiness for the next stage.
 
 1. **Investigation:** Exploring opportunities, technologies, and business justification.
-2. **Define:** Define product concept, features, schedule, and cost goals.
+2. **Define:** Establish product concept, features, schedule, and cost goals.
 3. **Develop:** Iteratively designing and defining the product, validating early assumptions.
 4. **Prototyping:** Building first form-factor units to test core design and functionality.
 5. **Engineering Verification Testing (EVT):** Validating engineering design with production-intent parts.
