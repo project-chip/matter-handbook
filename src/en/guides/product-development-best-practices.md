@@ -86,7 +86,7 @@ The Product Development Process is a phased approach used for hardware developme
 
 **Matter Specific Activities:**
 
-* **Stack Integration:** Define how Matter stack will be integrated into the software architecture. If relevant, define how the Thread stack will be integrated into the software architecture.
+* **Stack Integration:** Define how the Matter stack will be integrated into the software architecture. If relevant, define how the Thread stack will be integrated into the software architecture.
 * **Core Feature Prototyping:** Implement initial integration of Matter stack, conduct basic network connectivity tests, and test device-type-specific cluster logic on reference hardware.
 
 **Exit Criteria:**
