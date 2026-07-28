@@ -211,7 +211,7 @@ The Product Development Process is a phased approach used for hardware developme
 
 **Matter Specific Activities:**
 
-* **0-Day OTA Update Preparation:** If an update is required immediately at launch (to address multi-admin bugs or interoperability edge cases found after FSI lock), ensure the OTA infrastructure and software image are ready and thoroughly tested across major ecosystems.
+* **Day-0 OTA Update Preparation:** If an update is required immediately at launch (to address multi-admin bugs or interoperability edge cases found after FSI lock), ensure the OTA infrastructure and software image are ready and thoroughly tested across major ecosystems.
   * Leverage Matter FastTrack Recertification program to quickly certify updated image if relevant.
   * Consider OTA update delivery strategy for major ecosystems as some ecosystems will require leveraging their portal to upload and stage OTA updates.
 
