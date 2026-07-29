@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.837346556105">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.838648284200">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" data-href-light="../static/logos/favicon.svg" data-href-dark="../static/logos/favicon-dark.svg" href="../static/logos/favicon.svg" />
-    <link href="../resources/css/retype.css?v=4.6.0.837346556105" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.838648284200" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.837346556105" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.838648284200" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.837346556105" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.838648284200" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -189,41 +189,80 @@
 | AoE      | Anywhere on Earth. This acronym is commonly used when discussing deadlines to clarify the exact end time.                                                                 |
 | AsciiDoc | Markup language we use to write the specification and test plans. [AsciiDoc](https://asciidoc.org/)                                                                       |
 | ATL      | Authorized Test Laboratory. ATLs run the tests required to certify devices.                                                                                               |
+| BLE      | Bluetooth Low Energy. BLE is used in many Matter devices for commissioning.                                                                                               |
+| BOM      | Bill of Materials. This term is generally used to refer to the total cost to manufacture one unit of a product.                                                           |
+| BR       | Border Router. This type of router connects two communication protocols. Matter uses both Thread and Wi-Fi as operational transports, and therefore a Thread border router (TBR) is required to route packets between the Thread and Wi-Fi networks.|
+| CA       | Certificate Authority. These entities store, sign, and issue digital certificates. In Matter, the Device attestation certificate chain is backed by a Product Attestation Authority certificate that is issued by a manufacturer CA or the CA of a certificate provider (also called a Public Key Infrastructure (PKI) provider). The Node Operational Certificate (NOC) chains are backed by a Trusted Root Certificate that chains to a CA managed by the Fabric administrator. |
 | CASE     | Certificate Authenticated Session Establishment. This is the session establishment mechanism used during normal Matter operations                                         |
 | Causeway | Site used to store documents and calendars and track group memberships etc. [https://groups.csa-iot.org/](https://groups.csa-iot.org/)                                    |
+| CCB      | Change Control Board. In the Alliance, CCB is also used to refer to issues raised in the CCB system. CCB issues may be raised by members to report issues in either the specification or the test plan. These are most commonly raised for test issues found at certification. The certification section has more information about the [CCB process](../Certification/certifying-a-product/self-pre-test#fixing-bugs). |
 | CD       | Certification Declaration - this declaration is provided by devices to prove they have passed certification                                                               |
 | CHIP     | Matter used to be called Project CHIP (Connected Home over IP) before it got its current name. Much of the SDK still uses that prefix.                                    |
+| CI       | Continuous Integration. This is normally used to refer to the tests performed before pull requests can be merged into any of the Matter-owned repositories.               |
+| CLI      | Command line interface.                                                                                                                                                   |
+| commissioning | This is the process by which Matter devices are attested and issued operational certificates and credentials for the operational network. More information about the commissioning process can be found in the [Commissioning guide](../howitworks/commissioning). |
+| CRL      | Certificate revocation list. This is a list of certificates that were previously issued by a CA, but that have since been revoked.                                        |
 | CSA      | Connectivity Standards Alliance - the member-driven organization that manages the Matter standard                                                                         |
 | CSG      | Certification Sub Group [CSG](https://groups.csa-iot.org/wg/matter-csg/workgroup)                                                                                         |
+| CSR      | Certificate signing request. CSRs are used during the commissioning process to issue operational certificates for a node. For more information on the operational certificate signing process, please see the [Commissioning](../HowItWorks/Commisioning) section of the handbook. |
+| CTP      | Certification transfer program. This program is used to allow companies to white-label devices that were previously certified by another member company. More information on the [Certification Transfer Program](https://csa-iot.org/certification/transfer-program/) can be found on the website.|
 | DAC      | Device Attestation Certificates. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                                          |
+| DCL      | Distributed compliance ledger. This system is used to distribute additional information about Matter products. Please see the [DCL guide](../Guides/DistributedComplianceLedger/) for more information.|
 | DM       | Data Model. The data model describes the organization of data within a cluster. DM is sometimes also used to refer to the DMTT.                                           |
 | DMTT     | Data Model Tiger Team.                                                                                                                                                    |
 | DNS-SD   | Domain name service (DNS) service discovery. This is the mechanism used to locate Matter devices on the IP network                                                        |
 | DRLC     | Demand Response Load Control                                                                                                                                              |
+| EP       | Used in some documents to refer to an endpoint on a Matter node. The [Data model](../HowItWorks/DataModel) section has information on Matter nodes and endpoints.         |
 | EVSE     | Electric Vehicle Supply Equipment                                                                                                                                         |
+| FastTrack| Matter FastTrack Recertification is a program designed to streamline the recertification process for Matter-certified products. You can find more information about this at the [Matter FastTrack Recertification FAQ](../Certification/MatterFastTrackRecertificationFAQ).|
+| FRP      | FastTrack Recertification program. See FastTrack.                                                                                                                         |
+| HVAC     | Heating, Ventilation, and Air Conditioning. In the context of Matter, HVAC refers to the category of smart home devices that control environmental conditions within a building.|
+| HRAP     | Home Routers and Access Points. This is the tiger team working on Matter support for networking equipment.|
+| IDM      | Interaction and Data Model. This term is used within the context of the test plans to refer to tests that are testing the underlying interaction model layers and the conformance of the data model elements to the specification. |
+| IM       | Interaction Model. The [Interaction Model](../HowItWorks/InteractionModel/) section has more information on this layer. |
 | ICAC     | Intermediate Certificate Authority Certificate See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                     |
 | ICD      | Intermittently Connected Devices. These device can sleep for relatively long periods and will be unreachable over Matter during these times.                              |
+| MCORE    | MCORE PICS codes describe device elements that are not directly tied to data model elements. For example, TCP support.                                                    |
 | mDNS     | Multicast DNS - the mechanism used to perform DNS-SD over Wi-Fi                                                                                                           |
 | MPSG     | Marketing and Product Sub Group [MPSG](https://groups.csa-iot.org/wg/matter-mpsg/workgroup)                                                                               |
+| MRD      | Market Requirements Document. Large new features are required to have an MRD approved by the MPSG.                                                                        |
+| MRP      | Message Reliability Protocol. The Matter specification uses MRP to provide reliable communication over UDP. MRP includes protocols for message acknowledgements, retransmissions, and duplicate message detection. |
+| MTU      | Maximum Transmission Unit. MTU refers to the largest size of a packet (Protocol Data Unit) that can be transmitted over a network without being fragmented.               |
+| NFR      | New Feature Request. A new feature request is submitted to the MPSG by a team looking to implement a new feature. These are used for medium-sized features that the MPSG determines does not require a full marketing requirements document (MRD), but is too large for a technical change request (TCR). |
 | NOC      | Node operational certificate. See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                                      |
 | NOCSR    | Node Operational Certificate Signing Request. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                                             |
+| NOKP     | Node Operational Key Pair. This is the key pair generated on the device as part of the operational certificate signing process. See [Commissioning](../howitworks/commisioning)|
+| OpenThread | [OpenThread](https://openthread.io/) is an implementation of the Thread protocol.                                                                                       |
+| OTA      | Over The Air. This acronym normally refers to software updates delivered to deployed devices.                                                                             |
 | PAA      | Product Attestation Authority. Root certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)                   |
 | PAI      | Product attestation intermediate - Intermediate certificate for device attestation. See [Attestation](https://handbook.buildwithmatter.com/howitworks/attestation/)       |
+| PAKE     | Password-Authenticated Key Exchange. PAKE is the cryptographic protocol used for key exchange for password-authenticated session establishment (PASE) for commissioning. Matter uses the SPAKE2+ key exchange protocol. |
 | PASE     | Password Authenticated Session Establishment. This is the session establishment mechanism used to commission devices.                                                     |
+| PHY      | PHY refers to the Physical Layer. The PHY is the lowest layer of the network stack, responsible for the actual transmission and reception of raw data bits over a physical medium. |
 | PICS     | Protocol Implementation Conformance Statement. PICS are also used to determine testing requirements for certification                                                     |
-| PID      | Product identifier                                                                                                                                                        |
+| PID      | Product identifier. Product identifiers are allocated by the manufacturer and used to identify individual Matter-enabled products.                                        |
 | PIXIT    | Protocol Implementation eXtra Information for Testing. These are configuration values provided to certification tests.                                                    |
+| PKI      | Public key infrastructure. For Matter, PKI is used for provisioning operational certificates and attesting devices. A &quot;PKI provider&quot; is a company that can provide Matter device attestation certificates for companies that do not run their own certificate authorities. |
+| PR       | Pull Request. This is the mechanism used to contribute to the Matter-owned repositories. Information on [GitHub pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) can be found on the GitHub site.|
 | RCAC     | Root Certificate Authority Certificate. See [Operational Credentials](https://handbook.buildwithmatter.com/howitworks/fabric/)                                            |
 | SDK      | Software development kit - a software package implementing the specification [GitHub](https://github.com/project-chip/connectedhomeip)                                    |
+| SKID     | Subject Key Identifier. This information is used to identify certificates.                                                                                                |
 | spec     | Short for specification. [GitHub](https://github.com/CHIP-Specifications/connectedhomeip-spec)                                                                            |
 | SRP      | Service Registration Protocol. This is the mechanism used to register thread devices for DNS-SD. Border routers implement this protocol to allow Thread device discovery. |
 | SVE      | Specification Validation Event - this follows the test events and acts as the final check on the certification package for a release.                                     |
 | SWTT     | [Software development tiger team](https://groups.csa-iot.org/wg/matter-tsg-swd/workgroup). This is the group of people working on the SDK.                                |
+| TCOC     | Testing and Certification Oversight Committee. This is an Alliance board-level committee that is responsible for overseeing the certification programs of all the working groups. |
+| TCP      | Transmission Control Protocol. TCP is a reliable, connection-oriented network transmission protocol. TCP is a recent addition to the Matter specification, used primarily by the camera stack to transmit large messages that do not fit into an MTU. |
+| TCR      | Technical Change Request. A technical change request is used for small changes to existing specification elements. These are intended to be a lightweight process for small improvements. |
 | TE       | Test Event. These events are held during development to verify that test scripts and SDK development are on track.                                                        |
+| TLS      | Transport Layer Security. TLS is a cryptographic protocol used for secure communication over a network. TLS is used by camera device types.                               |
+| TLV      | Tag-Length-Value. The Matter encoding specification uses a TLV encoding for transmission of data.                                                                         |
 | TSG      | Technical Sub Group [TSG](https://groups.csa-iot.org/wg/matter-tsg/workgroup)                                                                                             |
 | TT       | Tiger team - a small group focused on one activity or feature.                                                                                                            |
-| VID      | Vendor identifier                                                                                                                                                         |
-| WG       | Work Group. [Matter](https://groups.csa-iot.org/wg/matter-wg/workgroup) is a working group in the Alliance.                                                               |">
+| UDP      | User Datagram Protocol. UDP is a connectionless network transmission protocol. UDP is used for most Matter communication using MRP for reliability.                       |
+| VID      | Vendor identifier. VIDs are allocated by the Alliance (see [Membership](../Certification/certifying-a-product/membership/))                                               |
+| WG       | Work Group. [Matter](https://groups.csa-iot.org/wg/matter-wg/workgroup) is a working group in the Alliance.                                                               |
+| YAML     | YAML Ain't Markup Language. This is a key-value format used primarily for things like configuration files. In Matter, some certification tests are written in YAML. Information about Matter certification YAML can be found in the [YAML testing guide](https://project-chip.github.io/connectedhomeip-doc/testing/yaml.html). |">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -262,12 +301,32 @@
 <td>Authorized Test Laboratory. ATLs run the tests required to certify devices.</td>
 </tr>
 <tr>
+<td>BLE</td>
+<td>Bluetooth Low Energy. BLE is used in many Matter devices for commissioning.</td>
+</tr>
+<tr>
+<td>BOM</td>
+<td>Bill of Materials. This term is generally used to refer to the total cost to manufacture one unit of a product.</td>
+</tr>
+<tr>
+<td>BR</td>
+<td>Border Router. This type of router connects two communication protocols. Matter uses both Thread and Wi-Fi as operational transports, and therefore a Thread border router (TBR) is required to route packets between the Thread and Wi-Fi networks.</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>Certificate Authority. These entities store, sign, and issue digital certificates. In Matter, the Device attestation certificate chain is backed by a Product Attestation Authority certificate that is issued by a manufacturer CA or the CA of a certificate provider (also called a Public Key Infrastructure (PKI) provider). The Node Operational Certificate (NOC) chains are backed by a Trusted Root Certificate that chains to a CA managed by the Fabric administrator.</td>
+</tr>
+<tr>
 <td>CASE</td>
 <td>Certificate Authenticated Session Establishment. This is the session establishment mechanism used during normal Matter operations</td>
 </tr>
 <tr>
 <td>Causeway</td>
 <td>Site used to store documents and calendars and track group memberships etc. <a href="https://groups.csa-iot.org/" class="outbound" target="_blank"><span>https://groups.csa-iot.org/</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
+</tr>
+<tr>
+<td>CCB</td>
+<td>Change Control Board. In the Alliance, CCB is also used to refer to issues raised in the CCB system. CCB issues may be raised by members to report issues in either the specification or the test plan. These are most commonly raised for test issues found at certification. The certification section has more information about the <a href="../certification/certifying-a-product/self-pre-test/#fixing-bugs">CCB process</a>.</td>
 </tr>
 <tr>
 <td>CD</td>
@@ -278,6 +337,22 @@
 <td>Matter used to be called Project CHIP (Connected Home over IP) before it got its current name. Much of the SDK still uses that prefix.</td>
 </tr>
 <tr>
+<td>CI</td>
+<td>Continuous Integration. This is normally used to refer to the tests performed before pull requests can be merged into any of the Matter-owned repositories.</td>
+</tr>
+<tr>
+<td>CLI</td>
+<td>Command line interface.</td>
+</tr>
+<tr>
+<td>commissioning</td>
+<td>This is the process by which Matter devices are attested and issued operational certificates and credentials for the operational network. More information about the commissioning process can be found in the <a href="../howitworks/commissioning">Commissioning guide</a>.</td>
+</tr>
+<tr>
+<td>CRL</td>
+<td>Certificate revocation list. This is a list of certificates that were previously issued by a CA, but that have since been revoked.</td>
+</tr>
+<tr>
 <td>CSA</td>
 <td>Connectivity Standards Alliance - the member-driven organization that manages the Matter standard</td>
 </tr>
@@ -286,8 +361,20 @@
 <td>Certification Sub Group <a href="https://groups.csa-iot.org/wg/matter-csg/workgroup" class="outbound" target="_blank"><span>CSG</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
 </tr>
 <tr>
+<td>CSR</td>
+<td>Certificate signing request. CSRs are used during the commissioning process to issue operational certificates for a node. For more information on the operational certificate signing process, please see the <a href="../howitworks/commisioning">Commissioning</a> section of the handbook.</td>
+</tr>
+<tr>
+<td>CTP</td>
+<td>Certification transfer program. This program is used to allow companies to white-label devices that were previously certified by another member company. More information on the <a href="https://csa-iot.org/certification/transfer-program/" class="outbound" target="_blank"><span>Certification Transfer Program</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> can be found on the website.</td>
+</tr>
+<tr>
 <td>DAC</td>
 <td>Device Attestation Certificates. See <a href="https://handbook.buildwithmatter.com/howitworks/attestation/" class="outbound" target="_blank"><span>Attestation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
+</tr>
+<tr>
+<td>DCL</td>
+<td>Distributed compliance ledger. This system is used to distribute additional information about Matter products. Please see the <a href="../guides/distributedcomplianceledger/">DCL guide</a> for more information.</td>
 </tr>
 <tr>
 <td>DM</td>
@@ -306,8 +393,36 @@
 <td>Demand Response Load Control</td>
 </tr>
 <tr>
+<td>EP</td>
+<td>Used in some documents to refer to an endpoint on a Matter node. The <a href="../howitworks/datamodel">Data model</a> section has information on Matter nodes and endpoints.</td>
+</tr>
+<tr>
 <td>EVSE</td>
 <td>Electric Vehicle Supply Equipment</td>
+</tr>
+<tr>
+<td>FastTrack</td>
+<td>Matter FastTrack Recertification is a program designed to streamline the recertification process for Matter-certified products. You can find more information about this at the <a href="../certification/matterfasttrackrecertificationfaq">Matter FastTrack Recertification FAQ</a>.</td>
+</tr>
+<tr>
+<td>FRP</td>
+<td>FastTrack Recertification program. See FastTrack.</td>
+</tr>
+<tr>
+<td>HVAC</td>
+<td>Heating, Ventilation, and Air Conditioning. In the context of Matter, HVAC refers to the category of smart home devices that control environmental conditions within a building.</td>
+</tr>
+<tr>
+<td>HRAP</td>
+<td>Home Routers and Access Points. This is the tiger team working on Matter support for networking equipment.</td>
+</tr>
+<tr>
+<td>IDM</td>
+<td>Interaction and Data Model. This term is used within the context of the test plans to refer to tests that are testing the underlying interaction model layers and the conformance of the data model elements to the specification.</td>
+</tr>
+<tr>
+<td>IM</td>
+<td>Interaction Model. The <a href="../howitworks/interactionmodel/">Interaction Model</a> section has more information on this layer.</td>
 </tr>
 <tr>
 <td>ICAC</td>
@@ -318,12 +433,32 @@
 <td>Intermittently Connected Devices. These device can sleep for relatively long periods and will be unreachable over Matter during these times.</td>
 </tr>
 <tr>
+<td>MCORE</td>
+<td>MCORE PICS codes describe device elements that are not directly tied to data model elements. For example, TCP support.</td>
+</tr>
+<tr>
 <td>mDNS</td>
 <td>Multicast DNS - the mechanism used to perform DNS-SD over Wi-Fi</td>
 </tr>
 <tr>
 <td>MPSG</td>
 <td>Marketing and Product Sub Group <a href="https://groups.csa-iot.org/wg/matter-mpsg/workgroup" class="outbound" target="_blank"><span>MPSG</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
+</tr>
+<tr>
+<td>MRD</td>
+<td>Market Requirements Document. Large new features are required to have an MRD approved by the MPSG.</td>
+</tr>
+<tr>
+<td>MRP</td>
+<td>Message Reliability Protocol. The Matter specification uses MRP to provide reliable communication over UDP. MRP includes protocols for message acknowledgements, retransmissions, and duplicate message detection.</td>
+</tr>
+<tr>
+<td>MTU</td>
+<td>Maximum Transmission Unit. MTU refers to the largest size of a packet (Protocol Data Unit) that can be transmitted over a network without being fragmented.</td>
+</tr>
+<tr>
+<td>NFR</td>
+<td>New Feature Request. A new feature request is submitted to the MPSG by a team looking to implement a new feature. These are used for medium-sized features that the MPSG determines does not require a full marketing requirements document (MRD), but is too large for a technical change request (TCR).</td>
 </tr>
 <tr>
 <td>NOC</td>
@@ -334,6 +469,18 @@
 <td>Node Operational Certificate Signing Request. See <a href="https://handbook.buildwithmatter.com/howitworks/attestation/" class="outbound" target="_blank"><span>Attestation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
 </tr>
 <tr>
+<td>NOKP</td>
+<td>Node Operational Key Pair. This is the key pair generated on the device as part of the operational certificate signing process. See <a href="../howitworks/commisioning">Commissioning</a></td>
+</tr>
+<tr>
+<td>OpenThread</td>
+<td><a href="https://openthread.io/" class="outbound" target="_blank"><span>OpenThread</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> is an implementation of the Thread protocol.</td>
+</tr>
+<tr>
+<td>OTA</td>
+<td>Over The Air. This acronym normally refers to software updates delivered to deployed devices.</td>
+</tr>
+<tr>
 <td>PAA</td>
 <td>Product Attestation Authority. Root certificate for device attestation. See <a href="https://handbook.buildwithmatter.com/howitworks/attestation/" class="outbound" target="_blank"><span>Attestation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
 </tr>
@@ -342,8 +489,16 @@
 <td>Product attestation intermediate - Intermediate certificate for device attestation. See <a href="https://handbook.buildwithmatter.com/howitworks/attestation/" class="outbound" target="_blank"><span>Attestation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
 </tr>
 <tr>
+<td>PAKE</td>
+<td>Password-Authenticated Key Exchange. PAKE is the cryptographic protocol used for key exchange for password-authenticated session establishment (PASE) for commissioning. Matter uses the SPAKE2+ key exchange protocol.</td>
+</tr>
+<tr>
 <td>PASE</td>
 <td>Password Authenticated Session Establishment. This is the session establishment mechanism used to commission devices.</td>
+</tr>
+<tr>
+<td>PHY</td>
+<td>PHY refers to the Physical Layer. The PHY is the lowest layer of the network stack, responsible for the actual transmission and reception of raw data bits over a physical medium.</td>
 </tr>
 <tr>
 <td>PICS</td>
@@ -351,11 +506,19 @@
 </tr>
 <tr>
 <td>PID</td>
-<td>Product identifier</td>
+<td>Product identifier. Product identifiers are allocated by the manufacturer and used to identify individual Matter-enabled products.</td>
 </tr>
 <tr>
 <td>PIXIT</td>
 <td>Protocol Implementation eXtra Information for Testing. These are configuration values provided to certification tests.</td>
+</tr>
+<tr>
+<td>PKI</td>
+<td>Public key infrastructure. For Matter, PKI is used for provisioning operational certificates and attesting devices. A &quot;PKI provider&quot; is a company that can provide Matter device attestation certificates for companies that do not run their own certificate authorities.</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>Pull Request. This is the mechanism used to contribute to the Matter-owned repositories. Information on <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests" class="outbound" target="_blank"><span>GitHub pull requests</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> can be found on the GitHub site.</td>
 </tr>
 <tr>
 <td>RCAC</td>
@@ -364,6 +527,10 @@
 <tr>
 <td>SDK</td>
 <td>Software development kit - a software package implementing the specification <a href="https://github.com/project-chip/connectedhomeip" class="outbound" target="_blank"><span>GitHub</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></td>
+</tr>
+<tr>
+<td>SKID</td>
+<td>Subject Key Identifier. This information is used to identify certificates.</td>
 </tr>
 <tr>
 <td>spec</td>
@@ -382,8 +549,28 @@
 <td><a href="https://groups.csa-iot.org/wg/matter-tsg-swd/workgroup" class="outbound" target="_blank"><span>Software development tiger team</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. This is the group of people working on the SDK.</td>
 </tr>
 <tr>
+<td>TCOC</td>
+<td>Testing and Certification Oversight Committee. This is an Alliance board-level committee that is responsible for overseeing the certification programs of all the working groups.</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>Transmission Control Protocol. TCP is a reliable, connection-oriented network transmission protocol. TCP is a recent addition to the Matter specification, used primarily by the camera stack to transmit large messages that do not fit into an MTU.</td>
+</tr>
+<tr>
+<td>TCR</td>
+<td>Technical Change Request. A technical change request is used for small changes to existing specification elements. These are intended to be a lightweight process for small improvements.</td>
+</tr>
+<tr>
 <td>TE</td>
 <td>Test Event. These events are held during development to verify that test scripts and SDK development are on track.</td>
+</tr>
+<tr>
+<td>TLS</td>
+<td>Transport Layer Security. TLS is a cryptographic protocol used for secure communication over a network. TLS is used by camera device types.</td>
+</tr>
+<tr>
+<td>TLV</td>
+<td>Tag-Length-Value. The Matter encoding specification uses a TLV encoding for transmission of data.</td>
 </tr>
 <tr>
 <td>TSG</td>
@@ -394,12 +581,20 @@
 <td>Tiger team - a small group focused on one activity or feature.</td>
 </tr>
 <tr>
+<td>UDP</td>
+<td>User Datagram Protocol. UDP is a connectionless network transmission protocol. UDP is used for most Matter communication using MRP for reliability.</td>
+</tr>
+<tr>
 <td>VID</td>
-<td>Vendor identifier</td>
+<td>Vendor identifier. VIDs are allocated by the Alliance (see <a href="../certification/certifying-a-product/membership/">Membership</a>)</td>
 </tr>
 <tr>
 <td>WG</td>
 <td>Work Group. <a href="https://groups.csa-iot.org/wg/matter-wg/workgroup" class="outbound" target="_blank"><span>Matter</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> is a working group in the Alliance.</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td>YAML Ain&#x27;t Markup Language. This is a key-value format used primarily for things like configuration files. In Matter, some certification tests are written in YAML. Information about Matter certification YAML can be found in the <a href="https://project-chip.github.io/connectedhomeip-doc/testing/yaml.html" class="outbound" target="_blank"><span>YAML testing guide</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</td>
 </tr>
 </tbody>
 </table>
