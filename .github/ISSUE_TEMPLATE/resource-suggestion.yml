@@ -1,6 +1,5 @@
 name: 🔗 Suggest a resource
 description: Suggest a public learning resource for the More Matter page.
-title: "[Resource]: "
 labels:
   - new content
 assignees:
