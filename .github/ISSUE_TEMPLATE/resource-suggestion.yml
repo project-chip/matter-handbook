@@ -1,0 +1,60 @@
+name: 🔗 Suggest a resource
+description: Suggest a public learning resource for the More Matter page.
+title: "[Resource]: "
+labels:
+  - new content
+assignees:
+  - p0fi
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand More Matter. Use this form to suggest a public tutorial, course, documentation site, video, or example project maintained outside the Matter Handbook.
+
+  - type: input
+    id: resource-name
+    attributes:
+      label: 📚 Resource name
+      description: Enter the title readers will recognize.
+      placeholder: Matter Fundamentals
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 🔗 Resource URL
+      description: Link directly to the resource rather than a general company home page when possible.
+      placeholder: https://example.com/matter/resource
+    validations:
+      required: true
+
+  - type: input
+    id: publisher
+    attributes:
+      label: 🏢 Publisher
+      description: Name the organization or project that maintains the resource.
+      placeholder: Example Semiconductor
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: value
+    attributes:
+      label: 👥 What does it cover, and who is it for?
+      description: Briefly explain what readers can learn and who would benefit.
+      placeholder: This resource introduces commissioning and walks embedded developers through...
+    validations:
+      required: true
+
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: ✅ Quick checks
+      options:
+        - label: I checked that the link opens and points to the resource described above.
+          required: true
+        - label: To the best of my knowledge, this resource is public and does not contain Alliance-confidential information.
+          required: true
