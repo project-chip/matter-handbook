@@ -15,4 +15,4 @@ The Matter specification, SDK documentation, and Connectivity Standards Alliance
 
 Found another public technical resource, or a broken link? Raise an issue on the GitHub repository.
 
-[!button variant="contrast" icon="mark-github" text="Suggest a Resource" target="blank"](https://github.com/project-chip/matter-handbook/issues/new)
+[!button variant="contrast" icon="mark-github" text="Suggest a Resource" target="blank"](https://github.com/project-chip/matter-handbook/issues/new?template=resource-suggestion.yml)
