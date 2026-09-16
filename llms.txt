@@ -12,6 +12,7 @@
 - [Glossary & Acronym Decoder](https://handbook.buildwithmatter.com/glossary/index.md): Term
 - [About](https://handbook.buildwithmatter.com/about.md): This handbook helps you plan, build, and ship Matter devices by answering common questions and connecting you to the right resources. You’ll find orientation on working with Alliance Working Groups, foundational Matter concepts, and practical guidance for navigating SDKs and tools.
 - [Creative Commons Attribution 4.0 International](https://handbook.buildwithmatter.com/license.md): Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship.
+- [More Matter](https://handbook.buildwithmatter.com/more-matter.md): Organizations across the Matter ecosystem publish tutorials, courses, documentation, and example projects for developers. These resources complement the official Matter SDK documentation and the material in this handbook.
 
 ## How It Works
 

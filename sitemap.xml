@@ -49,13 +49,16 @@
     <loc>https://handbook.buildwithmatter.com/how-it-works/commisioning/</loc>
   </url>
   <url>
+    <loc>https://handbook.buildwithmatter.com/glossary/</loc>
+  </url>
+  <url>
     <loc>https://handbook.buildwithmatter.com/how-it-works/fabric/</loc>
   </url>
   <url>
-    <loc>https://handbook.buildwithmatter.com/how-it-works/attestation/</loc>
+    <loc>https://handbook.buildwithmatter.com/development/</loc>
   </url>
   <url>
-    <loc>https://handbook.buildwithmatter.com/development/</loc>
+    <loc>https://handbook.buildwithmatter.com/how-it-works/attestation/</loc>
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/guides/</loc>
@@ -70,9 +73,6 @@
     <loc>https://handbook.buildwithmatter.com/alliance/membership/</loc>
   </url>
   <url>
-    <loc>https://handbook.buildwithmatter.com/glossary/</loc>
-  </url>
-  <url>
     <loc>https://handbook.buildwithmatter.com/alliance/what-we-do/</loc>
   </url>
   <url>
@@ -80,6 +80,9 @@
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/alliance/resources/</loc>
+  </url>
+  <url>
+    <loc>https://handbook.buildwithmatter.com/more-matter/</loc>
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/certification/certification-program-development/</loc>
