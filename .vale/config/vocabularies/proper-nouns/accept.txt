@@ -4,6 +4,7 @@ Bonjour
 Certicom
 Comcast
 Dotdot
+Espressif
 Eurocylinder
 Javadoc
 mDNSResponder
