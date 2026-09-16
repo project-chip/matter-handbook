@@ -3,6 +3,8 @@ description: Suggest a public learning resource for the More Matter page.
 title: "[Resource]: "
 labels:
   - new content
+assignees:
+  - p0fi
 body:
   - type: markdown
     attributes:
@@ -36,20 +38,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: format
-    attributes:
-      label: 🧭 Resource type
-      description: Choose the closest match.
-      options:
-        - Documentation
-        - Tutorial or guide
-        - Course or workshop
-        - Video
-        - Example or sample project
-        - Other
-    validations:
-      required: true
 
   - type: textarea
     id: value
@@ -60,18 +48,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: affiliation
-    attributes:
-      label: 🤝 Relationship to the resource
-      description: Disclose any connection to the publisher or resource.
-      options:
-        - No affiliation
-        - I created or contributed to it
-        - I work with the publisher
-        - Other
-    validations:
-      required: true
 
   - type: checkboxes
     id: checks
