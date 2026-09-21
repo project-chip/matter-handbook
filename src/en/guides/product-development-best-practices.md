@@ -167,7 +167,7 @@ The Product Development Process is a phased approach used for hardware developme
 **Matter Specific Activities:**
 
 * **Formal Certification:** Submit DVT units to Authorized Test Laboratories (ATLs) for formal certifications (Regulatory, Safety, Wi-Fi, Bluetooth, Thread, and Matter). Apply for Interoperability testing simultaneously with Matter certification to discover and address issues with popular smart home ecosystems.
-* **Large-Scale Interoperability:** Expand interoperability testing with a wider range of Matter controllers and networking infrastructure (Wi-Fi Routers, Thread Border Routers). Participate in Alliance Test Events.
+* **Large-Scale Interoperability:** Expand interoperability testing with a wider range of Matter controllers and networking infrastructure (Wi-Fi Routers, Thread Border Routers). 
 * **Conduct “Works With” activities for Ecosystems:** Works With programs for ecosystems require distinct activities (such as field testing, automated testing, etc) in order to satisfy requirements for Works With badges. At this stage you should engage with each ecosystem platform, and kick off completing these activities.
 * **Real-World Network Stress Testing:** Passing certification is not a substitute for diligent real-world testing. Extensive field testing in diverse, real-world 3rd-party networking environments and complex multi-admin scenarios with real users is critical prior to launch.
 
