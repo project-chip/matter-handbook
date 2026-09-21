@@ -109,8 +109,8 @@ The Product Development Process is a phased approach used for hardware developme
 
 **Matter Specific Activities:**
 
-* **Core Connectivity Testing:** Verify successful Matter commissioning onto a test fabric -- test certificates may be used. Confirm the device appears correctly with its defined Matter device type and clusters. Verify basic on/off or primary function control via Matter.
 * **Network Joining:** Verify successful joining to a test Ethernet/Wi-Fi/Thread network and test basic network reachability.
+* **Core Connectivity Testing:** Verify successful Matter commissioning onto a test fabric -- test certificates may be used. Confirm the device appears correctly with its defined Matter device type and clusters. Verify basic on/off or primary function control via Matter.
 * **Test Infrastructure Setup:** Set up testbeds and automation frameworks specifically geared for Matter, the chosen network architecture, and multi-ecosystem testing.
 
 **Exit Criteria:**
