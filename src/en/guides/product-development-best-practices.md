@@ -191,7 +191,7 @@ The Product Development Process is a phased approach used for hardware developme
 
 **Matter Specific Activities:**
 
-* **Provisioning Validation:** Ensure the FSI correctly includes all necessary firmware, Matter configurations, and pre-loaded credentials. Validate that the factory lines are successfully and securely injecting individual DACs, discriminators, and PAKE verifiers, and that physical QR codes match the digital records perfectly.
+* **Provisioning Validation:** Ensure the FSI correctly includes all necessary firmware, Matter configurations, and pre-loaded credentials. Validate that the factory lines are successfully and securely injecting individual DACs, discriminators, and PAKE verifiers, and that physical QR codes match the digital records perfectly.  Production DACs must be used at this stage.
 
 **Exit Criteria:**
 
