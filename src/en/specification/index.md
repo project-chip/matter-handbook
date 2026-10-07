@@ -1,33 +1,29 @@
 #
+
 ![|700](/static/logos/matter-spec-logo.svg)
 
 The Matter specification is the technical foundation of the Matter protocol. There are normally two minor releases per year, in Spring and Fall, with optional follow-up patch releases between the minor releases.
 
 ## Latest Release
 
-!!!base :icon-tag: Version 1.5.1 (March 2026)
+!!!base :icon-tag: Version 1.6.0 (June 2026)
 All specification documents are available for download from the Alliance website.
 
 [!button variant="base" icon="download" text="Download Specification"](https://csa-iot.org/developer-resource/specifications-download-request/)
 !!!
 
-### What's New in 1.5.1
+### What's New in 1.6
 
-Building on the camera and video doorbell support introduced in 1.5, this maintenance release focuses on streaming efficiency, media capabilities, and device refinements:
+Matter 1.6 focuses on device setup, device sharing across ecosystems, context-aware thermostat control, and clearer device status information:
 
-- :icon-device-camera-video: **Multi-stream video** - Cameras can now deliver multiple optimized streams simultaneously (e.g. high-res for recording, low-res for mobile, and a separate stream for AI processing), reducing bandwidth overhead.
-- :icon-image: **HEIC snapshots & CMAF streaming** - Snapshot images can use the HEIC codec for better quality at smaller file sizes. Recorded video gains HLS/DASH upload support via the CMAF Interface-2 profile.
-- :icon-arrow-both: **Pan-tilt-zoom improvements** - Greater flexibility for camera positioning, including better support for installations where the home position is at the edge of the rotation range.
-- :icon-bell: **Chime & intercom updates** - Controllers can now request a specific chime sound rather than only the default, enabling per-doorbell or contextual chimes. Intercom devices gain clearer signaling requirements and integrated chime support.
-- :icon-bug: **Bug fixes & clarifications** - Recording configuration validation, doorbell stability improvements, and editorial refinements across the camera-related specifications.
+- :icon-device-mobile: **NFC-based commissioning** - The full commissioning exchange can take place over bidirectional Near Field Communication (NFC), even before a device is fully powered. This provides an alternative to Bluetooth Low Energy (BLE) commissioning for devices such as light bulbs and in-wall switches.
+- :icon-people: **Joint Fabric** - Multiple user-authorized controllers can co-administer one shared Matter fabric through a central datastore. Devices on the Joint Fabric are available to participating controllers without separate setup in each ecosystem.
+- :icon-home: **Thermostat Suggestions** - Ecosystems can send time-limited suggestions tied to thermostat presets. The thermostat can evaluate each suggestion against user preferences, recent manual changes, and current conditions, then explain when it does not follow a suggestion.
+- :icon-info: **Device status and safety information** - Devices can report capabilities and operating limits more consistently. Security sensors gain event history, and smoke and carbon monoxide alarms can report when they are unmounted.
+- :icon-shield: **Partitioned certificate revocation lists** - Certificate revocation information can be split into smaller, independently updated partitions as the number of certified devices grows.
 
-[!ref target="blank" text="Read the full announcement"](https://csa-iot.org/newsroom/matter-1-5-1-enhancing-camera-performance-and-expanding-device-flexibility/)
+[!ref target="blank" text="Read the full announcement"](https://csa-iot.org/newsroom/matter-1-6-enables-more-intuitive-setup-multi-ecosystem-experiences-and-context-driven-control/)
 
-!!!base :icon-lock: Alliance Members
-In-progress drafts of the specification are available through the [Secure Document Access Portal](https://docs.csa-iot.org/) (requires Alliance member login).
-
-Members actively contributing to specification development may submit and review content in the [Specification GitHub Repository](https://github.com/CHIP-Specifications/connectedhomeip-spec). If you are a Participant or Promoter member and need contributor access, please email [help@csa-iot.org](mailto:help@csa-iot.org).
-!!!
 
 ---
 
@@ -49,13 +45,14 @@ Document | Description
 
 The Alliance aims to publish two releases per year. The specification follows a **major.minor.patch** versioning scheme:
 
-- **Minor releases** (e.g. 1.3, 1.4, 1.5) introduce new device types, clusters, and protocol features.
+- **Minor releases** (e.g. 1.4, 1.5, 1.6) introduce new device types, clusters, and protocol features.
 - **Patch releases** (e.g. 1.4.1, 1.5.1) primarily contain corrections and clarifications, but may also include smaller new features.
 
 {.clean .striped .compact}
 Version | Published | Highlights
 --- | --- | ---
-[!badge text="1.5.1" variant="success"] [!badge text="Latest" variant="success"] | March 2026 | Multi-stream video, HEIC/CMAF media
+[!badge text="1.6.0" variant="success"] [!badge text="Latest" variant="success"] | June 2026 | NFC-based commissioning, Joint Fabric, Thermostat Suggestions, device status and security updates
+[!badge text="1.5.1" variant="primary"] | March 2026 | Multi-stream video, HEIC/CMAF media
 [!badge text="1.5" variant="primary"] | November 2025 | Cameras, closures, soil sensors, energy tariffs, TCP transport
 [!badge text="1.4.2" variant="primary"] | August 2025 | Wi-Fi-only commissioning, security enhancements, certifiable scenes
 [!badge text="1.4.1" variant="primary"] | May 2025 | Enhanced Setup Flow, NFC onboarding, multi-device QR code
