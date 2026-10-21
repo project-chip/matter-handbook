@@ -59,3 +59,4 @@
 ## Guides
 
 - [Distributed Compliance Ledger (DCL)](https://handbook.buildwithmatter.com/guides/dcl.md): The DCL is a blockchain-based system owned and hosted by Alliance members. It is used by the Matter protocol for storing information such as:
+- [Matter Product Development Best Practices](https://handbook.buildwithmatter.com/guides/product-development-best-practices.md): This document outlines best practices for developing Matter-enabled smart home products, drawing from industry best practices.

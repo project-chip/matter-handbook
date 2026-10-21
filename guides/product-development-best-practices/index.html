@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.845930076988">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.6.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Matter Product Development Best Practices | Matter Handbook</title>
+    <meta name="title" content="Matter Product Development Best Practices | Matter Handbook">
+    <meta name="description" content="This document outlines best practices for developing Matter-enabled smart home products, drawing from industry best practices.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://handbook.buildwithmatter.com/guides/product-development-best-practices/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://handbook.buildwithmatter.com/sitemap.xml">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://handbook.buildwithmatter.com/guides/product-development-best-practices/">
+    <meta property="og:title" content="Matter Product Development Best Practices | Matter Handbook">
+    <meta property="og:description" content="This document outlines best practices for developing Matter-enabled smart home products, drawing from industry best practices.">
+    <meta property="og:site_name" content="">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://handbook.buildwithmatter.com/guides/product-development-best-practices/">
+    <meta name="twitter:title" content="Matter Product Development Best Practices | Matter Handbook">
+    <meta name="twitter:description" content="This document outlines best practices for developing Matter-enabled smart home products, drawing from industry best practices.">
+
+    <!-- Alternate Markdown -->
+    <link rel="alternate" type="text/markdown" href="https://handbook.buildwithmatter.com/guides/product-development-best-practices.md">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" data-href-light="../../static/logos/favicon.svg" data-href-dark="../../static/logos/favicon-dark.svg" href="../../static/logos/favicon.svg" />
+    <link href="../../resources/css/retype.css?v=4.6.0.845930076988" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.845930076988" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.845930076988" data-turbo-eval="false" defer></script>
+
+    <script defer src="https://assets.onedollarstats.com/stonks.js"></script>
+
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="retype-branding-logo" href="https://handbook.buildwithmatter.com/" class="flex items-center leading-snug text-2xl">
+                        <span class="grow-0 shrink-0 overflow-hidden">
+                            <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logos/matter.svg" alt="" width="116" height="40">
+                            <img class="max-h-10 hidden dark:inline-block" src="../../static/logos/matter-dark.svg" alt="" width="116" height="40">
+                        </span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Handbook</span>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../">
+                                <span class="docs-emoji mr-1.5">🇺🇸</span>
+                                <span>English</span>
+                            </a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../ja/">
+                                <span class="docs-emoji mr-1.5">🇯🇵</span>
+                                <span>Japanese</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../">
+                                        <span class="docs-emoji mr-1.5">🇺🇸</span>
+                                        <span>English</span>
+                                    </a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="../../ja/">
+                                        <span class="docs-emoji mr-1.5">🇯🇵</span>
+                                        <span>Japanese</span>
+                                    </a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="relative retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                    <ol role="list">
+                        <li class="pr-4">
+                            <a href="../../" class="pr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../guides/" class="pr-4">
+                                Guides
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../../guides/product-development-best-practices/" class="pr-4">
+                                Product Development Best Practices
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <doc-page-actions></doc-page-actions>
+
+                <!-- Page content  -->
+<h1 id="matter-product-development-best-practices">Matter Product Development Best Practices</h1>
+<p>This document outlines best practices for developing Matter-enabled smart home products, drawing from industry best practices.</p>
+<h2 id="overview-of-product-development-process-stages">Overview of Product Development Process Stages</h2>
+<p>The Product Development Process is a phased approach used for hardware development, from concept to end-of-life. Each phase has specific goals, activities, and exit criteria to ensure readiness for the next stage.</p>
+<ol>
+<li><strong>Investigation:</strong> Exploring opportunities, technologies, and business justification.</li>
+<li><strong>Define:</strong> Establish product concept, features, schedule, and cost goals.</li>
+<li><strong>Develop:</strong> Iteratively designing and defining the product, validating early assumptions.</li>
+<li><strong>Prototyping:</strong> Building first form-factor units to test core design and functionality.</li>
+<li><strong>Engineering Verification Testing (EVT):</strong> Validating engineering design with production-intent parts.</li>
+<li><strong>Development Verification Testing (DVT):</strong> Validating the manufacturing process and readiness for mass production.</li>
+<li><strong>Production Verification Testing (PVT):</strong> Validating mass production processes and producing marketable units.</li>
+<li><strong>Mass Production (MP):</strong> Ramping to full production capacity.</li>
+<li><strong>Product Maintenance:</strong> Ongoing product support, improvements, and end-of-life management.</li>
+</ol>
+<h2 id="detailed-stages-for-matter-product-development">Detailed Stages for Matter Product Development</h2>
+<h3 id="investigation-stage">Investigation Stage</h3>
+<p><strong>Goal:</strong> To explore potential market opportunities for new Matter devices, assess the technical feasibility of potential solutions, and ensure any pursued concepts align with the company&#x27;s broader strategic objectives and core competencies. This stage is about idea generation, opportunity sizing, and initial risk assessment before significant resources are committed.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Market &amp; User Research:</strong> Analyze market trends in the smart home space and identify unmet user needs or pain points. Conduct foundational user research (e.g., interviews, surveys) to understand user behaviors. Estimate market size and growth potential.</li>
+<li><strong>Initial Estimates:</strong> Develop cost estimates for development and conduct a high-level assessment of technical risks. Generate a range of product concepts and ideas to address the identified opportunities.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Technology Scouting:</strong> Research available System on Chip (SoC) solutions with robust support for Matter, Thread/Wi-Fi, and Bluetooth Low Energy (BLE). Evaluate Matter stacks from silicon vendors, considering power consumption, cost, and software maturity.</li>
+</ul>
+<p><strong>Exit Criteria:</strong></p>
+<ul>
+<li>A clear business opportunity for a Matter device is identified and documented.</li>
+<li>Sufficient evidence suggests technical feasibility at a high level.</li>
+<li>The opportunity aligns with the company&#x27;s strategic direction.</li>
+<li>Internal stakeholders agree to invest resources in further defining a specific product concept.</li>
+</ul>
+<h3 id="define-stage">Define Stage</h3>
+<p><strong>Goal:</strong> To solidify a selected product concept into a well-defined product proposal. This involves detailing key features, defining the target user experience, making critical technology choices, and establishing a preliminary business case, schedule, and resource plan.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Product &amp; UX Definition:</strong> Clearly articulate the product vision, goals, and target users. Develop initial user flows for the device setup and control experience. Create early industrial designs to explore physical form.</li>
+<li><strong>Planning:</strong> Define the Financial Plan, Business Case, and High-Level Schedule. Finalize choices for sensors, connectivity modules, and power sources.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Matter Requirements Definition:</strong>
+<ul>
+<li><strong>Functional (Feature Mapping):</strong> Detail the exact Matter device types and specific standard/custom clusters the product will support to achieve its core use cases.</li>
+<li><strong>Non-Functional (Ecosystem Strategy):</strong> Acknowledge the architectural shift from a closed, single-app ecosystem to a multi-ecosystem, network-dependent environment. Define stringent non-functional requirements (e.g., latency expectations, multi-admin considerations, network architecture Key Performance Indicators (KPIs)) specifically for this complex, highly variable environment.</li>
+</ul>
+</li>
+<li><strong>Comprehensive Matter Lifecycle Planning:</strong> Because Matter operates in a highly dynamic, multi-ecosystem environment, you must draft a lifecycle plan now that accounts for extended software, certification, and post-launch realities. Your plan must define:
+<ul>
+<li><strong>Vendor Engagement Timelines:</strong> Do not wait until development. Engage critical external dependencies during this phase.
+<ul>
+<li><em>PKI Providers:</em> Select and engage a Public Key Infrastructure (PKI) provider for Device Attestation Certificates (DACs) to ensure your factory provisioning infrastructure is ready by EVT.</li>
+<li><em>Authorized Test Labs (ATLs):</em> Lab queues can back up. Scope your testing windows and establish relationships with ATLs now.</li>
+</ul>
+</li>
+<li><strong>The Certification Critical Path:</strong> Understand that Matter certification is a hard blocker for Mass Production. You must obtain a Certification Declaration (CD) <em>before</em> you can legally flash units on the factory line. Plan to begin pre-certification testing during EVT, with final formal certification targeted for early DVT.</li>
+<li><strong>FSI vs. Day-0 OTA Strategy:</strong> Acknowledge that the Factory Shipped Image (FSI) locked during PVT may be out of date by the time the product reaches consumers. Because smart home ecosystems update constantly, interoperability bugs may be discovered between factory lock and retail launch. You must architect your launch schedule to consider the high likelihood of a Day-0 Over-the-Air (OTA) update, reserving development resources specifically to patch multi-ecosystem edge cases right before the product hits the shelves.</li>
+<li><strong>Rapid/FastTrack Recertification Training:</strong> Matter FastTrack Recertification is a program for recertification of previously certified Matter products that reduces the cost and friction involved in releasing software updates for these products. If you discover bugs between factory image lock (PVT) and retail launch, the FastTrack program will be your primary mechanism to deploy a Day-0 patch without restarting a multi-week ATL queue.
+<ul>
+<li>Secure budget and schedule time for your engineering team to attend the <a href="https://handbook.buildwithmatter.com/certification/fast-track-recertification-faq/" class="outbound" target="_blank"><span>mandatory Connectivity Standards Alliance (Alliance) Rapid/FastTrack Recertification Training</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
+</ul>
+</li>
+<li><strong>Ecosystem &quot;Works With&quot; (WW) Badging Strategy:</strong> Matter certification ensures baseline interoperability, but if your marketing and packaging require specific ecosystem badges (e.g., <em>Works with Google Home</em>, <em>Works with Apple Home</em>, <em>Works with Alexa</em>), you must account for this now. Each ecosystem has its own distinct certification programs, legal agreements, and testing queues that run parallel to (and often require) Matter certification.</li>
+<li><strong>Post-Launch Requirements &amp; Resource Allocation:</strong> Matter is not a &quot;ship and forget&quot; protocol. Define the operational budget and engineering resources required for the post-launch phase. This includes monitoring ecosystem changes, addressing security vulnerabilities, fixing bugs and committing to an ongoing OTA cadence to maintain compatibility as the Matter specification inevitably evolves.</li>
+</ul>
+</li>
+<li><strong>End-to-End Testing Strategy:</strong> Outline the high-level technical approach for validating Matter, Wi-Fi/Thread and interoperability across all phases of development. Additionally, define how Matter-specific checks (such as verifying secure DAC injection, validating physical QR codes against digital payloads, confirming basic network joining capability, etc) will be integrated into factory test stations and Outgoing Quality Control (OQC) procedures to prevent defective units from shipping.</li>
+</ul>
+<p><strong>Exit Criteria:</strong></p>
+<ul>
+<li>An approved Product Proposal with cross-functional buy-in.</li>
+<li>A clear path to achieving the desired features, schedule, and cost goals.</li>
+<li>Key technology choices are made, and a viable business case is established.</li>
+</ul>
+<h3 id="develop-stage">Develop Stage</h3>
+<p><strong>Goal:</strong> Mature the product design through iteration and early prototyping (e.g., development boards, non-form factor hardware).</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Architectural Design:</strong> Define the overall system layout including hardware components, Operating System (OS), middleware, and mechanical material selection. Evaluate trade-offs in performance, power consumption, size, cost, and manufacturing feasibility.</li>
+<li><strong>Reference Hardware Bring-up:</strong> Utilize vendor development kits or non-form factor boards to bring up the SoC. Develop low-level drivers and port the target OS.</li>
+<li><strong>Risk &amp; Appearance:</strong> Create non-functional physical models for aesthetics and ergonomics. Identify potential schedule, cost, and manufacturing issues and create mitigation plans.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Stack Integration:</strong> Define how the Matter stack will be integrated into the software architecture. If relevant, define how the Thread stack will be integrated into the software architecture.</li>
+<li><strong>Core Feature Prototyping:</strong> Implement initial integration of Matter stack, conduct basic network connectivity tests, and test device-type-specific cluster logic on reference hardware.</li>
+</ul>
+<p><strong>Exit Criteria:</strong></p>
+<ul>
+<li>A clear and feasible path forward for the product&#x27;s hardware, software, and mechanical design.</li>
+<li>Key technical and design assumptions have been tested and validated through Non-Form Factor (NFF) prototyping.</li>
+<li>Major risks have been identified, with credible mitigation plans in place.</li>
+<li>Sufficient confidence to proceed with designing first form-factor prototypes.</li>
+</ul>
+<h3 id="prototyping-stage">Prototyping Stage</h3>
+<p><strong>Goal:</strong> To build the first form-factor devices to validate core design, hardware/software integration, key technology assumptions, and to identify fundamental risks early.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Hardware Bring Up:</strong> Fabricate and assemble form-factor Printed Circuit Board Assemblies (PCBAs). Perform basic power-on tests, interface validation, and initial Radio Frequency (RF) circuit testing for Wi-Fi/Thread, and BLE.</li>
+<li><strong>Base Firmware:</strong> Integrate initial firmware and conduct software unit/integration tests on the hardware.</li>
+<li><strong>Internal Field Testing:</strong> Ensure internal team members interact with the working prototype for early feedback.</li>
+<li><strong>Updated Risk Assessment:</strong> Leveraging testing data &amp; user feedback, identify and document new key risks in hardware, software, mechanics, and network performance. Develop mitigation plans.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Network Joining:</strong> Verify successful joining to a test Ethernet/Wi-Fi/Thread network and test basic network reachability.</li>
+<li><strong>Core Connectivity Testing:</strong> Verify successful Matter commissioning onto a test fabric -- test certificates may be used. Confirm the device appears correctly with its defined Matter device type and clusters. Verify basic on/off or primary function control via Matter.</li>
+<li><strong>Test Infrastructure Setup:</strong> Set up testbeds and automation frameworks specifically geared for Matter, the chosen network architecture, and multi-ecosystem testing.</li>
+</ul>
+<p><strong>Exit Criteria:</strong></p>
+<ul>
+<li>Core product features demonstrated on form-factor hardware, with basic software/firmware stability.</li>
+<li>Successful Matter commissioning and basic control established.</li>
+<li>Achieve basic network connectivity (Ethernet/Wi-Fi/Thread).</li>
+<li>Major risks identified with viable mitigation strategies.</li>
+<li>Alignment on final product specifications, features, schedule, and cost.</li>
+</ul>
+<h3 id="engineering-verification-testing-evt">Engineering Verification Testing (EVT)</h3>
+<p><strong>Goal:</strong> To verify the engineering design against all functional, performance, reliability, and manufacturing feasibility specifications using production-intent design, materials, and processes.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Comprehensive Hardware Validation:</strong> Build units with hard-tooled parts. Conduct detailed electrical testing, mechanical testing (fit, drop, vibration), thermal testing, and RF tuning.</li>
+<li><strong>Software Maturation:</strong> Achieve feature-complete beta quality. Execute full functional test plans, stability tests, and performance profiling.</li>
+<li><strong>Manufacturing Test Prep:</strong> Develop and validate factory test stations and software.</li>
+<li><strong>Field Testing (General):</strong> Launch an internal field testing program to gather qualitative and quantitative feedback on usability and feature performance.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Matter Self-Testing &amp; Pre-Certification:</strong> <a href="https://handbook.buildwithmatter.com/certification/certifying-a-product/self-pre-test/" class="outbound" target="_blank"><span>Matter self-testing</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> is critical at this stage. Validate spec compliance using the <a href="https://github.com/project-chip/connectedhomeip/tree/master/src/app/tests/suites/certification" class="outbound" target="_blank"><span>YAML</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> or <a href="https://github.com/project-chip/connectedhomeip/tree/master/src/python_testing" class="outbound" target="_blank"><span>Python</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> SDK folders. Run manual verification steps from the <a href="https://groups.csa-iot.org/wg/members-all/document/folder/2269" class="outbound" target="_blank"><span>official release documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. Test with the <a href="https://github.com/project-chip/certification-tool/blob/main/docs/Matter_TH_User_Guide/Matter_TH_User_Guide.adoc" class="outbound" target="_blank"><span>Matter Test Harness</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, as this mimics ATL evaluation.</li>
+<li><strong>In-Depth Protocol Testing:</strong> Conduct commissioning stress tests, multi-admin commissioning scenarios, subscription testing, and group control testing. Test Device Authentication Certificates may be used.
+<ul>
+<li>For Thread devices, test network joining, multi-hop mesh performance, recovery, and power consumption for sleepy end devices.</li>
+</ul>
+</li>
+<li><strong>Network &amp; Ecosystem Interoperability Testing:</strong> Adopt the mindset that in a multi-ecosystem world <em>&quot;network problems are user problems&quot;</em>. Test interoperability with major smart home ecosystems, not just one version of your app. Validate device connectivity with distinct networking infrastructure (Wi-Fi Routers, Thread Border Routers).</li>
+<li><strong>Device Quality Testing:</strong> Protocol conformance testing is not the same as quality testing. The best way to evaluate device quality for Matter devices is by gathering real-world qualitative and quantitative feedback on setup, usability, feature performance, device connectivity, and user-experience in real-world environments.
+<ul>
+<li><strong>Product Development Team Testing:</strong> Ensure the majority of members on the product development team have directly used the product over multiple sessions, testing for reliability, performance, and user experience.</li>
+<li><strong>Testing with internal users outside the Product Development Team:</strong> Secure field testing program participation from other internal company employees, from a diverse set of functions, both technical and non-technical, to ensure unbiased feedback. Secure a statistically significant number of users to participate in this program; the more participation the better.</li>
+<li><strong>Standardized Feedback:</strong> Ensure a standardized feedback collection mechanism, bug submission process, and thorough quantitative data collection for users participating in this program. Direct user feedback, bugs, device logs, and metrics, must be thoroughly analyzed to identify performance/reliability issues, bugs, and user experience quality.</li>
+</ul>
+</li>
+<li><strong>Factory Provisioning Preparation:</strong> Finalize the strategy for factory-provisioned items that must be individually allocated per unit (e.g., discriminators, Password-Authenticated Key Exchange (PAKE) verifiers). Determine the manufacturing logic to correctly match QR and manual setup codes to those specific devices.</li>
+<li><strong>Plugfests:</strong> Participate in Alliance Plugfests if possible.</li>
+</ul>
+<p><strong>Exit Criteria:</strong></p>
+<ul>
+<li>Production-intent design validated against key specifications.</li>
+<li>Hardware design locked (no major changes anticipated).</li>
+<li>Key Performance Indicators (KPIs) for function, connectivity, and reliability on track.</li>
+<li>Positive results from protocol conformance and interoperability tests.</li>
+<li>Positive initial feedback from user testing.</li>
+<li>Clear resolution paths for all critical or launch-blocking bugs.</li>
+</ul>
+<h3 id="development-verification-testing-dvt">Development Verification Testing (DVT)</h3>
+<p><strong>Intent:</strong> To validate the manufacturing process, ensure the product can be built at scale meeting quality and reliability standards, and to finalize the product for certification and mass production.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Manufacturing &amp; Reliability:</strong> Build units on the mass production line. Monitor and optimize factory yield. Conduct extensive Highly Accelerated Life Testing (HALT) and environmental stress tests.</li>
+<li><strong>Regressions:</strong> Execute full regression test suites on hardware and software to catch issues introduced by process changes.</li>
+<li><strong>Field Testing Expansion:</strong> Expand the field testing program participation with DVT units by at least 2x to focus on long-term stability and edge cases.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Formal Certification:</strong> Submit DVT units to Authorized Test Laboratories (ATLs) for formal certifications (Regulatory, Safety, Wi-Fi, Bluetooth, Thread, and Matter). Apply for Interoperability testing simultaneously with Matter certification to discover and address issues with popular smart home ecosystems.</li>
+<li><strong>Large-Scale Interoperability:</strong> Expand interoperability testing with a wider range of Matter controllers and networking infrastructure (Wi-Fi Routers, Thread Border Routers).</li>
+<li><strong>Conduct “Works With” activities for Ecosystems:</strong> Works With programs for ecosystems require distinct activities (such as field testing, automated testing, etc) in order to satisfy requirements for Works With badges. At this stage you should engage with each ecosystem platform, and kick off completing these activities.</li>
+<li><strong>Real-World Network Stress Testing:</strong> Passing certification is not a substitute for diligent real-world testing. Extensive field testing in diverse, real-world 3rd-party networking environments and complex multi-admin scenarios with real users is critical prior to launch.</li>
+</ul>
+<p><strong>Exit Criteria:</strong></p>
+<ul>
+<li>Manufacturing process is stable and capable.</li>
+<li>Pass all formal certification tests (or have high confidence in imminent approval).</li>
+<li>Demonstrate product reliability through rigorous stress testing.</li>
+<li>Successful and extensive Matter &amp; networking interoperability proven.</li>
+<li>No critical, high-severity, or launch-blocking bugs in software or hardware.</li>
+</ul>
+<h3 id="production-verification-testing-pvt-stage">Production Verification Testing (PVT) Stage</h3>
+<p><strong>Intent:</strong> To conduct a final validation of the entire mass production process, including assembly lines, test stations, training, and logistics.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Production Line Validation:</strong> Run a significant build on the finalized assembly lines to verify repeatable and scalable processes.</li>
+<li><strong>Test &amp; Packaging:</strong> Verify all factory test stations are operating correctly. Verify final packaging, labeling, and accessories.</li>
+<li><strong>Factory Shipped Image (FSI) Lock:</strong> Finalize and lock the software image to be flashed on devices during production.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Provisioning Validation:</strong> Ensure the FSI correctly includes all necessary firmware, Matter configurations, and pre-loaded credentials. Validate that the factory lines are successfully and securely injecting individual DACs, discriminators, and PAKE verifiers, and that physical QR codes match the digital records perfectly.  Production DACs must be used at this stage.</li>
+</ul>
+<p><strong>Exit Criteria:</strong></p>
+<ul>
+<li>Demonstrated stable and capable manufacturing process.</li>
+<li>Repeatable and reliable test results from all factory test stations.</li>
+<li>FSI software locked and validated.</li>
+<li>All necessary regulatory and compliance certifications are fully approved and received.</li>
+</ul>
+<h3 id="mass-production-stage">Mass Production Stage</h3>
+<p><strong>Intent:</strong> To ramp up manufacturing to full capacity to meet launch inventory needs, ongoing sales forecasts, and quality expectations.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Ramp-Up:</strong> Incrementally increase production volume to target levels.</li>
+<li><strong>Quality Monitoring:</strong> Continuously monitor key production metrics and implement corrective actions. Ensure systems are in place to receive and analyze early field quality data post-launch.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Day-0 OTA Update Preparation:</strong> If an update is required immediately at launch (to address multi-admin bugs or interoperability edge cases found after FSI lock), ensure the OTA infrastructure and software image are ready and thoroughly tested across major ecosystems.
+<ul>
+<li>Leverage Matter FastTrack Recertification program to quickly certify updated image if relevant.</li>
+<li>Consider OTA update delivery strategy for major ecosystems as some ecosystems will require leveraging their portal to upload and stage OTA updates.</li>
+</ul>
+</li>
+</ul>
+<h3 id="product-maintenance">Product Maintenance</h3>
+<p><strong>Intent:</strong> To manage the product throughout its post-launch lifecycle by maintaining long-term security, multi-ecosystem interoperability, and field performance, while executing a structured End-of-Life (EOL) strategy that preserves user trust and meets regulatory compliance.</p>
+<p><strong>General Product Development Activities:</strong></p>
+<ul>
+<li><strong>Field Performance &amp; Sustaining Engineering:</strong> Track device performance and hardware reliability through field analytics, crash logs, and product returns. Maintain dedicated engineering resources for root-cause analysis on connectivity drops or field bugs.</li>
+<li><strong>Ongoing Security &amp; Vulnerability Management:</strong> Continuously monitor Common Vulnerabilities and Exposures (CVE) databases for OS, network stack (Wi-Fi/Thread), and cryptographic library vulnerabilities.</li>
+<li><strong>Feedback &amp; Support Loops:</strong> Gather and analyze customer reviews and support tickets. Translate user feedback regarding setup or connectivity into actionable software patches.</li>
+<li><strong>General OTA Updates:</strong> Deploy software updates to fix bugs, address security vulnerabilities, and improve overall performance. Leverage ecosystem developer portals to manage OTAs and ensure smooth and consistent deployments.</li>
+</ul>
+<p><strong>Matter Specific Activities:</strong></p>
+<ul>
+<li><strong>Ecosystem &amp; Network Monitoring:</strong> Track commissioning success rates, network stability, interoperability issues across different major ecosystems, and OTA update uptake rates.</li>
+<li><strong>Standard Evolution &amp; Upstream SDK Upgrades:</strong>
+<ul>
+<li>Actively track updates to the open-source Matter SDK and establish a cadence for merging upstream bug fixes and security patches into your production firmware branch.</li>
+<li>Evaluate new Matter specification releases to determine whether backporting new features to existing hardware is valuable and viable (given memory constraints).</li>
+</ul>
+</li>
+<li><strong>Ecosystem Interoperability Maintenance:</strong>
+<ul>
+<li>Maintain active testbeds with updated ecosystem hubs and mobile OS releases to catch regression bugs introduced by 3rd-party updates.</li>
+<li>Utilize the Rapid/FastTrack Recertification program to cost-effectively re-certify products when releasing firmware updates or stack upgrades.</li>
+<li>Ensure ongoing compliance with ecosystem-specific &quot;Works With&quot; badge requirements as program rules evolve over time.</li>
+</ul>
+</li>
+</ul>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../guides/dcl/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Distributed Compliance Ledger (DCL)</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../glossary/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Glossary</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                        <li>
+                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-footer-link hover:text-footer-link-hover md:mb-0" href="../../about/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                    <g fill="currentColor">
+                                        <path d="M10.97 8.265a1.45 1.45 0 0 0-.487.57.75.75 0 0 1-1.341-.67c.2-.402.513-.826.997-1.148C10.627 6.69 11.244 6.5 12 6.5c.658 0 1.369.195 1.934.619a2.45 2.45 0 0 1 1.004 2.006c0 1.033-.513 1.72-1.027 2.215-.19.183-.399.358-.579.508l-.147.123a4.329 4.329 0 0 0-.435.409v1.37a.75.75 0 1 1-1.5 0v-1.473c0-.237.067-.504.247-.736.22-.28.486-.517.718-.714l.183-.153.001-.001c.172-.143.324-.27.47-.412.368-.355.569-.676.569-1.136a.953.953 0 0 0-.404-.806C12.766 8.118 12.384 8 12 8c-.494 0-.814.121-1.03.265ZM13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/>
+                                    </g>
+                                </svg>
+                                <span>About the Matter Handbook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-footer-link hover:text-footer-link-hover md:mb-0" href="../../license/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="block shrink-0 mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                    <g fill="currentColor">
+                                        <path d="M16.53 9.78a.75.75 0 0 0-1.06-1.06L11 13.19l-1.97-1.97a.75.75 0 0 0-1.06 1.06l2.5 2.5a.75.75 0 0 0 1.06 0l5-5Z"/><path d="m12.54.637 8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.771 10.704-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.77 20.705 2 16.19 2 10V4.976c0-.758.489-1.43 1.21-1.664L11.46.637a1.748 1.748 0 0 1 1.08 0Zm-.617 1.426-8.25 2.676a.249.249 0 0 0-.173.237V10c0 5.46 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.461 20.5 10V4.976a.25.25 0 0 0-.173-.237l-8.25-2.676a.253.253 0 0 0-.154 0Z"/>
+                                    </g>
+                                </svg>
+                                <span>License</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© Copyright 2026 Matter Handbook Authors. <br>Matter is a registered trademark of the Connectivity Standards Alliance.<br>All other trademarks are property of their respective owners.</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+        <script data-cfasync="false">window.__DOCS__ = { "title": "Product Development Best Practices", level: 2, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/guides/product-development-best-practices.md" }</script>
+</body>
+</html>

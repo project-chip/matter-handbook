@@ -28,6 +28,9 @@
     <loc>https://handbook.buildwithmatter.com/how-it-works/roles/</loc>
   </url>
   <url>
+    <loc>https://handbook.buildwithmatter.com/how-it-works/discovery/</loc>
+  </url>
+  <url>
     <loc>https://handbook.buildwithmatter.com/license/</loc>
   </url>
   <url>
@@ -37,16 +40,16 @@
     <loc>https://handbook.buildwithmatter.com/how-it-works/data-model/</loc>
   </url>
   <url>
-    <loc>https://handbook.buildwithmatter.com/how-it-works/discovery/</loc>
+    <loc>https://handbook.buildwithmatter.com/how-it-works/commisioning/</loc>
+  </url>
+  <url>
+    <loc>https://handbook.buildwithmatter.com/guides/</loc>
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/how-it-works/connectivity-transports/</loc>
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/how-it-works/interaction-model/</loc>
-  </url>
-  <url>
-    <loc>https://handbook.buildwithmatter.com/how-it-works/commisioning/</loc>
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/glossary/</loc>
@@ -59,9 +62,6 @@
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/how-it-works/attestation/</loc>
-  </url>
-  <url>
-    <loc>https://handbook.buildwithmatter.com/guides/</loc>
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/how-it-works/security/</loc>
@@ -92,6 +92,9 @@
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/certification/fast-track-recertification-faq/</loc>
+  </url>
+  <url>
+    <loc>https://handbook.buildwithmatter.com/guides/product-development-best-practices/</loc>
   </url>
   <url>
     <loc>https://handbook.buildwithmatter.com/certification/certifying-a-product/self-pre-test/</loc>
