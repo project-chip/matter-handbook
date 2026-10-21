@@ -1,14 +1,19 @@
+Alexa
 ALIRO|Aliro
 Avahi
+backport
+backporting
 Bonjour
 Certicom
 Comcast
 Dotdot
 Espressif
 Eurocylinder
+FastTrack Recertification
 Javadoc
 mDNSResponder
+Plugfest
+Plugfests
 protobuf
 Tuya
 Zigbee
-FastTrack Recertification
